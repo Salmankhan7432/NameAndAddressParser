@@ -1,0 +1,5131 @@
+[
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "ABC 22_11_07.692696_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-23 22:13:08.487140",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "SALMAN 22_16_19.869645_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-23 22:17:16.327412",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "ca70207cbc2fe1c6b6c519374cc8b208f10abd02",
+        "Exception_file_name": "c 21_19_16.057909_ExceptionFile.json",
+        "Input": "874 WEST PARK, LITTLE ROCK,, AR 55646",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDF,WW,,TN",
+        "Approved By": "Committee Member_1 at 2023-08-25 21:38:09.467720",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "874",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "WEST",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "55646",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "8cb46038854b1dbced6f23bd5dda7361909fcdbd",
+        "Exception_file_name": "ccc 21_58_28.383089_ExceptionFile.json",
+        "Input": "1701 WESTPARK DR, LITTLE ROCK, AR 65656",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_2 at 2023-08-26 21:59:12.820334",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1701",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "WESTPARK",
+                "USAD_SNO"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_SNO"
+            ],
+            [
+                "N",
+                "65656",
+                "USAD_SNM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "672817894ea5177b01f8de677f5dfdb4fd82e49a",
+        "Exception_file_name": "_MultiLine_ExceptionFile22_03_31.627001.json",
+        "Input": "815 MARVON ST SOUTH, OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFD,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-08-26 22:04:28.833062",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_SNM"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_SPR"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_SNM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e620b939c0fe80e323933f9e1bd78628b0edb395",
+        "Exception_file_name": "_MultiLine_ExceptionFile22_03_31.627001.json",
+        "Input": "6678 UNIVERSITY, AVENUE ,SAN JUAN,PR 00926",
+        "Region": "Puerto Rico",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "NZ,F,WW,FN",
+        "Approved By": "Committee Member_1 at 2023-08-26 22:05:02.437231",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "6678",
+                "USAD_ANO"
+            ],
+            [
+                "Z",
+                "UNIVERSITY",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "AVENUE",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "JUAN",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "PR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "00926",
+                "USAD_STA"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "ecd0b4786bb4125fdf28c883da43eeaf827299f3",
+        "Exception_file_name": "_MultiLine_ExceptionFile22_03_31.627001.json",
+        "Input": "109 MARKHAN ST , CORONA, NY 11368",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,W,TN",
+        "Approved By": "Committee Member_1 at 2023-08-26 22:05:32.590673",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "109",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "MARKHAN",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "CORONA",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "11368",
+                "USAD_SFX"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "73064e2b37a5ec25502eedfb7bbbcea60a76a5b3",
+        "Exception_file_name": "_MultiLine_ExceptionFile22_03_31.627001.json",
+        "Input": "81 MCCAIN JOHN ,CHICAGO , IL,  60629",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWW,W,T,N",
+        "Approved By": "Committee Member_2 at 2023-08-26 22:05:47.287219",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "81",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "MCCAIN",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "JOHN",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "CHICAGO",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "IL",
+                "USAD_SPR"
+            ],
+            [
+                "N",
+                "60629",
+                "USAD_SPR"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "04ca5a0df3f8298bce86da5866cfcab2643593f4",
+        "Exception_file_name": "_MultiLine_ExceptionFile22_03_31.627001.json",
+        "Input": "8190 MARSH AVE, THE VILLAGES, FL 32162",
+        "Region": "Puerto Rico",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "NWF,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-08-26 22:06:01.805875",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "8190",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "MARSH",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "THE",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "VILLAGES",
+                "USAD_HNO"
+            ],
+            [
+                "T",
+                "FL",
+                "USAD_SPT"
+            ],
+            [
+                "N",
+                "32162",
+                "USAD_ANM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "3f3d1959f6aefa9fcd28835ada17ad10776b2131",
+        "Exception_file_name": "_MultiLine_ExceptionFile22_03_31.627001.json",
+        "Input": "7966, BEACON, ST,SUN, PRAIRIE, WI,  53590",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "N,W,F,W,F,T,N",
+        "Approved By": "Committee Member_1 at 2023-08-26 22:06:15.660148",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "7966",
+                "USAD_RNO"
+            ],
+            [
+                "W",
+                "BEACON",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "SUN",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "PRAIRIE",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "WI",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "53590",
+                "USAD_SNM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c98ffd36523ede0e008701b4150175a2d836b103",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "1701 WESTPARK DR, LITTLE ROCK, AR 6565",
+        "Region": "US",
+        "Type": "PO Box Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:43:59.846350",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1701",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "WESTPARK",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "6565",
+                "USAD_CTY"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "672817894ea5177b01f8de677f5dfdb4fd82e49a",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "815 MARVON ST SOUTH, OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "PO Box Address",
+        "Token Pattern": "NWFD,WF,TN",
+        "Approved By": "Committee Member_2 at 2023-08-27 17:47:51.142742",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_ANM"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_SPT"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ANM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "ecd0b4786bb4125fdf28c883da43eeaf827299f3",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "109 MARKHAN ST , CORONA, NY 11368",
+        "Region": "Puerto Rico",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "NWF,W,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:49:44.819047",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "109",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "MARKHAN",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "CORONA",
+                "USAD_SFX"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_SNM"
+            ],
+            [
+                "N",
+                "11368",
+                "USAD_ANM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "73064e2b37a5ec25502eedfb7bbbcea60a76a5b3",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "81 MCCAIN JOHN ,CHICAGO , IL,  60629",
+        "Region": "US",
+        "Type": "PO Box Address",
+        "Token Pattern": "NWW,W,T,N",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:49:59.720179",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "81",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "MCCAIN",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "JOHN",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "CHICAGO",
+                "USAD_SNM"
+            ],
+            [
+                "T",
+                "IL",
+                "USAD_SNM"
+            ],
+            [
+                "N",
+                "60629",
+                "USAD_SPT"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "04ca5a0df3f8298bce86da5866cfcab2643593f4",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "8190 MARSH AVE, THE VILLAGES, FL 32162",
+        "Region": "Puerto Rico",
+        "Type": "Military Address",
+        "Token Pattern": "NWF,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:50:13.488675",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "8190",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "MARSH",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "THE",
+                "USAD_SPT"
+            ],
+            [
+                "F",
+                "VILLAGES",
+                "USAD_SFX"
+            ],
+            [
+                "T",
+                "FL",
+                "USAD_SPT"
+            ],
+            [
+                "N",
+                "32162",
+                "USAD_ANM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "3f3d1959f6aefa9fcd28835ada17ad10776b2131",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "7966, BEACON, ST,SUN, PRAIRIE, WI,  53590",
+        "Region": "US",
+        "Type": "PO Box Address",
+        "Token Pattern": "N,W,F,W,F,T,N",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:50:39.986382",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "7966",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "BEACON",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "SUN",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "PRAIRIE",
+                "USAD_SNO"
+            ],
+            [
+                "T",
+                "WI",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "53590",
+                "USAD_SPR"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c98ffd36523ede0e008701b4150175a2d836b103",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "1701 WESTPARK DR, LITTLE ROCK, AR 6565",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:54:50.663644",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1701",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "WESTPARK",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_MDG"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_RNM"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "6565",
+                "USAD_SFX"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "672817894ea5177b01f8de677f5dfdb4fd82e49a",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "815 MARVON ST SOUTH, OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFD,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 17:58:53.593493",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_ANM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_ANO"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ANO"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c98ffd36523ede0e008701b4150175a2d836b103",
+        "Exception_file_name": "_MultiLine_ExceptionFile17_42_49.736105.json",
+        "Input": "1701 WESTPARK DR, LITTLE ROCK, AR 6565",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 18:01:31.182414",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1701",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "WESTPARK",
+                "USAD_BNO"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "6565",
+                "USAD_SPR"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c98ffd36523ede0e008701b4150175a2d836b103",
+        "Exception_file_name": "_MultiLine_ExceptionFile18_06_42.793814.json",
+        "Input": "1701 WESTPARK DR, LITTLE ROCK, AR 6565",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 18:07:34.732238",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1701",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "WESTPARK",
+                "USAD_SPR"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_SPR"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_BNO"
+            ],
+            [
+                "N",
+                "6565",
+                "USAD_CTY"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c98ffd36523ede0e008701b4150175a2d836b103",
+        "Exception_file_name": "_MultiLine_ExceptionFile18_06_42.793814.json",
+        "Input": "1701 WESTPARK DR, LITTLE ROCK, AR 6565",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-27 18:10:32.508645",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1701",
+                "USAD_ZP4"
+            ],
+            [
+                "W",
+                "WESTPARK",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "6565",
+                "USAD_SPR"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "672817894ea5177b01f8de677f5dfdb4fd82e49a",
+        "Exception_file_name": "_MultiLine_ExceptionFile18_06_42.793814.json",
+        "Input": "815 MARVON ST SOUTH, OZONE PARK, NY 11420",
+        "Region": "Puerto Rico",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "NWFD,WF,TN",
+        "Approved By": "Committee Member_2 at 2023-08-27 18:11:10.299554",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SPT"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_ANM"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_SFX"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "f13231bdb15fcddbefbaae65731bbf05cafe0cf6",
+        "Exception_file_name": "_MultiLine_ExceptionFile18_06_42.793814.json",
+        "Input": "PO BOX 1599 WOONSOCKET RI 02895",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "XXNWTN",
+        "Approved By": "Committee Member_1 at 2023-08-27 18:12:21.774521",
+        "Comment": "",
+        "Table Data": [
+            [
+                "X",
+                "PO",
+                "USAD_SPT"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "1599",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "WOONSOCKET",
+                "USAD_SPT"
+            ],
+            [
+                "T",
+                "RI",
+                "USAD_ANO"
+            ],
+            [
+                "N",
+                "02895",
+                "USAD_SNM"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "d0876f4ba9f3382dcb59c7ee044bcdf45da12d69",
+        "Exception_file_name": "_MultiLine_ExceptionFile18_06_42.793814.json",
+        "Input": "PO BOX 1232 MILLVILLE NJ 08332",
+        "Region": "Puerto Rico",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "XXNWTN",
+        "Approved By": "Committee Member_1 at 2023-08-27 20:54:38.549727",
+        "Comment": "",
+        "Table Data": [
+            [
+                "X",
+                "PO",
+                "USAD_STA"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_ANO"
+            ],
+            [
+                "N",
+                "1232",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "MILLVILLE",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NJ",
+                "USAD_SPT"
+            ],
+            [
+                "N",
+                "08332",
+                "USAD_CTY"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "_MultiLine_ExceptionFile20_47_20.253334.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-28 00:57:33.421879",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e514daaa9fb6094be012cf8f05b60836ec17f0d0",
+        "Exception_file_name": "Batch test 1 11_27_07.765601.json",
+        "Input": "6678 UNIVERSITY AVENUE ,SAN JUAN PR 00926",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NZF,WWFN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:40:27.580477",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "6678",
+                "USAD_SNO"
+            ],
+            [
+                "Z",
+                "UNIVERSITY",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVENUE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "JUAN",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "00926",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "7ac863f9a2c2198f4674194805b4dc2afedc8fee",
+        "Exception_file_name": "Batch test 1 11_27_07.765601.json",
+        "Input": "109 MARKHAN ST, CORONA, NY 11368",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,W,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:42:59.553712",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "109",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARKHAN",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "CORONA",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11368",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1fb44ffb78971147ccd403943a167aa42fc9b703",
+        "Exception_file_name": "Batch test 1 11_27_07.765601.json",
+        "Input": "81 MCCAIN JOHN, CHICAGO IL 60629",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWW,WTN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:43:32.293598",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "81",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MCCAIN",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "JOHN",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "CHICAGO",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IL",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "60629",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "d86f680f40e30851e53c8c55765cca22c180e533",
+        "Exception_file_name": "Batch test 1 11_27_07.765601.json",
+        "Input": "8190 MARSH AVE THE VILLAGES FL 32162",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFWFTN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:44:11.774842",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "8190",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARSH",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "THE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "VILLAGES",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "FL",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "32162",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "87c2766263502c539b98ac7b7672a20148ae89e9",
+        "Exception_file_name": "Batch test 1 11_27_07.765601.json",
+        "Input": "7966 BEACON ST,SUN PRAIRIE, WI,  53590",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WF,T,N",
+        "Approved By": "Committee Member_2 at 2023-08-30 11:44:39.108370",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "7966",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "BEACON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "SUN",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PRAIRIE",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "WI",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "53590",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "672817894ea5177b01f8de677f5dfdb4fd82e49a",
+        "Exception_file_name": "Batch test 1 11_42_26.314720.json",
+        "Input": "815 MARVON ST SOUTH, OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFD,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:46:31.790991",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e514daaa9fb6094be012cf8f05b60836ec17f0d0",
+        "Exception_file_name": "Batch test 1 11_42_26.314720.json",
+        "Input": "6678 UNIVERSITY AVENUE ,SAN JUAN PR 00926",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NZF,WWFN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:47:09.368123",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "6678",
+                "USAD_SNO"
+            ],
+            [
+                "Z",
+                "UNIVERSITY",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVENUE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "JUAN",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "00926",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "a 11_42_26.314720_Forced_ExceptionFile.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_2 at 2023-08-30 11:49:27.345690",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "a 11_42_26.314720_Forced_ExceptionFile.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:51:24.197381",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "GSP 11_42_26.314720_Forced_ExceptionFile.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 11:53:33.089793",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "fszd 12_18_51.382395_Forced_ExceptionFile.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_2 at 2023-08-30 12:24:35.012760",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "fszd 12_18_51.382395_Forced_ExceptionFile.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 12:26:09.178093",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "jewgads 12_29_33.053187_Forced_ExceptionFile.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 12:30:35.873291",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "207c7555773e99ec72ce2a0918182a22dab48226",
+        "Exception_file_name": "dot file 14_10_34.996335.json",
+        "Input": "815 MARVON ST SOUTH OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFDWF,TN",
+        "Approved By": "Committee Member_2 at 2023-08-30 14:12:37.267745",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "207c7555773e99ec72ce2a0918182a22dab48226",
+        "Exception_file_name": "SAD 14_10_34.997374_Forced_ExceptionFile.json",
+        "Input": "815 MARVON ST SOUTH OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFDWF,TN",
+        "Approved By": "Committee Member_2 at 2023-08-30 14:14:22.536327",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "207c7555773e99ec72ce2a0918182a22dab48226",
+        "Exception_file_name": "hsa 14_10_34.997374_Forced_ExceptionFile.json",
+        "Input": "815 MARVON ST SOUTH OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFDWF,TN",
+        "Approved By": "Committee Member_2 at 2023-08-30 14:35:16.733040",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "207c7555773e99ec72ce2a0918182a22dab48226",
+        "Exception_file_name": "jad 14_10_34.997374_Forced_ExceptionFile.json",
+        "Input": "815 MARVON ST SOUTH OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFDWF,TN",
+        "Approved By": "Committee Member_1 at 2023-08-30 14:38:26.048917",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "fe0806b84d584d5e707d80de7cdeeb71c5539c41",
+        "Exception_file_name": "10k records 10_17_31.861415.json",
+        "Input": "1254 RODNEY STREET, CHESTER,FIELD-MISSOURI 63005",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,W,WN",
+        "Approved By": "Committee Member_1 at 2023-09-03 10:49:21.847316",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1254",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "RODNEY",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "CHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "FIELD-MISSOURI",
+                "USAD_CTY"
+            ],
+            [
+                "N",
+                "63005",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "fe0806b84d584d5e707d80de7cdeeb71c5539c41",
+        "Exception_file_name": "10k records 10_17_31.861415.json",
+        "Input": "1254 RODNEY STREET, CHESTER,FIELD-MISSOURI 63005",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,W,WN",
+        "Approved By": "Committee Member_1 at 2023-09-03 10:54:18.981692",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1254",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "RODNEY",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "CHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "FIELD-MISSOURI",
+                "USAD_CTY"
+            ],
+            [
+                "N",
+                "63005",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "230d5d9fd6c62d1b5e6776752b3841b99b9943f9",
+        "Exception_file_name": "Individual Address1_Input_File 10_57_29.741244.json",
+        "Input": "43 STATE AVE ,NEW ALBANY, IN 47150",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-03 10:58:49.741462",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "207c7555773e99ec72ce2a0918182a22dab48226",
+        "Exception_file_name": "Individual Address1_Input_File 10_57_29.741244.json",
+        "Input": "815 MARVON ST SOUTH OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "NWFDWF,TN",
+        "Approved By": "Committee Member_1 at 2023-09-03 10:59:23.291626",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "704e15cb8f1cede29cd2036143a5caf64cc9c865",
+        "Exception_file_name": "Individual Address1_Input_File 02_20_15.389657.json",
+        "Input": "6678 UNIVERSITY AVENUE ,SAN JUAN,PR 00926",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NZF,WW,FN",
+        "Approved By": "Committee Member_1 at 2023-09-04 02:33:51.131540",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "6678",
+                "USAD_SNO"
+            ],
+            [
+                "Z",
+                "UNIVERSITY",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "JUAN",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PR",
+                "USAD_NA"
+            ],
+            [
+                "N",
+                "00926",
+                "USAD_NA"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "6f49e8fd43419deaa7b404a4db293623bb8b4862",
+        "Exception_file_name": "Individual Address1_Input_File 02_20_15.389657.json",
+        "Input": "81 MCCAIN RD ,CHICAGO , IL 60629",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,W,TN",
+        "Approved By": "Committee Member_2 at 2023-09-04 02:34:26.276838",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "81",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MCCAIN",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "RD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "CHICAGO",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IL",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "60629",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "05960af4bf6d66f4d55243be0e822c7e3aeedf8e",
+        "Exception_file_name": "New_Test 22_40_15.031714.json",
+        "Input": "402 S OAK ROAD MANCHESTER NEW HAMPSHIRE 72732",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWWWN",
+        "Approved By": "Committee Member_2 at 2023-09-04 22:54:07.623757",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "402",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "S",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "OAK",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ROAD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "MANCHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "HAMPSHIRE",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72732",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "SALMAN 01_09_34.801501_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFWWTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 01:11:10.515136",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "511efa8b3168de50a6afd577be5ac33dbfea62f7",
+        "Exception_file_name": "New_Test 01_43_11.134689.json",
+        "Input": "88 N PINE DRIVE OLYMPIA WASHINGTON 72733",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDFFWTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 01:48:13.066480",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "88",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "N",
+                "USAD_SPR"
+            ],
+            [
+                "F",
+                "PINE",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "DRIVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "OLYMPIA",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "WASHINGTON",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72733",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "3d2094b6ff09be295a463cceeffb03f2512a8be5",
+        "Exception_file_name": "New_Test 01_43_11.134689.json",
+        "Input": "878 NE BIRCH LANE PORTLAND OREGON 72734",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 01:48:36.474646",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "878",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "NE",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "BIRCH",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "LANE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "PORTLAND",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "OREGON",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72734",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "7b9965c61646d0d19803456c744673a95f9bf77e",
+        "Exception_file_name": "New_Test 01_43_11.134689.json",
+        "Input": "78 SE CEDAR COURT MIAMI FLORIDA 72735",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWTN",
+        "Approved By": "Committee Member_2 at 2023-09-10 01:48:52.308029",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "78",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "SE",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "CEDAR",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "COURT",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "MIAMI",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "FLORIDA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72735",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "ea58e2d49e1a8fff2d67a85c0d23f86e9e91059e",
+        "Exception_file_name": "New_Test 01_43_11.134689.json",
+        "Input": "7687 N MAIN ST ANCHORAGE ALASKA 99501",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWTN",
+        "Approved By": "Committee Member_2 at 2023-09-10 01:49:59.519558",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "7687",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "N",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "MAIN",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "ANCHORAGE",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "ALASKA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "99501",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e1c4e4b77a05ca853c33bb8da14710500c2bfa28",
+        "Exception_file_name": "New_Test 01_43_11.134689.json",
+        "Input": "5678 W ELM AVE JUNEAU ALASKA 99801",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWTN",
+        "Approved By": "Committee Member_2 at 2023-09-10 01:50:17.616857",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5678",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "W",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "ELM",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "JUNEAU",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "ALASKA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "99801",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "fd2b4e63bc6ffb71746e421fda97a211a39ffc08",
+        "Exception_file_name": "RR_Test 01_53_57.829753.json",
+        "Input": "RR 2 BOX 152 GREENFIELD OH 23456",
+        "Region": "US",
+        "Type": "Roural Route Address",
+        "Token Pattern": "RNXNWTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 01:54:58.577473",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "2",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "152",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "GREENFIELD",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "OH",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "23456",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "9e3ad5f5eb8f0c693cd556337e2d243e428e8498",
+        "Exception_file_name": "RR_Test 01_53_57.829753.json",
+        "Input": "RR 40 BOX 63 DALLAS TX 75202",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "RNXNWTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 01:55:27.216601",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "40",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "63",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "DALLAS",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "TX",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "75202",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "3dc57b7510a6afde47fcfad2915a6eda99b1bca0",
+        "Exception_file_name": "HC_Test 01_53_57.829753.json",
+        "Input": "HC 68 BOX 23 CHICAGO IL 44432-11323",
+        "Region": "US",
+        "Type": "Highway Contract Address",
+        "Token Pattern": "FNXNWTN",
+        "Approved By": "Committee Member_2 at 2023-09-10 01:56:55.334943",
+        "Comment": "",
+        "Table Data": [
+            [
+                "F",
+                "HC",
+                "USAD_HNM"
+            ],
+            [
+                "N",
+                "68",
+                "USAD_HNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "23",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "CHICAGO",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IL",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "44432-11323",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "b603c08563879fd1c17aec2f30c928bc443bae26",
+        "Exception_file_name": "hgc 01_53_57.830760_ExceptionFile.json",
+        "Input": "RR 993 BOX 316 HICKORY HILLS IL 60457",
+        "Region": "US",
+        "Type": "Roural Route Address",
+        "Token Pattern": "RNXNWFTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 01:59:24.218691",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "993",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "316",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "HICKORY",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "HILLS",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "IL",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "60457",
+                "USAD_RNO"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "77a115ba6a566c506959dbb6391e7224223c218b",
+        "Exception_file_name": "RR_Test 01_53_57.829753.json",
+        "Input": "RR 77 BOX 134 SAN FRANCISCO CA 94115",
+        "Region": "US",
+        "Type": "Roural Route Address",
+        "Token Pattern": "RNXNWWTN",
+        "Approved By": "Committee Member_2 at 2023-09-10 02:00:04.953648",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "77",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "134",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "FRANCISCO",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "94115",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "a5b5e4833e780491614da55117852e1ae4586362",
+        "Exception_file_name": "RR_Test 01_53_57.829753.json",
+        "Input": "RR 567 BOX 890E RURALVILLE MT 34567",
+        "Region": "US",
+        "Type": "Roural Route Address",
+        "Token Pattern": "RNXNWFN",
+        "Approved By": "Committee Member_1 at 2023-09-10 02:00:55.933032",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "567",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "890E",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "RURALVILLE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "MT",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "34567",
+                "USAD_RNO"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "77a115ba6a566c506959dbb6391e7224223c218b",
+        "Exception_file_name": "RR_Test 01_53_57.829753.json",
+        "Input": "RR 77 BOX 134 SAN FRANCISCO CA 94115",
+        "Region": "US",
+        "Type": "Roural Route Address",
+        "Token Pattern": "RNXNWWTN",
+        "Approved By": "Committee Member_1 at 2023-09-10 02:01:28.787064",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "77",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "134",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "FRANCISCO",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "94115",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "5e26b2c2afc8d0f115fe7dbace9180b3b0055648",
+        "Exception_file_name": "RR_Test 01_53_57.829753.json",
+        "Input": "RR 55 BOX 4551 PROSPERITY,SC 29127",
+        "Region": "US",
+        "Type": "Roural Route Address",
+        "Token Pattern": "RNXNW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-10 02:03:16.204667",
+        "Comment": "",
+        "Table Data": [
+            [
+                "R",
+                "RR",
+                "USAD_RNM"
+            ],
+            [
+                "N",
+                "55",
+                "USAD_RNO"
+            ],
+            [
+                "X",
+                "BOX",
+                "USAD_BNM"
+            ],
+            [
+                "N",
+                "4551",
+                "USAD_BNO"
+            ],
+            [
+                "W",
+                "PROSPERITY",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "SC",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "29127",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "sd 16_33_32.682394_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-10 16:34:37.600095",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "a12f973ff326ba806f0929c9fed569b50b3404c8",
+        "Exception_file_name": "Attention Line_Test 15_30_57.200734.json",
+        "Input": "POWER COMPANY 1401 MAIN ST FALLS CHURCH, VA 22042-1441",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "WWNWFFW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-10 21:13:39.674952",
+        "Comment": "",
+        "Table Data": [
+            [
+                "W",
+                "POWER",
+                "USAD_ORG"
+            ],
+            [
+                "W",
+                "COMPANY",
+                "USAD_ORG"
+            ],
+            [
+                "N",
+                "1401",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MAIN",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "FALLS",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "CHURCH",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "VA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "22042-1441",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "a12f973ff326ba806f0929c9fed569b50b3404c8",
+        "Exception_file_name": "Attention Line_Test 16_40_42.294404.json",
+        "Input": "POWER COMPANY 1401 MAIN ST FALLS CHURCH, VA 22042-1441",
+        "Region": "US",
+        "Type": "PO Box Address",
+        "Token Pattern": "WWNWFFW,TN",
+        "Approved By": "Committee Member_2 at 2023-09-10 21:51:26.389612",
+        "Comment": "",
+        "Table Data": [
+            [
+                "W",
+                "POWER",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "COMPANY",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "1401",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "MAIN",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_RNM"
+            ],
+            [
+                "F",
+                "FALLS",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "CHURCH",
+                "USAD_SNM"
+            ],
+            [
+                "T",
+                "VA",
+                "USAD_ZP4"
+            ],
+            [
+                "N",
+                "22042-1441",
+                "USAD_SPR"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "672817894ea5177b01f8de677f5dfdb4fd82e49a",
+        "Exception_file_name": "Batch test 1 19_48_09.057038.json",
+        "Input": "815 MARVON ST SOUTH, OZONE PARK, NY 11420",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFD,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-09-10 22:07:20.392872",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "815",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MARVON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ST",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "SOUTH",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "OZONE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PARK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11420",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e514daaa9fb6094be012cf8f05b60836ec17f0d0",
+        "Exception_file_name": "Batch test 1 19_48_09.057038.json",
+        "Input": "6678 UNIVERSITY AVENUE ,SAN JUAN PR 00926",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NZF,WWFN",
+        "Approved By": "Committee Member_2 at 2023-09-10 22:09:35.847111",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "6678",
+                "USAD_SNO"
+            ],
+            [
+                "Z",
+                "UNIVERSITY",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVENUE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "SAN",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "JUAN",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "PR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "00926",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "afa36a02101930e580eef329b35b99c510d8fded",
+        "Exception_file_name": "uygv 16_16_27.720701_ExceptionFile.json",
+        "Input": "5506 A STREET,LITTLE ROCK AR",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WWT",
+        "Approved By": "Committee Member_1 at 2023-09-10 22:11:59.255621",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "gfdb 16_19_44.934888_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "PO Box Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-10 22:12:31.301947",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "a86194f6310532109b547d9bfda2289cffbe957f",
+        "Exception_file_name": "Attention Line_Test 22_40_15.031714.json",
+        "Input": "ACCENT-E-TECHNOLOGY 642 PLEASANT AVE UNIONTOWN, PA 15401",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "WNWFW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-11 13:41:54.630735",
+        "Comment": "",
+        "Table Data": [
+            [
+                "W",
+                "ACCENT-E-TECHNOLOGY",
+                "USAD_ORG"
+            ],
+            [
+                "N",
+                "642",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "PLEASANT",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "UNIONTOWN",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "PA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "15401",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c95db3970441a8be3728d416a63d97aab771af1a",
+        "Exception_file_name": "400K records 14_00_50.500008.json",
+        "Input": "4640 GROMO CT, APT NBR 1R, FORT COLLINS, CO  80537",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,SWN,FW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-13 14:09:40.630493",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "4640",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "GROMO",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "CT",
+                "USAD_SFX"
+            ],
+            [
+                "S",
+                "APT",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NBR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "1R",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "FORT",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "COLLINS",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CO",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "80537",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "160b1d9d809079567a49df338438ab47273af536",
+        "Exception_file_name": "400K records 14_00_50.500008.json",
+        "Input": "30 ELLWINE DR, NUMBER L FLOOR 3, EAGLE MOUNTAIN, UT  84041",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WWWN,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-09-13 14:10:38.847120",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "30",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "ELLWINE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NUMBER",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "L",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "FLOOR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "3",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "EAGLE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "MOUNTAIN",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "UT",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "84041",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "980895461f09a28e352e7757380fe3f5d87218c6",
+        "Exception_file_name": "400K records 14_00_50.500008.json",
+        "Input": "1889 KANDT DR, G F APARTMENT 1022, NEWHALL, CA  94559",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WWSN,W,TN",
+        "Approved By": "Committee Member_2 at 2023-09-13 14:11:26.144387",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1889",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "KANDT",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "G",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "F",
+                "USAD_ANM"
+            ],
+            [
+                "S",
+                "APARTMENT",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "1022",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "NEWHALL",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "94559",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e78ff0d78a24606f90d28898e5d528acb15cc877",
+        "Exception_file_name": "400K records 14_00_50.500008.json",
+        "Input": "720 KENSINGTON CT, FL NO 2, MARKTON, AL  36608",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,TWN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-13 14:12:13.907430",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "720",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "KENSINGTON",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "CT",
+                "USAD_SFX"
+            ],
+            [
+                "T",
+                "FL",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NO",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "2",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "MARKTON",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AL",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "36608",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "61420255c8573d58e966a2ac7ec22c39868fa228",
+        "Exception_file_name": "400K records 14_00_50.500008.json",
+        "Input": "3716 HUNTERS MILL RD, 10TH FL, MADISON, SD  57004",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWFF,NT,W,TN",
+        "Approved By": "Committee Member_2 at 2023-09-13 14:13:18.022748",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "3716",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "HUNTERS",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "MILL",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "RD",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "10TH",
+                "USAD_ANO"
+            ],
+            [
+                "T",
+                "FL",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "MADISON",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "SD",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "57004",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "165f8d27972f5d7643bb929d1b67437fe4256b68",
+        "Exception_file_name": "400K records 14_00_50.500008.json",
+        "Input": "2330 NW CHIPMAN RD, APRT NO 10046, ALLEN, TX  77433",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWF,WWN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-13 14:14:02.907332",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "2330",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "NW",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "CHIPMAN",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "RD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "APRT",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NO",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "10046",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "ALLEN",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "TX",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "77433",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "57b6769a7d569ab31c5eef0b3725824051ddb6ca",
+        "Exception_file_name": "aslk 19_32_42.707500_ExceptionFile.json",
+        "Input": "5506 A STREET, APT #8656, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,SSN,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-17 02:23:51.449551",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "S",
+                "APT",
+                "USAD_ANM"
+            ],
+            [
+                "S",
+                "#",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "8656",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "jshb 18_00_40.435999_Forced_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-18 18:51:52.070073",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c95db3970441a8be3728d416a63d97aab771af1a",
+        "Exception_file_name": "400K records 01_43_58.852169.json",
+        "Input": "4640 GROMO CT, APT NBR 1R, FORT COLLINS, CO  80537",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,SWN,FW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-20 02:04:23.417172",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "4640",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "GROMO",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "CT",
+                "USAD_SFX"
+            ],
+            [
+                "S",
+                "APT",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NBR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "1R",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "FORT",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "COLLINS",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CO",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "80537",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1f0fb3a7b5ca3a9efb8ff50d3981a2420a750d13",
+        "Exception_file_name": "drs 01_43_58.854170_Forced_ExceptionFile.json",
+        "Input": "5506 A STREET, LITTLE ROCK, AR 72205",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-20 02:06:52.181833",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "05960af4bf6d66f4d55243be0e822c7e3aeedf8e",
+        "Exception_file_name": "New_Test 10_06_51.235653.json",
+        "Input": "402 S OAK ROAD MANCHESTER NEW HAMPSHIRE 72732",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWWWN",
+        "Approved By": "Committee Member_1 at 2023-09-20 10:22:34.511649",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "402",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "S",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "OAK",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ROAD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "MANCHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "HAMPSHIRE",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72732",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "511efa8b3168de50a6afd577be5ac33dbfea62f7",
+        "Exception_file_name": "New_Test 10_06_51.235653.json",
+        "Input": "88 N PINE DRIVE OLYMPIA WASHINGTON 72733",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDFFWTN",
+        "Approved By": "Committee Member_1 at 2023-09-20 10:23:50.440734",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "88",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "N",
+                "USAD_SPR"
+            ],
+            [
+                "F",
+                "PINE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DRIVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "OLYMPIA",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "WASHINGTON",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72733",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "3d2094b6ff09be295a463cceeffb03f2512a8be5",
+        "Exception_file_name": "New_Test 10_06_51.235653.json",
+        "Input": "878 NE BIRCH LANE PORTLAND OREGON 72734",
+        "Region": "US",
+        "Type": "Individual Address",
+        "Token Pattern": "NDWFWTN",
+        "Approved By": "Committee Member_1 at 2023-09-20 10:28:28.301236",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "878",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "NE",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "BIRCH",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "LANE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "PORTLAND",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "OREGON",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72734",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "04b9f73e9c03a43b5b563e8cb31db16fd1f183c3",
+        "Exception_file_name": "Sja 14_07_05.407680_Forced_ExceptionFile.json",
+        "Input": "5506 A Street, Little Rock, AR 72205",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-20 14:10:52.583605",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "31702cf8bd3bf2c03b0bd341647b95708a401e9b",
+        "Exception_file_name": "New_Test 14_07_05.404915.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NDWFWWWN",
+        "Approved By": "Committee Member_1 at 2023-09-20 14:12:44.829087",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "402",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "S",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "OAK",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "ROAD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "MANCHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_STA"
+            ],
+            [
+                "W",
+                "HAMPSHIRE",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72732",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "2072170eddbe7bfb0de6c9b0c99d5194bf505bc4",
+        "Exception_file_name": "New_Test 14_07_05.404915.json",
+        "Input": "88 N Pine Drive Olympia Washington 72733",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NDFFWTN",
+        "Approved By": "Committee Member_1 at 2023-09-20 14:13:37.594189",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "88",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "N",
+                "USAD_SPR"
+            ],
+            [
+                "F",
+                "PINE",
+                "USAD_SFX"
+            ],
+            [
+                "F",
+                "DRIVE",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "OLYMPIA",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "WASHINGTON",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72733",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c9d0ca0271f0ce339e40ed6ac31c3654864b5c70",
+        "Exception_file_name": "TESTING 20_26_27.734076_ExceptionFile.json",
+        "Input": "30 ellwine dr, number l floor 3, eagle mountain, UT 82314",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,WWWN,WF,TN",
+        "Approved By": "Committee Member_1 at 2023-09-20 20:31:48.081670",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "30",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "ELLWINE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NUMBER",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "L",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "FLOOR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "3",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "EAGLE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "MOUNTAIN",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "UT",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "82314",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "04b9f73e9c03a43b5b563e8cb31db16fd1f183c3",
+        "Exception_file_name": "jsa 04_39_21.571261_ExceptionFile.json",
+        "Input": "5506 A Street, Little Rock, AR 72205",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-22 04:43:30.432948",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "5506",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "A",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "LITTLE",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "ROCK",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "72205",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "c9a292bbac6ec2d15538bd4db22bfabcdf496564",
+        "Exception_file_name": "10k records 23_02_52.301878.json",
+        "Input": "43 State Ave ,New Albany, IN 47150",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NRF,WW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-22 23:04:28.136164",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "43",
+                "USAD_SNO"
+            ],
+            [
+                "R",
+                "STATE",
+                "USAD_SPR"
+            ],
+            [
+                "F",
+                "AVE",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "NEW",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "ALBANY",
+                "USAD_SPR"
+            ],
+            [
+                "T",
+                "IN",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "47150",
+                "USAD_STA"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "27bb621b812996c1abe3db0298110b19fceb0860",
+        "Exception_file_name": "hsasa 23_13_05.138506_ExceptionFile.json",
+        "Input": "Stanford University Graduate School of Business Knight Management Center, 655 Knight Way, Suite 245, Stanford, CA 94305-7298",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "WZWZWWWWF,NWF,SN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-25 23:16:38.438916",
+        "Comment": "",
+        "Table Data": [
+            [
+                "W",
+                "STANFORD",
+                "USAD_ORG"
+            ],
+            [
+                "Z",
+                "UNIVERSITY",
+                "USAD_ORG"
+            ],
+            [
+                "W",
+                "GRADUATE",
+                "USAD_ORG"
+            ],
+            [
+                "Z",
+                "SCHOOL",
+                "USAD_ORG"
+            ],
+            [
+                "W",
+                "OF",
+                "USAD_ORG"
+            ],
+            [
+                "W",
+                "BUSINESS",
+                "USAD_ORG"
+            ],
+            [
+                "W",
+                "KNIGHT",
+                "USAD_ORG"
+            ],
+            [
+                "W",
+                "MANAGEMENT",
+                "USAD_ORG"
+            ],
+            [
+                "F",
+                "CENTER",
+                "USAD_ORG"
+            ],
+            [
+                "N",
+                "655",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "KNIGHT",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "WAY",
+                "USAD_SFX"
+            ],
+            [
+                "S",
+                "SUITE",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "245",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "STANFORD",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "94305-7298",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "f97092321ddb8030ce08051b6c42ad4557f3f20c",
+        "Exception_file_name": "1k Rhode Island 08_38_16.591089.json",
+        "Input": "6615 spruce, pawtucket, RI 2812",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NW,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-26 21:16:18.935183",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "6615",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "SPRUCE",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "PAWTUCKET",
+                "USAD_SFX"
+            ],
+            [
+                "T",
+                "RI",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "2812",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "36fb536eb02c1fadba60470cc6cd93306e5c6f83",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "2330 nw chipman rd, aprt no 10046, allen, TX 77433",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NDWF,WWN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-26 23:36:48.352282",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "2330",
+                "USAD_SNO"
+            ],
+            [
+                "D",
+                "NW",
+                "USAD_SPR"
+            ],
+            [
+                "W",
+                "CHIPMAN",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "RD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "APRT",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NO",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "10046",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "ALLEN",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "TX",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "77433",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "4e22eaca19c6d2554eda5b418c82965c31594415",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "544 boston post rd, ap 5, chandler, AZ 85309",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWXF,WN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-26 23:37:59.943177",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "544",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "BOSTON",
+                "USAD_SNM"
+            ],
+            [
+                "X",
+                "POST",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "RD",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "AP",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "5",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "CHANDLER",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AZ",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "85309",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "d4b76e3f55060c309d2b9786a6fb90e7a324a47e",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "201 southwest auburn road, apt nr 59, rochester, NY 11221",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWWF,SWN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-26 23:39:06.398903",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "201",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "SOUTHWEST",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "AUBURN",
+                "USAD_SNO"
+            ],
+            [
+                "F",
+                "ROAD",
+                "USAD_SFX"
+            ],
+            [
+                "S",
+                "APT",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "59",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "ROCHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "NY",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "11221",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "0cd043d68ac2039a93959d4fe01fa083840835b2",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "4640 gromo ct, apt nbr 1r, fort collins, CO 80537",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,SWN,FW,TN",
+        "Approved By": "Committee Member_1 at 2023-09-26 23:40:02.214347",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "4640",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "GROMO",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "CT",
+                "USAD_SNM"
+            ],
+            [
+                "S",
+                "APT",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "NBR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "1R",
+                "USAD_ANO"
+            ],
+            [
+                "F",
+                "FORT",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "COLLINS",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CO",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "80537",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "e6394bb2137485cb6b3a92ec41c3b32d321a5302",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "1889 kandt dr, g f apartment 1022, newhall, CA 94559",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,WWSN,W,TN",
+        "Approved By": "Committee Member_2 at 2023-09-26 23:40:59.629013",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1889",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "KANDT",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "G",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "F",
+                "USAD_ANM"
+            ],
+            [
+                "S",
+                "APARTMENT",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "1022",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "NEWHALL",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "CA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "94559",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "0c8d5f55200d325d0540fb2891cd6de97756806a",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "602 mause creek dr, 5th story apartment 78, fayetteville, AR 71854",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWFF,NWSN,W,TN",
+        "Approved By": "Committee Member_1 at 2023-09-26 23:41:54.896847",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "602",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "MAUSE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "CREEK",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "N",
+                "5TH",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "STORY",
+                "USAD_ANM"
+            ],
+            [
+                "S",
+                "APARTMENT",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "78",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "FAYETTEVILLE",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "AR",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "71854",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "51d9e7a5b8b18a689a9bd6f47aa3e69182f79ae8",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "1604 silver leaf tr ne, g f apt # 153, fairbanks, TX 78503",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWWWD,WWSSN,W,TN",
+        "Approved By": "Committee Member_2 at 2023-09-26 23:46:59.818124",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1604",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "SILVER",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "LEAF",
+                "USAD_SNM"
+            ],
+            [
+                "W",
+                "TR",
+                "USAD_SFX"
+            ],
+            [
+                "D",
+                "NE",
+                "USAD_SPT"
+            ],
+            [
+                "W",
+                "G",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "F",
+                "USAD_ANM"
+            ],
+            [
+                "S",
+                "APT",
+                "USAD_ANM"
+            ],
+            [
+                "S",
+                "#",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "153",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "FAIRBANKS",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "TX",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "78503",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "573063ad4462b8051818ab96736ac90847d6622d",
+        "Exception_file_name": "KB Psd 23_30_30.597589.json",
+        "Input": "30 ellwine dr, number l floor 3, eagle mountain, UT 84041",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,WWWN,WF,TN",
+        "Approved By": "Committee Member_2 at 2023-09-26 23:48:37.846035",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "30",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "ELLWINE",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "DR",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "NUMBER",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "L",
+                "USAD_ANM"
+            ],
+            [
+                "W",
+                "FLOOR",
+                "USAD_ANM"
+            ],
+            [
+                "N",
+                "3",
+                "USAD_ANO"
+            ],
+            [
+                "W",
+                "EAGLE",
+                "USAD_CTY"
+            ],
+            [
+                "F",
+                "MOUNTAIN",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "UT",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "84041",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "1c9ac87322525b3179295d26c0acce397e8d272a",
+        "Exception_file_name": "Individual Address1_Input_File 23_30_30.597589.json",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWF,W,WN",
+        "Approved By": "Committee Member_1 at 2023-09-26 23:53:17.775660",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "1254",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "RODNEY",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "CHESTER",
+                "USAD_CTY"
+            ],
+            [
+                "W",
+                "FIELD-MISSOURI",
+                "USAD_CTY"
+            ],
+            [
+                "N",
+                "63005",
+                "USAD_ZIP"
+            ]
+        ]
+    },
+    {
+        "Unique_ID": "f0760182757e04ee91d3804ac493cc86f931636b",
+        "Exception_file_name": "Individual Address1_Input_File 23_30_30.597589.json",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Region": "US",
+        "Type": "Street Address",
+        "Token Pattern": "NWFWTN",
+        "Approved By": "Committee Member_2 at 2023-09-26 23:53:39.814873",
+        "Comment": "",
+        "Table Data": [
+            [
+                "N",
+                "3759",
+                "USAD_SNO"
+            ],
+            [
+                "W",
+                "COLLINS",
+                "USAD_SNM"
+            ],
+            [
+                "F",
+                "STREET",
+                "USAD_SFX"
+            ],
+            [
+                "W",
+                "TAMPA",
+                "USAD_CTY"
+            ],
+            [
+                "T",
+                "FLORIDA",
+                "USAD_STA"
+            ],
+            [
+                "N",
+                "33619",
+                "USAD_ZIP"
+            ]
+        ]
+    }
+]

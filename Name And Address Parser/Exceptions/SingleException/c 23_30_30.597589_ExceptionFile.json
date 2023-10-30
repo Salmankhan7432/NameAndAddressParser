@@ -1,0 +1,53 @@
+[
+    {
+        "Record ID": "Single Line Exception_File c-->01",
+        "INPUT": "3690 buckelew av floor # 2 jacksonville FL 32009",
+        "NWFWSNWTN": [
+            [
+                "3690",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "BUCKELEW",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "AV",
+                "USAD_SFX",
+                "F"
+            ],
+            [
+                "FLOOR",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "#",
+                "USAD_NA",
+                "S"
+            ],
+            [
+                "2",
+                "USAD_ZIP",
+                "N"
+            ],
+            [
+                "JACKSONVILLE",
+                "USAD_NA",
+                "W"
+            ],
+            [
+                "FL",
+                "USAD_NA",
+                "T"
+            ],
+            [
+                "32009",
+                "USAD_NA",
+                "N"
+            ]
+        ]
+    }
+]

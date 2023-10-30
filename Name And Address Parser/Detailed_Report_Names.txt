@@ -1,0 +1,296 @@
+Output From Active Learning
+
+{
+    "1": {
+        "Prefix Title": "DR",
+        "Given Name": "CAROLINE GRACE",
+        "Surname": "LEE",
+        "Suffix Title": "MD"
+    },
+    "2": {
+        "Prefix Title": "MR",
+        "Given Name": "SAMUEL ALEXANDER",
+        "Surname": "JONES",
+        "Suffix Title": "MCA"
+    },
+    "3": {
+        "Prefix Title": "MS",
+        "Given Name": "ISABELLA",
+        "Surname": "CLAIRE",
+        "Generational Suffix": "MARTINEZ",
+        "Suffix Title": "PHD"
+    },
+    "4": {
+        "Prefix Title": "DR",
+        "Given Name": "OLIVER",
+        "Surname": "MITCHELL",
+        "Generational Suffix": "CARL",
+        "Suffix Title": "PHD"
+    },
+    "5": {
+        "Prefix Title": "MR",
+        "Given Name": "DAVID WILLIAM",
+        "Surname": "WRIGHT",
+        "Suffix Title": "MBA"
+    },
+    "6": {
+        "Prefix Title": "MRS",
+        "Given Name": "RACHEL BROWN",
+        "Surname": "BRIGHT",
+        "Suffix Title": "LLM"
+    },
+    "7": {
+        "Prefix Title": "DR",
+        "Given Name": "OLIVIA MART",
+        "Surname": "TAYLOR",
+        "Suffix Title": "MD"
+    },
+    "8": {
+        "Prefix Title": "MR",
+        "Given Name": "WILLIAM COOPER",
+        "Surname": "ANDERSON",
+        "Suffix Title": "MBA"
+    },
+    "9": {
+        "Prefix Title": "MRS",
+        "Given Name": "SAMANTHA LEO",
+        "Surname": "MARTINEZ",
+        "Suffix Title": "MCA"
+    },
+    "10": {
+        "Prefix Title": "MS",
+        "Given Name": "EMILY",
+        "Surname": "MARIA",
+        "Generational Suffix": "DAVIS",
+        "Suffix Title": "PHD"
+    },
+    "11": {
+        "Prefix Title": "MR",
+        "Given Name": "PATRICK MIKE",
+        "Surname": "MARTIN",
+        "Suffix Title": "MBA"
+    },
+    "12": {
+        "Prefix Title": "MS",
+        "Given Name": "MARIA STEVE",
+        "Surname": "HERNANDEZ",
+        "Suffix Title": "MD"
+    },
+    "13": {
+        "Prefix Title": "DR",
+        "Given Name": "RABBI DAVID",
+        "Surname": "NGUYEN",
+        "Suffix Title": "PHD"
+    },
+    "14": {
+        "Prefix Title": "HON",
+        "Given Name": "REBECCA",
+        "Surname": "FLORES",
+        "Suffix Title": "RET LLM"
+    },
+    "15": {
+        "Prefix Title": "DR",
+        "Given Name": "ETHAN CARL",
+        "Surname": "TAYLOR",
+        "Suffix Title": "MD"
+    },
+    "16": {
+        "Prefix Title": "DR",
+        "Given Name": "MATTHEW ELIS",
+        "Surname": "FOSTER",
+        "Suffix Title": "MD"
+    },
+    "17": {
+        "Prefix Title": "MS",
+        "Given Name": "EMMA PAUL",
+        "Surname": "BAKER"
+    },
+    "18": {
+        "Prefix Title": "MR",
+        "Given Name": "WILLIAM DAVIS",
+        "Surname": "TURNER"
+    },
+    "19": {
+        "Prefix Title": "MR",
+        "Given Name": "BENJAMIN",
+        "Surname": "HILL"
+    },
+    "20": {
+        "Prefix Title": "MS",
+        "Given Name": "SOPHIA",
+        "Surname": "JOHNSON"
+    },
+    "21": {
+        "Prefix Title": "DR",
+        "Given Name": "VICTORIA",
+        "Surname": "CLARK",
+        "Suffix Title": "MD"
+    },
+    "22": {
+        "Prefix Title": "MS",
+        "Given Name": "REBECCA",
+        "Surname": "GREEN"
+    },
+    "23": {
+        "Prefix Title": "MR",
+        "Given Name": "JAMES",
+        "Surname": "ANDERSON"
+    },
+    "24": {
+        "Prefix Title": "MS",
+        "Given Name": "AVA",
+        "Surname": "PEREZ"
+    },
+    "25": {
+        "Prefix Title": "DR",
+        "Given Name": "ISAAC",
+        "Surname": "HERNANDEZ",
+        "Suffix Title": "MD"
+    },
+    "26": {
+        "Prefix Title": "MS",
+        "Given Name": "AERON",
+        "Surname": "DAVIS"
+    },
+    "27": {
+        "Prefix Title": "DR",
+        "Given Name": "JARON",
+        "Surname": "LEE",
+        "Suffix Title": "PHD"
+    },
+    "28": {
+        "Prefix Title": "MS",
+        "Given Name": "EMILY",
+        "Suffix Title": "MS"
+    },
+    "29": {
+        "Prefix Title": "MR",
+        "Given Name": "ERICKDAVID"
+    },
+    "30": {
+        "Prefix Title": "MR",
+        "Given Name": "HENRY",
+        "Surname": "PATEL"
+    },
+    "31": {
+        "Prefix Title": "MR",
+        "Given Name": "TIM MILLER",
+        "Surname": "TURNER"
+    },
+    "32": {
+        "Prefix Title": "PROF",
+        "Given Name": "HARRY CANE",
+        "Surname": "WILSON"
+    },
+    "33": {
+        "Prefix Title": "PROF",
+        "Given Name": "VICTORIA NGUYEN",
+        "Surname": "JR",
+        "Suffix Title": "EDD"
+    },
+    "34": {
+        "Prefix Title": "REV",
+        "Given Name": "S A",
+        "Surname": "MARTINEZ"
+    },
+    "35": {
+        "Prefix Title": "HON",
+        "Given Name": "BENJAMIN",
+        "Surname": "HILL",
+        "Suffix Title": "SR JD"
+    },
+    "36": {
+        "Prefix Title": "MR",
+        "Given Name": "D R",
+        "Surname": "PEREZ"
+    },
+    "37": {
+        "Prefix Title": "CAPT",
+        "Given Name": "K J",
+        "Surname": "NGUYEN"
+    },
+    "38": {
+        "Prefix Title": "HON",
+        "Given Name": "F M",
+        "Surname": "BROWN"
+    },
+    "39": {
+        "Prefix Title": "MR",
+        "Given Name": "ALEXANDER WRIGHT",
+        "Surname": "II"
+    },
+    "40": {
+        "Prefix Title": "DR",
+        "Given Name": "V D",
+        "Surname": "LEWIS",
+        "Suffix Title": "MD"
+    },
+    "41": {
+        "Prefix Title": "MR",
+        "Given Name": "B H",
+        "Surname": "FOSTER"
+    },
+    "42": {
+        "Prefix Title": "CAPT",
+        "Given Name": "E A",
+        "Surname": "HERNANDEZ"
+    },
+    "43": {
+        "Prefix Title": "MS",
+        "Given Name": "M L",
+        "Surname": "GREEN"
+    },
+    "44": {
+        "Prefix Title": "PROF",
+        "Given Name": "W S",
+        "Surname": "WHITE"
+    },
+    "45": {
+        "Prefix Title": "DR",
+        "Given Name": "Q L",
+        "Surname": "CLARK",
+        "Suffix Title": "PHD"
+    },
+    "46": {
+        "Prefix Title": "MR",
+        "Given Name": "R T",
+        "Surname": "ANDERSON"
+    },
+    "47": {
+        "Prefix Title": "MS",
+        "Given Name": "P M",
+        "Surname": "PATEL"
+    },
+    "48": {
+        "Prefix Title": "DR",
+        "Given Name": "I J",
+        "Surname": "COOPER"
+    },
+    "49": {
+        "Prefix Title": "MR",
+        "Given Name": "P K",
+        "Surname": "CHARLES"
+    },
+    "50": {
+        "Prefix Title": "MR",
+        "Given Name": "Y M",
+        "Surname": "TANNER"
+    }
+}
+
+Number of Exceptions Thrown: -	0
+Number of Parsed Name: -	50
+Percentage of Parsed Result: -	100.0
+
+
+ Evaluation Metrics
+
+                 index  precision    recall  f1-score     support
+0         Prefix Title   0.941176  0.979592  0.960000   49.000000
+1           Given Name   0.931818  1.000000  0.964706   41.000000
+2              Surname   0.954545  0.857143  0.903226   49.000000
+3  Generational Suffix   0.000000  0.000000  0.000000    1.000000
+4         Suffix Title   1.000000  0.913043  0.954545   23.000000
+5             accuracy   0.932515  0.932515  0.932515    0.932515
+6            macro avg   0.765508  0.749956  0.756495  163.000000
+7         weighted avg   0.945368  0.932515  0.937457  163.000000

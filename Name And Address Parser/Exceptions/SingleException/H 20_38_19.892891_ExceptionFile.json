@@ -1,0 +1,43 @@
+[
+    {
+        "Record ID": "Single Line Exception_File H-->01",
+        "INPUT": "PO BOX 17 LITTLE ROCK AR 72204",
+        "XXNWWTN": [
+            [
+                "PO",
+                "USAD_BNM",
+                "X"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X"
+            ],
+            [
+                "17",
+                "USAD_BNO",
+                "N"
+            ],
+            [
+                "LITTLE",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ROCK",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "AR",
+                "USAD_STA",
+                "T"
+            ],
+            [
+                "72204",
+                "USAD_ZIP",
+                "N"
+            ]
+        ]
+    }
+]

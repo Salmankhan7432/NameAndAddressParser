@@ -1,0 +1,46 @@
+{
+    "Record ID": "Single Line Exception_File xfc-->01",
+    "INPUT": "30 ellwine dr, number l floor 3, eagle mountain, UT 84041",
+    "NWF,WWWN,WF,TN": [
+        [
+            "USAD_SNO",
+            "N",
+            "30"
+        ],
+        [
+            "USAD_SNM",
+            "W",
+            "ELLWINE"
+        ],
+        [
+            "USAD_SFX",
+            "F",
+            "DR"
+        ],
+        [
+            "USAD_ANM",
+            "WW",
+            "NUMBER FLOOR"
+        ],
+        [
+            "USAD_ANO",
+            "WN",
+            "L 3"
+        ],
+        [
+            "USAD_CTY",
+            "WF",
+            "EAGLE MOUNTAIN"
+        ],
+        [
+            "USAD_STA",
+            "T",
+            "UT"
+        ],
+        [
+            "USAD_ZIP",
+            "N",
+            "84041"
+        ]
+    ]
+}

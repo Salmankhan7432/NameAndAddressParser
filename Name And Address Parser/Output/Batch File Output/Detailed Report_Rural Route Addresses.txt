@@ -1,0 +1,2165 @@
+Exception and Mask Report
+
+Number of Pattern Parsed Addresses: -	50
+Percentage of Patterns Parsed Result:  -	100.00%
+
+Number of Exceptions Thrown: -		0
+Percentage of RuleBased Parsed Result: -	0.00%
+Output From Active Learning
+
+{
+    "1": [
+        {
+            "Record ID": "1",
+            "INPUT": "RR 15 BOX 36 Austin PA 16720",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "15"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "36"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "AUSTIN"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "16720"
+                ]
+            ]
+        }
+    ],
+    "2": [
+        {
+            "Record ID": "2",
+            "INPUT": "RR 22 BOX 71 McGregor IA 52157",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "22"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "71"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MCGREGOR"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "52157"
+                ]
+            ]
+        }
+    ],
+    "3": [
+        {
+            "Record ID": "3",
+            "INPUT": "RR 2 BOX 22 Lawton IA 51030",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "2"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "22"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "LAWTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "51030"
+                ]
+            ]
+        }
+    ],
+    "4": [
+        {
+            "Record ID": "4",
+            "INPUT": "RR 12 BOX 19 Topmost KY 41862",
+            "RNXNWFN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "12"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "19"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TOPMOST"
+                ],
+                [
+                    "USAD_STA",
+                    "F",
+                    "KY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "41862"
+                ]
+            ]
+        }
+    ],
+    "5": [
+        {
+            "Record ID": "5",
+            "INPUT": "RR 15 BOX 73 Capron IL 61012",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "15"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "73"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CAPRON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IL"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "61012"
+                ]
+            ]
+        }
+    ],
+    "6": [
+        {
+            "Record ID": "6",
+            "INPUT": "RR 16 BOX 90 Sarcoxie MO 64862",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "16"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "90"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "SARCOXIE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MO"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "64862"
+                ]
+            ]
+        }
+    ],
+    "7": [
+        {
+            "Record ID": "7",
+            "INPUT": "RR 4 BOX 98 Marmaduke AR 72443",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "4"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "98"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MARMADUKE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "AR"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "72443"
+                ]
+            ]
+        }
+    ],
+    "8": [
+        {
+            "Record ID": "8",
+            "INPUT": "RR 5 BOX 10 Putney KY 40865",
+            "RNXNWFN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "5"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "10"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PUTNEY"
+                ],
+                [
+                    "USAD_STA",
+                    "F",
+                    "KY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "40865"
+                ]
+            ]
+        }
+    ],
+    "9": [
+        {
+            "Record ID": "9",
+            "INPUT": "RR 11 BOX 76 Rosedale IN 47874",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "11"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "76"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ROSEDALE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "47874"
+                ]
+            ]
+        }
+    ],
+    "10": [
+        {
+            "Record ID": "10",
+            "INPUT": "RR 6 BOX 45 Stuart VA 24171",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "6"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "45"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "STUART"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "VA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "24171"
+                ]
+            ]
+        }
+    ],
+    "11": [
+        {
+            "Record ID": "11",
+            "INPUT": "RR 3 BOX 27 Sibley LA 71073",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "3"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "27"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "SIBLEY"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "LA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "71073"
+                ]
+            ]
+        }
+    ],
+    "12": [
+        {
+            "Record ID": "12",
+            "INPUT": "RR 1 BOX 69 Larned KS 67550",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "1"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "69"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "LARNED"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "67550"
+                ]
+            ]
+        }
+    ],
+    "13": [
+        {
+            "Record ID": "13",
+            "INPUT": "RR 4 BOX 72 Grafton ND 58237",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "4"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "72"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "GRAFTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ND"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "58237"
+                ]
+            ]
+        }
+    ],
+    "14": [
+        {
+            "Record ID": "14",
+            "INPUT": "RR 2 BOX 16 Mulino OR 97042",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "2"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "16"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MULINO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "OR"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "97042"
+                ]
+            ]
+        }
+    ],
+    "15": [
+        {
+            "Record ID": "15",
+            "INPUT": "RR 5 BOX 42 Moulton IA 52572",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "5"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "42"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MOULTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "52572"
+                ]
+            ]
+        }
+    ],
+    "16": [
+        {
+            "Record ID": "16",
+            "INPUT": "RR 8 BOX 70 Cascade WI 53011",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "8"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "70"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CASCADE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "53011"
+                ]
+            ]
+        }
+    ],
+    "17": [
+        {
+            "Record ID": "17",
+            "INPUT": "RR 9 BOX 84 Homer MI 49245",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "9"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "84"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "HOMER"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "49245"
+                ]
+            ]
+        }
+    ],
+    "18": [
+        {
+            "Record ID": "18",
+            "INPUT": "RR 11 BOX 44 Burnside KY 42519",
+            "RNXNWFN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "11"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "44"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BURNSIDE"
+                ],
+                [
+                    "USAD_STA",
+                    "F",
+                    "KY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "42519"
+                ]
+            ]
+        }
+    ],
+    "19": [
+        {
+            "Record ID": "19",
+            "INPUT": "RR 12 BOX 25 Fairfield WA 99012",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "12"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "25"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "FAIRFIELD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "99012"
+                ]
+            ]
+        }
+    ],
+    "20": [
+        {
+            "Record ID": "20",
+            "INPUT": "RR 13 BOX 61 Atwood KS 67730",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "13"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "61"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ATWOOD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "67730"
+                ]
+            ]
+        }
+    ],
+    "21": [
+        {
+            "Record ID": "21",
+            "INPUT": "RR 14 BOX 94 Greencastle IN 46135",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "14"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "94"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "GREENCASTLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "46135"
+                ]
+            ]
+        }
+    ],
+    "22": [
+        {
+            "Record ID": "22",
+            "INPUT": "RR 15 BOX 38 Kirbyville TX 75956",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "15"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "38"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "KIRBYVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "75956"
+                ]
+            ]
+        }
+    ],
+    "23": [
+        {
+            "Record ID": "23",
+            "INPUT": "RR 17 BOX 86 Bonesteel SD 57317",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "17"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "86"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BONESTEEL"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "SD"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "57317"
+                ]
+            ]
+        }
+    ],
+    "24": [
+        {
+            "Record ID": "24",
+            "INPUT": "RR 18 BOX 52 Chewelah WA 99109",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "18"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "52"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHEWELAH"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "99109"
+                ]
+            ]
+        }
+    ],
+    "25": [
+        {
+            "Record ID": "25",
+            "INPUT": "RR 20 BOX 10 Rutledge TN 37861",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "20"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "10"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "RUTLEDGE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "37861"
+                ]
+            ]
+        }
+    ],
+    "26": [
+        {
+            "Record ID": "26",
+            "INPUT": "RR 21 BOX 77 Roscommon MI 48653",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "21"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "77"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ROSCOMMON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "48653"
+                ]
+            ]
+        }
+    ],
+    "27": [
+        {
+            "Record ID": "27",
+            "INPUT": "RR 23 BOX 32 Sherwood OR 97140",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "23"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "32"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "SHERWOOD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "OR"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "97140"
+                ]
+            ]
+        }
+    ],
+    "28": [
+        {
+            "Record ID": "28",
+            "INPUT": "RR 24 BOX 67 Colfax WI 54730",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "24"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "67"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "COLFAX"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "54730"
+                ]
+            ]
+        }
+    ],
+    "29": [
+        {
+            "Record ID": "29",
+            "INPUT": "RR 25 BOX 99 Alice TX 78332",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "25"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "99"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ALICE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "78332"
+                ]
+            ]
+        }
+    ],
+    "30": [
+        {
+            "Record ID": "30",
+            "INPUT": "RR 27 BOX 46 Vanceboro ME 04491",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "27"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "46"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "VANCEBORO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ME"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "04491"
+                ]
+            ]
+        }
+    ],
+    "31": [
+        {
+            "Record ID": "31",
+            "INPUT": "RR 28 BOX 80 Tipton IN 46072",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "28"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "80"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TIPTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "46072"
+                ]
+            ]
+        }
+    ],
+    "32": [
+        {
+            "Record ID": "32",
+            "INPUT": "RR 30 BOX 47 Cherokee TX 76832",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "30"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "47"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHEROKEE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "76832"
+                ]
+            ]
+        }
+    ],
+    "33": [
+        {
+            "Record ID": "33",
+            "INPUT": "RR 31 BOX 73 Easton MN 56025",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "31"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "73"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "EASTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "56025"
+                ]
+            ]
+        }
+    ],
+    "34": [
+        {
+            "Record ID": "34",
+            "INPUT": "RR 33 BOX 68 Mattituck NY 11952",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "33"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "68"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MATTITUCK"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "11952"
+                ]
+            ]
+        }
+    ],
+    "35": [
+        {
+            "Record ID": "35",
+            "INPUT": "RR 35 BOX 17 Ellsworth KS 67439",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "35"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "17"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ELLSWORTH"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "67439"
+                ]
+            ]
+        }
+    ],
+    "36": [
+        {
+            "Record ID": "36",
+            "INPUT": "RR 37 BOX 55 Knoxville PA 16928",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "37"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "55"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "KNOXVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "16928"
+                ]
+            ]
+        }
+    ],
+    "37": [
+        {
+            "Record ID": "37",
+            "INPUT": "RR 39 BOX 87 Pueblo CO 81001",
+            "RNXNFTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "39"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "87"
+                ],
+                [
+                    "USAD_CTY",
+                    "F",
+                    "PUEBLO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CO"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "81001"
+                ]
+            ]
+        }
+    ],
+    "38": [
+        {
+            "Record ID": "38",
+            "INPUT": "RR 40 BOX 31 Laconia NH 03246",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "40"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "31"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "LACONIA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NH"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "03246"
+                ]
+            ]
+        }
+    ],
+    "39": [
+        {
+            "Record ID": "39",
+            "INPUT": "RR 42 BOX 64 Williston VT 05495",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "42"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "64"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "WILLISTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "VT"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "05495"
+                ]
+            ]
+        }
+    ],
+    "40": [
+        {
+            "Record ID": "40",
+            "INPUT": "RR 44 BOX 99 Canmer KY 42722",
+            "RNXNWFN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "44"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "99"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CANMER"
+                ],
+                [
+                    "USAD_STA",
+                    "F",
+                    "KY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "42722"
+                ]
+            ]
+        }
+    ],
+    "41": [
+        {
+            "Record ID": "41",
+            "INPUT": "RR 45 BOX 22 Beaverville IL 60912",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "45"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "22"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BEAVERVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IL"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "60912"
+                ]
+            ]
+        }
+    ],
+    "42": [
+        {
+            "Record ID": "42",
+            "INPUT": "RR 47 BOX 47 South Colton NY 13687",
+            "RNXNDWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "47"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "47"
+                ],
+                [
+                    "USAD_CTY",
+                    "DW",
+                    "SOUTH COLTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "13687"
+                ]
+            ]
+        }
+    ],
+    "43": [
+        {
+            "Record ID": "43",
+            "INPUT": "RR 49 BOX 82 Minneota MN 56264",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "49"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "82"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MINNEOTA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "56264"
+                ]
+            ]
+        }
+    ],
+    "44": [
+        {
+            "Record ID": "44",
+            "INPUT": "RR 50 BOX 13 Putnamville IN 46170",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "50"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "13"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PUTNAMVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "46170"
+                ]
+            ]
+        }
+    ],
+    "45": [
+        {
+            "Record ID": "45",
+            "INPUT": "RR 52 BOX 88 Koshkonong MO 65692",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "52"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "88"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "KOSHKONONG"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MO"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "65692"
+                ]
+            ]
+        }
+    ],
+    "46": [
+        {
+            "Record ID": "46",
+            "INPUT": "RR 54 BOX 30 Chaparral NM 88081",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "54"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "30"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHAPARRAL"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NM"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "88081"
+                ]
+            ]
+        }
+    ],
+    "47": [
+        {
+            "Record ID": "47",
+            "INPUT": "RR 56 BOX 66 Bluefield WV 24701",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "56"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "66"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BLUEFIELD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WV"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "24701"
+                ]
+            ]
+        }
+    ],
+    "48": [
+        {
+            "Record ID": "48",
+            "INPUT": "RR 57 BOX 91 Mound Valley KS 67354",
+            "RNXNWFTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "57"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "91"
+                ],
+                [
+                    "USAD_CTY",
+                    "WF",
+                    "MOUND VALLEY"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "67354"
+                ]
+            ]
+        }
+    ],
+    "49": [
+        {
+            "Record ID": "49",
+            "INPUT": "RR 59 BOX 45 Harwich MA 02645",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "59"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "45"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "HARWICH"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "02645"
+                ]
+            ]
+        }
+    ],
+    "50": [
+        {
+            "Record ID": "50",
+            "INPUT": "RR 61 BOX 98 Washburn WI 54891",
+            "RNXNWTN": [
+                [
+                    "USAD_RNM",
+                    "R",
+                    "RR"
+                ],
+                [
+                    "USAD_RNO",
+                    "N",
+                    "61"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "98"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "WASHBURN"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "54891"
+                ]
+            ]
+        }
+    ]
+}
+
+Output Fron Rule Based Approach
+
+{}

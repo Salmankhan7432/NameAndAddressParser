@@ -1,8 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Nov 11 20:27:31 2023
+Created on Sat Nov 11 21:15:57 2023
 
-@author: Salman Khan
+@author: skhan2
+"""
+
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 31 09:15:34 2022
+
+@author: onais
 """
 
 import re
@@ -15,7 +22,6 @@ import PreprocessingNameAddress as PreProc
 import sklearn
 from sklearn.metrics import multilabel_confusion_matrix,confusion_matrix,classification_report
 #Parsing 1st program
-from DB_Operations import DB_Operations
 import os
 import warnings
 warnings.filterwarnings("ignore")
@@ -33,7 +39,6 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     FishBone=""
     Detailed_Report=""
     Mask_log={}
-    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
     file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
     Lines = Address_4CAF50.readlines()
@@ -167,15 +172,12 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         Found=False
         FoundDict={}
 
-        # if Mask_1 in data.keys():
-        #     FoundDict[Mask_1]=data[Mask_1]
-        #     Found=True
-        if db_operations.check_mask_exists(Mask_1):
-            # Mask exists in the database, retrieve data using database queries
-            FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
-            Found = True
-            # print("Found Dict = ",FoundDict[Mask_1])
+        if Mask_1 in data.keys():
+            FoundDict[Mask_1]=data[Mask_1]
+            Found=True
+
         FoundExcept=False
+        
         if Found:
             Observation+=1
             Mappings=[]
@@ -423,5 +425,4 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #     for key,value in k.items():
         #         print(i,"\t\t",key,"\t\t\t\t",value) 
         #     i+=1
-# Address_Parser("SampleAddress.txt")
-
+#Address_Parser("D://10k records.txt")

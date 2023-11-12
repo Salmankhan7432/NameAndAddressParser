@@ -1,0 +1,120 @@
+[
+    {
+        "Record ID": "3",
+        "INPUT": "6678 University Avenue ,San Juan PR 00926",
+        "NZF,WWFN": [
+            [
+                "6678",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "UNIVERSITY",
+                "USAD_NA",
+                "Z"
+            ],
+            [
+                "AVENUE",
+                "USAD_NA",
+                "F"
+            ],
+            [
+                "SAN",
+                "USAD_NA",
+                "W"
+            ],
+            [
+                "JUAN",
+                "USAD_NA",
+                "W"
+            ],
+            [
+                "PR",
+                "USAD_NA",
+                "F"
+            ],
+            [
+                "00926",
+                "USAD_NA",
+                "N"
+            ]
+        ]
+    },
+    {
+        "Record ID": "5",
+        "INPUT": "81 Mccain John, Chicago IL 60629",
+        "NWW,WTN": [
+            [
+                "81",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "MCCAIN",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "JOHN",
+                "USAD_SFX",
+                "W"
+            ],
+            [
+                "CHICAGO",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "IL",
+                "USAD_STA",
+                "T"
+            ],
+            [
+                "60629",
+                "USAD_ZIP",
+                "N"
+            ]
+        ]
+    },
+    {
+        "Record ID": "6",
+        "INPUT": "8190 Marsh Ave The Villages FL 32162",
+        "NWFWFTN": [
+            [
+                "8190",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "MARSH",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "AVE",
+                "USAD_SFX",
+                "F"
+            ],
+            [
+                "THE",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "VILLAGES",
+                "USAD_NA",
+                "F"
+            ],
+            [
+                "FL",
+                "USAD_STA",
+                "T"
+            ],
+            [
+                "32162",
+                "USAD_ZIP",
+                "N"
+            ]
+        ]
+    }
+]

@@ -174,8 +174,9 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             # Mask exists in the database, retrieve data using database queries
             FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
             Found = True
-            # print("Found Dict = ",FoundDict[Mask_1])
+
         FoundExcept=False
+        
         if Found:
             Observation+=1
             Mappings=[]

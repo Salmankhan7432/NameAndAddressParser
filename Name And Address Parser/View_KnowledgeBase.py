@@ -2,32 +2,26 @@
 """
 Created on Sun Oct 29 18:57:31 2023
 
-@author: skhan2
+@author: Salman Khan
 """
 
-from DB_Operations import open_database, get_Mask_data, get_Component_data, get_MappingJSON_data
 
-database_url = 'sqlite:///KnowledgeBase1.db'  # Replace with your actual database URL
+from DB_Operations import DB_Operations
 
-session = open_database(database_url)
+database_url = 'sqlite:///KnowledgeBase_Mapping1234.db'
+db_operations = DB_Operations(database_url)
 
-# Query and print data from Mask Table
-mask_data = get_Mask_data(session)
+mask_data = db_operations.get_Mask_data()
 print("Data from Mask Table:")
 for row in mask_data:
-    print(f"ID: {row.id}, Mask: {row.mask}, Index: {row.index}")
+    print(f"Mask: {row.mask}")
 
-# Query and print data from Component Table
-component_data = get_Component_data(session)
+component_data = db_operations.get_Component_data()
 print("\nData from Component Table:")
 for row in component_data:
-    print(f"ID: {row.id}, Component: {row.component},Description: {row.description}, Index: {row.index}" )
+    print(f"Component: {row.component}, Description: {row.description}")
 
-# Query and print data from MappingJSON Table
-MappingJSON_data = get_MappingJSON_data(session)
+MappingJSON_data = db_operations.get_MappingJSON_data()
 print("\nData from MappingJSON Table:")
 for row in MappingJSON_data:
-    print(f"ID: {row.id}, Mask Index: {row.mask_index}, Component Index: {row.component_index}, Component Value: {row.component_value}")
-
-# Close the session
-session.close()
+    print(f"Mask: {row.mask_index}, Component: {row.component_index}, Token Index: {row.component_value}")

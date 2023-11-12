@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Nov 11 21:33:57 2023
+Created on Wed Dec  7 00:06:20 2022
 
-@author: Salman Khan
+@author: Onais, Salman, Kashif
 """
 
 
@@ -17,7 +17,6 @@ import os.path
 import Rulebased as rulebased
 from tkinter import messagebox
 import PreprocessingNameAddress as PreProc
-from DB_Operations import DB_Operations
 
 from datetime import datetime,timedelta
 today=datetime.today()
@@ -63,7 +62,6 @@ def throwException(originalInput,initials):
 def Address_Parser(line,initials,originalInput):
     global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules
     Result={}
-    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     Exception_=False
     Exception_file_name=""
     fileHandle = open('USAddressWordTable.txt', 'r',encoding="utf8")
@@ -127,19 +125,17 @@ def Address_Parser(line,initials,originalInput):
         LoopCheck+=1
     Mask_1=",".join(Mask)
     FirstPhaseList = [FirstPhaseList[b] for b in range(len(FirstPhaseList)) if FirstPhaseList[b] != ","]
-    # data={}
-    # with open('JSONMappingDefault.json', 'r+', encoding='utf-8') as f:
-    #     data = json.load(f)
+    data={}
+    with open('JSONMappingDefault.json', 'r+', encoding='utf-8') as f:
+        data = json.load(f)
     Found=False
     FoundDict={}
-    # for tk,tv in data.items():
-    #     if(tk==Mask_1):
-    #         FoundDict[tk]=tv
-    #         Found=True
-    #         break
-    if db_operations.check_mask_exists(Mask_1):
-        FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
-        Found = True
+    for tk,tv in data.items():
+        if(tk==Mask_1):
+            FoundDict[tk]=tv
+            Found=True
+            break
+    
     if Found:
         Observation+=1
         Mappings=[]

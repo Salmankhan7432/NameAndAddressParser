@@ -57,7 +57,20 @@ class DB_Operations:
         finally:
             session.close()
 
+    def get_component_description(self, component):
+        try:
+            Session = sessionmaker(bind=self.engine)
+            session = Session()
 
+            component_record = session.query(ComponentTable).filter_by(component=component).first()
+
+            if component_record:
+                return component_record.description
+            else:
+                return "Not Selected"
+
+        finally:
+            session.close()
 
     
     def get_Mask_data(self):
@@ -94,32 +107,62 @@ class DB_Operations:
             session = Session()
 
             for mask, components in data.items():
-                mask_record = session.query(MaskTable).filter_by(mask=mask).first()
-                if not mask_record:
-                    mask_record = MaskTable(mask=mask)
-                    session.add(mask_record)
-                    session.commit()
-
-                mask_id = mask_record.mask
-
-                for component, values in components.items():
-                    component_record = session.query(ComponentTable).filter_by(component=component).first()
-                    if not component_record:
-                        component_record = ComponentTable(
-                            component=component,
-                            description=input(f"Give a description for {component}:")
-                        )
-                        session.add(component_record)
+                try:
+                    mask_record = session.query(MaskTable).filter_by(mask=mask).first()
+                    if not mask_record:
+                        mask_record = MaskTable(mask=mask)
+                        session.add(mask_record)
                         session.commit()
-
-                    for value in values:
-                        mapping_json_record = MappingJSON(
-                            mask_index=f"{mask_id}",
-                            component_index=component_record.component,
-                            component_value=value
-                        )
-                        session.add(mapping_json_record)
-
+    
+                    mask_id = mask_record.mask
+    
+                    for component, values in components.items():
+                        try:
+                            component_record = session.query(ComponentTable).filter_by(component=component).first()
+                            if not component_record:
+                                component_record = ComponentTable(
+                                    component=component,
+                                    description=input(f"Give a description for {component}:")
+                                )
+                                session.add(component_record)
+                                session.commit()
+        
+                            for value in values:
+                                try:
+                                    mapping_json_record = MappingJSON(
+                                        mask_index=mask_id,
+                                        component_index=component_record.component,
+                                        component_value=value
+                                    )
+                                    session.add(mapping_json_record)
+                                except IntegrityError as e:
+                                        session.rollback()
+                                        error_info = e.orig.args[0]
+                                        if 'UNIQUE constraint failed' in error_info:
+                                            pass
+                                            # print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
+                                        else:   
+                                            print(f"Error: {e}")
+                                        continue
+                        except IntegrityError as e:
+                                    session.rollback()
+                                    error_info = e.orig.args[0]
+                                    if 'UNIQUE constraint failed' in error_info:
+                                        pass
+                                        # print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
+                                    else:   
+                                        print(f"Error: {e}")
+                                    continue
+                except IntegrityError as e:
+                            session.rollback()
+                            error_info = e.orig.args[0]
+                            if 'UNIQUE constraint failed' in error_info:
+                                pass
+                                # print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
+                            else:   
+                                print(f"Error: {e}")
+                            continue
+                
             session.commit()
 
         except IntegrityError as e:
@@ -135,7 +178,31 @@ class DB_Operations:
                 print("Duplicate Dictionaries are added to the file")
             else:
                 print(f"Error: {e}")
-
+            
         finally:
             session.close()
 
+
+    def update_component_descriptions_interactively(self):
+            try:
+                Session = sessionmaker(bind=self.engine)
+                session = Session()
+
+                components = session.query(ComponentTable).all()
+
+                for component in components:
+                    current_description = component.description
+                    new_description = input(f"Enter new description for component {component.component} (current: {current_description}): ")
+
+                    if new_description:
+                        component.description = new_description
+                        print(f"Description updated for component {component.component}")
+                    else:
+                        print(f"Description for component {component.component} unchanged.")
+
+                # Commit the changes
+                session.commit()
+                print("All changes committed.")
+
+            finally:
+                session.close()

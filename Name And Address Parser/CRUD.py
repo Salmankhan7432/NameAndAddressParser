@@ -20,12 +20,13 @@ def read_data_from_file(file_path):
 
 
 if __name__ == "__main__":
-    database_url = 'sqlite:///KnowledgeBase_Test.db'
+    database_url = 'sqlite:///KnowledgeBase_TestDummy.db'
     dictionary_file_path = 'JSONMappingDefault.json'
     # data_to_add = read_data_from_file(dictionary_file_path)
     data_to_add = {
-        "NWFFSW,WW,TN": {"USAD_SNO": [1], "USAD_SNM": [2], "USAD_SFX": [3, 4], "USAD_ANM": [5], "USAD_ANO": [6], "USAD_CTY": [7, 8], "USAD_STA": [9], "USAD_ZIP": [10]},
-        "NDWF,WW,TN": {"USAD_SNO": [1], "USAD_SPR": [2], "USAD_SNM": [3], "USAD_SFX": [4], "USAD_CTY": [5, 6], "USAD_STA": [7], "USAD_ZIP": [8]}
-    }
+        "NWF,WW,TN": {"USAD_SNO": [1], "USAD_SNM": [2], "USAD_SFX": [3], "USAD_CTY": [4, 5], "USAD_STA": [6], "USAD_ZIP": [7]},
+        "NWFWW,TN": {"USAD_SNO": [1], "USAD_SNM": [2], "USAD_SFX": [3], "USAD_CTY": [4, 5], "USAD_STA": [6], "USAD_ZIP": [7]},
+        "NWFWWTN": {"USAD_SNO": [1], "USAD_SNM": [2], "USAD_SFX": [3], "USAD_CTY": [4, 5], "USAD_STA": [6], "USAD_ZIP": [7]}
+        }
 
     add_data_to_database(database_url, data_to_add)

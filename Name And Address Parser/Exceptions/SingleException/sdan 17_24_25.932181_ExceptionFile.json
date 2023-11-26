@@ -1,0 +1,38 @@
+[
+    {
+        "Record ID": "Single Line Exception_File sdan-->01",
+        "INPUT": "5506 A Street jasfdiea df8owieahdsfb isadfb ",
+        "NWFWWW": [
+            [
+                "5506",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "A",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "STREET",
+                "USAD_SFX",
+                "F"
+            ],
+            [
+                "JASFDIEA",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "DF8OWIEAHDSFB",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ISADFB",
+                "USAD_CTY",
+                "W"
+            ]
+        ]
+    }
+]

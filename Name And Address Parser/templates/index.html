@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Parser and Map Creation Form</title>
+    <style>
+        .input-group button {
+            display: block;
+            width: 100%;
+        }
+        .input-group #submit-next,
+        .input-group #save-exit {
+            display: inline-block;
+            width: auto;
+            margin-right: 10px;
+        }
+         /* Basic reset and body styling */
+         * {
+             box-sizing: border-box;
+             margin: 0;
+             padding: 0;
+         }
+         body {
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background-color: #f2f2f2;
+             color: #333;
+             line-height: 1.6;
+         }
+         /* Style for the navigation bar */
+         .navbar {
+             background-color: #4b6584;
+             overflow: hidden;
+         }
+         .navbar a {
+             float: left;
+             display: block;
+             color: white;
+             text-align: center;
+             padding: 14px 20px;
+             text-decoration: none;
+             font-size: 17px;
+         }
+         .navbar a:hover {
+             background-color: #3867d6;
+             color: white;
+         }
+         /* Main content area */
+         .container {
+             padding: 20px;
+             max-width: 800px;
+             margin: 30px auto;
+             background-color: #ffffff;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         /* Style for the form input groups */
+         .input-group {
+             margin-bottom: 20px;
+         }
+         .input-group label {
+             display: block;
+             margin-bottom: 5px;
+             color: #333;
+         }
+         .input-group input[type="text"],
+         .input-group input[type="file"] {
+             width: calc(100% - 22px); /* Adjust width to account for padding and border */
+             padding: 10px;
+             margin-bottom: 10px;
+             border: 1px solid #ccd1d9;
+             border-radius: 4px;
+         }
+         /* Style for the submit button */
+         .input-group button {
+             display: block;
+             width: 100%;
+             padding: 10px;
+             background-color: #20bf6b;
+             color: white;
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+             font-size: 17px;
+         }
+         .input-group button:hover {
+             background-color: #0b8457;
+             }
+        .result-box {
+            border-collapse: collapse;
+            margin: 30px auto;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 800px;
+        }
+
+        .result-box thead tr {
+            background-color: #20bf6b;
+            color: #ffffff;
+            text-align: left;
+        }
+                .result-box thead tr:hover {
+                    background-color: #0b8457;
+                    }
+        .result-box th,
+        .result-box td {
+            padding: 12px 15px;
+        }
+        .result-box tbody tr {
+            border-bottom: 1px solid #dddddd;
+            cursor: pointer;
+        }
+                
+        .result-box tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+            cursor: pointer;
+        }   
+        
+        .result-box tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+            cursor: pointer;
+        }
+        .result-box tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+            cursor: pointer;
+        }
+        .result-box tbody tr:hover {
+            background-color: #e1e1e1;
+            }         
+    </style>
+    
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="tablink" onclick="openTab('SingleLine')" id="defaultOpen">SingleLine Address Parser</a>
+    <a href="#" class="tablink" onclick="openTab('Batch')">Batch Parser</a>
+    <a href="#" class="tablink" onclick="openTab('Map')">Map Creation Form</a>
+</div>
+
+
+<!-- Content for SingleLine Address Parser -->
+<div id="SingleLine" class="tabcontent">
+
+    <div class="container">
+        <form id="myForm" action="/" method="POST">
+            <!--<div class="input-group"><label for="file-upload">Please Choose a Pipe Delimited File</label><input type="file" id="file-upload" name="file-upload"></div>-->
+            <div class="input-group">
+                <label for="address-input">Enter Address</label>
+                <input type="text" id="address-input" name="address" placeholder="1234 Main St" autocomplete="address">
+            </div>
+            <div class="input-group">
+                <button type="submit" id="submit-btn">Submit</button>
+            </div>
+            </div>
+            <div class="result-box" id="result-box">
+                <table id="resultTable" class="table " style="display: none;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Token</th>
+                            <th scope="col">Component</th>
+                            <th scope="col">Address</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultBody">
+                        <!-- Table rows will be populated dynamically here -->
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#myForm').submit(function(event) {
+        event.preventDefault();
+        var addressValue = $('#address-input').val();
+        $.ajax({
+            type: "POST",
+            url: "/",
+            data: { address: addressValue },
+            success: function(response) {
+                console.log('Response:', response);
+                renderAddressData(response);
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+
+    function renderAddressData(data) {
+        var tableBody = $('#resultBody');
+        tableBody.empty();
+        var tableHTML = '';
+
+        if (data && data.result && data.result.Output) {
+            var addressComponents = data.result.Output;
+
+            addressComponents.forEach(function(array) {
+                
+                    tableHTML += '<tr>';
+                    tableHTML += '<td>' + array[2] + '</td>'; // Token
+                    tableHTML += '<td>' + array[1] + '</td>'; // Component
+                    tableHTML += '<td>' + array[0] + '</td>'; // Address
+                    tableHTML += '</tr>';
+                
+            });
+
+            tableBody.html(tableHTML);
+            $('#resultTable').show();
+            $('#resultTable thead').show();
+        } else {
+            console.error('Data structure issue: Output is undefined.');
+            $('#resultTable').hide();
+            $('#resultTable thead').hide();
+        }
+    }
+
+    });
+</script>
+
+
+</body>
+</html>

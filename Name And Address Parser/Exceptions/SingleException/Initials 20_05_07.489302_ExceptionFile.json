@@ -1,0 +1,43 @@
+[
+    {
+        "Record ID": "Single Line Exception_File Initials-->01",
+        "INPUT": "5506 A s Little Rock Arkansas 72205",
+        "NWDWWTN": [
+            [
+                "5506",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "A",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "S",
+                "USAD_SPT",
+                "D"
+            ],
+            [
+                "LITTLE",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ROCK",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ARKANSAS",
+                "USAD_STA",
+                "T"
+            ],
+            [
+                "72205",
+                "USAD_ZIP",
+                "N"
+            ]
+        ]
+    }
+]

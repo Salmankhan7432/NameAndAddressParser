@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Parser and Map Creation Form</title>
+    <style>
+        /* Include styles from both parts, ensuring there are no duplicates */
+        /* ... existing styles ... */
+ /* Existing styles... */
+        .input-group button {
+            display: block;
+            width: 100%;
+            /* ... other styles ... */
+        }
+
+        /* New CSS rule for side-by-side buttons */
+        .input-group #submit-next,
+        .input-group #save-exit {
+            display: inline-block; /* This will make them sit side by side */
+            width: auto; /* Override the 100% width */
+            margin-right: 10px; /* Optional: Adds some space between the buttons */
+        }
+    </style>
+    
+    <script>
+        // JavaScript to enable tab switching
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            // Find the current tablink by its href attribute
+            var currentTab = document.querySelector(`a[href="#${tabName}"]`);
+            if (currentTab) {
+                currentTab.classList.add("active");
+            }
+        }
+
+
+        // Click on the default tab (SingleLine) on page load
+        window.onload = function() {
+            openTab('SingleLine');
+            document.getElementById('defaultOpen').classList.add('active');
+        };
+    </script>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="tablink" onclick="openTab('SingleLine')" id="defaultOpen">SingleLine Address Parser</a>
+    <a href="#" class="tablink" onclick="openTab('Batch')">Batch Parser</a>
+    <a href="#" class="tablink" onclick="openTab('Map')">Map Creation Form</a>
+</div>
+
+
+<!-- Content for SingleLine Address Parser -->
+<div id="SingleLine" class="tabcontent">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Parser Interface</title>
+    <style>
+        /* Basic reset and body styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Style for the navigation bar */
+        .navbar {
+            background-color: #4b6584;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #3867d6;
+            color: white;
+        }
+        /* Main content area */
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Style for the form input groups */
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .input-group input[type="text"],
+        .input-group input[type="file"] {
+            width: calc(100% - 22px); /* Adjust width to account for padding and border */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccd1d9;
+            border-radius: 4px;
+        }
+        /* Style for the submit button */
+        .input-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #20bf6b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        .input-group button:hover {
+            background-color: #0b8457;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="myForm" action="/" method="POST">
+            <!--<div class="input-group"><label for="file-upload">Please Choose a Pipe Delimited File</label><input type="file" id="file-upload" name="file-upload"></div>-->
+            <div class="input-group">
+                <label for="address-input">Enter Address</label>
+                <input type="text" id="address-input" name="address" placeholder="1234 Main St" autocomplete="address">
+            </div>
+            <div class="input-group">
+                <button type="submit" id="submit-btn">Submit</button>
+            </div>
+            </div>
+            <div class="result-box" id="result-box" style="display: none;">
+                    <table id="resultTable" style="display: none;">
+                        <!-- Table header -->
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Component</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <!-- Table body -->
+                        <tbody id="resultBody">
+                            <!-- Table rows will be filled dynamically -->
+                        </tbody>
+                    </table>
+            </div>
+        </form>
+
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#myForm').submit(function(event) {
+        event.preventDefault();
+        var addressValue = $('#address').val();
+        $.ajax({
+            type: "POST",
+            url: "/process",
+            data: { address: addressValue },
+            success: function(response) {
+                // Assuming 'response' is the processed data dictionary
+                populateTable(response);
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+
+function renderAddressData(data) {
+    var tableBody = $('#resultBody');
+    tableBody.empty();
+    var tableHTML = '';
+
+    // Accessing the 'NWFWW,TN' array in the provided JSON data
+    var addressComponents = data['NWFWW,TN'];
+
+    // Iterate through the address components to populate the table
+    for (var i = 0; i < addressComponents.length; i++) {
+        var rowData = addressComponents[i];
+        tableHTML += '<tr>';
+        tableHTML += '<td>' + rowData[1] + '</td>'; // Token
+        tableHTML += '<td>' + rowData[2] + '</td>'; // Component
+        tableHTML += '<td>' + rowData[0] + '</td>'; // Address
+        tableHTML += '</tr>';
+    }
+
+    // Update the table body with the generated HTML
+    tableBody.html(tableHTML);
+    $('#resultTable').show(); // Display the table
+}
+
+// Example usage: Assuming 'data' contains the JSON object you provided
+var sampleData = {
+    "Record ID": "Single Line Exception_File 123-->01",
+    "INPUT": "5506 A Street Little Rock, AR 72205",
+    "NWFWW,TN": [
+        ["USAD_SNO", "N", "5506"],
+        ["USAD_SNM", "W", "A"],
+        ["USAD_SFX", "F", "STREET"],
+        ["USAD_CTY", "WW", "LITTLE ROCK"],
+        ["USAD_STA", "T", "AR"],
+        ["USAD_ZIP", "N", "72205"]
+    ]
+};
+
+// Call the function to render the table with sample data
+renderAddressData(sampleData);
+})
+</script>
+</body>
+</html>
+
+    <!-- Include the content from Part 1 for SingleLine Address Parser here -->
+</div>
+
+<!-- Content for Batch Parser (if any) -->
+<div id="Batch" class="tabcontent">
+    <!-- Batch Parser content would go here -->
+</div>
+
+<!-- Content for Map Creation Form -->
+<div id="Map" class="tabcontent">
+    <!-- Include the content from Part 2 for Map Creation Form here -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Creation Form</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            color: white;
+        }
+        .navbar a {
+            padding: 12px 16px;
+            float: left;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar a.active {
+            background-color: #666;
+        }
+
+        /* Two-column layout */
+        .left-column, .right-column {
+            width: 50%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        /* Styling for form elements */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input, select, textarea {
+            width: 95%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin-left: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .file-input-container {
+            background-color: #f2f2f2;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+        .file-input-container button {
+            float: none;
+            display: inline-block;
+            padding: 6px 12px;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="left-column">
+        <table>
+            <tr>
+                <th>Mask Token</th>
+                <th>Address Token</th>
+                <th>Address Component</th>
+            </tr>
+            <!-- Repeat this row structure for each token -->
+            <tr>
+                <td><input type="text" value="N" readonly /></td>
+                <td><input type="text" value="6678" readonly /></td>
+                <td>
+                    <select>
+                        <option selected>Street Number</option>
+                        <!-- Add other options here -->
+                        <tr>
+                <td><input type="text" value="N" readonly /></td>
+                <td><input type="text" value="6678" readonly /></td>
+                <td>
+                    <select>
+                        <option selected>Street Number</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" value="N" readonly /></td>
+                <td><input type="text" value="6678" readonly /></td>
+                <td>
+                    <select>
+                        <option selected>Street Number</option>
+                <tr>
+                <td><input type="text" value="N" readonly /></td>
+                <td><input type="text" value="6678" readonly /></td>
+                <td>
+                    <select>
+                        <option selected>Street Number</option>
+                        <tr>
+                <td><input type="text" value="N" readonly /></td>
+                <td><input type="text" value="6678" readonly /></td>
+                <td>
+                    <select>
+                        <option selected>Street Number</option>
+            <!-- Additional rows... -->
+            
+            
+        </table>
+    </div>
+    <div class="right-column">
+    <!-- ... [previous code for the left-column] ... -->
+
+<div class="right-column">
+    <div class="input-group">
+        <label for="exception-file">Choose an Exception File</label>
+        <button id="exception-file">Choose File</button>
+        <span>No file chosen</span>
+    </div>
+    <div class="input-group">
+        <label for="exception-file-name">Exception File Name:</label>
+        <input type="text" id="exception-file-name" value="Batch test 1_13_03_47.581593.json" readonly />
+    </div>
+   <div class="input-group">
+    <label for="record-id">Record ID:</label>
+    <input type="text" id="record-id" value="3" readonly />
+</div>
+
+    <div class="input-group">
+        <label for="input-address">Input:</label>
+        <input type="text" id="input-address" value="6678 University Avenue, San Juan PR 00926" readonly />
+    </div>
+    <div class="input-group">
+        <label for="region">Region:</label><select id="region">
+        
+            <!-- Options should be dynamically populated -->
+            <option value="region1">Region 1</option>
+            <option value="region2">Region 2</option>
+            <!-- ... other options ... -->
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="type">Type:</label>
+        <select id="type">
+            <!-- Options should be dynamically populated -->
+            <option value="type1">Type 1</option>
+            <option value="type2">Type 2</option>
+            <!-- ... other options ... -->
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="token-pattern">Token Pattern:</label> <input type="text" id="token-pattern" value="NZF,WWFN" readonly />
+    </div>
+    <div class="input-group">
+        <label for="add-to-db">Add to V_DB and KB?</label><input type="checkbox" id="add-to-db" />
+        
+    </div>
+    <div class="input-group">
+        <label for="comment">Comment:</label><textarea id="comment"></textarea>
+        
+    </div>
+    <div class="input-group">
+        <label for="approved-by">Approved By:</label><input type="text" id="approved-by" />
+        
+    </div>
+<div class="input-group">
+    <button id="submit-next" style="display: inline-block;">Submit and Next</button>
+    <button id="save-exit" style="display: inline-block;">Save and Exit</button>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
+</div>
+
+</body>
+</html>

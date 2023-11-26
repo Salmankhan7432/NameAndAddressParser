@@ -271,7 +271,7 @@ class submission_form:
                 "USAD_MDG",
                 "USAD_MGN",
                 "USAD_HNM",
-                "USAD_HNO", 
+                "USAD_HNO",
                 "USAD_NA",
                 ]
             
@@ -424,7 +424,7 @@ class submission_form:
                 submit_button = ttk.Button(form_frame, text="Submit and Next", command=lambda: submitform.submit_form(Exception_file_name_entry, Input_entry, region_var, Type_var, Approval_List_var,
                                                                                                                     Mask_entry, Comment_entry, toggle_state, table_rows, dropdown_values,
                                                                                                                     form_frame, scrollbar, canvas, df, RevisedJSON, table_frame,
-                                                                                                                    label1, label2, label3, tab4, table_inner_frame), style="Submit.TButton")  # ,
+                                                                                                                    label1, label2, label3, tab4, table_inner_frame), style="Submit.TButton")
                 submit_button.grid(row=10, column=1, pady=5)
 
                 # Create a custom style for the buttons

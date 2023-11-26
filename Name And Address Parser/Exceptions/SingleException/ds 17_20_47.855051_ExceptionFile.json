@@ -1,0 +1,63 @@
+[
+    {
+        "Record ID": "Single Line Exception_File ds-->01",
+        "INPUT": "5506 A Streevasdmnads mfabwdksf askdbft, Little jhvsad javsd Rock, AR 72205",
+        "NWWWW,WWWW,TN": [
+            [
+                "5506",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "A",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "STREEVASDMNADS",
+                "USAD_SFX",
+                "W"
+            ],
+            [
+                "MFABWDKSF",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ASKDBFT",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "LITTLE",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "JHVSAD",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "JAVSD",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ROCK",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "AR",
+                "USAD_STA",
+                "T"
+            ],
+            [
+                "72205",
+                "USAD_ZIP",
+                "N"
+            ]
+        ]
+    }
+]

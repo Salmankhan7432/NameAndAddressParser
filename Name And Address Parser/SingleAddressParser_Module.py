@@ -61,7 +61,7 @@ def throwException(originalInput,initials):
         json.dump(ExceptionList, g, indent=4)
     return
 def Address_Parser(line,initials,originalInput):
-    global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules
+    global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules, OutputDict
     Result={}
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     Exception_=False
@@ -152,12 +152,13 @@ def Address_Parser(line,initials,originalInput):
             for i in v:
                 dict_found[i]=k
         nest_list=[]
+        print(dict_found)
         mask=Mask_1.replace(",","")
         for i in range(0,len(FirstPhaseList)):
             token=""
             for k,v in FirstPhaseList[i].items():
                 token=v
-            uiMappings.append([dict_found[i+1],mask[i],token])
+            uiMappings.append([token,dict_found[i+1],mask[i]])
         # print(uiMappings)
         
         for K2,V2 in sorted_Found.items():
@@ -187,11 +188,11 @@ def Address_Parser(line,initials,originalInput):
         try:
             Result["Input"]= originalInput
             Result["Output"]=uiMappings
-            messagebox.showinfo("Success!",f"{originalInput}\n\nAddress Successfully Parsed!\n\nOutput derived from Active Learning")
+            # messagebox.showinfo("Success!",f"{originalInput}\n\nAddress Successfully Parsed!\n\nOutput derived from Active Learning")
         except:
             Result["Input"]= originalInput
             Result["Output"]=uiMappings
-            messagebox.showinfo("Success!",f"{originalInput}\n\nAddress Successfully Parsed!\n\nOutput derived from Active Learning")
+            # messagebox.showinfo("Success!",f"{originalInput}\n\nAddress Successfully Parsed!\n\nOutput derived from Active Learning")
 
         
         
@@ -220,7 +221,7 @@ def Address_Parser(line,initials,originalInput):
         }
         Result["Input"]=originalInput
         Result["Output"]=rules
-        messagebox.showwarning("Exception!",f"Exception is Created for the Address\n\n{originalInput}\n\nOutput Derived from Rulebased Learning")
+        # messagebox.showwarning("Exception!",f"Exception is Created for the Address\n\n{originalInput}\n\nOutput Derived from Rulebased Learning")
 
         
         if ExceptionList:
@@ -241,7 +242,13 @@ def Address_Parser(line,initials,originalInput):
         
     Total+=1
    
-    return (Result, Mask_1,Exception_file_name, throwException,Exception_)
+    return (Result, Mask_1,Exception_file_name, throwException,Exception_,OutputDict)
+
+Convert=Address_Parser("5506 A Street Little Rock AR 72205",'initial',"5506 A Street Little Rock AR 72205")
+Result=Convert[5]
+print(Result)
+print(type(Result))
+
 # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)
 # print("Address Matching Report")
 # print("Total=",Count)

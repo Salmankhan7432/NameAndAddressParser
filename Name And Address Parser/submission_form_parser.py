@@ -18,6 +18,9 @@ import tkinter.messagebox as msg
 import pandas as pd
 from functools import partial
 import json
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from ORM import MaskTable, MappingJSON
 import NameParser___Module as NModule
 import NameAddressParser__Module as NaM
 import Address_Parser__Module as AdM
@@ -60,6 +63,9 @@ class submission_form:
                     label1,label2,label3,tab4,table_inner_frame):
         # Retrieve the entered values and process the form data
         global Stat
+        engine = create_engine('sqlite:///KnowledgeBase_TestDummy.db')
+        Session = sessionmaker(bind=engine)
+        session = Session()
         Exception_file_name = Exception_file_name_entry.get()
         Input = Input_entry.get("1.0", "end-1c")
         Input_bytes = Input.encode('utf-8')
@@ -261,29 +267,54 @@ class submission_form:
                 i+=1
     
             print(Def_Dict)
-            with open('JSONMappingDefault.json', 'r+', encoding='utf-8') as f:
-                data = json.load(f)
-                if pattern in data:
+            # with open('JSONMappingDefault.json', 'r+', encoding='utf-8') as f:
+            #     data = json.load(f)
+            #     if pattern in data:
+            #         result = messagebox.askyesno("MASK Found!", f"Mapping found for Token Pattern : {pattern} in Knowledge Base!\nDo you still want to Overwrite?")
+            #         if result:
+            #             for x in data:
+            #                 if x == pattern:
+            #                     data[x] = Def_Dict
+            #             # data[pattern] = Def_Dict
+            #         else:
+            #             pass
+            #     else:
+            #         data[pattern] = Def_Dict
+                    
+            #     f.seek(0)        # <--- should reset file position to the beginning.
+            #     json.dump(data, f)
+            #     f.truncate()# remove remaining part
+            existing_mask = session.query(MaskTable).filter_by(mask=pattern).first()
+            
+            if existing_mask:
+                # Check if the mask exists in MappingJSON
+                existing_mapping = session.query(MappingJSON).filter_by(mask_index=pattern).first()
+            
+                if existing_mapping:
                     result = messagebox.askyesno("MASK Found!", f"Mapping found for Token Pattern : {pattern} in Knowledge Base!\nDo you still want to Overwrite?")
                     if result:
-                        for x in data:
-                            if x == pattern:
-                                data[x] = Def_Dict
-                        # data[pattern] = Def_Dict
+                        session.delete(existing_mapping)
+                        session.commit()
+                    
+                        for component, index in Def_Dict.items():
+                            new_mapping_entry = MappingJSON(mask_index=pattern, component_index=component, component_value=index)
+                            session.add(new_mapping_entry)
+                        session.commit()
                     else:
                         pass
-                else:
-                    data[pattern] = Def_Dict
-                    
-                f.seek(0)        # <--- should reset file position to the beginning.
-                json.dump(data, f)
-                f.truncate()# remove remaining part
+            else:
+                
+                for component, index in Def_Dict.items():
+                    new_mapping_entry = MappingJSON(mask_index=pattern, component_index=component, component_value=index)
+                    session.add(new_mapping_entry)
+                session.commit()
+            
             if len(RevisedJSON)>0:
                 approval_form_instance.Browse_File(df,True,form_frame,canvas,table_frame,label1,label2,label3,tab4)
                 scrollbar.destroy()
                 table_inner_frame.destroy()
                 return
-            return  
+            return
         
         
         return form_data, rejection_data

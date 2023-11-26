@@ -13,7 +13,7 @@ import SingleAddressParser_Module as AD_API
 import textwrap
 import os
 import test_Main
-
+from DB_Operations import DB_Operations
 
 class Address_parser_misc():
     def __init__(self):
@@ -97,31 +97,32 @@ class Address_parser_misc():
 
         ### toggle_button.grid(row=5, column=0,columnspan=2, pady=5)
         ### style.configure("Toggle.TCheckbutton", font=("Arial", 14))
-        USAD_Descriptions = {
+        # USAD_Descriptions = {
             
-            "USAD_SNO": "Street Number",
-            "USAD_SPR": "Street Pre-Directional",
-            "USAD_SNM": "Street Name",
-            "USAD_SFX": "Street Suffix",
-            "USAD_SPT": "Street Post-Directional",
-            "USAD_ANM": "Secondary Address Name",
-            "USAD_ANO": "Secondary Address Number",
-            "USAD_CTY": "City Name",
-            "USAD_STA": "State Name",
-            "USAD_ZIP": "Zip Code",
-            "USAD_ZP4": "Zip 4 Code",
-            "USAD_BNM": "Box Name",
-            "USAD_BNO": "Box Number",
-            "USAD_RNM": "Route Name",
-            "USAD_RNO": "Route Number",
-            "USAD_ORG": "Organization Name",
-            "USAD_MDG": "Military Rd Name",
-            "USAD_MGN": "Military Rd Number",
-            "USAD_HNM": "Highway Name",
-            "USAD_HNO": "Highway Number", "USAD_NA":"Not Selected"}
+        #     "USAD_SNO": "Street Number",
+        #     "USAD_SPR": "Street Pre-Directional",
+        #     "USAD_SNM": "Street Name",
+        #     "USAD_SFX": "Street Suffix",
+        #     "USAD_SPT": "Street Post-Directional",
+        #     "USAD_ANM": "Secondary Address Name",
+        #     "USAD_ANO": "Secondary Address Number",
+        #     "USAD_CTY": "City Name",
+        #     "USAD_STA": "State Name",
+        #     "USAD_ZIP": "Zip Code",
+        #     "USAD_ZP4": "Zip 4 Code",
+        #     "USAD_BNM": "Box Name",
+        #     "USAD_BNO": "Box Number",
+        #     "USAD_RNM": "Route Name",
+        #     "USAD_RNO": "Route Number",
+        #     "USAD_ORG": "Organization Name",
+        #     "USAD_MDG": "Military Rd Name",
+        #     "USAD_MGN": "Military Rd Number",
+        #     "USAD_HNM": "Highway Name",
+        #     "USAD_HNO": "Highway Number", "USAD_NA":"Not Selected"}
         
         
         
+        db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
         initial = simpledialog.askstring("Optional", "Your Initials")
         # print(single_input.get("1.0","end-1c"))
         Convert=AD_API.Address_Parser(single_input.get("1.0","end-1c"),initial,originalInput=single_input.get("1.0","end-1c"))
@@ -145,10 +146,19 @@ class Address_parser_misc():
                 tree.delete(item)
             tree.insert('','end',values=(self.wrap('Mask'),self.wrap(Convert[1]),"","","Active Learning"))
             for m in Result["Output"]: 
-                if m[0] in USAD_Descriptions:
-                    m1_display = USAD_Descriptions[m[0]]
-                tree.insert('', 'end', values=(self.wrap(m[1]),self.wrap(m[2]),self.wrap(m[0]),self.wrap(m1_display)))
+                # if m[0] in USAD_Descriptions:
+                #     m1_display = USAD_Descriptions[m[0]]
+                # tree.insert('', 'end', values=(self.wrap(m[1]),self.wrap(m[2]),self.wrap(m[0]),self.wrap(m1_display)))
+                component_index = m[0]
             
+                # Fetch description for the component index
+                component_description = db_operations.get_component_description(component_index)
+            
+                tree.insert('', 'end', values=(
+                    self.wrap(m[2]),
+                    self.wrap(m[0]),
+                    self.wrap(m[1]),
+                    self.wrap(component_description)))
             
         
         elif Convert[4]:
@@ -168,10 +178,17 @@ class Address_parser_misc():
                 tree.delete(item)
             tree.insert('','end',values=(self.wrap('Mask'),self.wrap(Convert[1]),"","","RuleBased"))
             for m in Result["Output"]:
-                if m[1] in USAD_Descriptions:
-                    m1_display = USAD_Descriptions[m[1]]
-                tree.insert('', 'end', values=(self.wrap(m[2]),self.wrap(m[0]),self.wrap(m[1]),self.wrap(m1_display)))
+                # if m[1] in USAD_Descriptions:
+                #     m1_display = USAD_Descriptions[m[1]]
+                # tree.insert('', 'end', values=(self.wrap(m[2]),self.wrap(m[0]),self.wrap(m[1]),self.wrap(m1_display)))
+                component_index = m[1]
+                component_description = db_operations.get_component_description(component_index)
             
+                tree.insert('', 'end', values=(
+                    self.wrap(m[2]),
+                    self.wrap(m[0]),
+                    self.wrap(m[1]),
+                    self.wrap(component_description)))
         
 
         

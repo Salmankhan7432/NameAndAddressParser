@@ -1,0 +1,36 @@
+{
+    "Record ID": "Single Line Exception_File das-->01",
+    "INPUT": "5506 A Street, Little jhvsad javsd Rock, AR 72205",
+    "NWF,WWWW,TN": [
+        [
+            "USAD_SNO",
+            "N",
+            "5506"
+        ],
+        [
+            "USAD_SNM",
+            "W",
+            "A"
+        ],
+        [
+            "USAD_SFX",
+            "F",
+            "STREET"
+        ],
+        [
+            "USAD_CTY",
+            "WWWW",
+            "LITTLE JHVSAD JAVSD ROCK"
+        ],
+        [
+            "USAD_STA",
+            "T",
+            "AR"
+        ],
+        [
+            "USAD_ZIP",
+            "N",
+            "72205"
+        ]
+    ]
+}

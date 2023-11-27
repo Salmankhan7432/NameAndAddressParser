@@ -138,6 +138,7 @@
     <a href="#" class="tablink" onclick="openTab('SingleLine')" id="defaultOpen">SingleLine Address Parser</a>
     <a href="#" class="tablink" onclick="openTab('Batch')">Batch Parser</a>
     <a href="#" class="tablink" onclick="openTab('Map')">Map Creation Form</a>
+    <a href="#" class="tablink" onclick="openTab('Map')">User Defined Component</a>
 </div>
 
 
@@ -160,8 +161,9 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Token</th>
-                            <th scope="col">Component</th>
                             <th scope="col">Address</th>
+                            <th scope="col">Component</th>
+                            <th scope="col">Component Description</th>
                         </tr>
                     </thead>
                     <tbody id="resultBody">
@@ -205,10 +207,11 @@
                 
                     tableHTML += '<tr>';
                     tableHTML += '<td>' + array[2] + '</td>'; // Token
-                    tableHTML += '<td>' + array[1] + '</td>'; // Component
                     tableHTML += '<td>' + array[0] + '</td>'; // Address
+                    tableHTML += '<td>' + array[1] + '</td>'; // Component
+                    tableHTML += '<td>' + array[3] + '</td>'; // Component Description
                     tableHTML += '</tr>';
-                
+                    // tableHTML += wrapTableData(array);
             });
 
             tableBody.html(tableHTML);

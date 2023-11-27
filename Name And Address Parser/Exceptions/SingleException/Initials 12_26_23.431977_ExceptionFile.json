@@ -1,0 +1,80 @@
+[
+    {
+        "Record ID": "Single Line Exception_File Initials-->01",
+        "INPUT": "1701 Westpark Drive, Little Rock, Ar 72205 234235 435 343 24 23",
+        "NWF,WW,TNNNNNN": [
+            [
+                "1701",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "WESTPARK",
+                "USAD_SNM",
+                "W",
+                "Street Name"
+            ],
+            [
+                "DRIVE",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "LITTLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "ROCK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "AR",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "72205",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "234235",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "435",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "343",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "24",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "23",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    }
+]

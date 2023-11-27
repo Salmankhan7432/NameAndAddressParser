@@ -1,0 +1,31 @@
+{
+    "Record ID": "Single Line Exception_File initial-->01",
+    "INPUT": "5506 A Street Little Rock AR 72205",
+    "NWFW,W,TN": [
+        [
+            "USAD_SNO",
+            "N",
+            "5506"
+        ],
+        [
+            "USAD_SNM",
+            "WF",
+            "A STREET"
+        ],
+        [
+            "USAD_CTY",
+            "WW",
+            "LITTLE ROCK"
+        ],
+        [
+            "USAD_STA",
+            "T",
+            "AR"
+        ],
+        [
+            "USAD_ZIP",
+            "N",
+            "72205"
+        ]
+    ]
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "Record ID": "Single Line Exception_File Initials-->01",
+        "INPUT": "4353423 4tbwrkjsnfq d234 rwefdsk 123243refd c324 werdssadabskjfbvaskjdfbvawkJABSCKJEWBCHAKJSBDFOLBeasdfkbwadsfbkas",
+        "NNWWNWW": [
+            [
+                "4353423",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "4TBWRKJSNFQ",
+                "USAD_SNM",
+                "N",
+                "Street Name"
+            ],
+            [
+                "D234",
+                "USAD_SFX",
+                "W",
+                "Street Suffix"
+            ],
+            [
+                "RWEFDSK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "123243REFD",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "C324",
+                "USAD_NA",
+                "W",
+                "Not Selected"
+            ],
+            [
+                "WERDSSADABSKJFBVASKJDFBVAWKJABSCKJEWBCHAKJSBDFOLBEASDFKBWADSFBKAS",
+                "USAD_NA",
+                "W",
+                "Not Selected"
+            ]
+        ]
+    }
+]

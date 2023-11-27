@@ -1,35 +1,40 @@
 [
     {
         "Record ID": "Single Line Exception_File Initials-->01",
-        "INPUT": "9440 Stratton Drive Frisco Tx 75035",
-        "NWFWTN": [
+        "INPUT": "5506 A Street Little Rock, AR 72205",
+        "NWFWW,TN": [
             [
-                "9440",
+                "5506",
                 "USAD_SNO",
                 "N"
             ],
             [
-                "STRATTON",
+                "A",
                 "USAD_SNM",
                 "W"
             ],
             [
-                "DRIVE",
+                "STREET",
                 "USAD_SFX",
                 "F"
             ],
             [
-                "FRISCO",
+                "LITTLE",
                 "USAD_CTY",
                 "W"
             ],
             [
-                "TX",
+                "ROCK",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "AR",
                 "USAD_STA",
                 "T"
             ],
             [
-                "75035",
+                "72205",
                 "USAD_ZIP",
                 "N"
             ]

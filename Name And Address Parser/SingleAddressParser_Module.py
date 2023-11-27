@@ -61,7 +61,7 @@ def throwException(originalInput,initials):
         json.dump(ExceptionList, g, indent=4)
     return
 def Address_Parser(line,initials,originalInput):
-    global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules, OutputDict
+    global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules
     Result={}
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     Exception_=False
@@ -158,7 +158,10 @@ def Address_Parser(line,initials,originalInput):
             token=""
             for k,v in FirstPhaseList[i].items():
                 token=v
-            uiMappings.append([token,dict_found[i+1],mask[i]])
+                # print(dict_found[i+1])
+                component_description = db_operations.get_component_description(dict_found[i+1])
+                # print(component_description)
+            uiMappings.append([token,dict_found[i+1],mask[i],component_description])
         # print(uiMappings)
         
         for K2,V2 in sorted_Found.items():
@@ -221,6 +224,11 @@ def Address_Parser(line,initials,originalInput):
         }
         Result["Input"]=originalInput
         Result["Output"]=rules
+        for m in Result["Output"]:
+            component = m[1]
+            component_description = db_operations.get_component_description(component)
+            m.append(component_description)
+        print(Result["Output"])
         # messagebox.showwarning("Exception!",f"Exception is Created for the Address\n\n{originalInput}\n\nOutput Derived from Rulebased Learning")
 
         
@@ -242,12 +250,12 @@ def Address_Parser(line,initials,originalInput):
         
     Total+=1
    
-    return (Result, Mask_1,Exception_file_name, throwException,Exception_,OutputDict)
+    return (Result, Mask_1,Exception_file_name, throwException,Exception_)
 
-Convert=Address_Parser("5506 A Street Little Rock AR 72205",'initial',"5506 A Street Little Rock AR 72205")
-Result=Convert[5]
-print(Result)
-print(type(Result))
+# Convert=Address_Parser("5506 A Street 324 2535 64356 3452323 Little, Rock, AR 72205",'initial',"5506 A Street Little Rock AR 72205")
+# Result=Convert[0]
+# print(Result)
+# print(type(Result))
 
 # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)
 # print("Address Matching Report")

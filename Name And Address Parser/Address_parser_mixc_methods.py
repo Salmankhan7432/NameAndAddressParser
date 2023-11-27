@@ -183,7 +183,7 @@ class Address_parser_misc():
                 # tree.insert('', 'end', values=(self.wrap(m[2]),self.wrap(m[0]),self.wrap(m[1]),self.wrap(m1_display)))
                 component_index = m[1]
                 component_description = db_operations.get_component_description(component_index)
-            
+                
                 tree.insert('', 'end', values=(
                     self.wrap(m[2]),
                     self.wrap(m[0]),

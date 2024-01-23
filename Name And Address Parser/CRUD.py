@@ -20,7 +20,7 @@ def read_data_from_file(file_path):
 
 
 if __name__ == "__main__":
-    database_url = 'sqlite:///KnowledgeBase_TestDummy.db'
+    database_url = 'sqlite:///KnowledgeBase_TestDummy1.db'
     dictionary_file_path = 'JSONMappingDefault.json'
     # data_to_add = read_data_from_file(dictionary_file_path)
     data_to_add = {

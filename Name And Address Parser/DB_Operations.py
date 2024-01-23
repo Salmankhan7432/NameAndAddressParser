@@ -206,3 +206,33 @@ class DB_Operations:
 
             finally:
                 session.close()
+    def Delete_records(self, component):
+        try:
+            Session = sessionmaker(bind=self.engine)
+            session = Session()
+            
+            component_record = session.query(ComponentTable).filter_by(component=component).first()
+            
+            if component_record:
+                # Fetch all mask indices associated with the component
+                linked_masks = session.query(MappingJSON).filter_by(component=component_record.component).all()
+                
+                # Delete records in the MappingJSON table first
+                for mask in linked_masks:
+                    session.query(MappingJSON).filter_by(component_index=component_record.component).delete()
+                
+                # Fetch masks associated with the component and delete them from MaskTable
+                for mask in linked_masks:
+                    mask_record = session.query(MaskTable).filter_by(mask=mask.mask).first()
+                    if mask_record:
+                        session.delete(mask_record)
+                
+                # Finally, delete the component from ComponentTable
+                session.delete(component_record)
+                session.commit()
+                
+        finally:
+            session.close()
+# database_url = 'sqlite:///KnowledgeBase_TestDummy.db'
+# db_operations = DB_Operations(database_url)
+# db_operations.Delete_records('USAD_SFX')

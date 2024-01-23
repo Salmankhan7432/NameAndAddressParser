@@ -12,7 +12,7 @@ from sqlalchemy import PrimaryKeyConstraint
 
 Base = declarative_base()
 
-engine = create_engine('sqlite:///KnowledgeBase_TestDummy.db')
+engine = create_engine('sqlite:///KnowledgeBase_TestDummy1.db')
 
 Session = sessionmaker(bind=engine)
 session = Session()

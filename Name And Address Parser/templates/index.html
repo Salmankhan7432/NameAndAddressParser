@@ -85,6 +85,24 @@
          .input-group button:hover {
              background-color: #0b8457;
              }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+         .buttons button {
+             display: block;
+             flex : 1;
+             margin-right: 5px;
+             width: 20%;
+             padding: 10px;
+             background-color: #20bf6b;
+             color: white;
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+             font-size: 17px;
+         }
         .result-box {
             border-collapse: collapse;
             margin: 30px auto;
@@ -128,7 +146,139 @@
         }
         .result-box tbody tr:hover {
             background-color: #e1e1e1;
-            }         
+            } 
+        .udresult-box {
+            border-collapse: collapse;
+            margin: 30px auto;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 750px;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .udresult-box thead tr {
+            background-color: #20bf6b;
+            color: #ffffff;
+            text-align: left;
+        }
+        .udresult-box thead th {
+            position: sticky;
+            top: 0;
+            background-color: #20bf6b;
+            color: #ffffff;
+            text-align: left;
+            padding: 12px 15px;
+        }
+        .udresult-box thead tr:hover {
+            background-color: #0b8457;
+            }
+        .udresult-box th,
+        .udresult-box td {
+            padding: 12px 15px;
+        }
+        .udresult-box tbody tr {
+
+            border-bottom: 1px solid #dddddd;
+            cursor: pointer;
+        }
+                
+        .udresult-box tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+            cursor: pointer;
+        }   
+        
+        .udresult-box tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+            cursor: pointer;
+        }
+        .udresult-box tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+            cursor: pointer;
+        }
+        .udresult-box tbody tr:hover {
+            background-color: #e1e1e1;
+            }
+        /* Style for the edit and delete buttons */
+        .edit-btn, .delete-btn {
+            padding: 8px 12px;
+            margin-right: 5px;
+            /* Applying Bootstrap classes to style buttons */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+        }
+    
+        /* Styling for the Edit button */
+        .edit-btn {
+            color: #ffc107; /* Change the color to match Bootstrap's warning button */
+            background-color: transparent;
+            border: 1px solid #ffc107; /* Border color */
+        }
+    
+        /* Styling for the Delete button */
+        .delete-btn {
+            color: #dc3545; /* Change the color to match Bootstrap's danger button */
+            background-color: transparent;
+            border: 1px solid #dc3545; /* Border color */
+        }
+    
+        /* Hover styles for both buttons */
+        .edit-btn:hover, .delete-btn:hover {
+            background-color: #f8f9fa;  
+               
+
+        /* Styling for the Save and Cancel buttons */
+        .save-btn,
+        .udresult-box .actions .save-btn {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            color: #ffc107;
+            background-color: transparent;
+            border: 1px solid #ffc107;
+        }
+
+        .cancel-btn,
+        .udresult-box .actions .cancel-btn {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            color: #dc3545;
+            background-color: transparent;
+            border: 1px solid #dc3545;
+        }
+
+        /* Hover styles for both buttons */
+        .save-btn:hover,
+        .cancel-btn:hover,
+        .udresult-box .actions .save-btn:hover,
+        .udresult-box .actions .cancel-btn:hover {
+            background-color: #f8f9fa;
+            color: #000;
+        }
+
+
+
+ 
     </style>
     
 </head>
@@ -138,7 +288,7 @@
     <a href="#" class="tablink" onclick="openTab('SingleLine')" id="defaultOpen">SingleLine Address Parser</a>
     <a href="#" class="tablink" onclick="openTab('Batch')">Batch Parser</a>
     <a href="#" class="tablink" onclick="openTab('Map')">Map Creation Form</a>
-    <a href="#" class="tablink" onclick="openTab('Map')">User Defined Component</a>
+    <a href="#" class="tablink" onclick="openTab('UDComponents')">User Defined Component</a>
 </div>
 
 
@@ -155,9 +305,9 @@
             <div class="input-group">
                 <button type="submit" id="submit-btn">Submit</button>
             </div>
-            </div>
+    </div>
             <div class="result-box" id="result-box">
-                <table id="resultTable" class="table " style="display: none;">
+                <table id="resultTable" class="table" style="display: none;">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Token</th>
@@ -173,8 +323,44 @@
             </div>
 
         </form>
-
     </div>
+<div id="UDComponents" class="tabcontent">
+    <div class="container">
+    <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
+        <div class="udresult-box" id="udresult-box">
+            <table id="udresultTable" class="table" style="display: none;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Component</th>
+                        <th scope="col">Component Description</th>
+                        <th scope="col" class="actions">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="udresultBody">
+                    <!-- Table rows will be populated dynamically here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            
+            <button onclick="fetchComponentData()">Fetch All the Components</button>
+            <button onclick="addComponent()">Add</button>
+        </div>
+    <!-- </form> -->
+    </div>
+</div>
+<script>
+    function openTab(tabName) {
+        var tabContents = document.getElementsByClassName("tabcontent");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = "none";
+        }
+        var selectedTab = document.getElementById(tabName);
+        if (selectedTab) {
+            selectedTab.style.display = "block";
+        }
+    }
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
@@ -194,7 +380,8 @@
             }
         });
     });
-
+    
+    
     function renderAddressData(data) {
         var tableBody = $('#resultBody');
         tableBody.empty();
@@ -225,6 +412,223 @@
     }
 
     });
+    function fetchComponentData() {
+        $.ajax({
+            type: "POST",
+            url: "/UserDefinedComponents",
+            success: function(response) {
+                console.log('Response:', response);
+                populateComponentsTable(response.result);
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    }
+    
+    function populateComponentsTable(components) {
+        var tableBody = $('#udresultBody');
+        tableBody.empty(); // Clear existing table rows
+        var tableHTML = '';
+    
+        // Loop through the received JSON data
+        for (var key in components) {
+            tableHTML += '<tr>';
+            tableHTML += '<td>' + key + '</td>'; // Component
+            tableHTML += '<td>' + components[key] + '</td>'; // Component Description
+            tableHTML += '<td class="actions">';
+            tableHTML += '<button class="edit-btn" onclick="editRow(this,event)">Edit</button>';
+            tableHTML += '<button class="delete-btn" onclick="deleteRow(this,event)">Delete</button>';
+            tableHTML += '</td>';
+            tableHTML += '</tr>';
+        }
+    
+        tableBody.html(tableHTML); // Inject the generated HTML into the table body
+        $('#udresultTable').show(); // Show the table
+        $('#udresultTable thead').show(); // Show the table header
+    }
+    $('#udresultBody').on('click', 'td', function (event) {
+        event.stopPropagation();
+    });
+    
+    
+    var oldComponent, oldDescription;
+    function editRow(button,event) {
+        console.log('Edit button clicked');
+        
+        var row = $(button).closest("tr");
+        var cells = row.find("td:not(.actions)");
+        event.stopPropagation();
+        event.preventDefault();
+        cells.each(function (index) {
+            if (index < 2) {
+                var cell = $(this);
+                var cellText = cell.text();
+                cell.attr('data-old-value', cellText);
+                cell.html('<input type="text" class="editable" value="' + cellText + '">');
+            }
+
+        });
+        oldComponent = row.find('td:eq(0)').data('old-value');
+        oldDescription = row.find('td:eq(1)').data('old-value');
+        
+                // Log values to console for debugging
+        console.log('oldComponent:', oldComponent);
+        console.log('oldDescription:', oldDescription);
+        
+        var actionsCell = row.find('.actions');
+        actionsCell.html('<button class="save-btn" id="#saveButton" onclick="saveRow(this,event)">Save</button>' +
+            '<button class="cancel-btn" onclick="cancelEditRow(this,event)">Cancel</button>');
+        enableButtons(row);
+    }
+
+
+    // Function to cancel editing a row
+    function cancelEditRow(button) {
+        var row = $(button).closest('tr');
+        var cells = row.find('td:not(.actions)');
+        
+        cells.each(function () {
+            var cell = $(this);
+            var oldValue = cell.attr('data-old-value');
+            cell.text(oldValue);
+        });
+    
+        var actionsCell = row.find('.actions');
+        actionsCell.html('<button class="edit-btn" onclick="editRow(this,event)">Edit</button>' +
+            '<button class="delete-btn" onclick="deleteRow(this,event)">Delete</button>');
+        enableButtons(row);
+    
+            // Preserve oldComponent and oldDescription
+        oldComponent = cells.eq(0).text();
+        oldDescription = cells.eq(1).text();
+    }
+
+
+    // Function to handle the save button click event
+    function saveRow(button) {
+        var row = $(button).closest('tr');
+        var cells = row.find('td:not(.actions)');
+        var newData = []; // Array to hold modified data
+    
+        cells.each(function () {
+            var cell = $(this);
+            var input = cell.find('input');
+            var newValue = input.val();
+            cell.text(newValue); // Update cell with new value
+    
+            // Store new data in an array
+            newData.push(newValue);
+        });
+    
+        var payload = {
+            oldComponent: oldComponent,
+            oldDescription: oldDescription,
+            newComponent: newData[0], // Updated component value after editing
+            newDescription: newData[1]
+        };
+    
+        var actionsCell = row.find('.actions');
+        actionsCell.html('<button class="edit-btn">Edit</button>' +
+            '<button class="delete-btn">Delete</button>');
+        enableButtons(row);    
+        // Preserve oldComponent and oldDescription
+        oldComponent = cells.eq(0).text();
+        oldDescription = cells.eq(1).text();
+        
+        // Send the modified data to the server
+        saveChangesToServer([payload]); // Wrap payload in an array
+    
+        // Reset oldComponent and oldDescription
+        //oldComponent = null;
+        //oldDescription = null;
+    }
+    
+    function saveChangesToServer(payload) {
+        console.log('Data sent to server:', payload);
+        $.ajax({
+            type: "POST",
+            url: "/save_changes",
+            contentType: "application/json",
+            data: JSON.stringify({ components: payload }), // Wrap payload in an object
+            success: function (response) {
+                console.log('Response:', response);
+                console.log(response.message);
+                // Handle success
+            },
+            error: function (error) {
+                console.error('Error:', error);
+                // Handle error
+            }
+            })
+        .always(function () {
+            resetButtons();
+        });
+    }
+
+    function deleteRow(button, event) {
+        var confirmation = confirm("Are you sure you want to delete this record?");
+        if (confirmation) {
+            var row = $(button).closest("tr");
+            var component = row.find('td:first').text(); // Assuming the Component column is the first one
+            
+            // Send a POST request to the server for deletion
+            $.ajax({
+                type: "POST",
+                url: "/delete_record",
+                data: { component: component }, // Send the component to be deleted
+                success: function(response) {
+                    console.log('Record deleted:', response);
+                    row.remove(); // Remove the row from the table upon successful deletion
+                },
+                error: function(error) {
+                    console.error('Error deleting record:', error);
+                }
+            });
+        } else {
+            // Do nothing if the user selects "Cancel" in the confirmation dialog
+        }
+        event.preventDefault(); // Prevent the default action of the button
+        event.stopPropagation(); // Stop the event from propagating further
+    }
+    function resetButtons() {
+        // Implement the logic to reset the buttons as needed
+        // For example, enable the edit and delete buttons
+        // Replace this with your actual logic
+        $('.edit-btn').prop('disabled', false);
+        $('.delete-btn').prop('disabled', false);
+            // Reattach the click event for the edit button
+        $('.edit-btn').off('click').on('click', function (event) {
+            editRow(this, event);
+        });
+        $('.delete-btn').off('click').on('click',function(event){
+            deleteRow(this,event);
+        });
+    }
+    function enableButtons(row) {
+        row.find('.edit-btn').prop('disabled', false);
+        row.find('.delete-btn').prop('disabled', false);
+    }
+    
+    function disableButtons(row) {
+        row.find('.edit-btn').prop('disabled', true);
+        row.find('.delete-btn').prop('disabled', true);
+    }
+
+
+    $(document).on('click', '.edit-btn', function (event) {
+        editRow(this, event);
+    });
+    
+    $(document).on('click', '.save-btn', function (event) {
+        saveRow(this,event);
+    });
+    
+    $(document).on('click', '.cancel-btn', function (event) {
+        cancelEditRow(this,event);
+    });
+
+
 </script>
 
 

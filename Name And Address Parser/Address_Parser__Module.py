@@ -44,27 +44,27 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     Truth_Result={}
     dataFinal={} 
     USAD_Conversion_Dict={
-  "USAD_SNO": 1,
-  "USAD_SPR": 2,
-  "USAD_SNM": 3,
-  "USAD_SFX": 4,
-  "USAD_SPT": 5,
-  "USAD_ANM": 6,
-  "USAD_ANO": 7,
-  "USAD_CTY": 8,
-  "USAD_STA": 9,
-  "USAD_ZIP": 10,
-  "USAD_ZP4": 11,
-  "USAD_BNM": 12,
-  "USAD_BNO": 13,
-  "USAD_RNM": 14,
-  "USAD_RNO": 15,
-  "USAD_ORG": 16,
-  "USAD_MDG": 17,
-  "USAD_MGN": 18,
-  "USAD_HNM": 19,
-  "USAD_HNO": 20
-}
+      "USAD_SNO": 1,
+      "USAD_SPR": 2,
+      "USAD_SNM": 3,
+      "USAD_SFX": 4,
+      "USAD_SPT": 5,
+      "USAD_ANM": 6,
+      "USAD_ANO": 7,
+      "USAD_CTY": 8,
+      "USAD_STA": 9,
+      "USAD_ZIP": 10,
+      "USAD_ZP4": 11,
+      "USAD_BNM": 12,
+      "USAD_BNO": 13,
+      "USAD_RNM": 14,
+      "USAD_RNO": 15,
+      "USAD_ORG": 16,
+      "USAD_MDG": 17,
+      "USAD_MGN": 18,
+      "USAD_HNM": 19,
+      "USAD_HNO": 20
+    }
     data={}
     with open('JSONMappingDefault.json', 'r+', encoding='utf8') as f:
         data = json.load(f)

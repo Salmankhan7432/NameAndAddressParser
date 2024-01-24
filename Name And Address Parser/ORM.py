@@ -12,7 +12,7 @@ from sqlalchemy import PrimaryKeyConstraint
 
 Base = declarative_base()
 
-engine = create_engine('sqlite:///KnowledgeBase_TestDummy1.db')
+engine = create_engine('sqlite:///KnowledgeBase_TestDummy5.db')
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -22,7 +22,7 @@ class MaskTable(Base):
     mask = Column(String, primary_key=True)
     # index = Column(Integer, unique=True)
     
-    mapping_json = relationship('MappingJSON', back_populates='mask', cascade='all', single_parent=True)
+    mapping_json = relationship('MappingJSON', back_populates='mask', cascade='all, delete-orphan', single_parent=True)
 
 class ComponentTable(Base):
     __tablename__ = 'componentTable'
@@ -31,7 +31,7 @@ class ComponentTable(Base):
     # index = Column(Integer, unique=True)
     description = Column(String)
     
-    mapping_json = relationship('MappingJSON', back_populates='component', cascade='all', single_parent=True)
+    mapping_json = relationship('MappingJSON', back_populates='component', cascade='all, delete-orphan', single_parent=True)
 
 class MappingJSON(Base):
     __tablename__ = 'mappingJSON'

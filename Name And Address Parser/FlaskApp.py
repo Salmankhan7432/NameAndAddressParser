@@ -15,7 +15,7 @@ from DB_Operations import DB_Operations as CRUD
 import json
 
 app = Flask(__name__, template_folder='templates')
-engine = create_engine('sqlite:///KnowledgeBase_TestDummy5.db')
+engine = create_engine('sqlite:///KnowledgeBase_Test.db')
 Session = sessionmaker(bind=engine)
 
 
@@ -34,7 +34,7 @@ def index():
 @app.route('/UserDefinedComponents', methods=["GET","POST"])
 def UD_Components():
     result= {}
-    database_url = 'sqlite:///KnowledgeBase_TestDummy5.db'
+    database_url = 'sqlite:///KnowledgeBase_Test.db'
     Database_schema = CRUD(database_url)
     if request.method == "POST":
         component_data = Database_schema.get_Component_data()
@@ -61,12 +61,10 @@ def add_new_component():
             session = Session()
     
             try:
-                # Create a new UserDefinedComponents instance and add it to the database
                 new_ud_component = ComponentTable(component=new_component, description=new_description)
                 session.add(new_ud_component)
                 session.commit()
     
-                # You may also want to update the MappingJSON and MaskTable accordingly
     
                 result['message'] = 'New component added successfully'
                 session.close()

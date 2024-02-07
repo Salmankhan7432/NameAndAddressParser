@@ -7,29 +7,94 @@ Created on Thu Nov 23 18:22:53 2023
 
 from flask import Flask, request, render_template, jsonify
 from sqlalchemy import create_engine, func
-import SingleAddressParser_Module as SAP
-from ORM import MaskTable, ComponentTable, MappingJSON
 from sqlalchemy.orm import sessionmaker
-import Address_Parser__Module as BAP
+from werkzeug.utils import secure_filename
+from tqdm import tqdm
+from flask_socketio import SocketIO
+import os
+from ORM import MaskTable, ComponentTable, MappingJSON
 from DB_Operations import DB_Operations as CRUD
-import json
+import SingleAddressParser_Module as SAP
+import Address_Parser__Module as BAP
 
 app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
 Session = sessionmaker(bind=engine)
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
+
 
 
 @app.route('/', methods=["GET", "POST"])
-def index():
+def SingleLineAddressParser():
     result = {}
     if request.method == 'POST':
         address = request.form['address']
         convert = SAP.Address_Parser(address, 'Initials', address)
-        result = convert[0]
+        if convert[4]:
+            result = convert[0]
+            result['Parsed_By'] = 'Rule Based'
+        else:
+            result = convert[0]
+            result['Parsed_By'] = 'Active Learning'
         print(result)
         return jsonify(result=result)
 
     return render_template('index.html', result=result)
+
+@app.route("/forceException", methods=["GET","POST"])
+def ForceException():
+    response = {'result': False}
+    if request.method == "POST":
+        address = request.form["address"]
+        convert = SAP.throwException(address, "initials")
+       
+        response['result'] = convert
+        print(convert)
+        
+    return jsonify(response)
+
+@app.route('/Batch_Parser', methods=["POST"])
+def BatchParser():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    if file:
+        filename = secure_filename(file.filename)
+        print(filename)
+        file_path = os.path.join('File Uploads', filename)
+        file.save(file_path)
+
+        # Create tqdm instance for progress bar
+        # total_lines = 100  # Adjust based on your requirements
+        # progress_bar = tqdm(total=total_lines, position=0, leave=True)
+
+        # def update_progress(progress):
+        #     socketio.emit('progress', {'progress': progress}, namespace='/test')
+
+        # with tqdm(total=total_lines) as progress_bar:
+            # Here you would call your Address_Parser function and pass the file path
+        convert = BAP.Address_Parser(file_path, "update_progress")
+        print(convert[0], "\n", convert[1])
+
+        # Close the tqdm instance after completion
+        # progress_bar.close()
+
+        if convert[0]:
+            result = convert[1]
+            metrics = {'metrics': convert[1]}
+            return jsonify(result=result, metrics=metrics)
+        
+
+    return jsonify(result=result, metrics=metrics)
+
+
+    
 
 @app.route('/UserDefinedComponents', methods=["GET","POST"])
 def UD_Components():

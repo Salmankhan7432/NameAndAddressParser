@@ -36,6 +36,10 @@ root_folder = Path(__file__).parents[1]
 
 ExceptionList = []
 def throwException(originalInput,initials):
+    PackAddress=PreProc.PreProcessingNameAddress().AddresssCleaning(originalInput)
+    # AddressList = re.split("\s|\s,\s ", Address)
+    AddressList = PackAddress[0]
+    AddressList= [item for item in AddressList if item]# != ","]
     rules=rulebased.RuleBasedAddressParser.AddressParser(AddressList)
     ID = str(initials) + "Forced Exception_File " +  "-->01"
     ExceptionDict = {

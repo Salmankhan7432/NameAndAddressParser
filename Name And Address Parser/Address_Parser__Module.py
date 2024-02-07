@@ -65,9 +65,9 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
       "USAD_HNM": 19,
       "USAD_HNO": 20
     }
-    data={}
-    with open('JSONMappingDefault.json', 'r+', encoding='utf8') as f:
-        data = json.load(f)
+    # data={}
+    # with open('JSONMappingDefault.json', 'r+', encoding='utf8') as f:
+    #     data = json.load(f)
     USAD_CONVERSION_={
         
   "1": "USAD_SNO",
@@ -99,12 +99,12 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
      
         fields=line.split('|')
         WordTable[fields[0]]=fields[1][0]
-    Progress.start()
+    # Progress.start()
     CNT=100/len(Lines)
     CN=0
-    for line in tqdm(Lines):
+    for line in tqdm(Lines, desc="Processing"):
         CN=CN+CNT
-        Progress["value"]=CN
+        # Progress["value"]=CN
         line=line.strip("\n").split("|")
         ID=line[0].strip()
         try:
@@ -408,8 +408,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         f=open(path,"w",encoding="utf8")
         f.write(Detailed_Report)
         f.close()
-        Progress.stop()
-        return (True,f"Detailed_Report of {file_name} Generated \n{Detailed_Report_1}")
+        # Progress.stop()
+        return (True,f"Detailed_Report of {file_name}.txt is Generated! \nFile Path: {path} \n{Detailed_Report_1}")
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)
     # print("Address Matching Report")

@@ -1,0 +1,43 @@
+[
+    {
+        "Record ID": "initialsForced Exception_File -->01",
+        "INPUT": "5506 A Street, Little Rock, AR 72205",
+        "NWF,WW,TN": [
+            [
+                "5506",
+                "USAD_SNO",
+                "N"
+            ],
+            [
+                "A",
+                "USAD_SNM",
+                "W"
+            ],
+            [
+                "STREET",
+                "USAD_SFX",
+                "F"
+            ],
+            [
+                "LITTLE",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "ROCK",
+                "USAD_CTY",
+                "W"
+            ],
+            [
+                "AR",
+                "USAD_STA",
+                "T"
+            ],
+            [
+                "72205",
+                "USAD_ZIP",
+                "N"
+            ]
+        ]
+    }
+]

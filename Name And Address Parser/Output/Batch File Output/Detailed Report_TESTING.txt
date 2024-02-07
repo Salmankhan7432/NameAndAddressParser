@@ -1,0 +1,165 @@
+Exception and Mask Report
+
+Number of Pattern Parsed Addresses: -	1
+Percentage of Patterns Parsed Result:  -	25.00%
+
+Number of Exceptions Thrown: -		3
+Percentage of RuleBased Parsed Result: -	75.00%
+Output From Active Learning
+
+{
+    "3": [
+        {
+            "Record ID": "3",
+            "INPUT": "6678 University Avenue ,San Juan,PR 00926",
+            "NZF,WW,FN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "6678"
+                ],
+                [
+                    "USAD_SNM",
+                    "Z",
+                    "UNIVERSITY"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "SAN JUAN"
+                ],
+                [
+                    "USAD_STA",
+                    "F",
+                    "PR"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "00926"
+                ]
+            ]
+        }
+    ]
+}
+
+Output Fron Rule Based Approach
+
+{
+    "1": [
+        [
+            "1234",
+            "USAD_SNO",
+            "N"
+        ],
+        [
+            "STATE",
+            "USAD_NA",
+            "R"
+        ],
+        [
+            "AVE",
+            "USAD_NA",
+            "F"
+        ],
+        [
+            "NEW",
+            "USAD_NA",
+            "W"
+        ],
+        [
+            "ALBANY",
+            "USAD_NA",
+            "W"
+        ],
+        [
+            "IN",
+            "USAD_NA",
+            "T"
+        ],
+        [
+            "47150",
+            "USAD_NA",
+            "N"
+        ]
+    ],
+    "2": [
+        [
+            "815",
+            "USAD_SNO",
+            "N"
+        ],
+        [
+            "MARVON",
+            "USAD_SNM",
+            "W"
+        ],
+        [
+            "ST",
+            "USAD_SFX",
+            "F"
+        ],
+        [
+            "SOUTH",
+            "USAD_SPT",
+            "D"
+        ],
+        [
+            "OZONE",
+            "USAD_CTY",
+            "W"
+        ],
+        [
+            "PARK",
+            "USAD_NA",
+            "F"
+        ],
+        [
+            "NY",
+            "USAD_STA",
+            "T"
+        ],
+        [
+            "11420",
+            "USAD_ZIP",
+            "N"
+        ]
+    ],
+    "4": [
+        [
+            "109",
+            "USAD_SNO",
+            "N"
+        ],
+        [
+            "MARKHAN",
+            "USAD_SNM",
+            "W"
+        ],
+        [
+            "ST",
+            "USAD_SFX",
+            "F"
+        ],
+        [
+            "CORONA",
+            "USAD_CTY",
+            "W"
+        ],
+        [
+            "NY",
+            "USAD_STA",
+            "T"
+        ],
+        [
+            "11368",
+            "USAD_ZIP",
+            "N"
+        ]
+    ]
+}

@@ -29,9 +29,22 @@
          }
          /* Style for the navigation bar */
          .navbar {
+             position: fixed;
+             top: 0;
+             width: 100%;
+             z-index: 1000;
              background-color: #4b6584;
              overflow: hidden;
          }
+         /* Add padding to the top of the body to push the main content down */
+        body {
+            padding-top: 50px; /* This should be the height of your navbar */
+        }
+        
+        /* If your page content is within a main tag or a div with a specific class, add padding or margin to that element */
+        main, .main-content {
+            margin-top: 50px; /* Adjust this value to match your navbar's height */
+        }
          .navbar a {
              float: left;
              display: block;
@@ -45,6 +58,11 @@
              background-color: #3867d6;
              color: white;
          }
+         .navbar a.active {
+            background-color: #3867d6; /* or any color that indicates the active state */
+            color: white;
+        }
+
          /* Main content area */
          .container {
              padding: 20px;
@@ -103,6 +121,21 @@
              cursor: pointer;
              font-size: 17px;
          }
+         #exception-controls {
+            margin-top: 15px;
+            text-align: center; /* Centering the checkbox and button */
+        }
+        
+        #exception-btn {
+            background-color: #f44336; /* Red color for the button */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px; /* Space between checkbox and button */
+        }
+
         .result-box {
             border-collapse: collapse;
             margin: 30px auto;
@@ -118,9 +151,9 @@
             color: #ffffff;
             text-align: left;
         }
-                .result-box thead tr:hover {
-                    background-color: #0b8457;
-                    }
+        .result-box thead tr:hover {
+            background-color: #0b8457;
+            }
         .result-box th,
         .result-box td {
             padding: 12px 15px;
@@ -276,19 +309,104 @@
             color: #000;
         }
 
+        /* Base styles for the container */
+        .box {
+            font-size: 1.25rem; /* 20px */
+            background-color: #c8dadf;
+            position: relative;
+            padding: 100px 20px;
+        }
+        
+        .box__input,
+        .box__uploading,
+        .box__success,
+        .box__error {
+            display: none;
+        }
+        
+        /* Box when dragging over */
+        .is-dragover {
+            background-color: #9ecbec;
+        }
+        
+        /* Styling for the input[type="file"] */
+        .box__file {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        /* Styling for the label */
+        .box__label {
+            font-size: 1rem;
+            display: inline-block;
+            cursor: pointer;
+            color: #333;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .box__label:hover {
+            background-color: #f7f7f7;
+        }
+        
+        /* Upload button styling */
+        .box__button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .box__button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Additional styles for 'uploading' state */
+        .box__uploading,
+        .box__success,
+        .box__error {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        
+        /* Success and error message styling */
+        .box__success,
+        .box__error {
+            font-size: 1rem;
+            line-height: 1.4;
+            text-align: center;
+        }
+        
+        .box__error {
+            color: #d9534f;
+        }
+
+
 
 
  
     </style>
-    
+<script src="https://cdn.socket.io/3.0.4/socket.io.js"></script>
+  
 </head>
 <body>
 
 <div class="navbar">
-    <a href="#" class="tablink" onclick="openTab('SingleLine')" id="defaultOpen">SingleLine Address Parser</a>
-    <a href="#" class="tablink" onclick="openTab('Batch')">Batch Parser</a>
-    <a href="#" class="tablink" onclick="openTab('Map')">Map Creation Form</a>
-    <a href="#" class="tablink" onclick="openTab('UDComponents')">User Defined Component</a>
+    <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">SingleLine Address Parser</a>
+    <a href="#" class="tablink" onclick="openTab('Batch',event)">Batch Parser</a>
+    <a href="#" class="tablink" onclick="openTab('Map',event)">Map Creation Form</a>
+    <a href="#" class="tablink" onclick="openTab('UDComponents',event)">User Defined Component</a>
 </div>
 
 
@@ -305,6 +423,12 @@
             <div class="input-group">
                 <button type="submit" id="submit-btn">Submit</button>
             </div>
+                <div id="exception-controls" style="display:none;">
+                <label for="exception-checkbox">
+                    <input type="checkbox" id="exception-checkbox" name="ForceException"> Not Satisfied?
+                </label>
+                <button type="button" id="exception-btn">Force Exception</button>
+            </div>
     </div>
             <div class="result-box" id="result-box">
                 <table id="resultTable" class="table" style="display: none;">
@@ -314,6 +438,7 @@
                             <th scope="col">Address</th>
                             <th scope="col">Component</th>
                             <th scope="col">Component Description</th>
+                            <th scope="col">Address Parsed By</th>
                         </tr>
                     </thead>
                     <tbody id="resultBody">
@@ -324,6 +449,33 @@
 
         </form>
     </div>
+
+<div id="Batch" class="tabcontent">
+    <!-- Upload Section -->
+    <div class="Batchcontainer">
+        <form id="BatchForm" method="post" enctype="multipart/form-data">
+            <div class="box">
+                <input type="file" id="file-upload" name="file" required class="box__file" data-multiple-caption="{count} files selected" multiple />
+                <label for="file-upload" class="box__label">
+                    <strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.
+                </label>
+                <button type="upload" class="box__button">Upload Files</button>
+            </div>
+            <div class="box__uploading">Uploading&hellip;</div>
+            <div class="box__success">Done!</div>
+            <div class="box__error">Error! <span></span>.</div>
+        </form>
+
+        <!-- Metrics Display -->
+        <div id="metrics-display" style="display:none; border: 1px solid black; padding: 10px;">
+            <h2>Batch Parsing Metrics</h2>
+            <p id="detailed-report"></p>
+            <!-- Metrics will be inserted here -->
+        </div>
+    </div>
+</div>
+
+
 <div id="UDComponents" class="tabcontent">
     <div class="container">
     <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
@@ -350,19 +502,40 @@
     </div>
 </div>
 <script>
-    function openTab(tabName) {
-        var tabContents = document.getElementsByClassName("tabcontent");
-        for (var i = 0; i < tabContents.length; i++) {
-            tabContents[i].style.display = "none";
-        }
-        var selectedTab = document.getElementById(tabName);
-        if (selectedTab) {
-            selectedTab.style.display = "block";
-        }
+function openTab(tabName, event) {
+    var i;
+    var tabContents = document.getElementsByClassName("tabcontent");
+    var tabLinks = document.getElementsByClassName("tablink");
+
+    for (i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none"; // Hide all tab content
     }
+
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", ""); // Remove "active" class from all tabs
+    }
+
+    document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
+    event.currentTarget.className += " active"; // Add "active" class to the clicked tab
+}
+document.getElementById('defaultOpen').click();
+
 </script>
+<script>
+    var socket = io.connect("http://" + document.domain + ":" + location.port + "/test");
+
+    socket.on("progress", function(msg) {
+        document.getElementById("progressBar").value = msg.progress;
+    });
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+
+//------------------------------------------------------------------------------------------------------------
+//                                 Single Line Address Parser Tab Functionality
+//------------------------------------------------------------------------------------------------------------
+
     $(document).ready(function() {
     $('#myForm').submit(function(event) {
         event.preventDefault();
@@ -374,6 +547,26 @@
             success: function(response) {
                 console.log('Response:', response);
                 renderAddressData(response);
+                document.getElementById('exception-controls').style.display = 'block';
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+        // Event listener for the exception button
+    $('#exception-btn').on('click', function() {
+        var forceException = $('#exception-checkbox').is(':checked');
+        var unsatisfied_address = $('#address-input').val();
+
+        // AJAX request to the server with the forceException value
+        $.ajax({
+            type: 'POST',
+            url: '/forceException', 
+            data: { address: unsatisfied_address },
+            success: function(response) {
+                console.log('Response:', response);
+                alert('Forced Exception is Created!');
             },
             error: function(error) {
                 console.error('Error:', error);
@@ -381,22 +574,26 @@
         });
     });
     
-    
     function renderAddressData(data) {
         var tableBody = $('#resultBody');
         tableBody.empty();
         var tableHTML = '';
 
-        if (data && data.result && data.result.Output) {
+        if (data && data.result && data.result.Output && data.result.Parsed_By) {
             var addressComponents = data.result.Output;
+            var parsedBy = data.result.Parsed_By;
 
-            addressComponents.forEach(function(array) {
+            addressComponents.forEach(function(array, index) {
                 
                     tableHTML += '<tr>';
                     tableHTML += '<td>' + array[2] + '</td>'; // Token
                     tableHTML += '<td>' + array[0] + '</td>'; // Address
                     tableHTML += '<td>' + array[1] + '</td>'; // Component
                     tableHTML += '<td>' + array[3] + '</td>'; // Component Description
+                    //tableHTML += '<td>' + parsedBy + '</td>'; // Parsed By
+                    if (index === 0) {
+                        tableHTML += '<td rowspan="' + addressComponents.length + '" style="vertical-align: top;">' + parsedBy + '</td>';
+                    }
                     tableHTML += '</tr>';
                     // tableHTML += wrapTableData(array);
             });
@@ -410,8 +607,96 @@
             $('#resultTable thead').hide();
         }
     }
-
     });
+    
+//------------------------------------------------------------------------------------------------------------
+//                     Batch Parser Tab Functionality
+//------------------------------------------------------------------------------------------------------------
+
+$(document).ready(function() {
+    var droppedFiles = false;
+
+    // Drag and drop functionality
+    $('.box').on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    })
+    .on('dragover dragenter', function() {
+        $('.box').addClass('is-dragover');
+    })
+    .on('dragleave dragend drop', function() {
+        $('.box').removeClass('is-dragover');
+    })
+    .on('drop', function(e) {
+        droppedFiles = e.originalEvent.dataTransfer.files;
+        displayFileName(droppedFiles[0]); // Update the file name display
+    });
+
+    // Function to update file name display
+    function displayFileName(file) {
+        var fileInfo = $('#file-drag'); // Ensure you have an element with this ID
+        var fileName = file ? file.name : "Select a file or drag it here";
+        fileInfo.text(fileName);
+    }
+
+    // Event listener for file selection
+    $('#file-upload').on('change', function() {
+        displayFileName(this.files[0]);
+    });
+
+    // Form submission event handler
+    $('#BatchForm').submit(function(event) {
+        event.preventDefault();
+
+        var ajaxData = new FormData(this);
+        if(droppedFiles) {
+            $.each(droppedFiles, function(i, file) {
+                ajaxData.append($('#file-upload').attr('name'), file);
+            });
+        }
+
+        // AJAX request for form submission
+        $.ajax({
+            url: '/Batch_Parser',
+            type: 'POST',
+            data: ajaxData,
+            contentType: false,
+            processData: false,
+            xhr: function() {
+                var xhr = new window.XMLHttpRequest();
+                xhr.upload.addEventListener('progress', function(e) {
+                    if (e.lengthComputable) {
+                        var percentComplete = (e.loaded / e.total) * 100;
+                        $('#progressBar').val(percentComplete);
+                    }
+                }, false);
+                return xhr;
+            },
+            success: function(response) {
+                console.log('File uploaded!');
+                
+                var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                $('#metrics-display').html(formattedText).show();
+            },
+            error: function(error) {
+                console.log('Upload error:', error);
+            }
+        });
+    });
+});
+
+
+
+
+//------------------------------------------------------------------------------------------------------------
+//                                  Map Creation Form Tab Functionality
+//------------------------------------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------------------------------
+//                                  User Defined Components Tab Functionality
+//------------------------------------------------------------------------------------------------------------
+
     function fetchComponentData() {
         $.ajax({
             type: "POST",

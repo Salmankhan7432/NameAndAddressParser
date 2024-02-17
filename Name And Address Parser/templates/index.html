@@ -71,6 +71,13 @@
              background-color: #ffffff;
              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
          }
+         .map-container {
+             padding: 30px;
+             max-width: 1200px;
+             margin: 50px auto;
+             background-color: #ffffff;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
          /* Style for the form input groups */
          .input-group {
              margin-bottom: 20px;
@@ -308,90 +315,180 @@
             background-color: #f8f9fa;
             color: #000;
         }
+        .map-result-box {
+            border-collapse: collapse;
+            margin: 30px auto;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 750px;
+            height: 500px;
+            overflow-y: auto;
+        }
 
-        /* Base styles for the container */
-        .box {
-            font-size: 1.25rem; /* 20px */
-            background-color: #c8dadf;
-            position: relative;
-            padding: 100px 20px;
+        .map-result-box thead tr {
+            background-color: #20bf6b;
+            color: #ffffff;
+            text-align: left;
         }
-        
-        .box__input,
-        .box__uploading,
-        .box__success,
-        .box__error {
-            display: none;
+        .map-result-box thead th {
+            position: sticky;
+            top: 0;
+            background-color: #20bf6b;
+            color: #ffffff;
+            text-align: left;
+            padding: 12px 15px;
         }
-        
-        /* Box when dragging over */
-        .is-dragover {
-            background-color: #9ecbec;
+        .map-result-box thead tr:hover {
+            background-color: #0b8457;
+            }
+        .map-result-box th,
+        .map-result-box td {
+            padding: 12px 15px;
         }
-        
-        /* Styling for the input[type="file"] */
-        .box__file {
-            width: 0.1px;
-            height: 0.1px;
-            opacity: 0;
-            overflow: hidden;
-            position: absolute;
-            z-index: -1;
-        }
-        
-        /* Styling for the label */
-        .box__label {
-            font-size: 1rem;
-            display: inline-block;
-            cursor: pointer;
-            color: #333;
-            background-color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        .box__label:hover {
-            background-color: #f7f7f7;
-        }
-        
-        /* Upload button styling */
-        .box__button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            border-radius: 5px;
+        .map-result-box tbody tr {
+
+            border-bottom: 1px solid #dddddd;
             cursor: pointer;
         }
+                
+        .map-result-box tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+            cursor: pointer;
+        }   
         
-        .box__button:hover {
-            background-color: #45a049;
+        .map-result-box tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+            cursor: pointer;
         }
-        
-        /* Additional styles for 'uploading' state */
-        .box__uploading,
-        .box__success,
-        .box__error {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            left: 0;
-            transform: translateY(-50%);
+        .map-result-box tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+            cursor: pointer;
         }
-        
-        /* Success and error message styling */
-        .box__success,
-        .box__error {
-            font-size: 1rem;
-            line-height: 1.4;
+        .map-result-box tbody tr:hover {
+            background-color: #e1e1e1;
+            }
+
+        .map-result-box .actions .cancel-btn {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
             text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            color: #dc3545;
+            background-color: transparent;
+            border: 1px solid #dc3545;
         }
-        
-        .box__error {
-            color: #d9534f;
+        label {
+            display: block; /* Makes the label take up the full width */
+            margin-bottom: 5px;
         }
 
+       /* Style for the container */
+        .container {
+            max-width: 600px; /* Adjust the width as necessary */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center; /* Center the content */
+        }
+        
+        /* Style for the input and button */
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group input[type="file"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px; /* Spacing between input and button */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .input-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green color */
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer; /* Hand icon on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        
+        .input-group button:hover {
+            background-color: #45a049; /* Darker shade of green on hover */
+        }
+        
+        /* Style for the progress bar */
+        #progressBar {
+            width: 100%;
+            height: 20px; /* Thickness of the progress bar */
+            margin-top: 20px; /* Spacing between upload button and progress bar */
+            -webkit-appearance: none; /* Removes default styling in webkit browsers */
+        }
+        
+        /* Customizes the progress bar color */
+        #progressBar::-webkit-progress-bar {
+            background-color: #eee;
+            border-radius: 4px;
+        }
+        
+        #progressBar::-webkit-progress-value {
+            background-color: #4CAF50; /* Same green as the upload button */
+            border-radius: 4px;
+        }
+        
+        #progressBar::-moz-progress-bar {
+            background-color: #4CAF50; /* For Firefox */
+            border-radius: 4px;
+        }
+        
+        /* Style for the metrics display */
+        #metrics-display {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 30px; /* Spacing between progress bar and metrics display */
+            background-color: white;
+            border-radius: 4px;
+        }
+        
+        #metrics-display h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        #metrics-display p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Ensures the content is not too wide on larger screens */
+        @media (min-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 767px) {
+            .input-group input[type="file"], .input-group button {
+                width: 100%;
+                margin-right: 0;
+            }
+        
+            .input-group button {
+                margin-top: 10px; /* Spacing between input and button on small screens */
+            }
+        }
 
 
 
@@ -405,7 +502,7 @@
 <div class="navbar">
     <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">SingleLine Address Parser</a>
     <a href="#" class="tablink" onclick="openTab('Batch',event)">Batch Parser</a>
-    <a href="#" class="tablink" onclick="openTab('Map',event)">Map Creation Form</a>
+    <a href="#" class="tablink" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
     <a href="#" class="tablink" onclick="openTab('UDComponents',event)">User Defined Component</a>
 </div>
 
@@ -452,20 +549,14 @@
 
 <div id="Batch" class="tabcontent">
     <!-- Upload Section -->
-    <div class="Batchcontainer">
+    <div class="container">
         <form id="BatchForm" method="post" enctype="multipart/form-data">
-            <div class="box">
-                <input type="file" id="file-upload" name="file" required class="box__file" data-multiple-caption="{count} files selected" multiple />
-                <label for="file-upload" class="box__label">
-                    <strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.
-                </label>
-                <button type="upload" class="box__button">Upload Files</button>
+            <div class="input-group">
+                <input type="file" id="file-upload" name="file" required>
+                <button type="upload" id="upload-btn">Upload Files</button>
             </div>
-            <div class="box__uploading">Uploading&hellip;</div>
-            <div class="box__success">Done!</div>
-            <div class="box__error">Error! <span></span>.</div>
+            <!--<progress id="progressBar" value="0" max="100"></progress>-->
         </form>
-
         <!-- Metrics Display -->
         <div id="metrics-display" style="display:none; border: 1px solid black; padding: 10px;">
             <h2>Batch Parsing Metrics</h2>
@@ -474,7 +565,81 @@
         </div>
     </div>
 </div>
+<!--------------------------------------------------------------------------------------------------- -->
+                                <!-- Map Creattion Form -->
+<!--------------------------------------------------------------------------------------------------- -->
+<div id="MapCreationForm" class="tabcontent" >
+    <div class="map-container" id="upload" style="text-align: center; margin-bottom: 20px;">
+        <input type="file" id="jsonFileInput" accept=".json">
+        <button id="loadFileBtn">Load JSON File</button>
+    </div>
+    <div class="map-container" id="mapdata" style="grid-template-columns: 1fr 1fr;" hidden>
+        <div class="leftContainer" style="width: 90%; height: 100vh; padding: 20px;">
+            <div class="map-result-box" id="map-result-box">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Mask Token</th>
+                        <th>Address Token</th>
+                        <th>Component Description</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Table body will be populated by JavaScript -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div class="rightContainer" id="inputData" style="width: 90%; height: 100vh; padding: 20px;">
+            <label for="fileName" class="" style="width: 100%; padding: 8px; margin-top: 5px;">Exception File Name : </label>
+            <input type="text" id="filename" readonly><br>
+            <label for="recordId" style="">Record ID:</label>
+            <input type="text" id="recordId" readonly><br>
+            <label for="inputValue" style="">INPUT:</label>
+            <input type="text" id="inputValue" readonly><br>
+            <label for="region" class="col-sm-2 col-form-label">Region:</label>
+            <select id="region" name="region" class="" style="">
+                <option value="Not Selected">Not Selected</option>
+                <option value="US">US</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+            </select><br>
+            <label for="type">Address Type : </label>
+            <select id="region" name="region" class="" style="">
+                <option value="street address">Street Address</option>
+                <option value="po box address">PO Box Address</option>
+                <option value="highay contract address">Highway Contract Address</option>
+                <option value="militay address">Military Address</option>
+                <option value="attention line address">Attention Line Address</option>
+                <option value="roural route address">Roural Route Address</option>
+                <option value="puerto rico address">Puerto Rico Address</option>
+                <option value="university address">University Address</option>
+            </select><br>
+            <label id="keyLabel" style="display:none; padding-bottom: 5px;" style=""></label>
+            <label for="">Add to V-DB and KB : </label>
+            <select name="kb" id="">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br>
+            <label for="comment">Comment : </label>
+            <textarea name="" id="" cols="30" rows="3"></textarea><br>
+            <label for="approvedby">Approved By : </label>
+            <select name="approvedby" id="" >
+                <option value="Person 1">Person 1</option>
+                <option value="Person 2">Person 2</option>
+                <option value="Person 3">Person 3</option>
+            </select><br>
 
+            <button id="showNextBtn">Next</button>
+        </div>
+    </div>
+
+
+
+
+</div>
+<!--------------------------------------------------------------------------------------------------- -->
+                                <!-- User Defined COmponents -->
+<!--------------------------------------------------------------------------------------------------- -->
 
 <div id="UDComponents" class="tabcontent">
     <div class="container">
@@ -561,15 +726,15 @@ document.getElementById('defaultOpen').click();
 
         // AJAX request to the server with the forceException value
         $.ajax({
-            type: 'POST',
-            url: '/forceException', 
+            type: "POST",
+            url: "/forceException", 
             data: { address: unsatisfied_address },
             success: function(response) {
-                console.log('Response:', response);
-                alert('Forced Exception is Created!');
+                console.log("Response:", response);
+                alert("Forced Exception is Created!");
             },
             error: function(error) {
-                console.error('Error:', error);
+                console.error("Error:", error);
             }
         });
     });
@@ -614,70 +779,42 @@ document.getElementById('defaultOpen').click();
 //------------------------------------------------------------------------------------------------------------
 
 $(document).ready(function() {
-    var droppedFiles = false;
-
-    // Drag and drop functionality
-    $('.box').on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    })
-    .on('dragover dragenter', function() {
-        $('.box').addClass('is-dragover');
-    })
-    .on('dragleave dragend drop', function() {
-        $('.box').removeClass('is-dragover');
-    })
-    .on('drop', function(e) {
-        droppedFiles = e.originalEvent.dataTransfer.files;
-        displayFileName(droppedFiles[0]); // Update the file name display
-    });
-
-    // Function to update file name display
-    function displayFileName(file) {
-        var fileInfo = $('#file-drag'); // Ensure you have an element with this ID
-        var fileName = file ? file.name : "Select a file or drag it here";
-        fileInfo.text(fileName);
-    }
-
-    // Event listener for file selection
-    $('#file-upload').on('change', function() {
-        displayFileName(this.files[0]);
-    });
-
-    // Form submission event handler
     $('#BatchForm').submit(function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default form submission
 
-        var ajaxData = new FormData(this);
-        if(droppedFiles) {
-            $.each(droppedFiles, function(i, file) {
-                ajaxData.append($('#file-upload').attr('name'), file);
-            });
-        }
+        var fileData = new FormData(this);
+        fileData.append('file', $('#file-upload')[0].files[0]);
 
-        // AJAX request for form submission
         $.ajax({
             url: '/Batch_Parser',
             type: 'POST',
-            data: ajaxData,
+            data: fileData,
             contentType: false,
             processData: false,
-            xhr: function() {
+            xhr: function() { 
                 var xhr = new window.XMLHttpRequest();
                 xhr.upload.addEventListener('progress', function(e) {
                     if (e.lengthComputable) {
                         var percentComplete = (e.loaded / e.total) * 100;
-                        $('#progressBar').val(percentComplete);
+                        // Update your front-end progress bar here
                     }
                 }, false);
                 return xhr;
             },
+            // Inside the success callback of your $.ajax request
             success: function(response) {
                 console.log('File uploaded!');
                 
+                // Replace newlines with <br> tags and tabs with four non-breaking spaces
                 var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
-                $('#metrics-display').html(formattedText).show();
+            
+                // Set the formatted text to your metrics display element
+                document.getElementById('metrics-display').innerHTML = formattedText;
+            
+                // Show the metrics box
+                document.getElementById('metrics-display').style.display = 'block';
             },
+
             error: function(error) {
                 console.log('Upload error:', error);
             }
@@ -686,11 +823,105 @@ $(document).ready(function() {
 });
 
 
-
-
 //------------------------------------------------------------------------------------------------------------
 //                                  Map Creation Form Tab Functionality
-//------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------      
+        
+        let data = [];
+        let currentKeyIndex = 0;
+
+        document.getElementById("loadFileBtn").addEventListener("click", loadFile);
+        document.getElementById("showNextBtn").addEventListener("click", showNext);
+
+        function loadFile() {
+            const jsonFileInput = document.getElementById("jsonFileInput");
+            // Commented out to keep the upload section visible
+            // document.getElementById("upload").style.display = "none";
+            document.getElementById("mapdata").style.display = "grid";
+            document.getElementById("filename").value = document.getElementById("jsonFileInput").files[0].name;
+            const file = jsonFileInput.files[0];
+        
+            if (file) {
+                const reader = new FileReader();
+        
+                reader.onload = function (e) {
+                    try {
+                        const newData = JSON.parse(e.target.result);
+                        data = newData; // Append new data to existing data array
+                        currentKeyIndex = 0;
+                        showNext(); // Start processing data if it's the first file
+                        
+                    } catch (error) {
+                        console.error("Parsing error:", error);
+                        alert("Invalid JSON data. Please provide a valid JSON file.",error.message);
+                    }
+                };
+        
+                reader.readAsText(file);
+            } else {
+                alert("Please select a JSON file.");
+            }
+            
+        }
+
+        function showNext() {
+            if (currentKeyIndex < data.length) {
+                const currentData = data[currentKeyIndex];
+                document.getElementById("recordId").value = currentData["Record ID"];
+                document.getElementById("inputValue").value = currentData["INPUT"];
+
+                const otherDataKey = findThirdObjectKey(currentData);
+                const otherData = currentData[otherDataKey];
+                const tableBody = document.getElementById("table-body");
+                tableBody.innerHTML = "";
+
+            if (otherDataKey) {
+                        otherData.forEach(function (item) {
+                            const row = document.createElement("tr");
+                            tableBody.appendChild(row);
+                            const reorderedItem = [item[2], item[0], item[3]];
+                            reorderedItem.forEach(function (value,index) {
+                                //const value = item[index];
+                                const td = document.createElement("td");
+                                if (index == 2) {
+                                    // Convert value column to a dropdown menu
+                                    const valueSelect = document.createElement("select");
+                                    valueSelect.name = "value";
+                                    const options = ["USAD_SNO", "USAD_SNM", "USAD_SFX", "USAD_ANO", "USAD_ANM", "USAD_CTY", "USAD_STA", "USAD_ZIP", "USAD_SPR", "USAD_BNM", "USAD_BNO", "USAD_SPT", "USAD_ZP4", "USAD_RNM", "USAD_RNO", "USAD_ORG", "USAD_MGN", "USAD_MDG", "USAD_HNO", "USAD_HNM", "USAD_NA"];
+                                    options.forEach(function (option) {
+                                        const optionElement = document.createElement("option");
+                                        optionElement.value = option;
+                                        optionElement.textContent = option;
+                                        valueSelect.appendChild(optionElement);
+                                    });
+                                    valueSelect.value = value;
+                                    td.appendChild(valueSelect);
+                                } else {
+                                    td.textContent = value;
+                                }
+                                row.appendChild(td);
+                            });
+                        });
+                    } else {
+                        alert("No third object found in the current data.");
+                    }
+            
+                    currentKeyIndex++;
+                } else {
+                    alert("End of data reached");
+                    currentKeyIndex = 0; // Reset currentKeyIndex for the next set of data
+                }
+            }
+
+        function findThirdObjectKey(data) {
+            for (const key in data) {
+                if (key !== "Record ID" && key !== "INPUT") {
+                    return key;
+                }
+            }
+            return null; // No third object key found
+        }
+
 
 
 //------------------------------------------------------------------------------------------------------------

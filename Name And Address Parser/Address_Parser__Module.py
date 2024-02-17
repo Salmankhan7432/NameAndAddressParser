@@ -33,6 +33,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     FishBone=""
     Detailed_Report=""
     Mask_log={}
+    Unique_Mask={}
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
     file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
@@ -162,8 +163,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             
         Mask_1=",".join(Mask)
         Mask_log[ID]=Mask_1
+        Unique_Mask[Mask_1]=ID
         FirstPhaseList = [FirstPhaseList[b] for b in range(len(FirstPhaseList)) if FirstPhaseList[b] != ","]
-       
         Found=False
         FoundDict={}
 
@@ -395,7 +396,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         Detailed_Report+="\n\nOutput Fron Rule Based Approach\n\n"
         Detailed_Report+=str(RuleBasedRes)
         # Detailed_Report+="List of Exception Mask(s): -\t\n\n"+Exception_Mask+"--"
-        Detailed_Report_1="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+"\n"
+        Detailed_Report_1="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+""
+        Detailed_Report_1+="\nUnique Pattern Count: -\t"+"{:,}".format(len(Unique_Mask))+"\n"
         Detailed_Report_1+="\nNumber of Pattern Parsed Addresses: -\t"+"{:,}".format(Observation)+"\n"
         Detailed_Report_1+="Percentage of Patterns Parsed Result:  -\t"+"{:.2f}%".format(float(percentage))+"\n"
         Detailed_Report_1+="\nNumber of Exceptions Thrown: -\t\t"+"{:,}".format(Total-Observation)+"\n"
@@ -408,6 +410,16 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         f=open(path,"w",encoding="utf8")
         f.write(Detailed_Report)
         f.close()
+        
+        #---------------------------------------------------------------------------------
+        #Just Evaluations
+        
+        print(Mask_1)
+        print("\n Other Without ID: ",Mask_log)
+        # print(FirstPhaseList)
+        
+        #---------------------------------------------------------------------------------
+        
         # Progress.stop()
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \nFile Path: {path} \n{Detailed_Report_1}")
 

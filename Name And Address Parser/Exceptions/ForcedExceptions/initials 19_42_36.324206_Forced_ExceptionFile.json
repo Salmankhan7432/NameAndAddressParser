@@ -1,27 +1,22 @@
 [
     {
-        "Record ID": "Single Line Exception_File HAS-->01",
-        "INPUT": "PO 12 BOX 17 LITTLE ROCK AR 72204",
-        "XNXNWWTN": [
+        "Record ID": "initialsForced Exception_File -->01",
+        "INPUT": "5506 A Street Little Rock, AR 72205",
+        "NWFWW,TN": [
             [
-                "PO",
-                "USAD_BNM",
-                "X"
-            ],
-            [
-                "12",
-                "USAD_NA",
+                "5506",
+                "USAD_SNO",
                 "N"
             ],
             [
-                "BOX",
-                "USAD_BNM",
-                "X"
+                "A",
+                "USAD_SNM",
+                "W"
             ],
             [
-                "17",
-                "USAD_BNO",
-                "N"
+                "STREET",
+                "USAD_SFX",
+                "F"
             ],
             [
                 "LITTLE",
@@ -39,7 +34,7 @@
                 "T"
             ],
             [
-                "72204",
+                "72205",
                 "USAD_ZIP",
                 "N"
             ]

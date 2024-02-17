@@ -36,11 +36,18 @@ root_folder = Path(__file__).parents[1]
 
 ExceptionList = []
 def throwException(originalInput,initials):
+    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     PackAddress=PreProc.PreProcessingNameAddress().AddresssCleaning(originalInput)
     # AddressList = re.split("\s|\s,\s ", Address)
     AddressList = PackAddress[0]
     AddressList= [item for item in AddressList if item]# != ","]
     rules=rulebased.RuleBasedAddressParser.AddressParser(AddressList)
+    print("Rules: ",rules)
+    for m in rules:
+        component = m[1]
+        component_description = db_operations.get_component_description(component)
+        m.append(component_description)
+    
     ID = str(initials) + "Forced Exception_File " +  "-->01"
     ExceptionDict = {
         "Record ID": ID,

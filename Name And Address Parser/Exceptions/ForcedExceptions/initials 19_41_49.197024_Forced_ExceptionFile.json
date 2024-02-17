@@ -1,8 +1,8 @@
 [
     {
-        "Record ID": "Single Line Exception_File Initials-->01",
-        "INPUT": "5506 A s Little Rock Arkansas 72205",
-        "NWDWWTN": [
+        "Record ID": "initialsForced Exception_File -->01",
+        "INPUT": "5506 A Street Little Rock, AR 72205",
+        "NWFWW,TN": [
             [
                 "5506",
                 "USAD_SNO",
@@ -14,9 +14,9 @@
                 "W"
             ],
             [
-                "S",
-                "USAD_SPT",
-                "D"
+                "STREET",
+                "USAD_SFX",
+                "F"
             ],
             [
                 "LITTLE",
@@ -29,7 +29,7 @@
                 "W"
             ],
             [
-                "ARKANSAS",
+                "AR",
                 "USAD_STA",
                 "T"
             ],

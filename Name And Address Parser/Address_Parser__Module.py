@@ -232,6 +232,10 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         elif not FoundExcept:
             AddressList=[item for item in AddressList if item!=","]
             rules=RuleBased.RuleBasedAddressParser.AddressParser(AddressList)
+            for m in rules:
+                component = m[1]
+                component_description = db_operations.get_component_description(component)
+                m.append(component_description)
             ExceptionEntry = {
                 "Record ID": ID,
                 "INPUT": Address,

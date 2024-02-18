@@ -93,6 +93,20 @@ def BatchParser():
 
     return jsonify(result=result, metrics=metrics)
 
+@app.route('/AddressComponents_dropdown', methods=['GET'])
+def get_address_components():
+    try:
+        session = Session()
+        components = session.query(ComponentTable.description).all()
+        options = [component[0] for component in components]
+        print(options)
+        session.close()
+        return jsonify(options)
+    except Exception as e:
+        # Log the exception for debugging
+        print(f"Error occurred: {e}")
+        # Return a JSON error message
+        return jsonify({'error': str(e)}), 500
 
     
 

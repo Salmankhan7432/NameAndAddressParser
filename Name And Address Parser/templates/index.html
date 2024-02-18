@@ -581,7 +581,7 @@
                     <tr>
                         <th>Mask Token</th>
                         <th>Address Token</th>
-                        <th>Component Description</th>
+                        <th>Address Component</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -597,6 +597,8 @@
             <input type="text" id="recordId" readonly><br>
             <label for="inputValue" style="">INPUT:</label>
             <input type="text" id="inputValue" readonly><br>
+            <label for="mask-inputValue" style="">Mask Pattern:</label>
+            <input type="text" id="mask-inputValue" readonly><br>
             <label for="region" class="col-sm-2 col-form-label">Region:</label>
             <select id="region" name="region" class="" style="">
                 <option value="Not Selected">Not Selected</option>
@@ -629,7 +631,9 @@
                 <option value="Person 3">Person 3</option>
             </select><br>
 
-            <button id="showNextBtn">Next</button>
+            <button id="submit&NextBtn">Submit & Next</button>
+            <button id="submitBtn" style="display: none;">Submit</button>
+            <button id="clear&exitBtn">Clear & Exit</button>
         </div>
     </div>
 
@@ -831,23 +835,42 @@ $(document).ready(function() {
         let currentKeyIndex = 0;
 
         document.getElementById("loadFileBtn").addEventListener("click", loadFile);
-        document.getElementById("showNextBtn").addEventListener("click", showNext);
+        document.getElementById("submit&NextBtn").addEventListener("click", showNext);
+        document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
 
         function loadFile() {
+            let container = document.getElementById("mapdata");
+            if (container) {
+                container.style.display = 'grid'; // Adjust the display style as per your original layout
+            } else {
+                console.error("Container element not found");
+                return; // Exit the function if the container is not found
+            }
+            
             const jsonFileInput = document.getElementById("jsonFileInput");
-            // Commented out to keep the upload section visible
-            // document.getElementById("upload").style.display = "none";
-            document.getElementById("mapdata").style.display = "grid";
-            document.getElementById("filename").value = document.getElementById("jsonFileInput").files[0].name;
-            const file = jsonFileInput.files[0];
-        
-            if (file) {
+            
+            if (jsonFileInput.files.length > 0) {
+                const file = jsonFileInput.files[0];
+                const filenameElement = document.getElementById("filename");
+                if (filenameElement) {
+                    filenameElement.value = file.name;
+                } else {
+                    console.error("filename element not found");
+                }
+                
                 const reader = new FileReader();
         
                 reader.onload = function (e) {
                     try {
                         const newData = JSON.parse(e.target.result);
                         data = newData; // Append new data to existing data array
+                        if (data.length > 1) {
+                            document.getElementById("submit&NextBtn").style.display = 'block';
+                            document.getElementById("submitBtn").style.display = 'none';
+                        } else {
+                            document.getElementById("submit&NextBtn").style.display = 'none';
+                            document.getElementById("submitBtn").style.display = 'block';
+                        }
                         currentKeyIndex = 0;
                         showNext(); // Start processing data if it's the first file
                         
@@ -867,52 +890,86 @@ $(document).ready(function() {
         function showNext() {
             if (currentKeyIndex < data.length) {
                 const currentData = data[currentKeyIndex];
+                const keys = Object.keys(currentData);
                 document.getElementById("recordId").value = currentData["Record ID"];
                 document.getElementById("inputValue").value = currentData["INPUT"];
+                document.getElementById("mask-inputValue").value = keys[2];
 
                 const otherDataKey = findThirdObjectKey(currentData);
                 const otherData = currentData[otherDataKey];
                 const tableBody = document.getElementById("table-body");
                 tableBody.innerHTML = "";
-
-            if (otherDataKey) {
-                        otherData.forEach(function (item) {
-                            const row = document.createElement("tr");
-                            tableBody.appendChild(row);
-                            const reorderedItem = [item[2], item[0], item[3]];
-                            reorderedItem.forEach(function (value,index) {
-                                //const value = item[index];
-                                const td = document.createElement("td");
-                                if (index == 2) {
-                                    // Convert value column to a dropdown menu
-                                    const valueSelect = document.createElement("select");
-                                    valueSelect.name = "value";
-                                    const options = ["USAD_SNO", "USAD_SNM", "USAD_SFX", "USAD_ANO", "USAD_ANM", "USAD_CTY", "USAD_STA", "USAD_ZIP", "USAD_SPR", "USAD_BNM", "USAD_BNO", "USAD_SPT", "USAD_ZP4", "USAD_RNM", "USAD_RNO", "USAD_ORG", "USAD_MGN", "USAD_MDG", "USAD_HNO", "USAD_HNM", "USAD_NA"];
-                                    options.forEach(function (option) {
-                                        const optionElement = document.createElement("option");
-                                        optionElement.value = option;
-                                        optionElement.textContent = option;
-                                        valueSelect.appendChild(optionElement);
-                                    });
-                                    valueSelect.value = value;
-                                    td.appendChild(valueSelect);
-                                } else {
-                                    td.textContent = value;
-                                }
-                                row.appendChild(td);
-                            });
-                        });
-                    } else {
-                        alert("No third object found in the current data.");
-                    }
-            
-                    currentKeyIndex++;
-                } else {
-                    alert("End of data reached");
-                    currentKeyIndex = 0; // Reset currentKeyIndex for the next set of data
-                }
+                fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
+                
+                currentKeyIndex++;
+            } else {
+                alert("End of data reached");
+                currentKeyIndex = 0;
             }
-
+        }
+        
+        function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
+            fetch("/AddressComponents_dropdown")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(options => {
+                    populateDropdowns(otherData, otherDataKey, options);
+                })
+                .catch(error => console.error('Error fetching options:', error));
+        }
+        
+        function populateDropdowns(otherData, otherDataKey, options) {
+            const tableBody = document.getElementById("table-body");
+            if (otherDataKey) {
+                    otherData.forEach(function (item) {
+                        const row = document.createElement("tr");
+                        tableBody.appendChild(row);
+                        const reorderedItem = [item[2], item[0], item[3]];
+                        reorderedItem.forEach(function (value,index) {
+                            //const value = item[index];
+                            const td = document.createElement("td");
+                            if (index == 2) {
+                                // Convert value column to a dropdown menu
+                                const valueSelect = document.createElement("select");
+                                valueSelect.name = "value";
+                                //const options = ["USAD_SNO", "USAD_SNM", "USAD_SFX", "USAD_ANO", "USAD_ANM", "USAD_CTY", "USAD_STA", "USAD_ZIP", "USAD_SPR", "USAD_BNM", "USAD_BNO", "USAD_SPT", "USAD_ZP4", "USAD_RNM", "USAD_RNO", "USAD_ORG", "USAD_MGN", "USAD_MDG", "USAD_HNO", "USAD_HNM", "USAD_NA"];
+                                options.forEach(function (optionValue) {
+                                    const optionElement = document.createElement("option");
+                                    optionElement.value = optionValue;
+                                    optionElement.textContent = optionValue;
+                                    valueSelect.appendChild(optionElement);
+                                });
+                                valueSelect.value = value;
+                                td.appendChild(valueSelect);
+                            } else {
+                                td.textContent = value;
+                            }
+                            row.appendChild(td);
+                        });
+                    });
+                } else {
+                    alert("No third object found in the current data.");
+                }
+        }
+            
+        function exitFunction() {
+            // Hide the container instead of removing it
+            const container = document.getElementById("mapdata");
+            if (container) {
+                container.style.display = "none"; // Hide the container
+            }
+        
+            // Reset the file input
+            const fileInput = document.getElementById("jsonFileInput");
+            if (fileInput) {
+                fileInput.value = "";
+            }
+        }
+        
         function findThirdObjectKey(data) {
             for (const key in data) {
                 if (key !== "Record ID" && key !== "INPUT") {
@@ -921,6 +978,7 @@ $(document).ready(function() {
             }
             return null; // No third object key found
         }
+        
 
 
 

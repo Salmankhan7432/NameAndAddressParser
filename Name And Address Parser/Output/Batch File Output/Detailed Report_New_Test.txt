@@ -1,13 +1,34 @@
 Exception and Mask Report
 
-Number of Pattern Parsed Addresses: -	79
-Percentage of Patterns Parsed Result:  -	86.81%
+Number of Pattern Parsed Addresses: -	82
+Percentage of Patterns Parsed Result:  -	90.11%
 
-Number of Exceptions Thrown: -		12
-Percentage of RuleBased Parsed Result: -	13.19%
+Number of Exceptions Thrown: -		9
+Percentage of RuleBased Parsed Result: -	9.89%
 Output From Active Learning
 
 {
+    "9": [
+        {
+            "Record ID": "9",
+            "INPUT": "9876 Elm Drive Bentonville Arkansas 72712",
+            "NWFWTN": []
+        }
+    ],
+    "10": [
+        {
+            "Record ID": "10",
+            "INPUT": "66 Oak Street Fremont California 94993",
+            "NWFWTN": []
+        }
+    ],
+    "11": [
+        {
+            "Record ID": "11",
+            "INPUT": "6543 Cedar Lane Stockton California 95202",
+            "NWFWTN": []
+        }
+    ],
     "13": [
         {
             "Record ID": "13",
@@ -3004,419 +3025,384 @@ Output Fron Rule Based Approach
         [
             "402",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "S",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "OAK",
             "USAD_SNM",
-            "W"
+            "W",
+            "Street Name"
         ],
         [
             "ROAD",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "MANCHESTER",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "NEW",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "HAMPSHIRE",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "72732",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "2": [
         [
             "88",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "N",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "PINE",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "DRIVE",
             "USAD_NA",
-            "F"
+            "F",
+            "Not Selected"
         ],
         [
             "OLYMPIA",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "WASHINGTON",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "72733",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "3": [
         [
             "878",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "NE",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "BIRCH",
             "USAD_SNM",
-            "W"
+            "W",
+            "Street Name"
         ],
         [
             "LANE",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "PORTLAND",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "OREGON",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "72734",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "4": [
         [
             "78",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "SE",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "CEDAR",
             "USAD_SNM",
-            "W"
+            "W",
+            "Street Name"
         ],
         [
             "COURT",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "MIAMI",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "FLORIDA",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "72735",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "5": [
         [
             "7687",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "N",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "MAIN",
             "USAD_SNM",
-            "W"
+            "W",
+            "Street Name"
         ],
         [
             "ST",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "ANCHORAGE",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "ALASKA",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "99501",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "6": [
         [
             "5678",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "W",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "ELM",
             "USAD_SNM",
-            "W"
+            "W",
+            "Street Name"
         ],
         [
             "AVE",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "JUNEAU",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "ALASKA",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "99801",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "7": [
         [
             "55",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "MAPLE",
             "USAD_SNM",
-            "W"
+            "W",
+            "Street Name"
         ],
         [
             "AVENUE",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "CALIFORNIA",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "94993",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "8": [
         [
             "5678",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "PINE",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "STREET",
             "USAD_NA",
-            "F"
+            "F",
+            "Not Selected"
         ],
         [
             "STOCKTON",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "CALIFORNIA",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "95202",
             "USAD_ZIP",
-            "N"
-        ]
-    ],
-    "9": [
-        [
-            "9876",
-            "USAD_SNO",
-            "N"
-        ],
-        [
-            "ELM",
-            "USAD_SNM",
-            "W"
-        ],
-        [
-            "DRIVE",
-            "USAD_SFX",
-            "F"
-        ],
-        [
-            "BENTONVILLE",
-            "USAD_CTY",
-            "W"
-        ],
-        [
-            "ARKANSAS",
-            "USAD_STA",
-            "T"
-        ],
-        [
-            "72712",
-            "USAD_ZIP",
-            "N"
-        ]
-    ],
-    "10": [
-        [
-            "66",
-            "USAD_SNO",
-            "N"
-        ],
-        [
-            "OAK",
-            "USAD_SNM",
-            "W"
-        ],
-        [
-            "STREET",
-            "USAD_SFX",
-            "F"
-        ],
-        [
-            "FREMONT",
-            "USAD_CTY",
-            "W"
-        ],
-        [
-            "CALIFORNIA",
-            "USAD_STA",
-            "T"
-        ],
-        [
-            "94993",
-            "USAD_ZIP",
-            "N"
-        ]
-    ],
-    "11": [
-        [
-            "6543",
-            "USAD_SNO",
-            "N"
-        ],
-        [
-            "CEDAR",
-            "USAD_SNM",
-            "W"
-        ],
-        [
-            "LANE",
-            "USAD_SFX",
-            "F"
-        ],
-        [
-            "STOCKTON",
-            "USAD_CTY",
-            "W"
-        ],
-        [
-            "CALIFORNIA",
-            "USAD_STA",
-            "T"
-        ],
-        [
-            "95202",
-            "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ],
     "12": [
         [
             "9876",
             "USAD_SNO",
-            "N"
+            "N",
+            "Street Number"
         ],
         [
             "E",
             "USAD_SPR",
-            "D"
+            "D",
+            "Street Pre-Directional"
         ],
         [
             "PINE",
             "USAD_SFX",
-            "F"
+            "F",
+            "Street Suffix"
         ],
         [
             "RD",
             "USAD_NA",
-            "F"
+            "F",
+            "Not Selected"
         ],
         [
             "FAIRBANKS",
             "USAD_CTY",
-            "W"
+            "W",
+            "City Name"
         ],
         [
             "ALASKA",
             "USAD_STA",
-            "T"
+            "T",
+            "State Name"
         ],
         [
             "99701",
             "USAD_ZIP",
-            "N"
+            "N",
+            "Zip Code"
         ]
     ]
 }

@@ -44,7 +44,7 @@ class MappingJSON(Base):
     component = relationship('ComponentTable', foreign_keys=[component_index], back_populates='mapping_json')
     
     __table_args__ = (
-        PrimaryKeyConstraint('mask_index', 'component_index','component_value'),
+        PrimaryKeyConstraint('mask_index','component_value'),
     )
     
     def __eq__(self, other):

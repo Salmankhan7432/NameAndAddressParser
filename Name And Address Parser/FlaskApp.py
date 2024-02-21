@@ -16,12 +16,14 @@ from ORM import MaskTable, ComponentTable, MappingJSON
 from DB_Operations import DB_Operations as CRUD
 import SingleAddressParser_Module as SAP
 import Address_Parser__Module as BAP
+from flask_cors import CORS
 
 app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
 Session = sessionmaker(bind=engine)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
+CORS(app)
 
 
 
@@ -69,28 +71,13 @@ def BatchParser():
         print(filename)
         file_path = os.path.join('File Uploads', filename)
         file.save(file_path)
-
-        # Create tqdm instance for progress bar
-        # total_lines = 100  # Adjust based on your requirements
-        # progress_bar = tqdm(total=total_lines, position=0, leave=True)
-
-        # def update_progress(progress):
-        #     socketio.emit('progress', {'progress': progress}, namespace='/test')
-
-        # with tqdm(total=total_lines) as progress_bar:
-            # Here you would call your Address_Parser function and pass the file path
         convert = BAP.Address_Parser(file_path, "update_progress")
         print(convert[0], "\n", convert[1])
-
-        # Close the tqdm instance after completion
-        # progress_bar.close()
-
         if convert[0]:
             result = convert[1]
             metrics = {'metrics': convert[1]}
             return jsonify(result=result, metrics=metrics)
         
-
     return jsonify(result=result, metrics=metrics)
 
 @app.route('/AddressComponents_dropdown', methods=['GET'])
@@ -103,12 +90,36 @@ def get_address_components():
         session.close()
         return jsonify(options)
     except Exception as e:
-        # Log the exception for debugging
         print(f"Error occurred: {e}")
-        # Return a JSON error message
         return jsonify({'error': str(e)}), 500
 
-    
+@app.route('/check-mask-existence', methods=['POST'])
+def check_mask_existence():
+    session = Session()
+    data = request.get_json()
+    mask = data.get('mask')
+    mask_record = session.query(MaskTable).filter_by(mask=mask).first()
+    return jsonify({'exists': mask_record is not None})
+
+
+@app.route('/MapCreationForm-Data',methods=["GET","POST"])
+def MapCreationForm():
+    session = Session()
+    database_url = 'sqlite:///KnowledgeBase_Test.db'
+    engine = create_engine(database_url)
+    result={}
+    mapdata = request.get_json()
+    print("Received Map Data:",mapdata)
+    keys = list(mapdata.keys())
+    Vdbs = {k: mapdata[k] for k in keys[:4]}
+    Kbs = {k: mapdata[k] for k in keys[4:]}
+    print("Validation Data Base: ",Vdbs)
+    print("Knowledge Base: ",Kbs)
+    CRUD.add_data(engine,Kbs)
+        
+    return jsonify({"status":"success","message":"Form Data Received"})
+
+
 
 @app.route('/UserDefinedComponents', methods=["GET","POST"])
 def UD_Components():
@@ -210,7 +221,7 @@ def get_mask_count():
         try:
             # Query the count of associated masks
             mask_entries = session.query(MappingJSON.mask_index).filter_by(component_index=component).distinct().all()
-            mask_count = session.query(func.count(MappingJSON.mask_index)).filter_by(component_index=component).scalar()
+            # mask_count = session.query(func.count(MappingJSON.mask_index)).filter_by(component_index=component).scalar()
 
             total_masks = 0
             for row in mask_entries:
@@ -233,7 +244,7 @@ def get_mask_count():
 
 @app.route("/delete_record", methods=["POST"])
 def delete_component():
-    result = {}
+    # result = {}
     if request.method == "POST":
         component = request.form['component']  # Get the component to be deleted
         print("Component to delete",component)

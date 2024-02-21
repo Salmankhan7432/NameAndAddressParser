@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from ORM import ComponentTable
 
 
-database_url = 'sqlite:///KnowledgeBase_TestDummy.db'
+database_url = 'sqlite:///KnowledgeBase_Test.db'
 db_operations = DB_Operations(database_url)
 
 class View_DataBase():

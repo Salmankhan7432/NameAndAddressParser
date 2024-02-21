@@ -102,45 +102,46 @@ class DB_Operations:
     
 
     def add_data(self, data):
+        Session = sessionmaker(bind=self.engine)
+        session = None
         try:
-            Session = sessionmaker(bind=self.engine)
             session = Session()
-
             for mask, components in data.items():
                 try:
                     mask_record = session.query(MaskTable).filter_by(mask=mask).first()
                     if not mask_record:
                         mask_record = MaskTable(mask=mask)
                         session.add(mask_record)
-                        session.commit()
+                    session.flush()
     
                     mask_id = mask_record.mask
-    
-                    for component, values in components.items():
+                    for values , component_description in components.items():
                         try:
-                            component_record = session.query(ComponentTable).filter_by(component=component).first()
+                            component_record = session.query(ComponentTable).filter_by(description=component_description).first()
                             if not component_record:
-                                component_record = ComponentTable(
-                                    component=component,
-                                    description=input(f"Give a description for {component}:")
-                                )
-                                session.add(component_record)
-                                session.commit()
-        
+                                pass
                             for value in values:
                                 try:
-                                    mapping_json_record = MappingJSON(
+                                    mapping_json_record = session.query(MappingJSON).filter_by(
                                         mask_index=mask_id,
-                                        component_index=component_record.component,
                                         component_value=value
-                                    )
-                                    session.add(mapping_json_record)
+                                        ).first()
+                                    if mapping_json_record:
+                                        mapping_json_record.component_index=component_record.component
+                                        mapping_json_record.component_value = value
+
+                                    else:
+                                        mapping_json_record = MappingJSON(
+                                            mask_index=mask_id,
+                                            component_index=component_record.component,
+                                            component_value=value
+                                        )
+                                        session.add(mapping_json_record)
                                 except IntegrityError as e:
                                         session.rollback()
                                         error_info = e.orig.args[0]
                                         if 'UNIQUE constraint failed' in error_info:
-                                            pass
-                                            # print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
+                                            print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
                                         else:   
                                             print(f"Error: {e}")
                                         continue
@@ -148,8 +149,7 @@ class DB_Operations:
                                     session.rollback()
                                     error_info = e.orig.args[0]
                                     if 'UNIQUE constraint failed' in error_info:
-                                        pass
-                                        # print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
+                                        print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
                                     else:   
                                         print(f"Error: {e}")
                                     continue
@@ -157,8 +157,7 @@ class DB_Operations:
                             session.rollback()
                             error_info = e.orig.args[0]
                             if 'UNIQUE constraint failed' in error_info:
-                                pass
-                                # print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
+                                print("Error: Duplicate entry. The combination of mask, component, and value must be unique.")
                             else:   
                                 print(f"Error: {e}")
                             continue
@@ -180,7 +179,8 @@ class DB_Operations:
                 print(f"Error: {e}")
             
         finally:
-            session.close()
+            if session is not None:
+                session.close()
 
 
     def update_component_descriptions_interactively(self):

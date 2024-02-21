@@ -16,6 +16,7 @@ import sklearn
 from sklearn.metrics import multilabel_confusion_matrix,confusion_matrix,classification_report
 #Parsing 1st program
 from DB_Operations import DB_Operations
+
 import os
 import warnings
 warnings.filterwarnings("ignore")
@@ -165,6 +166,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         Mask_log[ID]=Mask_1
         Unique_Mask[Mask_1]=ID
         FirstPhaseList = [FirstPhaseList[b] for b in range(len(FirstPhaseList)) if FirstPhaseList[b] != ","]
+        print("FirstPhaseList: ",FirstPhaseList)
         Found=False
         FoundDict={}
 
@@ -174,15 +176,19 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         if db_operations.check_mask_exists(Mask_1):
             # Mask exists in the database, retrieve data using database queries
             FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
+            print("FoundDict: ",FoundDict[Mask_1])
             Found = True
             # print("Found Dict = ",FoundDict[Mask_1])
+        
         FoundExcept=False
+        sorted_Found = {}
         if Found:
             Observation+=1
             Mappings=[]
             for K2,V2 in FoundDict[Mask_1].items():
                 FoundDict_KB=FoundDict[Mask_1]
                 sorted_Found={k: v for k ,v in sorted(FoundDict_KB.items(), key=lambda item:item[1])}
+            print("sorted_Found: ",sorted_Found)
             for K2,V2 in sorted_Found.items():
                 Temp=""
                 Merge_token=""

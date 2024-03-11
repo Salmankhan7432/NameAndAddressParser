@@ -188,7 +188,7 @@ $(document).ready(function() {
                             document.getElementById("submit&NextBtn").style.display = 'none';
                             document.getElementById("submitBtn").style.display = 'block';
                         }
-                        currentKeyIndex = 0;
+                        //currentKeyIndex = 0;
                         showNext(); // Start processing data if it's the first file
                         
                     } catch (error) {
@@ -219,10 +219,9 @@ $(document).ready(function() {
                 fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
                 
                 updateDictionaryDisplay();
-                currentKeyIndex++;
             } else {
                 alert("End of data reached");
-                currentKeyIndex = 0;
+                currentKeyIndex = data.length;
             }
         }
         
@@ -292,6 +291,8 @@ $(document).ready(function() {
                             row.appendChild(td);
                         });
                     });
+                currentKeyIndex++;
+                    
                 } else {
                     alert("No third object found in the current data.");
                 }
@@ -327,10 +328,16 @@ $(document).ready(function() {
         
         function collectData() {
             // Example: Collect data from input fields
-            const recordId = document.getElementById("recordId").value;
-            const inputValue = document.getElementById("inputValue").value;
+            const record_Id = document.getElementById("recordId").value;
+            const file_name = document.getElementById("filename").value;
+            const input_Value = document.getElementById("inputValue").value;
             const mask = document.getElementById("mask-inputValue").value;
-        
+            const address_region = document.getElementById("region") ? document.getElementById("region").value : null;
+            const Address_Type = document.getElementById("AddressType") ? document.getElementById("AddressType").value : null;
+            const approval = document.getElementById("Approved?") ? document.getElementById("Approved?").value : null;
+            const approved_by = document.getElementById("approvedby") ? document.getElementById("approvedby").value : null;
+
+            
             // Example: Collect data from table
             const mappingData = [];
             const table = document.getElementById("table-body");
@@ -349,9 +356,14 @@ $(document).ready(function() {
             }
         
             result = {
-                "Record Id": recordId,
-                "Original Input": inputValue,
+                "Record Id": record_Id,
+                "Exception_File_Name": file_name,
+                "Input": input_Value,
                 "Mask Pattern": mask,
+                "Region" : address_region,
+                "Type" : Address_Type,
+                "Address Approved?" : approval,
+                "Approved By" : approvedby,
                 "Mapping Data": mappingData
             };
             result[mask] = dicData;
@@ -516,8 +528,8 @@ $(document).ready(function() {
             '<td><input type="text" class="editable" placeholder="New Component" maxlength="20"></td>' +
             '<td><input type="text" class="editable" placeholder="New Description" maxlength="20"></td>' +
             '<td class="actions">' +
-            '<button class="save-btn" onclick="saveNewRow(this,event)">Save</button>' +
-            '<button class="cancel-btn" onclick="cancelAddRow(this,event)">Cancel</button>' +
+            '<button class="save-btn" id="save-btn" onclick="saveNewRow(this,event)">Save</button>' +
+            '<button class="cancel-btn" id="cancel-btn" onclick="cancelAddRow(this,event)">Cancel</button>' +
             '</td>' +
             '</tr>';
     
@@ -589,8 +601,8 @@ $(document).ready(function() {
         console.log('oldDescription:', oldDescription);
         
         var actionsCell = row.find('.actions');
-        actionsCell.html('<button class="save-btn" id="#saveButton" onclick="saveRow(this,event)">Save</button>' +
-            '<button class="cancel-btn" onclick="cancelEditRow(this,event)">Cancel</button>');
+        actionsCell.html('<button class="save-btn" style="padding: 8px 12px; color: #ffc107; border: 1px solid #ffc107;" onclick="saveRow(this,event)">Save</button>' +
+                     '<button class="cancel-btn" style="padding: 8px 12px; color: #dc3545; border: 1px solid #dc3545;" onclick="cancelEditRow(this,event)">Cancel</button>');
         enableButtons(row);
     }
 

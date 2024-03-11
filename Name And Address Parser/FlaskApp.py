@@ -17,6 +17,7 @@ from DB_Operations import DB_Operations as CRUD
 import SingleAddressParser_Module as SAP
 import Address_Parser__Module as BAP
 from flask_cors import CORS
+import json
 
 app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
@@ -116,6 +117,21 @@ def MapCreationForm():
     print("Validation Data Base: ",Vdbs)
     print("Knowledge Base: ",Kbs)
     CRUD.add_data(engine,Kbs)
+    with open("Validation_DB.txt", 'r+') as file:
+        try:
+            existing_data = json.load(file)
+        except json.JSONDecodeError:
+            existing_data = []
+    
+        # Append the new data to the existing data list
+        existing_data.append(Vdbs)
+        
+        # Set the file's current position at the beginning
+        file.seek(0)
+        
+        # Write the updated data back to the file
+        json.dump(existing_data, file, indent=4)
+        file.truncate()
         
     return jsonify({"status":"success","message":"Form Data Received"})
 
@@ -278,6 +294,11 @@ def delete_component():
             print("Error occurred:", str(e))
             return jsonify(result={'message': f'Error: {str(e)}'})
 
+
+@app.route("/Login", methods=["POST"])
+def loginPage():
+    if request.method == "POST":
+        return
     
     
 if __name__ == '__main__':

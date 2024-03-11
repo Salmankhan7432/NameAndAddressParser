@@ -152,9 +152,9 @@
             <label for="approvedby">Approved By : </label>
             <select name="approvedby" id="approvedby" required>
                 <option value="" selected></option>
-                <option value="Person 1">Person 1</option>
-                <option value="Person 2">Person 2</option>
-                <option value="Person 3">Person 3</option>
+                <option value="Committee Member 1">Committee Member 1</option>
+                <option value="Committee Member 2">Committee Member 2</option>
+                <option value="Committee Member 3">Committee Member 3</option>
             </select><br>
             <div class="Button-container">
             <button class="btn btn-success" id="submit&NextBtn">Submit & Next</button>
@@ -166,6 +166,7 @@
 
 
 
+</div>
 </div>
 <!--------------------------------------------------------------------------------------------------- -->
                                 <!-- User Defined COmponents -->
@@ -213,16 +214,10 @@ function openTab(tabName, event) {
     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
 }
-document.getElementById('defaultOpen').click();
+document.getElementById("defaultOpen").click();
 
 </script>
-<script>
-    var socket = io.connect("http://" + document.domain + ":" + location.port + "/test");
 
-    socket.on("progress", function(msg) {
-        document.getElementById("progressBar").value = msg.progress;
-    });
-</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ url_for('static', filename='script.js') }}"></script>

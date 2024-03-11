@@ -131,6 +131,128 @@ main, .main-content {
      font-size: 17px;
  }
  
+ .udresult-box {
+     border-collapse: collapse;
+     margin: 30px auto;
+     font-size: 0.9em;
+     font-family: sans-serif;
+     min-width: 400px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+     width: 750px;
+     height: 500px;
+     overflow-y: auto;
+ }
+
+ .udresult-box thead tr {
+     background-color: #20bf6b;
+     color: #ffffff;
+     text-align: left;
+ }
+ .udresult-box thead th {
+     position: sticky;
+     top: 0;
+     background-color: #20bf6b;
+     color: #ffffff;
+     text-align: left;
+     padding: 12px 15px;
+ }
+ .udresult-box thead tr:hover {
+     background-color: #0b8457;
+     }
+ .udresult-box th,
+ .udresult-box td {
+     padding: 12px 15px;
+ }
+ .udresult-box tbody tr {
+
+     border-bottom: 1px solid #dddddd;
+     cursor: pointer;
+ }
+         
+ .udresult-box tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+     cursor: pointer;
+ }   
+ 
+ .udresult-box tbody tr:last-of-type {
+     border-bottom: 2px solid #009879;
+     cursor: pointer;
+ }
+ .udresult-box tbody tr.active-row {
+     font-weight: bold;
+     color: #009879;
+     cursor: pointer;
+ }
+ .udresult-box tbody tr:hover {
+     background-color: #e1e1e1;
+     }
+ /* Style for the edit and delete buttons */
+ .edit-btn, .delete-btn {
+     padding: 8px 12px;
+     margin-right: 5px;
+     /* Applying Bootstrap classes to style buttons */
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     text-align: center;
+     text-decoration: none;
+ }
+ /* Styling for the Edit button */
+ .edit-btn {
+     color: #ffc107; /* Change the color to match Bootstrap's warning button */
+     background-color: transparent;
+     border: 1px solid #ffc107; /* Border color */
+ }
+
+ /* Styling for the Delete button */
+ .delete-btn {
+     color: #dc3545; /* Change the color to match Bootstrap's danger button */
+     background-color: transparent;
+     border: 1px solid #dc3545; /* Border color */
+ }
+
+ /* Hover styles for both buttons */
+ .edit-btn:hover, .delete-btn:hover {
+     background-color: #f8f9fa;  
+     
+.udresult-box .actions .save-btn, 
+.udresult-box .actions .cancel-btn {
+    /* Your styles here */
+
+
+ /* Style for the edit and delete buttons */
+ .save-btn, .cancel-btn {
+     padding: 8px 12px;
+     margin-right: 5px;
+     /* Applying Bootstrap classes to style buttons */
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     text-align: center;
+     text-decoration: none;
+ }
+ /* Styling for the Edit button */
+ .save-btn {
+     color: #ffc107; /* Change the color to match Bootstrap's warning button */
+     background-color: transparent;
+     border: 1px solid #ffc107; /* Border color */
+ }
+
+ /* Styling for the Delete button */
+ .cancel-btn {
+     color: #dc3545; /* Change the color to match Bootstrap's danger button */
+     background-color: transparent;
+     border: 1px solid #dc3545; /* Border color */
+ }
+
+ /* Hover styles for both buttons */
+ .save-btn:hover, .cancel-btn:hover {
+     background-color: #f8f9fa;  
+    }
+    }
+        
 
 
 

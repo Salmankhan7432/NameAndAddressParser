@@ -1,10 +1,10 @@
 Exception and Mask Report
 
-Number of Pattern Parsed Addresses: -	45
-Percentage of Patterns Parsed Result:  -	76.27%
+Number of Pattern Parsed Addresses: -	59
+Percentage of Patterns Parsed Result:  -	100.00%
 
-Number of Exceptions Thrown: -		14
-Percentage of RuleBased Parsed Result: -	23.73%
+Number of Exceptions Thrown: -		0
+Percentage of RuleBased Parsed Result: -	0.00%
 Output From Active Learning
 
 {
@@ -22,11 +22,39 @@ Output From Active Learning
             "FNXNWTN": []
         }
     ],
+    "3": [
+        {
+            "Record ID": "3",
+            "INPUT": "HC 02 BOX 45 Sterling Heights MI 48310",
+            "FNXNWFTN": []
+        }
+    ],
+    "4": [
+        {
+            "Record ID": "4",
+            "INPUT": "HC 94 BOX 41 Buffalo Grove IL 60089",
+            "FNXNWFTN": []
+        }
+    ],
     "5": [
         {
             "Record ID": "5",
             "INPUT": "HC 81 BOX 32 Lancaster NY 14086",
             "FNXNWTN": []
+        }
+    ],
+    "6": [
+        {
+            "Record ID": "6",
+            "INPUT": "HC 22 BOX 12 Baton Rouge LA 70806",
+            "FNXNWWTN": []
+        }
+    ],
+    "7": [
+        {
+            "Record ID": "7",
+            "INPUT": "HC 5323 BOX 25 Feasterville Trevose PA 19053",
+            "FNXNWWTN": []
         }
     ],
     "8": [
@@ -50,6 +78,13 @@ Output From Active Learning
             "FNXNWTN": []
         }
     ],
+    "11": [
+        {
+            "Record ID": "11",
+            "INPUT": "HC 2342 BOX 5 Lewis Center OH 43035",
+            "FNXNWFTN": []
+        }
+    ],
     "12": [
         {
             "Record ID": "12",
@@ -64,11 +99,32 @@ Output From Active Learning
             "FNXNWTN": []
         }
     ],
+    "14": [
+        {
+            "Record ID": "14",
+            "INPUT": "HC 002 BOX 11 South Bend IN 46614",
+            "FNXNDFTN": []
+        }
+    ],
+    "15": [
+        {
+            "Record ID": "15",
+            "INPUT": "HC 9900 BOX 9 Fort Worth TX 76110",
+            "FNXNFWTN": []
+        }
+    ],
     "16": [
         {
             "Record ID": "16",
             "INPUT": "HC 103 BOX 001 Titusville FL 32780",
             "FNXNWTN": []
+        }
+    ],
+    "17": [
+        {
+            "Record ID": "17",
+            "INPUT": "HC 44W BOX 840 Pembroke Pines FL 33028",
+            "FNXNWFTN": []
         }
     ],
     "18": [
@@ -83,6 +139,13 @@ Output From Active Learning
             "Record ID": "19",
             "INPUT": "HC 665N BOX 3 Freeport NY 11520",
             "FNXNWTN": []
+        }
+    ],
+    "20": [
+        {
+            "Record ID": "20",
+            "INPUT": "HC 09 BOX 31 East Haven CT 06512",
+            "FNXNDFFN": []
         }
     ],
     "21": [
@@ -124,6 +187,56 @@ Output From Active Learning
                     "USAD_ZIP",
                     "N",
                     "33028"
+                ]
+            ]
+        }
+    ],
+    "22": [
+        {
+            "Record ID": "22",
+            "INPUT": "HC 651 BOX 35 Oklahoma City,Oklahoma 73109",
+            "FNXNTW,TN": []
+        }
+    ],
+    "23": [
+        {
+            "Record ID": "23",
+            "INPUT": "HC 34 BOX 408 Bismarck,North Dakota 58501",
+            "FNXNW,DWN": [
+                [
+                    "USAD_HNM",
+                    "F",
+                    "HC"
+                ],
+                [
+                    "USAD_HNO",
+                    "N",
+                    "34"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "408"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BISMARCK"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "NORTH DAKOTA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "58501"
                 ]
             ]
         }
@@ -515,6 +628,13 @@ Output From Active Learning
             ]
         }
     ],
+    "33": [
+        {
+            "Record ID": "33",
+            "INPUT": "HC 5 BOX 23 Lambertville,New Jersey 08530",
+            "FNXNW,WWN": []
+        }
+    ],
     "34": [
         {
             "Record ID": "34",
@@ -556,6 +676,13 @@ Output From Active Learning
                     "27103"
                 ]
             ]
+        }
+    ],
+    "35": [
+        {
+            "Record ID": "35",
+            "INPUT": "HC 88 BOX 769 White Lake,South Dakota 57383",
+            "FNXNWF,DWN": []
         }
     ],
     "36": [
@@ -683,6 +810,49 @@ Output From Active Learning
                     "USAD_ZIP",
                     "N",
                     "32202"
+                ]
+            ]
+        }
+    ],
+    "39": [
+        {
+            "Record ID": "39",
+            "INPUT": "HC 09 BOX 31 Denton,North Carolina 27239",
+            "FNXNW,DWN": [
+                [
+                    "USAD_HNM",
+                    "F",
+                    "HC"
+                ],
+                [
+                    "USAD_HNO",
+                    "N",
+                    "09"
+                ],
+                [
+                    "USAD_BNM",
+                    "X",
+                    "BOX"
+                ],
+                [
+                    "USAD_BNO",
+                    "N",
+                    "31"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DENTON"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "NORTH CAROLINA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "27239"
                 ]
             ]
         }
@@ -1551,711 +1721,4 @@ Output From Active Learning
 
 Output Fron Rule Based Approach
 
-{
-    "3": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "02",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "45",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "STERLING",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "HEIGHTS",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "MI",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "48310",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "4": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "94",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "41",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "BUFFALO",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "GROVE",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "IL",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "60089",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "6": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "22",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "12",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "BATON",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "ROUGE",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "LA",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "70806",
-            "USAD_ZIP",
-            "N",
-            "Zip Code"
-        ]
-    ],
-    "7": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "5323",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "25",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "FEASTERVILLE",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "TREVOSE",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "PA",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "19053",
-            "USAD_ZIP",
-            "N",
-            "Zip Code"
-        ]
-    ],
-    "11": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "2342",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "5",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "LEWIS",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "CENTER",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "OH",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "43035",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "14": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "002",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "11",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "SOUTH",
-            "USAD_NA",
-            "D",
-            "Not Selected"
-        ],
-        [
-            "BEND",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "IN",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "46614",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "15": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "9900",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "9",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "FORT",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "WORTH",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "TX",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "76110",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "17": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "44W",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "840",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "PEMBROKE",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "PINES",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "FL",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "33028",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "20": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "09",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_NA",
-            "X",
-            "Not Selected"
-        ],
-        [
-            "31",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "EAST",
-            "USAD_NA",
-            "D",
-            "Not Selected"
-        ],
-        [
-            "HAVEN",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "CT",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "06512",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "22": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "651",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "35",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "OKLAHOMA",
-            "USAD_NA",
-            "T",
-            "Not Selected"
-        ],
-        [
-            "CITY",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "OKLAHOMA",
-            "USAD_STA",
-            "T",
-            "State Name"
-        ],
-        [
-            "73109",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "23": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "34",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "408",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "BISMARCK",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "NORTH",
-            "USAD_NA",
-            "D",
-            "Not Selected"
-        ],
-        [
-            "DAKOTA",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "58501",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "33": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "5",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "23",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "LAMBERTVILLE",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "NEW",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "JERSEY",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "08530",
-            "USAD_ZIP",
-            "N",
-            "Zip Code"
-        ]
-    ],
-    "35": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "88",
-            "USAD_NA",
-            "N",
-            "Not Selected"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "769",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "WHITE",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "LAKE",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "SOUTH",
-            "USAD_NA",
-            "D",
-            "Not Selected"
-        ],
-        [
-            "DAKOTA",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "57383",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ],
-    "39": [
-        [
-            "HC",
-            "USAD_HNM",
-            "F",
-            "Highway Name"
-        ],
-        [
-            "09",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ],
-        [
-            "BOX",
-            "USAD_BNM",
-            "X",
-            "Box Name"
-        ],
-        [
-            "31",
-            "USAD_BNO",
-            "N",
-            "Box Number"
-        ],
-        [
-            "DENTON",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "NORTH",
-            "USAD_NA",
-            "D",
-            "Not Selected"
-        ],
-        [
-            "CAROLINA",
-            "USAD_CTY",
-            "W",
-            "City Name"
-        ],
-        [
-            "27239",
-            "USAD_HNO",
-            "N",
-            "Highway Number"
-        ]
-    ]
-}
+{}

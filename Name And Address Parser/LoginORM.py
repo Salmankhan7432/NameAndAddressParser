@@ -17,8 +17,8 @@ session = Session()
 
 class UserRole(Base):
     __tablename__ = 'rolesTable'
-    id = Column(Integer, primary_key=True)
-    RoleName = Column(String, unique=True)
+    # id = Column(Integer, primary_key=True)
+    RoleName = Column(String, primary_key=True)
 
     def __repr__(self):
         return f"<UserRole(name='{self.RoleName}')>"
@@ -30,9 +30,10 @@ class User(Base):
     UserName = Column(String, unique=True)
     Email = Column(String, unique=True)
     Password = Column(String)
-    role_id = Column(Integer, ForeignKey('rolesTable.id'))
+    role = Column(Integer, ForeignKey('rolesTable.RoleName'))
+    stats = Column(String)
 
-    role = relationship("UserRole")
+    roles = relationship("UserRole")
 
     def __repr__(self):
         return f"<User(username='{self.UserName}', role_id={self.role_id})>"

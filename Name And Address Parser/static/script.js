@@ -110,9 +110,9 @@ $(document).ready(function () {
         }
     });
     var parsedByInfo = $('<div id="parsed-by-info" style="display: block; margin-left: auto; margin-right: auto; text-align: center; margin-top: 20px;"></div>');
-    $('#exception-controls').after(parsedByInfo);
     var Mask_Pattern = $('<div id="Mask_Pattern" style="display: block; margin-left: auto; margin-right: auto; text-align: center; margin-top: 20px;"></div>');
     $('#exception-controls').after(Mask_Pattern);
+    $('#exception-controls').after(parsedByInfo);
     
 
     function renderAddressData(data) {
@@ -498,13 +498,13 @@ function collectData() {
 document.getElementById("submitBtn").addEventListener("click", function () {
     setTimeout(() => {
         submitButtonHandler();
-    }, 3000); // Wait for 3 seconds before handling the submission
+    }, 200); // Wait for 3 seconds before handling the submission
 });
 
 document.getElementById("submit&NextBtn").addEventListener("click", function () {
     setTimeout(() => {
         submitButtonHandler();
-    }, 3000); // Wait for 3 seconds before handling the submission
+    }, 200); // Wait for 3 seconds before handling the submission
 });
 
 function submitButtonHandler() {

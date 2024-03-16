@@ -5805,5 +5805,250 @@
                 "Address Component": "Zip Code"
             }
         ]
+    },
+    {
+        "Record Id": "43",
+        "Exception_File_Name": "RR_Test 17_39_54.008397.json",
+        "Input": "RR 885 BOX 699 Starke,699 32091",
+        "Mask Pattern": "RNXNW,NN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "885",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "STARKE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Zip Code"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "32091",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "43",
+        "Exception_File_Name": "RR_Test 17_39_54.008397.json",
+        "Input": "RR 885 BOX 699 Starke,699 32091",
+        "Mask Pattern": "RNXNW,NN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "885",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "STARKE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Zip Code"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "32091",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "64",
+        "Exception_File_Name": "RR_Test 19_13_26.033131.json",
+        "Input": "RR 1 BOX 81 West Nyack, New York 10994",
+        "Mask Pattern": "RNXNDW,WWN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "1",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "81",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "WEST",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NYACK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "YORK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "10994",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "3",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "878 NE Birch Lane Portland Oregon 72734",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "878",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "NE",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "BIRCH",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "LANE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "PORTLAND",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "OREGON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72734",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "4",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "78 SE Cedar Court Miami Florida 72735",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "78",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "SE",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CEDAR",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "COURT",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MIAMI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72735",
+                "Address Component": "Zip Code"
+            }
+        ]
     }
 ]

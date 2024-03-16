@@ -1,4 +1,21 @@
-/* function openTab(tabName, event) {
+//  function openTab(tabName, event) {
+//     var i;
+//     var tabContents = document.getElementsByClassName("tabcontent");
+//     var tabLinks = document.getElementsByClassName("tablink");
+
+//     for (i = 0; i < tabContents.length; i++) {
+//         tabContents[i].style.display = "none"; // Hide all tab content
+//     }
+
+//     for (i = 0; i < tabLinks.length; i++) {
+//         tabLinks[i].className = tabLinks[i].className.replace(" active", ""); // Remove "active" class from all tabs
+//     }
+
+//     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
+//     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
+// }
+// document.getElementById('defaultOpen').click();
+function openTab(tabName, event) {
     var i;
     var tabContents = document.getElementsByClassName("tabcontent");
     var tabLinks = document.getElementsByClassName("tablink");
@@ -14,8 +31,8 @@
     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
 }
-document.getElementById('defaultOpen').click();
-*/
+document.getElementById("defaultOpen").click();
+
 
 //------------------------------------------------------------------------------------------------------------
 //                                 Single Line Address Parser Tab Functionality
@@ -31,19 +48,23 @@ $(document).ready(function () {
         event.preventDefault();
         $('#result-box').show();
         var addressValue = $('#address-input').val();
-        $.ajax({
-            type: "POST",
-            url: "/",
-            data: { address: addressValue },
-            success: function (response) {
-                console.log('Response:', response);
-                renderAddressData(response);
-                document.getElementById('exception-controls').style.display = 'block';
-                isExceptionForced = false;
-            },
-            error: function (error) {
-                console.error('Error:', error);
-            }
+        $('#result-box').fadeOut('fast', function() {
+            $.ajax({
+                type: "POST",
+                url: "/",
+                data: { address: addressValue },
+                success: function (response) {
+                    console.log('Response:', response);
+                    renderAddressData(response);
+                    document.getElementById('exception-controls').style.display = 'block';
+                    isExceptionForced = false;
+                    $('#result-box').fadeIn('fast');
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                    $('#result-box').fadeIn('fast');
+                }
+            });
         });
     });
 
@@ -65,6 +86,8 @@ $(document).ready(function () {
         // var forceException = $('#exception-checkbox').is(':checked');
         if (isExceptionForced) {
             alert("Exception already created for this address.");
+            $('#exception-checkbox').prop('checked', false);
+            $('#exception-btn').prop('disabled', true);
         } else {
             var unsatisfied_address = $('#address-input').val();
             
@@ -77,6 +100,8 @@ $(document).ready(function () {
                     console.log("Response:", response);
                     isExceptionForced = true;
                     alert("Forced Exception is Created!");
+                    $('#exception-checkbox').prop('checked', false);
+                    $('#exception-btn').prop('disabled', true);
                 },
                 error: function (error) {
                     console.error("Error:", error);
@@ -84,8 +109,10 @@ $(document).ready(function () {
             });
         }
     });
-    var parsedByInfo = $('<div id="parsed-by-info" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;"></div>');
+    var parsedByInfo = $('<div id="parsed-by-info" style="display: block; margin-left: auto; margin-right: auto; text-align: center; margin-top: 20px;"></div>');
     $('#exception-controls').after(parsedByInfo);
+    var Mask_Pattern = $('<div id="Mask_Pattern" style="display: block; margin-left: auto; margin-right: auto; text-align: center; margin-top: 20px;"></div>');
+    $('#exception-controls').after(Mask_Pattern);
     
 
     function renderAddressData(data) {
@@ -93,10 +120,12 @@ $(document).ready(function () {
         tableBody.empty();
         var tableHTML = '';
 
-        if (data && data.result && data.result.Output && data.result.Parsed_By) {
+        if (data && data.result && data.result.Mask_Pattern  && data.result.Parsed_By && data.result.Output) {
             var addressComponents = data.result.Output;
             var parsedBy = data.result.Parsed_By;
+            var MaskPattern = data.result.Mask_Pattern;
             $('#parsed-by-info').text('Address Parsed By --> ' + parsedBy);
+            $('#Mask_Pattern').text('Mask Pattern --> ' + MaskPattern);
             addressComponents.forEach(function (array, index) {
 
                 tableHTML += '<tr>';
@@ -133,40 +162,43 @@ $(document).ready(function () {
 
         var fileData = new FormData(this);
         fileData.append('file', $('#file-upload')[0].files[0]);
+        $('#metrics-display').fadeOut('fast', function() {
+            $.ajax({
+                url: '/Batch_Parser',
+                type: 'POST',
+                data: fileData,
+                contentType: false,
+                processData: false,
+                xhr: function () {
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener('progress', function (e) {
+                        if (e.lengthComputable) {
+                            var percentComplete = (e.loaded / e.total) * 100;
+                            // Update your front-end progress bar here
+                        }
+                    }, false);
+                    return xhr;
+                },
+                // Inside the success callback of your $.ajax request
+                success: function (response) {
+                    console.log('File uploaded!');
 
-        $.ajax({
-            url: '/Batch_Parser',
-            type: 'POST',
-            data: fileData,
-            contentType: false,
-            processData: false,
-            xhr: function () {
-                var xhr = new window.XMLHttpRequest();
-                xhr.upload.addEventListener('progress', function (e) {
-                    if (e.lengthComputable) {
-                        var percentComplete = (e.loaded / e.total) * 100;
-                        // Update your front-end progress bar here
-                    }
-                }, false);
-                return xhr;
-            },
-            // Inside the success callback of your $.ajax request
-            success: function (response) {
-                console.log('File uploaded!');
+                    // Replace newlines with <br> tags and tabs with four non-breaking spaces
+                    var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
 
-                // Replace newlines with <br> tags and tabs with four non-breaking spaces
-                var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                    // Set the formatted text to your metrics display element
+                    document.getElementById('metrics-display').innerHTML = formattedText;
 
-                // Set the formatted text to your metrics display element
-                document.getElementById('metrics-display').innerHTML = formattedText;
+                    // Show the metrics box
+                    document.getElementById('metrics-display').style.display = 'block';
+                    $('#metrics-display').fadeIn('fast');
+                },
 
-                // Show the metrics box
-                document.getElementById('metrics-display').style.display = 'block';
-            },
-
-            error: function (error) {
-                console.log('Upload error:', error);
-            }
+                error: function (error) {
+                    console.log('Upload error:', error);
+                    $('#metrics-display').fadeIn('fast');
+                }
+            });
         });
     });
 });

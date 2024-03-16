@@ -37,9 +37,11 @@ def SingleLineAddressParser():
         if convert[4]:
             result = convert[0]
             result['Parsed_By'] = 'Rule Based'
+            result['Mask_Pattern'] = convert[1]
         else:
             result = convert[0]
             result['Parsed_By'] = 'Active Learning'
+            result['Mask_Pattern'] = convert[1]
         print(result)
         return jsonify(result=result)
 

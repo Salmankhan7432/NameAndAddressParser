@@ -81,6 +81,9 @@
                     <div id="parsed-by-info" style="margin-top: 10px; margin-bottom: 10px;">
                         <!-- "Address Parsed By -> " info will be inserted here -->
                     </div>
+                    <div id="Mask_Pattern" style="margin-top: 10px; margin-bottom: 10px;">
+                        <!-- "Mask Pattern -> " info will be inserted here -->
+                    </div>
                 </center>
         </div>
         <div class="result-box" id="result-box">
@@ -150,6 +153,7 @@
                                 </tbody>
                             </table>
                         </div>
+
                     </div>
                     <div class="rightContainer" id="inputData" style="width: 90%; height: 100vh; padding: 20px;">
                         <div id="dictionaryInfo">
@@ -209,7 +213,7 @@
                 </div>
             </div>
             <!--------------------------------------------------------------------------------------------------- -->
-            <!-- User Defined COmponents -->
+            <!--                            User Defined COmponents                                               -->
             <!--------------------------------------------------------------------------------------------------- -->
 
             <div id="UDComponents" class="tabcontent userDefinedComponentsTab-container">
@@ -237,7 +241,7 @@
                     <!-- </form> -->
                 </div>
             </div>
-            <script>
+            <!-- <script>
                 function openTab(tabName, event) {
                     var i;
                     var tabContents = document.getElementsByClassName("tabcontent");
@@ -255,7 +259,7 @@
                     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
                 }
                 document.getElementById("defaultOpen").click();
-            </script>
+            </script> -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

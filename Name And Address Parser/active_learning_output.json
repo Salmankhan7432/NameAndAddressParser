@@ -1,0 +1,3053 @@
+{
+    "1": [
+        {
+            "Record ID": "1",
+            "INPUT": "402 S Oak Road Manchester New Hampshire 72732",
+            "NDWFWWWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "402"
+                ],
+                [
+                    "USAD_SPR",
+                    "D",
+                    "S"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "OAK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MANCHESTER"
+                ],
+                [
+                    "USAD_STA",
+                    "WW",
+                    "NEW HAMPSHIRE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "72732"
+                ]
+            ]
+        }
+    ],
+    "9": [
+        {
+            "Record ID": "9",
+            "INPUT": "9876 Elm Drive Bentonville Arkansas 72712",
+            "NWFWTN": []
+        }
+    ],
+    "10": [
+        {
+            "Record ID": "10",
+            "INPUT": "66 Oak Street Fremont California 94993",
+            "NWFWTN": []
+        }
+    ],
+    "11": [
+        {
+            "Record ID": "11",
+            "INPUT": "6543 Cedar Lane Stockton California 95202",
+            "NWFWTN": []
+        }
+    ],
+    "13": [
+        {
+            "Record ID": "13",
+            "INPUT": "6 DOYERS ST , Los Angeles , CA 90011",
+            "NWF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "6"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "DOYERS"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ST"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "LOS ANGELES"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "90011"
+                ]
+            ]
+        }
+    ],
+    "14": [
+        {
+            "Record ID": "14",
+            "INPUT": "99 BAY BLVD ,Pacoima , CA 91331",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "99"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BAY"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "BLVD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PACOIMA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "91331"
+                ]
+            ]
+        }
+    ],
+    "15": [
+        {
+            "Record ID": "15",
+            "INPUT": "72 ANDERSON PL , Ketchikan , AK 99950",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "72"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ANDERSON"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "PL"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "KETCHIKAN"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "AK"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "99950"
+                ]
+            ]
+        }
+    ],
+    "16": [
+        {
+            "Record ID": "16",
+            "INPUT": "459 Jefferson Street , Chesapeake , Virginia 23321",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "459"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "JEFFERSON"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHESAPEAKE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "VIRGINIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "23321"
+                ]
+            ]
+        }
+    ],
+    "17": [
+        {
+            "Record ID": "17",
+            "INPUT": "05 Conifer Drive , Tukwila, Washington 98168",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "05"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CONIFER"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TUKWILA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "98168"
+                ]
+            ]
+        }
+    ],
+    "18": [
+        {
+            "Record ID": "18",
+            "INPUT": "64 Camel Back Road , Tulsa , Oklahoma 74145",
+            "NWWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "64"
+                ],
+                [
+                    "USAD_SNM",
+                    "WW",
+                    "CAMEL BACK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TULSA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "OKLAHOMA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "74145"
+                ]
+            ]
+        }
+    ],
+    "19": [
+        {
+            "Record ID": "19",
+            "INPUT": "69 Green Hill Road , Bentonville, Arkansas 72712",
+            "NFFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "69"
+                ],
+                [
+                    "USAD_SNM",
+                    "FF",
+                    "GREEN HILL"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BENTONVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ARKANSAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "72712"
+                ]
+            ]
+        }
+    ],
+    "20": [
+        {
+            "Record ID": "20",
+            "INPUT": "245 Linden Avenue , Winter Park, Florida 32789",
+            "NWF,WF,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "245"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "LINDEN"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WF",
+                    "WINTER PARK"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "FLORIDA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "32789"
+                ]
+            ]
+        }
+    ],
+    "21": [
+        {
+            "Record ID": "21",
+            "INPUT": "806 Tenmile, Los Angeles, California 90017",
+            "NW,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "806"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "TENMILE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "LOS ANGELES"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CALIFORNIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "90017"
+                ]
+            ]
+        }
+    ],
+    "22": [
+        {
+            "Record ID": "22",
+            "INPUT": "34 Willow Greene Drive,Montgomery,Alabama 36116",
+            "NWWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "34"
+                ],
+                [
+                    "USAD_SNM",
+                    "WW",
+                    "WILLOW GREENE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MONTGOMERY"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ALABAMA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "36116"
+                ]
+            ]
+        }
+    ],
+    "23": [
+        {
+            "Record ID": "23",
+            "INPUT": "863 Berkshire Circle, Knoxville, Tennessee 37917",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "863"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BERKSHIRE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "CIRCLE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "KNOXVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TENNESSEE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "37917"
+                ]
+            ]
+        }
+    ],
+    "24": [
+        {
+            "Record ID": "24",
+            "INPUT": "960 Hilltop Street,Colrain,Massachusetts 01340",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "960"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "HILLTOP"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "COLRAIN"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MASSACHUSETTS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "01340"
+                ]
+            ]
+        }
+    ],
+    "25": [
+        {
+            "Record ID": "25",
+            "INPUT": "535 Oliverio Drive,Moundridge, Kansas 67107",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "535"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "OLIVERIO"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MOUNDRIDGE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KANSAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "67107"
+                ]
+            ]
+        }
+    ],
+    "26": [
+        {
+            "Record ID": "26",
+            "INPUT": "06 Havanna Street,Greensboro, North Carolina 27401",
+            "NWF,W,DWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "06"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "HAVANNA"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "GREENSBORO"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "NORTH CAROLINA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "27401"
+                ]
+            ]
+        }
+    ],
+    "27": [
+        {
+            "Record ID": "27",
+            "INPUT": "3168 Oak Avenue,Cedar Knolls,New Jersey 07927",
+            "NWF,WF,WWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "3168"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "OAK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WF",
+                    "CEDAR KNOLLS"
+                ],
+                [
+                    "USAD_STA",
+                    "WW",
+                    "NEW JERSEY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "07927"
+                ]
+            ]
+        }
+    ],
+    "28": [
+        {
+            "Record ID": "28",
+            "INPUT": "51 Terra Street,Georgetown, Florida 32139",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "51"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "TERRA"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "GEORGETOWN"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "FLORIDA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "32139"
+                ]
+            ]
+        }
+    ],
+    "29": [
+        {
+            "Record ID": "29",
+            "INPUT": "1990 Richards Avenue,San Gabriel,California 91775",
+            "NWF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1990"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "RICHARDS"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "SAN GABRIEL"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CALIFORNIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "91775"
+                ]
+            ]
+        }
+    ],
+    "30": [
+        {
+            "Record ID": "30",
+            "INPUT": "4858 Stoneybrook Road, Orlando,Florida 32801",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "4858"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "STONEYBROOK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ORLANDO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "FLORIDA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "32801"
+                ]
+            ]
+        }
+    ],
+    "31": [
+        {
+            "Record ID": "31",
+            "INPUT": "963 Freedom Lane,Lodi,California 95240",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "963"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "FREEDOM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "LANE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "LODI"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CALIFORNIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "95240"
+                ]
+            ]
+        }
+    ],
+    "32": [
+        {
+            "Record ID": "32",
+            "INPUT": "3662 Bicetown Road,Corona, New York 11368",
+            "NWF,W,WWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "3662"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BICETOWN"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CORONA"
+                ],
+                [
+                    "USAD_STA",
+                    "WW",
+                    "NEW YORK"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "11368"
+                ]
+            ]
+        }
+    ],
+    "33": [
+        {
+            "Record ID": "33",
+            "INPUT": "4325 Hidden Meadow Drive,CAMP HILL,Pennsylvania 17012",
+            "NWFF,FF,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "4325"
+                ],
+                [
+                    "USAD_SNM",
+                    "WF",
+                    "HIDDEN MEADOW"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "FF",
+                    "CAMP HILL"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PENNSYLVANIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "17012"
+                ]
+            ]
+        }
+    ],
+    "34": [
+        {
+            "Record ID": "34",
+            "INPUT": "2588 Armbrester Drive,Gardena,California 90248",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "2588"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ARMBRESTER"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "GARDENA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CALIFORNIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "90248"
+                ]
+            ]
+        }
+    ],
+    "35": [
+        {
+            "Record ID": "35",
+            "INPUT": "1980 Alexander Drive,Truscott, Texas 79260",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1980"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ALEXANDER"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TRUSCOTT"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TEXAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "79260"
+                ]
+            ]
+        }
+    ],
+    "36": [
+        {
+            "Record ID": "36",
+            "INPUT": "38 Patterson Street,Houston, Texas 77092",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "38"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "PATTERSON"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "HOUSTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TEXAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "77092"
+                ]
+            ]
+        }
+    ],
+    "37": [
+        {
+            "Record ID": "37",
+            "INPUT": "78 Snyder Avenue,Charlotte, North Carolina 28202",
+            "NWF,W,DWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "78"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "SNYDER"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHARLOTTE"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "NORTH CAROLINA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "28202"
+                ]
+            ]
+        }
+    ],
+    "38": [
+        {
+            "Record ID": "38",
+            "INPUT": "96 Hillcrest Drive,Tukwila, Washington 98168",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "96"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "HILLCREST"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TUKWILA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "98168"
+                ]
+            ]
+        }
+    ],
+    "39": [
+        {
+            "Record ID": "39",
+            "INPUT": "53 Walnut Drive,Dahlen, North Dakota 58224",
+            "NWF,W,DWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "53"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "WALNUT"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DAHLEN"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "NORTH DAKOTA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "58224"
+                ]
+            ]
+        }
+    ],
+    "40": [
+        {
+            "Record ID": "40",
+            "INPUT": "026 Lowland Drive,Beloit, Illinois 53511",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "026"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "LOWLAND"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BELOIT"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ILLINOIS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "53511"
+                ]
+            ]
+        }
+    ],
+    "41": [
+        {
+            "Record ID": "41",
+            "INPUT": "93 Jerry Dove Drive,Beaufort, South Carolina 29902",
+            "NWWF,W,DWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "93"
+                ],
+                [
+                    "USAD_SNM",
+                    "WW",
+                    "JERRY DOVE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BEAUFORT"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "SOUTH CAROLINA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "29902"
+                ]
+            ]
+        }
+    ],
+    "42": [
+        {
+            "Record ID": "42",
+            "INPUT": "396 Nickel Road,Alhambra,California 91801",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "396"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "NICKEL"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ALHAMBRA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CALIFORNIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "91801"
+                ]
+            ]
+        }
+    ],
+    "43": [
+        {
+            "Record ID": "43",
+            "INPUT": "2388 Kuhl Avenue,Atlanta,Georgia 30303",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "2388"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "KUHL"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ATLANTA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "GEORGIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "30303"
+                ]
+            ]
+        }
+    ],
+    "44": [
+        {
+            "Record ID": "44",
+            "INPUT": "254 Midway Road,Boles,Arkansas 72926",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "254"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MIDWAY"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BOLES"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ARKANSAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "72926"
+                ]
+            ]
+        }
+    ],
+    "45": [
+        {
+            "Record ID": "45",
+            "INPUT": "1310 Breezewood Court,Arma,Kansas 66712",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1310"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BREEZEWOOD"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "COURT"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ARMA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KANSAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "66712"
+                ]
+            ]
+        }
+    ],
+    "46": [
+        {
+            "Record ID": "46",
+            "INPUT": "3551 Rubaiyat Road,Grand Rapids,Michigan 49503",
+            "NWF,WF,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "3551"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "RUBAIYAT"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "WF",
+                    "GRAND RAPIDS"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MICHIGAN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "49503"
+                ]
+            ]
+        }
+    ],
+    "47": [
+        {
+            "Record ID": "47",
+            "INPUT": "1405 Spring Avenue,Fort Washington,Pennsylvania 19034",
+            "NFF,FT,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1405"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "SPRING"
+                ],
+                [
+                    "USAD_SFX",
+                    "FF",
+                    "AVENUE FORT"
+                ],
+                [
+                    "USAD_CTY",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PENNSYLVANIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "19034"
+                ]
+            ]
+        }
+    ],
+    "48": [
+        {
+            "Record ID": "48",
+            "INPUT": "5 Preston Street,Plainfield,Illinois 60586",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "5"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "PRESTON"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PLAINFIELD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ILLINOIS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "60586"
+                ]
+            ]
+        }
+    ],
+    "49": [
+        {
+            "Record ID": "49",
+            "INPUT": "1977 Laurel Lee,Minneapolis,Minnesota 55415",
+            "NWW,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1977"
+                ],
+                [
+                    "USAD_SNM",
+                    "WW",
+                    "LAUREL LEE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MINNEAPOLIS"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MINNESOTA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "55415"
+                ]
+            ]
+        }
+    ],
+    "50": [
+        {
+            "Record ID": "50",
+            "INPUT": "254 Rodney Street,Chesterfield,Missouri 63005",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "254"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "RODNEY"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHESTERFIELD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MISSOURI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "63005"
+                ]
+            ]
+        }
+    ],
+    "51": [
+        {
+            "Record ID": "51",
+            "INPUT": "59 Collins Street,Tampa,Florida 33619",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "59"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "COLLINS"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TAMPA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "FLORIDA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "33619"
+                ]
+            ]
+        }
+    ],
+    "52": [
+        {
+            "Record ID": "52",
+            "INPUT": "00 Maple Road, San Antonio, TX 78205",
+            "NWF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "00"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAPLE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "SAN ANTONIO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "78205"
+                ]
+            ]
+        }
+    ],
+    "53": [
+        {
+            "Record ID": "53",
+            "INPUT": "432 Cedar Boulevard, Dallas, TX 75201",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "432"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CEDAR"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "BOULEVARD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DALLAS"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "75201"
+                ]
+            ]
+        }
+    ],
+    "54": [
+        {
+            "Record ID": "54",
+            "INPUT": "789 Elm Avenue, Philadelphia, PA 19104",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "789"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ELM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PHILADELPHIA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "19104"
+                ]
+            ]
+        }
+    ],
+    "55": [
+        {
+            "Record ID": "55",
+            "INPUT": "123 Pine Street, Baltimore, MD 21201",
+            "NFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "123"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "PINE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BALTIMORE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MD"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "21201"
+                ]
+            ]
+        }
+    ],
+    "56": [
+        {
+            "Record ID": "56",
+            "INPUT": "79 CITY Avenue, Philadelphia, PA 19104",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "79"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CITY"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PHILADELPHIA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "19104"
+                ]
+            ]
+        }
+    ],
+    "57": [
+        {
+            "Record ID": "57",
+            "INPUT": "56 Maple Lane, Washington ,DC 20001",
+            "NWF,T,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "56"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAPLE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "LANE"
+                ],
+                [
+                    "USAD_CTY",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "DC"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "20001"
+                ]
+            ]
+        }
+    ],
+    "58": [
+        {
+            "Record ID": "58",
+            "INPUT": "005 Conifer Drive , Tukwila, Washington 98168",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "005"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CONIFER"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TUKWILA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "98168"
+                ]
+            ]
+        }
+    ],
+    "59": [
+        {
+            "Record ID": "59",
+            "INPUT": "863 Berkshire Circle, Knoxville, Tennessee 37917",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "863"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BERKSHIRE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "CIRCLE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "KNOXVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TENNESSEE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "37917"
+                ]
+            ]
+        }
+    ],
+    "60": [
+        {
+            "Record ID": "60",
+            "INPUT": "3960 Hilltop Street,Colrain,Massachusetts 01340",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "3960"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "HILLTOP"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "COLRAIN"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MASSACHUSETTS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "01340"
+                ]
+            ]
+        }
+    ],
+    "61": [
+        {
+            "Record ID": "61",
+            "INPUT": "432 Cedar Boulevard, Dallas, TX 75201",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "432"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CEDAR"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "BOULEVARD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DALLAS"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "75201"
+                ]
+            ]
+        }
+    ],
+    "62": [
+        {
+            "Record ID": "62",
+            "INPUT": "23 Pine Street, Baltimore, MD 29701",
+            "NFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "23"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "PINE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BALTIMORE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MD"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "29701"
+                ]
+            ]
+        }
+    ],
+    "63": [
+        {
+            "Record ID": "63",
+            "INPUT": "9 Palm Avenue, Philadelphia, PA 19104",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "9"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "PALM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PHILADELPHIA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "19104"
+                ]
+            ]
+        }
+    ],
+    "64": [
+        {
+            "Record ID": "64",
+            "INPUT": "6 Maple Lane, Washington, DC 20001",
+            "NWF,T,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "6"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAPLE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "LANE"
+                ],
+                [
+                    "USAD_CTY",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "DC"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "20001"
+                ]
+            ]
+        }
+    ],
+    "65": [
+        {
+            "Record ID": "65",
+            "INPUT": "90 Richards Avenue,San Gabriel,California 91775",
+            "NWF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "90"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "RICHARDS"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "SAN GABRIEL"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CALIFORNIA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "91775"
+                ]
+            ]
+        }
+    ],
+    "66": [
+        {
+            "Record ID": "66",
+            "INPUT": "858 Stoneybrook Road, Orlando,Florida 32801",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "858"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "STONEYBROOK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ORLANDO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "FLORIDA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "32801"
+                ]
+            ]
+        }
+    ],
+    "67": [
+        {
+            "Record ID": "67",
+            "INPUT": "662 Bicetown Road,Corona, New York 11368",
+            "NWF,W,WWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "662"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BICETOWN"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CORONA"
+                ],
+                [
+                    "USAD_STA",
+                    "WW",
+                    "NEW YORK"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "11368"
+                ]
+            ]
+        }
+    ],
+    "68": [
+        {
+            "Record ID": "68",
+            "INPUT": "6 Pine Road, Nashville, TN 37219",
+            "NFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "6"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "PINE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "NASHVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "37219"
+                ]
+            ]
+        }
+    ],
+    "69": [
+        {
+            "Record ID": "69",
+            "INPUT": "33 Main Street, Buffalo, NY 14203",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "33"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAIN"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BUFFALO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "14203"
+                ]
+            ]
+        }
+    ],
+    "70": [
+        {
+            "Record ID": "70",
+            "INPUT": "87 Cedar Street, Kansas City, MO 64105",
+            "NWF,TW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "87"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CEDAR"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "TW",
+                    "KANSAS CITY"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MO"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "64105"
+                ]
+            ]
+        }
+    ],
+    "71": [
+        {
+            "Record ID": "71",
+            "INPUT": "96 Hillcrest Drive,Tukwila, Washington 98168",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "96"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "HILLCREST"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TUKWILA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "98168"
+                ]
+            ]
+        }
+    ],
+    "72": [
+        {
+            "Record ID": "72",
+            "INPUT": "53 Walnut Drive,Dahlen, North Dakota 58224",
+            "NWF,W,DWN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "53"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "WALNUT"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DAHLEN"
+                ],
+                [
+                    "USAD_STA",
+                    "DW",
+                    "NORTH DAKOTA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "58224"
+                ]
+            ]
+        }
+    ],
+    "73": [
+        {
+            "Record ID": "73",
+            "INPUT": "26 Lowland Drive,Beloit, Illinois 53511",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "26"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "LOWLAND"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "DRIVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BELOIT"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "ILLINOIS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "53511"
+                ]
+            ]
+        }
+    ],
+    "74": [
+        {
+            "Record ID": "74",
+            "INPUT": "310 Breezewood Court,Arma,Kansas 66712",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "310"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "BREEZEWOOD"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "COURT"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "ARMA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "KANSAS"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "66712"
+                ]
+            ]
+        }
+    ],
+    "75": [
+        {
+            "Record ID": "75",
+            "INPUT": "6 Bluf Street, Baltimore, MD 21201",
+            "NFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "6"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "BLUF"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "BALTIMORE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MD"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "21201"
+                ]
+            ]
+        }
+    ],
+    "76": [
+        {
+            "Record ID": "76",
+            "INPUT": "8 Oak Avenue, Philadelphia, PA 19104",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "8"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "OAK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PHILADELPHIA"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "PA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "19104"
+                ]
+            ]
+        }
+    ],
+    "77": [
+        {
+            "Record ID": "77",
+            "INPUT": "356 Maple Lane, Washington, DC 20001",
+            "NWF,T,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "356"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAPLE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "LANE"
+                ],
+                [
+                    "USAD_CTY",
+                    "T",
+                    "WASHINGTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "DC"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "20001"
+                ]
+            ]
+        }
+    ],
+    "78": [
+        {
+            "Record ID": "78",
+            "INPUT": "45 Elm Street, Phoenix, AZ 85014",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "45"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ELM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "PHOENIX"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "AZ"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "85014"
+                ]
+            ]
+        }
+    ],
+    "79": [
+        {
+            "Record ID": "79",
+            "INPUT": "432 Pine Boulevard, Detroit, MI 48202",
+            "NFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "432"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "PINE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "BOULEVARD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DETROIT"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "48202"
+                ]
+            ]
+        }
+    ],
+    "80": [
+        {
+            "Record ID": "80",
+            "INPUT": "123 Elm Street, Houston, TX 77002",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "123"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ELM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "HOUSTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "77002"
+                ]
+            ]
+        }
+    ],
+    "81": [
+        {
+            "Record ID": "81",
+            "INPUT": "1977 Laurel Lee,Minneapolis,Minnesota 55415",
+            "NWW,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1977"
+                ],
+                [
+                    "USAD_SNM",
+                    "WW",
+                    "LAUREL LEE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MINNEAPOLIS"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MINNESOTA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "55415"
+                ]
+            ]
+        }
+    ],
+    "82": [
+        {
+            "Record ID": "82",
+            "INPUT": "1254 Rodney Street,Chesterfield,Missouri 63005",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "1254"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "RODNEY"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CHESTERFIELD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "MISSOURI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "63005"
+                ]
+            ]
+        }
+    ],
+    "83": [
+        {
+            "Record ID": "83",
+            "INPUT": "48 Elm Street, Springfield, IL 62704",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "48"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ELM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "SPRINGFIELD"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IL"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "62704"
+                ]
+            ]
+        }
+    ],
+    "84": [
+        {
+            "Record ID": "84",
+            "INPUT": "87 Main Road, Trenton, NJ 08638",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "87"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAIN"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "TRENTON"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NJ"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "08638"
+                ]
+            ]
+        }
+    ],
+    "85": [
+        {
+            "Record ID": "85",
+            "INPUT": "32 Oak Avenue, Dallas, TX 75201",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "32"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "OAK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "DALLAS"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TX"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "75201"
+                ]
+            ]
+        }
+    ],
+    "86": [
+        {
+            "Record ID": "86",
+            "INPUT": "998 Park Boulevard, San Diego, CA 92108",
+            "NFF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "998"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "PARK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "BOULEVARD"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "SAN DIEGO"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "CA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "92108"
+                ]
+            ]
+        }
+    ],
+    "87": [
+        {
+            "Record ID": "87",
+            "INPUT": "120 Maple Lane, Seattle, WA 98104",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "120"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MAPLE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "LANE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "SEATTLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "98104"
+                ]
+            ]
+        }
+    ],
+    "88": [
+        {
+            "Record ID": "88",
+            "INPUT": "123 Elm Boulevard, Cincinnati, OH 45202",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "123"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "ELM"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "BOULEVARD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CINCINNATI"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "OH"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "45202"
+                ]
+            ]
+        }
+    ],
+    "89": [
+        {
+            "Record ID": "89",
+            "INPUT": "789 Cedar Street, Cleveland, OH 44115",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "789"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "CEDAR"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "STREET"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "CLEVELAND"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "OH"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "44115"
+                ]
+            ]
+        }
+    ],
+    "90": [
+        {
+            "Record ID": "90",
+            "INPUT": "356 Oak Avenue, Milwaukee, WI 53202",
+            "NWF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "356"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "OAK"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVENUE"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "MILWAUKEE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "WI"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "53202"
+                ]
+            ]
+        }
+    ],
+    "91": [
+        {
+            "Record ID": "91",
+            "INPUT": "456 Pine Road, Nashville, TN 37219",
+            "NFF,W,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "456"
+                ],
+                [
+                    "USAD_SNM",
+                    "F",
+                    "PINE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ROAD"
+                ],
+                [
+                    "USAD_CTY",
+                    "W",
+                    "NASHVILLE"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "TN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "37219"
+                ]
+            ]
+        }
+    ]
+}

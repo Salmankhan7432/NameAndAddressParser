@@ -112,8 +112,8 @@ def MapCreationForm():
     mapdata = request.get_json()
     print("Received Map Data:",mapdata)
     keys = list(mapdata.keys())
-    Vdbs = {k: mapdata[k] for k in keys[:4]}
-    Kbs = {k: mapdata[k] for k in keys[4:]}
+    Vdbs = {k: mapdata[k] for k in keys[:9]}
+    Kbs = {k: mapdata[k] for k in keys[9:]}
     print("Validation Data Base: ",Vdbs)
     print("Knowledge Base: ",Kbs)
     CRUD.add_data(engine,Kbs)
@@ -302,5 +302,5 @@ def loginPage():
     
     
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=8080)
 

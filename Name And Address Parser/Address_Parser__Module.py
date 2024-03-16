@@ -16,7 +16,7 @@ import sklearn
 from sklearn.metrics import multilabel_confusion_matrix,confusion_matrix,classification_report
 #Parsing 1st program
 from DB_Operations import DB_Operations
-
+import zipfile
 import os
 import warnings
 warnings.filterwarnings("ignore")
@@ -393,18 +393,46 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     else:
         percentage = (Observation/Total)*100
         percentage = "%.2f"% percentage
-        ActiveLResult = json.dumps(Result, indent = 4,ensure_ascii=False) 
+        # ActiveLResult = json.dumps(Result, indent = 4,ensure_ascii=False) 
         # Detailed_Report+="\nNumber of Exceptions Thrown: -\t\t"+"{:,}".format(Total-Observation)+"\n"
+        Detailed_Report+="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+""
+        Detailed_Report+="\nUnique Pattern Count: -\t"+"{:,}".format(len(Unique_Mask))+"\n\n"
         Detailed_Report+="\nNumber of Pattern Parsed Addresses: -\t"+"{:,}".format(Observation)+"\n"
         Detailed_Report+="Percentage of Patterns Parsed Result:  -\t"+"{:.2f}%".format(float(percentage))+"\n"
         Detailed_Report+="\nNumber of Exceptions Thrown: -\t\t"+"{:,}".format(Total-Observation)+"\n"
         Detailed_Report+="Percentage of RuleBased Parsed Result: -\t"+"{:.2f}%".format(100-float(percentage))+"\n"
-        Detailed_Report+="Output From Active Learning\n\n"
-        Detailed_Report+=str(ActiveLResult)
+        # Detailed_Report+="Output From Active Learning\n\n"
+        # Detailed_Report+=str(ActiveLResult)
         
-        RuleBasedRes =json.dumps(RuleBasedOutput,indent=4)
-        Detailed_Report+="\n\nOutput Fron Rule Based Approach\n\n"
-        Detailed_Report+=str(RuleBasedRes)
+        # RuleBasedRes =json.dumps(RuleBasedOutput,indent=4)
+        # Detailed_Report+="\n\nOutput Fron Rule Based Approach\n\n"
+        # Detailed_Report+=str(RuleBasedRes)
+        detailed_report_file = "detailed_report.txt"
+        active_learning_file = "active_learning_output.json"
+        rulebased_output_file = "rulebased_output.json"
+        zip_file_name = f"Output/Batch File Output/{file_name}_output.zip"
+        # zip_file_name = re.sub(r'[^\w_. -]', '_', zip_file_name)
+        
+        with open(detailed_report_file, "w", encoding = "utf8") as file:
+            file.write(Detailed_Report)
+
+        # Writing the active learning output to a JSON file
+        with open(active_learning_file, "w", encoding = "utf8") as file:
+            file.seek(0)
+            json.dump(Result, file, indent=4)
+            file.truncate
+
+        # Writing the rule-based output to a JSON file
+        with open(rulebased_output_file, "w", encoding = "utf8") as file:
+            file.seek(0)
+            json.dump(RuleBasedOutput, file, indent=4)
+            file.truncate
+        
+        with zipfile.ZipFile(zip_file_name, 'w') as zipf:
+            zipf.write(detailed_report_file)
+            zipf.write(active_learning_file)
+            zipf.write(rulebased_output_file)
+            
         # Detailed_Report+="List of Exception Mask(s): -\t\n\n"+Exception_Mask+"--"
         Detailed_Report_1="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+""
         Detailed_Report_1+="\nUnique Pattern Count: -\t"+"{:,}".format(len(Unique_Mask))+"\n"
@@ -414,12 +442,13 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         Detailed_Report_1+="Percentage of RuleBased Parsed Result: -\t"+"{:.2f}%".format(100-float(percentage))+"\n"
         # Detailed_Report_1+="List of Exception Mask(s): -\t\n\n"+Exception_Mask+"--"
         # Output_file_name = "Detailed_Report_" + str(current_time) + ".txt"
-        Output_file_name = "Detailed Report_"+file_name+".txt"
-        Output_file_name = re.sub(r'[^\w_. -]', '_', Output_file_name)
-        path = 'Output/Batch File Output/' + Output_file_name
-        f=open(path,"w",encoding="utf8")
-        f.write(Detailed_Report)
-        f.close()
+        # Output_file_name = "Detailed Report_"+file_name+".txt"
+        # Output_file_name = re.sub(r'[^\w_. -]', '_', Output_file_name)
+        # path = 'Output/Batch File Output/' + Output_file_name
+        abs_path = os.path.abspath(zip_file_name)
+        # f=open(path,"w",encoding="utf8")
+        # f.write(Detailed_Report)
+        # f.close()
         
         #---------------------------------------------------------------------------------
         #Just Evaluations
@@ -431,7 +460,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #---------------------------------------------------------------------------------
         
         # Progress.stop()
-        return (True,f"Detailed_Report of {file_name}.txt is Generated! \nFile Path: {path} \n{Detailed_Report_1}")
+        return (True,f"Detailed_Report of {file_name}.txt is Generated! \nFile Path: {abs_path} \n{Detailed_Report_1}")
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)
     # print("Address Matching Report")

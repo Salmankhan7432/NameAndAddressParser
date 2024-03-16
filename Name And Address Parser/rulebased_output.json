@@ -1,0 +1,336 @@
+{
+    "2": [
+        [
+            "88",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "N",
+            "USAD_SPR",
+            "D",
+            "Street Pre-Directional"
+        ],
+        [
+            "PINE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "DRIVE",
+            "USAD_NA",
+            "F",
+            "Not Selected"
+        ],
+        [
+            "OLYMPIA",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "WASHINGTON",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "72733",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "3": [
+        [
+            "878",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "NE",
+            "USAD_SPR",
+            "D",
+            "Street Pre-Directional"
+        ],
+        [
+            "BIRCH",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "LANE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "PORTLAND",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "OREGON",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "72734",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "4": [
+        [
+            "78",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "SE",
+            "USAD_SPR",
+            "D",
+            "Street Pre-Directional"
+        ],
+        [
+            "CEDAR",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "COURT",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "MIAMI",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "FLORIDA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "72735",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "5": [
+        [
+            "7687",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "N",
+            "USAD_SPR",
+            "D",
+            "Street Pre-Directional"
+        ],
+        [
+            "MAIN",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "ST",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "ANCHORAGE",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "ALASKA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "99501",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "6": [
+        [
+            "5678",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "W",
+            "USAD_SPR",
+            "D",
+            "Street Pre-Directional"
+        ],
+        [
+            "ELM",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "AVE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "JUNEAU",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "ALASKA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "99801",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "7": [
+        [
+            "55",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "MAPLE",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "AVENUE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "CALIFORNIA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "94993",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "8": [
+        [
+            "5678",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "PINE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "STREET",
+            "USAD_NA",
+            "F",
+            "Not Selected"
+        ],
+        [
+            "STOCKTON",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "CALIFORNIA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "95202",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "12": [
+        [
+            "9876",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "E",
+            "USAD_SPR",
+            "D",
+            "Street Pre-Directional"
+        ],
+        [
+            "PINE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "RD",
+            "USAD_NA",
+            "F",
+            "Not Selected"
+        ],
+        [
+            "FAIRBANKS",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "ALASKA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "99701",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ]
+}

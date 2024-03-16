@@ -5461,5 +5461,349 @@
                 "USAD_ZIP"
             ]
         ]
+    },
+    {
+        "Record Id": "43",
+        "Exception_File_Name": "RR_Test 17_39_54.008397.json",
+        "Input": "RR 885 BOX 699 Starke,699 32091",
+        "Mask Pattern": "RNXNW,NN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "885",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "STARKE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Zip Code"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "32091",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "46",
+        "Exception_File_Name": "RR_Test 19_13_26.033131.json",
+        "Input": "RR 7 BOX 1492 San Francisco, CA 94103",
+        "Mask Pattern": "RNXNWW,TN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "7",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "1492",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "SAN",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FRANCISCO",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "CA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "94103",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "49",
+        "Exception_File_Name": "RR_Test 19_13_26.033131.json",
+        "Input": "RR 668 BOX 3758 Washington,DC 20009",
+        "Mask Pattern": "RNXNT,TN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "668",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "3758",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "WASHINGTON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "DC",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "20009",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "53",
+        "Exception_File_Name": "RR_Test 19_13_26.033131.json",
+        "Input": "RR 77 BOX 77 FLORAL CITY, FL 34436",
+        "Mask Pattern": "RNXNWW,TN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "77",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "77",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FLORAL",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CITY",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FL",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "34436",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "initialsForced Exception_File -->01",
+        "Exception_File_Name": "initials 19_13_25.200328_Forced_ExceptionFile.json",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "Single Line Exception_File Initials-->01",
+        "Exception_File_Name": "Initials 19_13_25.200328_ExceptionFile.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ]
+    },
+    {
+        "Record Id": "43",
+        "Exception_File_Name": "RR_Test 17_39_54.008397.json",
+        "Input": "RR 885 BOX 699 Starke,699 32091",
+        "Mask Pattern": "RNXNW,NN",
+        "Region": "US",
+        "Type": "roural route address",
+        "Address Approved?": "Yes",
+        "Approved By": "Committee Member 1",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "885",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "STARKE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "699",
+                "Address Component": "Zip Code"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "32091",
+                "Address Component": "Zip Code"
+            }
+        ]
     }
 ]

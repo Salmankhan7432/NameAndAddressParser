@@ -1,0 +1,56 @@
+[
+    {
+        "Record ID": "Single Line Exception_File Initials-->01",
+        "INPUT": "402 S Oak Road Manchester New Hampshire 72732",
+        "NDWFWWWN": [
+            [
+                "402",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "S",
+                "USAD_SPR",
+                "D",
+                "Street Pre-Directional"
+            ],
+            [
+                "OAK",
+                "USAD_SNM",
+                "W",
+                "Street Name"
+            ],
+            [
+                "ROAD",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "MANCHESTER",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NEW",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "HAMPSHIRE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "72732",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    }
+]

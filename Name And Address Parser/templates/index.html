@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/batchParserTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mapCreationFormTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/userDefinedComponentsTab.css') }}">
+
+
     <style>
         html, body {
             margin: 0;
@@ -81,9 +83,6 @@
                     <div id="parsed-by-info" style="margin-top: 10px; margin-bottom: 10px;">
                         <!-- "Address Parsed By -> " info will be inserted here -->
                     </div>
-                    <div id="Mask_Pattern" style="margin-top: 10px; margin-bottom: 10px;">
-                        <!-- "Mask Pattern -> " info will be inserted here -->
-                    </div>
                 </center>
         </div>
         <div class="result-box" id="result-box">
@@ -153,7 +152,6 @@
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                     <div class="rightContainer" id="inputData" style="width: 90%; height: 100vh; padding: 20px;">
                         <div id="dictionaryInfo">
@@ -172,13 +170,13 @@
                         <input type="text" id="mask-inputValue" readonly><br>
                         <label for="region" class="col-sm-2 col-form-label">Region:</label>
                         <select id="region" name="region" class="" required>
-                            <option value="" selected></option>
+                            <option value="" selected disabled hidden></option>
                             <option value="US">US</option>
                             <option value="Puerto Rico">Puerto Rico</option>
                         </select><br>
                         <label for="type">Address Type : </label>
                         <select id="AddressType" name="AddressType" class="" required>
-                            <option value="" selected></option>
+                            <option value="" selected disabled hidden></option>
                             <option value="street address">Street Address</option>
                             <option value="po box address">PO Box Address</option>
                             <option value="highay contract address">Highway Contract Address</option>
@@ -191,15 +189,15 @@
                         <label id="keyLabel" style="display:none; padding-bottom: 5px;"></label>
                         <label for="">Add to V-DB and KB : </label>
                         <select name="kb" id="Approved?" required>
-                            <option value="" selected></option>
+                            <option value="" selected disabled hidden></option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select><br>
                         <label for="comment">Comment : </label>
-                        <textarea name="" id="" cols="30" rows="3"></textarea><br>
+                        <textarea name="" id="comment" cols="30" rows="3"></textarea><br>
                         <label for="approvedby">Approved By : </label>
                         <select name="approvedby" id="approvedby" required>
-                            <option value="" selected></option>
+                            <option value="" selected disabled hidden></option>
                             <option value="Committee Member 1">Committee Member 1</option>
                             <option value="Committee Member 2">Committee Member 2</option>
                             <option value="Committee Member 3">Committee Member 3</option>
@@ -213,7 +211,7 @@
                 </div>
             </div>
             <!--------------------------------------------------------------------------------------------------- -->
-            <!--                            User Defined COmponents                                               -->
+            <!-- User Defined COmponents -->
             <!--------------------------------------------------------------------------------------------------- -->
 
             <div id="UDComponents" class="tabcontent userDefinedComponentsTab-container">
@@ -241,7 +239,7 @@
                     <!-- </form> -->
                 </div>
             </div>
-            <!-- <script>
+            <script>
                 function openTab(tabName, event) {
                     var i;
                     var tabContents = document.getElementsByClassName("tabcontent");
@@ -259,13 +257,14 @@
                     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
                 }
                 document.getElementById("defaultOpen").click();
-            </script> -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>            
             <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 <footer>
     <h3>Address Parser- Measuring address data accuracy by analyzing and structuring its components.</h3>
     <b>We Believe in the Power of Quality Data to Impact Public Life</b>
 </footer>
+
 
 </html>

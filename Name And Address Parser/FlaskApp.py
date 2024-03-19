@@ -18,12 +18,15 @@ import SingleAddressParser_Module as SAP
 import Address_Parser__Module as BAP
 from flask_cors import CORS
 import json
+from datetime import datetime
 
+current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
 Session = sessionmaker(bind=engine)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
+
 CORS(app)
 
 
@@ -37,11 +40,9 @@ def SingleLineAddressParser():
         if convert[4]:
             result = convert[0]
             result['Parsed_By'] = 'Rule Based'
-            result['Mask_Pattern'] = convert[1]
         else:
             result = convert[0]
             result['Parsed_By'] = 'Active Learning'
-            result['Mask_Pattern'] = convert[1]
         print(result)
         return jsonify(result=result)
 
@@ -112,28 +113,39 @@ def MapCreationForm():
     engine = create_engine(database_url)
     result={}
     mapdata = request.get_json()
-    print("Received Map Data:",mapdata)
+    print("\nReceived Map Data:",mapdata)
     keys = list(mapdata.keys())
-    Vdbs = {k: mapdata[k] for k in keys[:9]}
-    Kbs = {k: mapdata[k] for k in keys[9:]}
-    print("Validation Data Base: ",Vdbs)
-    print("Knowledge Base: ",Kbs)
-    CRUD.add_data(engine,Kbs)
-    with open("Validation_DB.txt", 'r+') as file:
-        try:
-            existing_data = json.load(file)
-        except json.JSONDecodeError:
-            existing_data = []
-    
-        # Append the new data to the existing data list
-        existing_data.append(Vdbs)
-        
-        # Set the file's current position at the beginning
-        file.seek(0)
-        
-        # Write the updated data back to the file
-        json.dump(existing_data, file, indent=4)
-        file.truncate()
+    Vdbs = {k: mapdata[k] for k in keys[:10]}
+    Vdbs["Approved By"] = Vdbs["Approved By"] + " at " + str(current_time)
+    Kbs = {k: mapdata[k] for k in keys[10:]}
+    print("\n\nValidation Data Base: ",Vdbs)
+    print("\n\nKnowledge Base: ",Kbs)
+    if Vdbs["Address Approved?"] == "Yes":
+        CRUD.add_data(engine,Kbs)
+        print("Approved: Yes")
+        with open("Validation_DB.txt", 'r+') as file:
+            try:
+                existing_data = json.load(file)
+            except json.JSONDecodeError:
+                existing_data = []
+            existing_data.append(Vdbs)
+            file.seek(0)
+            json.dump(existing_data, file, indent=4)
+            file.truncate()
+    else:
+        print("Approved: No")
+        Vdbs["Rejected By"] = Vdbs["Approved By"]
+        del Vdbs["Approved By"]
+        print(Vdbs)
+        with open("ADDR_Rejection_DB.txt", "r+") as file:
+            try:
+                existing_data = json.load(file)
+            except json.JSONDecodeError:
+                existing_data = []
+            existing_data.append(Vdbs)
+            file.seek(0)
+            json.dump(existing_data, file, indent=4)
+            file.truncate()
         
     return jsonify({"status":"success","message":"Form Data Received"})
 

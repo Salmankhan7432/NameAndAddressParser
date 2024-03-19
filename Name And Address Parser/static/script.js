@@ -1,21 +1,4 @@
-//  function openTab(tabName, event) {
-//     var i;
-//     var tabContents = document.getElementsByClassName("tabcontent");
-//     var tabLinks = document.getElementsByClassName("tablink");
-
-//     for (i = 0; i < tabContents.length; i++) {
-//         tabContents[i].style.display = "none"; // Hide all tab content
-//     }
-
-//     for (i = 0; i < tabLinks.length; i++) {
-//         tabLinks[i].className = tabLinks[i].className.replace(" active", ""); // Remove "active" class from all tabs
-//     }
-
-//     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
-//     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
-// }
-// document.getElementById('defaultOpen').click();
-function openTab(tabName, event) {
+/* function openTab(tabName, event) {
     var i;
     var tabContents = document.getElementsByClassName("tabcontent");
     var tabLinks = document.getElementsByClassName("tablink");
@@ -31,8 +14,8 @@ function openTab(tabName, event) {
     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
 }
-document.getElementById("defaultOpen").click();
-
+document.getElementById('defaultOpen').click();
+*/
 
 //------------------------------------------------------------------------------------------------------------
 //                                 Single Line Address Parser Tab Functionality
@@ -48,23 +31,19 @@ $(document).ready(function () {
         event.preventDefault();
         $('#result-box').show();
         var addressValue = $('#address-input').val();
-        $('#result-box').fadeOut('fast', function() {
-            $.ajax({
-                type: "POST",
-                url: "/",
-                data: { address: addressValue },
-                success: function (response) {
-                    console.log('Response:', response);
-                    renderAddressData(response);
-                    document.getElementById('exception-controls').style.display = 'block';
-                    isExceptionForced = false;
-                    $('#result-box').fadeIn('fast');
-                },
-                error: function (error) {
-                    console.error('Error:', error);
-                    $('#result-box').fadeIn('fast');
-                }
-            });
+        $.ajax({
+            type: "POST",
+            url: "/",
+            data: { address: addressValue },
+            success: function (response) {
+                console.log('Response:', response);
+                renderAddressData(response);
+                document.getElementById('exception-controls').style.display = 'block';
+                isExceptionForced = false;
+            },
+            error: function (error) {
+                console.error('Error:', error);
+            }
         });
     });
 
@@ -86,8 +65,6 @@ $(document).ready(function () {
         // var forceException = $('#exception-checkbox').is(':checked');
         if (isExceptionForced) {
             alert("Exception already created for this address.");
-            $('#exception-checkbox').prop('checked', false);
-            $('#exception-btn').prop('disabled', true);
         } else {
             var unsatisfied_address = $('#address-input').val();
             
@@ -100,8 +77,6 @@ $(document).ready(function () {
                     console.log("Response:", response);
                     isExceptionForced = true;
                     alert("Forced Exception is Created!");
-                    $('#exception-checkbox').prop('checked', false);
-                    $('#exception-btn').prop('disabled', true);
                 },
                 error: function (error) {
                     console.error("Error:", error);
@@ -109,9 +84,7 @@ $(document).ready(function () {
             });
         }
     });
-    var parsedByInfo = $('<div id="parsed-by-info" style="display: block; margin-left: auto; margin-right: auto; text-align: center; margin-top: 20px;"></div>');
-    var Mask_Pattern = $('<div id="Mask_Pattern" style="display: block; margin-left: auto; margin-right: auto; text-align: center; margin-top: 20px;"></div>');
-    $('#exception-controls').after(Mask_Pattern);
+    var parsedByInfo = $('<div id="parsed-by-info" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;"></div>');
     $('#exception-controls').after(parsedByInfo);
     
 
@@ -120,12 +93,10 @@ $(document).ready(function () {
         tableBody.empty();
         var tableHTML = '';
 
-        if (data && data.result && data.result.Mask_Pattern  && data.result.Parsed_By && data.result.Output) {
+        if (data && data.result && data.result.Output && data.result.Parsed_By) {
             var addressComponents = data.result.Output;
             var parsedBy = data.result.Parsed_By;
-            var MaskPattern = data.result.Mask_Pattern;
             $('#parsed-by-info').text('Address Parsed By --> ' + parsedBy);
-            $('#Mask_Pattern').text('Mask Pattern --> ' + MaskPattern);
             addressComponents.forEach(function (array, index) {
 
                 tableHTML += '<tr>';
@@ -162,43 +133,40 @@ $(document).ready(function () {
 
         var fileData = new FormData(this);
         fileData.append('file', $('#file-upload')[0].files[0]);
-        $('#metrics-display').fadeOut('fast', function() {
-            $.ajax({
-                url: '/Batch_Parser',
-                type: 'POST',
-                data: fileData,
-                contentType: false,
-                processData: false,
-                xhr: function () {
-                    var xhr = new window.XMLHttpRequest();
-                    xhr.upload.addEventListener('progress', function (e) {
-                        if (e.lengthComputable) {
-                            var percentComplete = (e.loaded / e.total) * 100;
-                            // Update your front-end progress bar here
-                        }
-                    }, false);
-                    return xhr;
-                },
-                // Inside the success callback of your $.ajax request
-                success: function (response) {
-                    console.log('File uploaded!');
 
-                    // Replace newlines with <br> tags and tabs with four non-breaking spaces
-                    var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+        $.ajax({
+            url: '/Batch_Parser',
+            type: 'POST',
+            data: fileData,
+            contentType: false,
+            processData: false,
+            xhr: function () {
+                var xhr = new window.XMLHttpRequest();
+                xhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        var percentComplete = (e.loaded / e.total) * 100;
+                        // Update your front-end progress bar here
+                    }
+                }, false);
+                return xhr;
+            },
+            // Inside the success callback of your $.ajax request
+            success: function (response) {
+                console.log('File uploaded!');
 
-                    // Set the formatted text to your metrics display element
-                    document.getElementById('metrics-display').innerHTML = formattedText;
+                // Replace newlines with <br> tags and tabs with four non-breaking spaces
+                var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
 
-                    // Show the metrics box
-                    document.getElementById('metrics-display').style.display = 'block';
-                    $('#metrics-display').fadeIn('fast');
-                },
+                // Set the formatted text to your metrics display element
+                document.getElementById('metrics-display').innerHTML = formattedText;
 
-                error: function (error) {
-                    console.log('Upload error:', error);
-                    $('#metrics-display').fadeIn('fast');
-                }
-            });
+                // Show the metrics box
+                document.getElementById('metrics-display').style.display = 'block';
+            },
+
+            error: function (error) {
+                console.log('Upload error:', error);
+            }
         });
     });
 });
@@ -210,9 +178,11 @@ $(document).ready(function () {
 
 let data = [];
 let currentKeyIndex = 0;
+let initialDataLength = 0;
+let dicIndex = 0;
 
 document.getElementById("loadFileBtn").addEventListener("click", loadFile);
-document.getElementById("submit&NextBtn").addEventListener("click", showNext);
+// document.getElementById("submit&NextBtn").addEventListener("click", submitButtonHandler);
 document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
 
 
@@ -242,6 +212,7 @@ function loadFile() {
             try {
                 const newData = JSON.parse(e.target.result);
                 data = newData; // Append new data to existing data array
+                initialDataLength = data.length;
                 if (data.length > 1) {
                     document.getElementById("submit&NextBtn").style.display = 'block';
                     document.getElementById("submitBtn").style.display = 'none';
@@ -280,26 +251,6 @@ function showNext() {
         fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
 
         updateDictionaryDisplay();
-        $.ajax({
-            type: "POST",
-            url: "/update_dictionary", // Adjust the URL as needed
-            contentType: "application/json",
-            data: JSON.stringify({ index: currentKeyIndex }),
-            success: function(response) {
-                // The dictionary has been removed from the server, move to the next one
-                console.log(response);
-                if (currentKeyIndex < data.length - 1) {
-                    currentKeyIndex++;
-                    showNext();
-                } else {
-                    alert("End of data reached");
-                    // Perform any cleanup if needed
-                }
-            },
-            error: function(error) {
-                console.error("Failed to remove the dictionary on the server:", error);
-            }
-        });
     } else {
         alert("End of data reached");
         currentKeyIndex = data.length;
@@ -310,8 +261,9 @@ function showNext() {
 
 
 function updateDictionaryDisplay() {
-    const totalDictionaries = data.length;
-    const currentDictionaryIndex = totalDictionaries > 0 ? currentKeyIndex + 1 : 0;
+    const totalDictionaries = initialDataLength;
+    // const keyIndex = currentKeyIndex;
+    const currentDictionaryIndex = totalDictionaries > 0 ? dicIndex + 1 : 0;
     document.getElementById("currentDictionaryDisplay").textContent = `${currentDictionaryIndex}/${totalDictionaries}`;
 }
 
@@ -329,14 +281,18 @@ function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
         .catch(error => console.error('Error fetching options:', error));
 }
 
-function handleNextDictionary() {
-    if (currentKeyIndex < data.length) {
-        data.splice(currentKeyIndex, 1); // Remove the processed dictionary
-
+function handleNextDictionary(index) {
+    console.log(index);
+    if (index < data.length) {
+        data.splice(index, 1); // Remove the processed dictionary
+        // console.log("data splice: ",data.splice(index,1));
         // Update the dictionary display
         updateDictionaryDisplay();
 
         if (data.length > 0) {
+            dicIndex++;
+            showNext();
+            console.log("data length for show next :",data.length);
             // Do not automatically call showNext here. It will be called after user actions.
         } else {
             alert("All Dictionaries Processed");
@@ -362,10 +318,22 @@ function populateDropdowns(otherData, otherDataKey, options) {
                     valueSelect.name = "value";
                     //const options = ["USAD_SNO", "USAD_SNM", "USAD_SFX", "USAD_ANO", "USAD_ANM", "USAD_CTY", "USAD_STA", "USAD_ZIP", "USAD_SPR", "USAD_BNM", "USAD_BNO", "USAD_SPT", "USAD_ZP4", "USAD_RNM", "USAD_RNO", "USAD_ORG", "USAD_MGN", "USAD_MDG", "USAD_HNO", "USAD_HNM", "USAD_NA"];
                     options.forEach(function (optionValue) {
-                        const optionElement = document.createElement("option");
-                        optionElement.value = optionValue;
-                        optionElement.textContent = optionValue;
-                        valueSelect.appendChild(optionElement);
+                        if(optionValue=="Not Selected")
+                        {
+                            const optionElement = document.createElement("option");
+                            optionElement.value = optionValue;
+                            optionElement.disabled=true;
+                            optionElement.textContent = optionValue;
+                            valueSelect.appendChild(optionElement);
+                        }
+
+                        else{
+                            const optionElement = document.createElement("option");
+                        
+                            optionElement.value = optionValue;
+                            optionElement.textContent = optionValue;
+                            valueSelect.appendChild(optionElement);
+                        }
                     });
                     valueSelect.value = value;
                     td.appendChild(valueSelect);
@@ -375,7 +343,8 @@ function populateDropdowns(otherData, otherDataKey, options) {
                 row.appendChild(td);
             });
         });
-        currentKeyIndex++;
+        // currentKeyIndex++;
+        // dicIndex++;
         
     } else {
         alert("No third object found in the current data.");
@@ -418,6 +387,7 @@ function collectData() {
     const file_name = document.getElementById("filename").value;
     const input_Value = document.getElementById("inputValue").value;
     const mask = document.getElementById("mask-inputValue").value;
+    const comment = document.getElementById("comment").value;
     const address_region = document.getElementById("region") ? document.getElementById("region").value : null;
     const Address_Type = document.getElementById("AddressType") ? document.getElementById("AddressType").value : null;
     const approval = document.getElementById("Approved?") ? document.getElementById("Approved?").value : null;
@@ -461,6 +431,7 @@ function collectData() {
         "Type": Address_Type,
         "Address Approved?": approval,
         "Approved By": approved_by,
+        "Comment": comment,
         "Mapping Data": mappingData
     };
     result[mask] = dicData;
@@ -496,29 +467,38 @@ function collectData() {
 // });
 
 document.getElementById("submitBtn").addEventListener("click", function () {
-    setTimeout(() => {
-        submitButtonHandler();
-    }, 200); // Wait for 3 seconds before handling the submission
+    // setTimeout(() => {
+    // }, 100);
+    const data = collectData();
+    submitButtonHandler(data, currentKeyIndex);
 });
 
 document.getElementById("submit&NextBtn").addEventListener("click", function () {
-    setTimeout(() => {
-        submitButtonHandler();
-    }, 200); // Wait for 3 seconds before handling the submission
+    // setTimeout(() => {
+        // }, 100);
+        // return false;
+    const data = collectData();
+    submitButtonHandler(data, currentKeyIndex);
 });
 
-function submitButtonHandler() {
+function submitButtonHandler(collectedData, index) {
+    console.log("Submit Button Index:", index);
     const approved = document.getElementById("Approved?").value;
-    if (approved === "Yes" && validateDropdowns()) {
-        const data = collectData();
-        checkForExistingMask(data["Mask Pattern"], data);
+    if (approved === "Yes") {
+        const isDropdownsValid = validateDropdowns();
+
+        if (isDropdownsValid) {
+            checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
+        } else {
+            alert("Please fill in all required fields.");
+        }
     } else if (approved === "No") {
-        // If approved is "No", skip to the next dictionary
-        handleNextDictionary();
+        sendDataToServer(collectedData, index);
     } else {
-        alert("Please fill in all required fields.");
+        alert("Please make a selection for approval.");
     }
 }
+
 
 
 
@@ -526,28 +506,35 @@ function validateDropdowns() {
     // Helper function to check if element exists and its value is not empty
     function isDropdownValid(id) {
         const element = document.getElementById(id);
-        return element.value !== "" && element.value !== "Not Selected";
+        const isValid = element.value !== "" && element.value !== "Not Selected";
+        console.log(`Dropdown ${id}: Value = ${element.value}, IsValid = ${isValid}`);
+        return isValid;
     }
 
-    // Check each dropdown
-    if (!isDropdownValid("region")) return false;
-    if (!isDropdownValid("AddressType")) return false;
-    if (!isDropdownValid("Approved?")) return false;
-    if (!isDropdownValid("approvedby")) return false;
+    if (!isDropdownValid("region") ||
+        !isDropdownValid("AddressType") ||
+        !isDropdownValid("Approved?") ||
+        !isDropdownValid("approvedby")) {
+        return false;
+    }
 
     // Check each address component dropdown
+    let isValidComponents = true;
     const dropdowns = document.querySelectorAll("select[name='value']");
+    console.log(dropdowns);
     for (let i = 0; i < dropdowns.length; i++) {
         if (dropdowns[i].value === "Not Selected") {
+            console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
+            isValidComponents = false;
             return false;
         }
     }
-    return true;
+    return isValidComponents;
 }
 
 
 
-function checkForExistingMask(mask, data) {
+function checkForExistingMask(mask, data, index) {
     $.ajax({
         type: "POST",
         url: "/check-mask-existence",
@@ -556,12 +543,13 @@ function checkForExistingMask(mask, data) {
         success: function (response) {
             if (response.exists) {
                 if (confirm("Mask found in KnowledgeBase, do you want to overwrite the existing entry?")) {
-                    sendDataToServer(data);
+                    sendDataToServer(data, index);
                 } else {
-                    // Move to the next address or perform other actions as needed
+                    handleNextDictionary(index);
+                    alert("Gaali");
                 }
             } else {
-                sendDataToServer(data);
+                sendDataToServer(data, index);
             }
         },
         error: function (xhr, status, error) {
@@ -573,7 +561,8 @@ function checkForExistingMask(mask, data) {
 
 
 
-function sendDataToServer(data) {
+function sendDataToServer(data, index) {
+    console.log("Send Data Server Index: ",index);
     $.ajax({
         type: "POST",
         url: "/MapCreationForm-Data",
@@ -581,17 +570,13 @@ function sendDataToServer(data) {
         data: JSON.stringify(data),
         success: function (response) {
             console.log("Success:", response);
-            alert("Mapping Created and sent to Knowledgebase");
-            if (currentKeyIndex < data.length) {
-                data.splice(currentKeyIndex, 1);
-
-                // Update the dictionary display
-                handleNextDictionary();
+            if (data["Address Approved?"] === "Yes") {
+                alert("Mapping Created and sent to Knowledgebase");
             }
+            handleNextDictionary(index);
         },
         error: function (xhr, status, error) {
-            console.error("Error:", error);
-            // Handle errors
+            console.error("AJAX Error: Status -", status, "Error -", error);
         }
     });
 }

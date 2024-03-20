@@ -77,10 +77,14 @@
 /* Rest of the styles */
 
 .map-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
+.map-container input, .map-container button{
+    margin: 5px;
+}
 .leftContainer,
 .rightContainer {
     padding: 20px;
@@ -97,7 +101,8 @@
 .mapCreationFormTab-container .rightContainer select,
 .mapCreationFormTab-container .rightContainer textarea {
     width: 100%;
-    padding: 0.375rem 0.75rem;
+    padding: 6px;
+    margin-top: 5px;
     font-size: 1rem;
     line-height: 1.5;
     color: black;
@@ -116,7 +121,7 @@
     background-color: #fff;
     border-color: #2e4c8c;
     outline: 0;
-    border: 3px solid #2e4c8c;
+    /* border: 3px solid #2e4c8c; */
     transition: 0.3s ease-in;
     /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25); */
 }
@@ -129,11 +134,11 @@
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
+    padding: 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     color: #2b74b7;
     transition: 0.3s ease-in-out;
 }
@@ -322,7 +327,8 @@
 }
 
 .rightContainer label{
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    margin: 5px;
 }
 
 
@@ -396,12 +402,11 @@ textarea {
 
 .map-container input[type="file"] {
     text-align: center;
-    margin: 10px;
-    margin-left: 320px;
-    font-size: 10px;
+    /* margin: 10px; */
+    /* margin-left: 320px; */
+    font-size: 14px;
     padding: 10px;
     width: 40%;
-    border-bottom: 2px solid #2e4c8c;
 }
 
 #loadFileBtn {
@@ -410,10 +415,8 @@ textarea {
     padding: 10px 20px;
     /* Uniform padding */
     margin-bottom: 10px;
-    transform: translate(270%);
     background-color: #2b74b7;
     transition: 0.3s ease-in;
-    /* Consistent margin with other elements */
 }
 
 #loadFileBtn:hover {
@@ -473,6 +476,7 @@ button:hover {
 
     #loadFileBtn {
         width: 100%;
+        padding: 5px;
         /* Full width button on small screens */
     }
     footer{
@@ -482,19 +486,22 @@ button:hover {
         width: 100%;
     }
 }
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     padding-bottom: 80px;
 }
+
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     background-image: url(../static/image.png);
     background-size: 110%;
     color: white;
-    text-align: center;
+    text-align: left;
     height: 100px;
 }

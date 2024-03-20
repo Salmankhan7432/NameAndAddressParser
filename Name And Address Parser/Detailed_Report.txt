@@ -1,11 +1,11 @@
 Exception and Mask Report
 
-Total Number of Addresses: -	47
-Unique Pattern Count: -	25
+Total Number of Addresses: -	91
+Unique Pattern Count: -	23
 
 
-Number of Pattern Parsed Addresses: -	47
-Percentage of Patterns Parsed Result:  -	100.00%
+Number of Pattern Parsed Addresses: -	86
+Percentage of Patterns Parsed Result:  -	94.51%
 
-Number of Exceptions Thrown: -		0
-Percentage of RuleBased Parsed Result: -	0.00%
+Number of Exceptions Thrown: -		5
+Percentage of RuleBased Parsed Result: -	5.49%

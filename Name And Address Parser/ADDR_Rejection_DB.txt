@@ -600,5 +600,58 @@
             }
         ],
         "Rejected By": " at 2024-03-19 03:52:41.019943"
+    },
+    {
+        "Record Id": "1",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee Member 1 at 2024-03-20 14:34:09.526248"
     }
 ]

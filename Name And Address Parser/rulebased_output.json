@@ -1,1 +1,186 @@
-{}
+{
+    "7": [
+        [
+            "55",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "MAPLE",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "AVENUE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "CALIFORNIA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "94993",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "8": [
+        [
+            "5678",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "PINE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "STREET",
+            "USAD_NA",
+            "F",
+            "Not Selected"
+        ],
+        [
+            "STOCKTON",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "CALIFORNIA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "95202",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "9": [
+        [
+            "9876",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "ELM",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "DRIVE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "BENTONVILLE",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "ARKANSAS",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "72712",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "10": [
+        [
+            "66",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "OAK",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "STREET",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "FREMONT",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "CALIFORNIA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "94993",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ],
+    "11": [
+        [
+            "6543",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "CEDAR",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "LANE",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "STOCKTON",
+            "USAD_CTY",
+            "W",
+            "City Name"
+        ],
+        [
+            "CALIFORNIA",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "95202",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ]
+}

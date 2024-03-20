@@ -1,4 +1,4 @@
-/* function openTab(tabName, event) {
+function openTab(tabName, event) {
     var i;
     var tabContents = document.getElementsByClassName("tabcontent");
     var tabLinks = document.getElementsByClassName("tablink");
@@ -15,7 +15,7 @@
     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
 }
 document.getElementById('defaultOpen').click();
-*/
+
 
 //------------------------------------------------------------------------------------------------------------
 //                                 Single Line Address Parser Tab Functionality
@@ -166,6 +166,7 @@ $(document).ready(function () {
 
             error: function (error) {
                 console.log('Upload error:', error);
+                alert("Please Select valid Pipe Delimited File")
             }
         });
     });

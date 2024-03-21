@@ -5,10 +5,10 @@ Created on Thu Nov 23 18:22:53 2023
 @author: skhan2
 """
 
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify, send_file
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
-from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename, safe_join
 from tqdm import tqdm
 from flask_socketio import SocketIO
 import os
@@ -76,13 +76,23 @@ def BatchParser():
         file_path = os.path.join('File Uploads', filename)
         file.save(file_path)
         convert = BAP.Address_Parser(file_path, "update_progress")
-        print(convert[0], "\n", convert[1])
+        print("Convert 0: \n",convert[0], "\n Convert 1: \n", convert[1], "\n Convert 2: \n", convert[2])
         if convert[0]:
             result = convert[1]
             metrics = {'metrics': convert[1]}
-            return jsonify(result=result, metrics=metrics)
+            output_file_path = convert[2]
+            global download_path
+            download_path = output_file_path
+            return jsonify(result=result, metrics=metrics, download_url = '/download')
         
     return jsonify(result=result, metrics=metrics)
+
+@app.route('/download')
+def download_file():
+    try:
+        return send_file(safe_join(app.root_path, download_path), as_attachment=True)
+    except FileNotFoundError:
+        return jsonify({'error': 'File not found'}), 404
 
 @app.route('/AddressComponents_dropdown', methods=['GET'])
 def get_address_components():

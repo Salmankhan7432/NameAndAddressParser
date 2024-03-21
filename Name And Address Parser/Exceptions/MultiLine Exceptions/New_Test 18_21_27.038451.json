@@ -1,0 +1,206 @@
+[
+    {
+        "Record ID": "7",
+        "INPUT": "55 Maple Avenue California 94993",
+        "NWFTN": [
+            [
+                "55",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "MAPLE",
+                "USAD_SNM",
+                "W",
+                "Street Name"
+            ],
+            [
+                "AVENUE",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "CALIFORNIA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "94993",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "8",
+        "INPUT": "5678 Pine Street Stockton California 95202",
+        "NFFWTN": [
+            [
+                "5678",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "PINE",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "STREET",
+                "USAD_NA",
+                "F",
+                "Not Selected"
+            ],
+            [
+                "STOCKTON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CALIFORNIA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "95202",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "9",
+        "INPUT": "9876 Elm Drive Bentonville Arkansas 72712",
+        "NWFWTN": [
+            [
+                "9876",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "ELM",
+                "USAD_SNM",
+                "W",
+                "Street Name"
+            ],
+            [
+                "DRIVE",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "BENTONVILLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "ARKANSAS",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "72712",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "10",
+        "INPUT": "66 Oak Street Fremont California 94993",
+        "NWFWTN": [
+            [
+                "66",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "OAK",
+                "USAD_SNM",
+                "W",
+                "Street Name"
+            ],
+            [
+                "STREET",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "FREMONT",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CALIFORNIA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "94993",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "11",
+        "INPUT": "6543 Cedar Lane Stockton California 95202",
+        "NWFWTN": [
+            [
+                "6543",
+                "USAD_SNO",
+                "N",
+                "Street Number"
+            ],
+            [
+                "CEDAR",
+                "USAD_SNM",
+                "W",
+                "Street Name"
+            ],
+            [
+                "LANE",
+                "USAD_SFX",
+                "F",
+                "Street Suffix"
+            ],
+            [
+                "STOCKTON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CALIFORNIA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "95202",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    }
+]

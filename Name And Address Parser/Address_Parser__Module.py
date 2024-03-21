@@ -6,6 +6,7 @@ Created on Sat Nov 11 20:27:31 2023
 """
 
 import re
+import io
 from tqdm import tqdm
 import Rulebased as RuleBased
 import pandas as pd
@@ -298,13 +299,14 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     
     
     # Exception_file_name = "_MultiLine_ExceptionFile" + str(current_time) + ".json"
-    Exception_file_name = file_name +" "+ str(current_time) + ".json"
-    Exception_file_name = re.sub(r'[^\w_. -]', '_', Exception_file_name)
-    path = 'Exceptions/MultiLine Exceptions/' + Exception_file_name
-    with open(path, 'w', encoding='utf-8') as g:
-        g.seek(0)
-        json.dump(ExceptionList, g, indent=4)
-        g.truncate
+    # Exception_file_name = file_name +" "+ str(current_time) + ".json"
+    # Exception_file_name = re.sub(r'[^\w_. -]', '_', Exception_file_name)
+    # path = 'Exceptions/MultiLine Exceptions/' + Exception_file_name
+    # exception_File = "Output/Downloads/Exception"+ file_name + "_Exception.json"
+    # with open(exception_File, 'w', encoding='utf-8') as g:
+    #     g.seek(0)
+    #     json.dump(ExceptionList, g, indent=4)
+    #     g.truncate
     
     FishBone+="Root Cause Analysis"
     if TruthSet!="":
@@ -395,7 +397,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         percentage = "%.2f"% percentage
         # ActiveLResult = json.dumps(Result, indent = 4,ensure_ascii=False) 
         # Detailed_Report+="\nNumber of Exceptions Thrown: -\t\t"+"{:,}".format(Total-Observation)+"\n"
-        Detailed_Report+="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+""
+        Detailed_Report="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+""
         Detailed_Report+="\nUnique Pattern Count: -\t"+"{:,}".format(len(Unique_Mask))+"\n\n"
         Detailed_Report+="\nNumber of Pattern Parsed Addresses: -\t"+"{:,}".format(Observation)+"\n"
         Detailed_Report+="Percentage of Patterns Parsed Result:  -\t"+"{:.2f}%".format(float(percentage))+"\n"
@@ -407,39 +409,85 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         # RuleBasedRes =json.dumps(RuleBasedOutput,indent=4)
         # Detailed_Report+="\n\nOutput Fron Rule Based Approach\n\n"
         # Detailed_Report+=str(RuleBasedRes)
-        detailed_report_file = "detailed_report.txt"
-        active_learning_file = "active_learning_output.json"
-        rulebased_output_file = "rulebased_output.json"
+        # detailed_report_file = "Output/Downloads/detailed_report.txt"
+        # active_learning_file = "Output/Downloads/active_learning_output.json"
+        # rulebased_output_file = "Output/Downloads/rulebased_output.json"
+        # zip_file_name = f"Output/Batch File Output/{file_name}_output.zip"
+        # # zip_file_name = re.sub(r'[^\w_. -]', '_', zip_file_name)
+        
+        # with open(detailed_report_file, "w", encoding = "utf8") as file:
+        #     file.write(Detailed_Report)
+
+        # # Writing the active learning output to a JSON file
+        # with open(active_learning_file, "w", encoding = "utf8") as file:
+        #     file.seek(0)
+        #     json.dump(Result, file, indent=4)
+        #     file.truncate
+
+        # # Writing the rule-based output to a JSON file
+        # with open(rulebased_output_file, "w", encoding = "utf8") as file:
+        #     file.seek(0)
+        #     json.dump(RuleBasedOutput, file, indent=4)
+        #     file.truncate
+        
+        # with open(exception_File, "w", encoding = "utf8") as file:
+        #     file.seek(0)
+        #     json.dump(ExceptionList,file,indent=4)
+        #     file.truncate
+        
+        # with zipfile.ZipFile(zip_file_name, 'w') as zipf:
+        #     zipf.write(detailed_report_file)
+        #     zipf.write(active_learning_file)
+        #     zipf.write(rulebased_output_file)
+        #     zipf.write(exception_File)
+
+
+# ... Your code above ...
+
+        # Create in-memory byte streams for your files
+        detailed_report_stream = io.BytesIO()
+        active_learning_stream = io.BytesIO()
+        rule_based_output_stream = io.BytesIO()
+        exception_stream = io.BytesIO()
+
+        # Write the contents to the byte streams
+        detailed_report_stream.write(Detailed_Report.encode('utf-8'))
+        active_learning_stream.write(json.dumps(Result, indent=4, ensure_ascii=False).encode('utf-8'))
+        rule_based_output_stream.write(json.dumps(RuleBasedOutput, indent=4, ensure_ascii=False).encode('utf-8'))
+        exception_stream.write(json.dumps(ExceptionList, indent=4, ensure_ascii=False).encode('utf-8'))
+
+        # Make sure to seek to the start of each stream after writing
+        detailed_report_stream.seek(0)
+        active_learning_stream.seek(0)
+        rule_based_output_stream.seek(0)
+        exception_stream.seek(0)
+
+        # File names
+        detailed_report_file_name = f"Detailed Report_{file_name}.txt"
+        active_learning_file_name = f"Active Learning Output.json"
+        rule_based_output_file_name = f"Rule Based Output.json"
+        exception_file_name = f"{file_name}_Exception File_{str(current_time)}.json"
         zip_file_name = f"Output/Batch File Output/{file_name}_output.zip"
-        # zip_file_name = re.sub(r'[^\w_. -]', '_', zip_file_name)
-        
-        with open(detailed_report_file, "w", encoding = "utf8") as file:
-            file.write(Detailed_Report)
 
-        # Writing the active learning output to a JSON file
-        with open(active_learning_file, "w", encoding = "utf8") as file:
-            file.seek(0)
-            json.dump(Result, file, indent=4)
-            file.truncate
-
-        # Writing the rule-based output to a JSON file
-        with open(rulebased_output_file, "w", encoding = "utf8") as file:
-            file.seek(0)
-            json.dump(RuleBasedOutput, file, indent=4)
-            file.truncate
-        
+        # Create a zip file and write the byte streams to it
         with zipfile.ZipFile(zip_file_name, 'w') as zipf:
-            zipf.write(detailed_report_file)
-            zipf.write(active_learning_file)
-            zipf.write(rulebased_output_file)
+            zipf.writestr(detailed_report_file_name, detailed_report_stream.getvalue())
+            zipf.writestr(active_learning_file_name, active_learning_stream.getvalue())
+            zipf.writestr(rule_based_output_file_name, rule_based_output_stream.getvalue())
+            zipf.writestr(exception_file_name, exception_stream.getvalue())
+
+        # No need to return a message about generating files since they aren't generated on the filesystem
+        # return (True, f"Zip file '{zip_file_name}' has been created with all reports.")
+
+
             
         # Detailed_Report+="List of Exception Mask(s): -\t\n\n"+Exception_Mask+"--"
-        Detailed_Report_1="\nTotal Number of Addresses: -\t"+"{:,}".format(Total)+""
-        Detailed_Report_1+="\nUnique Pattern Count: -\t"+"{:,}".format(len(Unique_Mask))+"\n"
-        Detailed_Report_1+="\nNumber of Pattern Parsed Addresses: -\t"+"{:,}".format(Observation)+"\n"
-        Detailed_Report_1+="Percentage of Patterns Parsed Result:  -\t"+"{:.2f}%".format(float(percentage))+"\n"
-        Detailed_Report_1+="\nNumber of Exceptions Thrown: -\t\t"+"{:,}".format(Total-Observation)+"\n"
-        Detailed_Report_1+="Percentage of RuleBased Parsed Result: -\t"+"{:.2f}%".format(100-float(percentage))+"\n"
+        # Detailed_Report_1="\nTotal Number of Addresses: -\t\t\t"+"{:,}".format(Total)+""
+        # Detailed_Report_1+="\nUnique Pattern Count: -\t\t\t\t"+"{:,}".format(len(Unique_Mask))+"\n"
+        # Detailed_Report_1+="\nNumber of Pattern Parsed Addresses: -\t"+"{:,}".format(Observation)+"\n"
+        # Detailed_Report_1+="Percentage of Patterns Parsed Result:  -\t"+"{:.2f}%".format(float(percentage))+"\n"
+        # Detailed_Report_1+="\nNumber of Exceptions Thrown: -\t\t\t"+"{:,}".format(Total-Observation)+"\n"
+        # Detailed_Report_1+="Percentage of RuleBased Parsed Result: -\t"+"{:.2f}%".format(100-float(percentage))+"\n"
         # Detailed_Report_1+="List of Exception Mask(s): -\t\n\n"+Exception_Mask+"--"
         # Output_file_name = "Detailed_Report_" + str(current_time) + ".txt"
         # Output_file_name = "Detailed Report_"+file_name+".txt"
@@ -460,7 +508,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #---------------------------------------------------------------------------------
         
         # Progress.stop()
-        return (True,f"Detailed_Report of {file_name}.txt is Generated! \nFile Path: {abs_path} \n{Detailed_Report_1}")
+        return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)
     # print("Address Matching Report")

@@ -1,0 +1,1898 @@
+[
+    {
+        "Record ID": "6",
+        "INPUT": "RR 77 BOX 134 San Francisco CA 94115",
+        "RNXNWWTN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "77",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "134",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "SAN",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "FRANCISCO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "94115",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "18",
+        "INPUT": "RR 77 BOX 134 San Francisco CA 94115",
+        "RNXNWWTN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "77",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "134",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "SAN",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "FRANCISCO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "94115",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "34",
+        "INPUT": "RR 55 BOX 4551 Prosperity,SC 29127",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "55",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4551",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "PROSPERITY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "SC",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "29127",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "35",
+        "INPUT": "RR 905 BOX 239 BARTLETT,IL 60103",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "905",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "239",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "BARTLETT",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "IL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "60103",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "36",
+        "INPUT": "RR 67 BOX 3532 REYNOLDSBURG,OH 43069",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "67",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3532",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "REYNOLDSBURG",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "OH",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "43069",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "37",
+        "INPUT": "RR 98 BOX 2941 Houston,TX 77063",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "98",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "2941",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "HOUSTON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "TX",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "77063",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "38",
+        "INPUT": "RR 220 BOX 1499 Pittsburgh,PA 15222",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "220",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "1499",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "PITTSBURGH",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "PA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "15222",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "39",
+        "INPUT": "RR 887 BOX 477 LINCOLNTON,GA 30817",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "887",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "477",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "LINCOLNTON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "GA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "30817",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "40",
+        "INPUT": "RR 445 BOX 2003 San Diego,CA 92123",
+        "RNXNWW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "445",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "2003",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "SAN",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "DIEGO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "92123",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "41",
+        "INPUT": "RR 223 BOX 2038 Milwaukee,WI 53212",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "223",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "2038",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "MILWAUKEE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "WI",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "53212",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "42",
+        "INPUT": "RR 667 BOX 4203 Houston,TX 77055",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "667",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4203",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "HOUSTON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "TX",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "77055",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "43",
+        "INPUT": "RR 885 BOX 699 Starke,699 32091",
+        "RNXNW,NN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "885",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "699",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "STARKE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "699",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ],
+            [
+                "32091",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "44",
+        "INPUT": "RR 43 BOX 962 Baltimore,MD 21202",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "43",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "962",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "BALTIMORE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "MD",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "21202",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "45",
+        "INPUT": "RR 86 BOX 3676 DALLAS,TX 75270",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "86",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3676",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "DALLAS",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "TX",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "75270",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "46",
+        "INPUT": "RR 7 BOX 1492 San Francisco, CA 94103",
+        "RNXNWW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "7",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "1492",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "SAN",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "FRANCISCO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "94103",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "47",
+        "INPUT": "RR 93 BOX 342 Chicago,IL 60605",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "93",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "342",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "CHICAGO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "IL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "60605",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "48",
+        "INPUT": "RR 8876 BOX 3094 Albany, NY 12207",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "8876",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3094",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "ALBANY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NY",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "12207",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "49",
+        "INPUT": "RR 668 BOX 3758 Washington,DC 20009",
+        "RNXNT,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "668",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3758",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "WASHINGTON",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "DC",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "20009",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "50",
+        "INPUT": "RR 56 BOX 3600 Galway,NY 12074",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "56",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3600",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "GALWAY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NY",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "12074",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "51",
+        "INPUT": "RR 22 BOX 1988 FAYETTE, NY 13065",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "22",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "1988",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "FAYETTE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NY",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "13065",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "52",
+        "INPUT": "RR 5567 BOX 464 Susanville,CA 96130",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "5567",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "464",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "SUSANVILLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "96130",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "53",
+        "INPUT": "RR 77 BOX 77 FLORAL CITY, FL 34436",
+        "RNXNWW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "77",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "77",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "FLORAL",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CITY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "FL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "34436",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "54",
+        "INPUT": "RR 4 BOX 778 Tallahassee, FL 32303",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "4",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "778",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "TALLAHASSEE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "FL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "32303",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "55",
+        "INPUT": "RR 90 BOX 4530 Jackson, MS 39201",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "90",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4530",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "JACKSON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "MS",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "39201",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "56",
+        "INPUT": "RR 54 BOX 4325 CAMP HILL, PA 17012",
+        "RNXNFF,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "54",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4325",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "CAMP",
+                "USAD_NA",
+                "F",
+                "Not Selected"
+            ],
+            [
+                "HILL",
+                "USAD_NA",
+                "F",
+                "Not Selected"
+            ],
+            [
+                "PA",
+                "USAD_NA",
+                "T",
+                "Not Selected"
+            ],
+            [
+                "17012",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ]
+        ]
+    },
+    {
+        "Record ID": "57",
+        "INPUT": "RR 66 BOX 4083 LEWISVILLE, AR 71845",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "66",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4083",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "LEWISVILLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "AR",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "71845",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "58",
+        "INPUT": "RR 7854 BOX 496 Franklin, IN 46131",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "7854",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "496",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "FRANKLIN",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "IN",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "46131",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "59",
+        "INPUT": "RR 44 BOX 4962 ROSEBORO,NC 28382",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "44",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4962",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "ROSEBORO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NC",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "28382",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "60",
+        "INPUT": "RR 678 BOX 823 Denver, Colorado 80202",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "678",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "823",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "DENVER",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "COLORADO",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "80202",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "61",
+        "INPUT": "RR 654 BOX 4023 Montpelier, Indiana 47359",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "654",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4023",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "MONTPELIER",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "INDIANA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "47359",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "62",
+        "INPUT": "RR 7 BOX 3580 RENO, Nevada 89506",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "7",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3580",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "RENO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NEVADA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "89506",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "63",
+        "INPUT": "RR 33 BOX 3281 Evansport, Ohio 43512",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "33",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3281",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "EVANSPORT",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "OHIO",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "43512",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "64",
+        "INPUT": "RR 1 BOX 81 West Nyack, New York 10994",
+        "RNXNDW,WWN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "1",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "81",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "WEST",
+                "USAD_CTY",
+                "D",
+                "City Name"
+            ],
+            [
+                "NYACK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NEW",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "YORK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "10994",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "65",
+        "INPUT": "RR 87 BOX 2319 Oklahoma City, Oklahoma 73113",
+        "RNXNTW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "87",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "2319",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "OKLAHOMA",
+                "USAD_NA",
+                "T",
+                "Not Selected"
+            ],
+            [
+                "CITY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "OKLAHOMA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "73113",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "66",
+        "INPUT": "RR 93 BOX 99 New York, New York 10005",
+        "RNXNWW,WWN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "93",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "99",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "NEW",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "YORK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NEW",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "YORK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "10005",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "67",
+        "INPUT": "RR 345 BOX 2817 HUDSON, South Dakota 57034",
+        "RNXNW,DWN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "345",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "2817",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "HUDSON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "SOUTH",
+                "USAD_RNO",
+                "D",
+                "Route Number"
+            ],
+            [
+                "DAKOTA",
+                "USAD_NA",
+                "W",
+                "Not Selected"
+            ],
+            [
+                "57034",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "68",
+        "INPUT": "RR 57 BOX 348 Memphis, Tennessee 38117",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "57",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "348",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "MEMPHIS",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "TENNESSEE",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "38117",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "69",
+        "INPUT": "RR 87 BOX 136 Tucson, Arizona 85701",
+        "RNXNW,TN": [
+            [
+                "RR",
+                "USAD_RNM",
+                "R",
+                "Route Name"
+            ],
+            [
+                "87",
+                "USAD_RNO",
+                "N",
+                "Route Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "136",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "TUCSON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "ARIZONA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "85701",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    }
+]

@@ -39,10 +39,13 @@ $(document).ready(function () {
                 console.log('Response:', response);
                 renderAddressData(response);
                 document.getElementById('exception-controls').style.display = 'block';
+                document.getElementById('address-input').value = null;
                 isExceptionForced = false;
+                $('#result-box').fadeIn('fast');
             },
             error: function (error) {
                 console.error('Error:', error);
+                $('#result-box').fadeIn('fast');
             }
         });
     });
@@ -65,6 +68,8 @@ $(document).ready(function () {
         // var forceException = $('#exception-checkbox').is(':checked');
         if (isExceptionForced) {
             alert("Exception already created for this address.");
+            $('#exception-checkbox').prop('checked', false);
+            $('#exception-btn').prop('disabled', true);
         } else {
             var unsatisfied_address = $('#address-input').val();
             
@@ -77,6 +82,8 @@ $(document).ready(function () {
                     console.log("Response:", response);
                     isExceptionForced = true;
                     alert("Forced Exception is Created!");
+                    $('#exception-checkbox').prop('checked', false);
+                    $('#exception-btn').prop('disabled', true);
                 },
                 error: function (error) {
                     console.error("Error:", error);
@@ -128,12 +135,13 @@ $(document).ready(function () {
 //------------------------------------------------------------------------------------------------------------
 
 $(document).ready(function () {
+    if (document.getElementById('file-upload')) {
+        $('#metrics-display').hide();
+    }
     $('#BatchForm').submit(function (event) {
         event.preventDefault(); // Prevent default form submission
-
         var fileData = new FormData(this);
         fileData.append('file', $('#file-upload')[0].files[0]);
-
         $.ajax({
             url: '/Batch_Parser',
             type: 'POST',
@@ -162,6 +170,15 @@ $(document).ready(function () {
 
                 // Show the metrics box
                 document.getElementById('metrics-display').style.display = 'block';
+                if (response.download_url) {
+                    // Create a temporary link element
+                    var tempLink = document.createElement('a');
+                    tempLink.href = response.download_url;
+                    tempLink.download = 'output.zip';
+                    document.body.appendChild(tempLink);
+                    tempLink.click();
+                    document.body.removeChild(tempLink);
+                }
             },
 
             error: function (error) {
@@ -485,8 +502,10 @@ document.getElementById("submit&NextBtn").addEventListener("click", function () 
 function submitButtonHandler(collectedData, index) {
     console.log("Submit Button Index:", index);
     const approved = document.getElementById("Approved?").value;
+    const isDropdownsValid = validateDropdowns();
+    const commentValidation = document.getElementById("comment").value;
+
     if (approved === "Yes") {
-        const isDropdownsValid = validateDropdowns();
 
         if (isDropdownsValid) {
             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
@@ -494,7 +513,13 @@ function submitButtonHandler(collectedData, index) {
             alert("Please fill in all required fields.");
         }
     } else if (approved === "No") {
-        sendDataToServer(collectedData, index);
+        
+        if (isDropdownsValid && commentValidation !== "") {
+            sendDataToServer(collectedData, index);
+            // checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
+        } else {
+            alert("Please fill in all required fields. \nNote: Comment field is mandatory if 'NO' is Selected.");
+        }
     } else {
         alert("Please make a selection for approval.");
     }

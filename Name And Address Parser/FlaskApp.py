@@ -48,17 +48,29 @@ def SingleLineAddressParser():
 
     return render_template('index.html', result=result)
 
-@app.route("/forceException", methods=["GET","POST"])
-def ForceException():
+@app.route("/forceException", methods=["GET", "POST"])
+def forceException():
     response = {'result': False}
+    global download_except_path  # Make sure to use the global variable
     if request.method == "POST":
         address = request.form["address"]
         convert = SAP.throwException(address, "initials")
-       
-        response['result'] = convert
+        if convert is not None:  # Check if the return value is not None
+            response['result'] = True
+            download_except_path = convert  # Assign the returned file path
         print(convert)
         
-    return jsonify(response)
+    return jsonify(response=response, download_url="/download_except")
+
+@app.route('/download_except')
+def download_except_file():  # Ensure this function name is unique
+    global download_except_path
+    if download_except_path is None:
+        return jsonify({'error': 'No file to download'}), 404
+    try:
+        return send_file(download_except_path, as_attachment=True)
+    except FileNotFoundError:
+        return jsonify({'error': 'File not found'}), 404
 
 @app.route('/Batch_Parser', methods=["POST"])
 def BatchParser():
@@ -83,11 +95,11 @@ def BatchParser():
             output_file_path = convert[2]
             global download_path
             download_path = output_file_path
-            return jsonify(result=result, metrics=metrics, download_url = '/download')
+            return jsonify(result=result, metrics=metrics, download_url = '/download_output')
         
     return jsonify(result=result, metrics=metrics)
 
-@app.route('/download')
+@app.route('/download_output')
 def download_file():
     try:
         return send_file(safe_join(app.root_path, download_path), as_attachment=True)

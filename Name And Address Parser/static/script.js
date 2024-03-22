@@ -24,6 +24,7 @@ document.getElementById('defaultOpen').click();
 $(document).ready(function () {
     
     isExceptionForced = false;
+    var unsatisfied_address = "";
 
     $('#mapdata').hide();
     $('#result-box').hide()
@@ -31,6 +32,8 @@ $(document).ready(function () {
         event.preventDefault();
         $('#result-box').show();
         var addressValue = $('#address-input').val();
+        unsatisfied_address = addressValue;
+
         $.ajax({
             type: "POST",
             url: "/",
@@ -39,7 +42,7 @@ $(document).ready(function () {
                 console.log('Response:', response);
                 renderAddressData(response);
                 document.getElementById('exception-controls').style.display = 'block';
-                document.getElementById('address-input').value = null;
+                $('#address-input').val('');
                 isExceptionForced = false;
                 $('#result-box').fadeIn('fast');
             },
@@ -67,11 +70,11 @@ $(document).ready(function () {
     $('#exception-btn').on('click', function () {
         // var forceException = $('#exception-checkbox').is(':checked');
         if (isExceptionForced) {
-            alert("Exception already created for this address.");
+            alert("Exception already created for this address. \nPlease check your downloads for exception file.");
             $('#exception-checkbox').prop('checked', false);
             $('#exception-btn').prop('disabled', true);
         } else {
-            var unsatisfied_address = $('#address-input').val();
+            
             
             // AJAX request to the server with the forceException value
             $.ajax({
@@ -81,9 +84,19 @@ $(document).ready(function () {
                 success: function (response) {
                     console.log("Response:", response);
                     isExceptionForced = true;
-                    alert("Forced Exception is Created!");
+                    alert("Forced Exception is Created! \nYour Exception file will be downloaded shortly");
                     $('#exception-checkbox').prop('checked', false);
                     $('#exception-btn').prop('disabled', true);
+
+                    if (response.download_url) {
+                        // Create a temporary link element
+                        var tempLink = document.createElement('a');
+                        tempLink.href = response.download_url;
+                        tempLink.download = 'Forced_Except.json';
+                        document.body.appendChild(tempLink);
+                        tempLink.click();
+                        document.body.removeChild(tempLink);
+                    }
                 },
                 error: function (error) {
                     console.error("Error:", error);

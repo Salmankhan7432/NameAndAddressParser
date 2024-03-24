@@ -64,21 +64,21 @@
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="userdfc" onclick="openTab('UDComponents',event)">User Defined Component</a>
         </div>
-        {% endif %}
+          {% endif %}
         
         
-        {% if session.role == 'admin'%}
-       <div style="text-align: left;" class="tabdiv">
-           <a href="#" class="tablink" id="user" onclick="openTab('CreateUser',event)">CRUD users</a>
-       </div>
-         {% endif %}
- 
- 
-   <div style="text-align: right;" class="tabdiv">
-<form action="\logout" method="POST"> 
-<button type="submit" name="logout">Logout</button>
-</form>          </div>
-
+               {% if session.role == 'admin'%}
+              <div style="text-align: left;" class="tabdiv">
+                  <a href="#" class="tablink" id="user" onclick="openTab('CreateUser',event)">CRUD users</a>
+              </div>
+                {% endif %}
+        
+        
+          <div style="text-align: right;" class="tabdiv">
+ <form action="\logout" method="POST"> 
+ <button type="submit" name="logout">Logout</button>
+ </form>          </div>
+       
 
     </div>
 
@@ -313,7 +313,10 @@
             <!-- </form> -->
         </div>
     </div>
-
+    
+    
+    
+    
     <!-- User Creation Edit Delete -->
     
     <div id="CreateUser" class="tabcontent CRUDUser-container">
@@ -375,10 +378,16 @@
 
         </div>
     </div>
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     <!-- <script>
                 function openTab(tabName, event) {
@@ -395,6 +404,15 @@
                     }
 
                     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
+                     console.log(even.currentTarget.className);
+                    if even.currentTarget.className ==="CreateUser"
+                   
+                    {
+                    window.location.href = "/CRUDUser";
+                    event.currentTarget.className += " active"; // Add "active" class to the clicked tab
+                    }
+                    
+                    
                     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
                 }
                 document.getElementById("defaultOpen").click();

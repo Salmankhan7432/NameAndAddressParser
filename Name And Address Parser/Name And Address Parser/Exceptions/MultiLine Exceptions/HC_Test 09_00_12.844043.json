@@ -1,0 +1,1292 @@
+[
+    {
+        "Record ID": "1",
+        "INPUT": "HC 68 BOX 23 Chicago IL 44432-11323",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "68",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "23",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "CHICAGO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "IL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "44432-11323",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "2",
+        "INPUT": "HC 32 BOX 12 Raeford NC 28376",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "32",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "12",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "RAEFORD",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NC",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "28376",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "3",
+        "INPUT": "HC 02 BOX 45 Sterling Heights MI 48310",
+        "FNXNWFTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "02",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "45",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "STERLING",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "HEIGHTS",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "MI",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "48310",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "4",
+        "INPUT": "HC 94 BOX 41 Buffalo Grove IL 60089",
+        "FNXNWFTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "94",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "41",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "BUFFALO",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "GROVE",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "IL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "60089",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "5",
+        "INPUT": "HC 81 BOX 32 Lancaster NY 14086",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "81",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "32",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "LANCASTER",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NY",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "14086",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "6",
+        "INPUT": "HC 22 BOX 12 Baton Rouge LA 70806",
+        "FNXNWWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "22",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "12",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "BATON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "ROUGE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "LA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "70806",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "7",
+        "INPUT": "HC 5323 BOX 25 Feasterville Trevose PA 19053",
+        "FNXNWWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "5323",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "25",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "FEASTERVILLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "TREVOSE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "PA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "19053",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "8",
+        "INPUT": "HC 91 BOX 54 Blacksburg VA 24060",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "91",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "54",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "BLACKSBURG",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "VA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "24060",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "9",
+        "INPUT": "HC 55 BOX 83 Nazareth PA 18064",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "55",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "83",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "NAZARETH",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "PA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "18064",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "10",
+        "INPUT": "HC 13 BOX 56 Hoboken NJ 07030",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "13",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "56",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "HOBOKEN",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NJ",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "07030",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "11",
+        "INPUT": "HC 2342 BOX 5 Lewis Center OH 43035",
+        "FNXNWFTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "2342",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "5",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "LEWIS",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "CENTER",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "OH",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "43035",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "12",
+        "INPUT": "HC 4013 BOX 4 Wanette Oklahoma 74878",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "4013",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "4",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "WANETTE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "OKLAHOMA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "74878",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "13",
+        "INPUT": "Hc 432 BOX 410 Cecil Ohio 45821",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "432",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "410",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "CECIL",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "OHIO",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "45821",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "14",
+        "INPUT": "HC 002 BOX 11 South Bend IN 46614",
+        "FNXNDFTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "002",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "11",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "SOUTH",
+                "USAD_NA",
+                "D",
+                "Not Selected"
+            ],
+            [
+                "BEND",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "IN",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "46614",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "15",
+        "INPUT": "HC 9900 BOX 9 Fort Worth TX 76110",
+        "FNXNFWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "9900",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "9",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "FORT",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "WORTH",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "TX",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "76110",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "16",
+        "INPUT": "HC 103 BOX 001 Titusville FL 32780",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "103",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "001",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "TITUSVILLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "FL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "32780",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "17",
+        "INPUT": "HC 44W BOX 840 Pembroke Pines FL 33028",
+        "FNXNWFTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "44W",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "840",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "PEMBROKE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "PINES",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "FL",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "33028",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "18",
+        "INPUT": "HC 84K BOX 0 Ambler PA 19002",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "84K",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "0",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "AMBLER",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "PA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "19002",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "19",
+        "INPUT": "HC 665N BOX 3 Freeport NY 11520",
+        "FNXNWTN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "665N",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "3",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "FREEPORT",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NY",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "11520",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "20",
+        "INPUT": "HC 09 BOX 31 East Haven CT 06512",
+        "FNXNDFFN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "09",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_NA",
+                "X",
+                "Not Selected"
+            ],
+            [
+                "31",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "EAST",
+                "USAD_NA",
+                "D",
+                "Not Selected"
+            ],
+            [
+                "HAVEN",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "CT",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "06512",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "22",
+        "INPUT": "HC 651 BOX 35 Oklahoma City,Oklahoma 73109",
+        "FNXNTW,TN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "651",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "35",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "OKLAHOMA",
+                "USAD_NA",
+                "T",
+                "Not Selected"
+            ],
+            [
+                "CITY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "OKLAHOMA",
+                "USAD_STA",
+                "T",
+                "State Name"
+            ],
+            [
+                "73109",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "23",
+        "INPUT": "HC 34 BOX 408 Bismarck,North Dakota 58501",
+        "FNXNW,DWN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "34",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "408",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "BISMARCK",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NORTH",
+                "USAD_NA",
+                "D",
+                "Not Selected"
+            ],
+            [
+                "DAKOTA",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "58501",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "33",
+        "INPUT": "HC 5 BOX 23 Lambertville,New Jersey 08530",
+        "FNXNW,WWN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "5",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "23",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "LAMBERTVILLE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NEW",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "JERSEY",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "08530",
+                "USAD_ZIP",
+                "N",
+                "Zip Code"
+            ]
+        ]
+    },
+    {
+        "Record ID": "35",
+        "INPUT": "HC 88 BOX 769 White Lake,South Dakota 57383",
+        "FNXNWF,DWN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "88",
+                "USAD_NA",
+                "N",
+                "Not Selected"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "769",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "WHITE",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "LAKE",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "SOUTH",
+                "USAD_NA",
+                "D",
+                "Not Selected"
+            ],
+            [
+                "DAKOTA",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "57383",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    },
+    {
+        "Record ID": "39",
+        "INPUT": "HC 09 BOX 31 Denton,North Carolina 27239",
+        "FNXNW,DWN": [
+            [
+                "HC",
+                "USAD_HNM",
+                "F",
+                "Highway Name"
+            ],
+            [
+                "09",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ],
+            [
+                "BOX",
+                "USAD_BNM",
+                "X",
+                "Box Name"
+            ],
+            [
+                "31",
+                "USAD_BNO",
+                "N",
+                "Box Number"
+            ],
+            [
+                "DENTON",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "NORTH",
+                "USAD_NA",
+                "D",
+                "Not Selected"
+            ],
+            [
+                "CAROLINA",
+                "USAD_CTY",
+                "W",
+                "City Name"
+            ],
+            [
+                "27239",
+                "USAD_HNO",
+                "N",
+                "Highway Number"
+            ]
+        ]
+    }
+]

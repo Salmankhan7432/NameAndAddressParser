@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tab {
+            display: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parser</h1>
+    <button onclick="openTab('singleLineAddressParser')">SingleLine Address Parser</button>
+    <button onclick="openTab('batchParser')">Batch Parser</button>
+    <button onclick="openTab('mapCreationForm')">Map Creation Form</button>
+    
+
+    <div id="singleLineAddressParser" class="tab">
+        <h2>SingleLine Address Parser</h2>
+        <br><br>
+        <label for="addressInput">Enter Address:</label>
+        <textarea id="addressInput" rows="4" cols="50"></textarea>
+        <button onclick="submitAddress()">Submit</button>
+        <div id="addressResult"></div>
+    </div>
+    
+
+    <div id="batchParser" class="tab">
+        <h2>Batch Parser</h2>
+        <label>Please Choose a Pipe Delimited File:</label>
+        <!-- Single file input element -->
+        <input type="file" id="batchFileInput" style="display: none;">
+        <button onclick="openFileSelection()">Choose Batch File</button>
+        <progress id="batchProgress" value="0" max="100"></progress>
+    </div>
+    
+
+    <div id="mapCreationForm" class="tab">
+        <h2>Map Creation Form</h2>
+        <label>Choose an Exception File:</label>
+        <!-- Single file input element -->
+        <input type="file" id="exceptionFileInput" style="display: none;">
+        <button onclick="openExceptionFile()">Choose Exception File</button>
+        <div id="exceptionDetails"></div>
+    </div>
+    
+    <script>
+    function openTab(tabName) {
+        var i, tabContent;
+        tabContent = document.getElementsByClassName("tab");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+
+    function openFileSelection() {
+        document.getElementById('batchFileInput').click();
+    }
+
+    function processBatch() {
+        var fileInput = document.getElementById('batchFileInput').files[0];
+        var formData = new FormData();
+        formData.append('file', fileInput);
+
+        fetch('/process_batch_file', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.result);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    </script>
+</body>
+</html>

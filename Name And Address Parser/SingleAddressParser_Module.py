@@ -43,7 +43,6 @@ def throwException(originalInput,initials):
     AddressList= [item for item in AddressList if item]# != ","]
     rules=rulebased.RuleBasedAddressParser.AddressParser(AddressList)
     print("Rules: ",rules)
-    print("Address List:", AddressList)
     for m in rules:
         component = m[1]
         component_description = db_operations.get_component_description(component)
@@ -72,8 +71,10 @@ def throwException(originalInput,initials):
         g.seek(0)
         json.dump(ExceptionList, g, indent=4)
         g.truncate
-    
+        
+
     return path
+
 
 def Address_Parser(line,initials,originalInput):
     global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules

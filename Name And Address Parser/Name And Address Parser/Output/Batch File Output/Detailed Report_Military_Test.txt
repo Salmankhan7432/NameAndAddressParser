@@ -1,0 +1,1947 @@
+Exception and Mask Report
+
+Number of Pattern Parsed Addresses: -	84
+Percentage of Patterns Parsed Result:  -	100.00%
+
+Number of Exceptions Thrown: -		0
+Percentage of RuleBased Parsed Result: -	0.00%
+Output From Active Learning
+
+{
+    "4": [
+        {
+            "Record ID": "4",
+            "INPUT": "APO AE 09427-5655",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09427-5655"
+                ]
+            ]
+        }
+    ],
+    "5": [
+        {
+            "Record ID": "5",
+            "INPUT": "FPO AP 96377-7564",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96377-7564"
+                ]
+            ]
+        }
+    ],
+    "6": [
+        {
+            "Record ID": "6",
+            "INPUT": "APO AA 09539",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09539"
+                ]
+            ]
+        }
+    ],
+    "7": [
+        {
+            "Record ID": "7",
+            "INPUT": "FPO AE 09631-7644",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09631-7644"
+                ]
+            ]
+        }
+    ],
+    "8": [
+        {
+            "Record ID": "8",
+            "INPUT": "APO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "9": [
+        {
+            "Record ID": "9",
+            "INPUT": "FPO AA 34002",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "34002"
+                ]
+            ]
+        }
+    ],
+    "10": [
+        {
+            "Record ID": "10",
+            "INPUT": "APO AE 09096-7643",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09096-7643"
+                ]
+            ]
+        }
+    ],
+    "11": [
+        {
+            "Record ID": "11",
+            "INPUT": "FPO AP 96517",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96517"
+                ]
+            ]
+        }
+    ],
+    "12": [
+        {
+            "Record ID": "12",
+            "INPUT": "APO AA 09208",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09208"
+                ]
+            ]
+        }
+    ],
+    "13": [
+        {
+            "Record ID": "13",
+            "INPUT": "FPO AE 09861-5353",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09861-5353"
+                ]
+            ]
+        }
+    ],
+    "14": [
+        {
+            "Record ID": "14",
+            "INPUT": "APO AE 09428",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09428"
+                ]
+            ]
+        }
+    ],
+    "15": [
+        {
+            "Record ID": "15",
+            "INPUT": "APO AP 96251",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96251"
+                ]
+            ]
+        }
+    ],
+    "16": [
+        {
+            "Record ID": "16",
+            "INPUT": "APO AA 09287-8763",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09287-8763"
+                ]
+            ]
+        }
+    ],
+    "17": [
+        {
+            "Record ID": "17",
+            "INPUT": "FPO AE 09826",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09826"
+                ]
+            ]
+        }
+    ],
+    "18": [
+        {
+            "Record ID": "18",
+            "INPUT": "FPO AP 96548",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96548"
+                ]
+            ]
+        }
+    ],
+    "19": [
+        {
+            "Record ID": "19",
+            "INPUT": "APO AA 09116",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09116"
+                ]
+            ]
+        }
+    ],
+    "20": [
+        {
+            "Record ID": "20",
+            "INPUT": "APO AE 09609-7344",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09609-7344"
+                ]
+            ]
+        }
+    ],
+    "21": [
+        {
+            "Record ID": "21",
+            "INPUT": "FPO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "22": [
+        {
+            "Record ID": "22",
+            "INPUT": "APO AA 09516",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09516"
+                ]
+            ]
+        }
+    ],
+    "23": [
+        {
+            "Record ID": "23",
+            "INPUT": "APO AE 09377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09377"
+                ]
+            ]
+        }
+    ],
+    "24": [
+        {
+            "Record ID": "24",
+            "INPUT": "APO AE 09427-3223",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09427-3223"
+                ]
+            ]
+        }
+    ],
+    "25": [
+        {
+            "Record ID": "25",
+            "INPUT": "FPO AP 96377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96377"
+                ]
+            ]
+        }
+    ],
+    "26": [
+        {
+            "Record ID": "26",
+            "INPUT": "APO AA 09539",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09539"
+                ]
+            ]
+        }
+    ],
+    "27": [
+        {
+            "Record ID": "27",
+            "INPUT": "FPO AE 09631-8686",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09631-8686"
+                ]
+            ]
+        }
+    ],
+    "28": [
+        {
+            "Record ID": "28",
+            "INPUT": "APO AE 09428",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09428"
+                ]
+            ]
+        }
+    ],
+    "29": [
+        {
+            "Record ID": "29",
+            "INPUT": "APO AP 96251",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96251"
+                ]
+            ]
+        }
+    ],
+    "30": [
+        {
+            "Record ID": "30",
+            "INPUT": "APO AA 09287-8763",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09287-8763"
+                ]
+            ]
+        }
+    ],
+    "31": [
+        {
+            "Record ID": "31",
+            "INPUT": "FPO AE 09826",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09826"
+                ]
+            ]
+        }
+    ],
+    "32": [
+        {
+            "Record ID": "32",
+            "INPUT": "FPO AP 96548",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96548"
+                ]
+            ]
+        }
+    ],
+    "33": [
+        {
+            "Record ID": "33",
+            "INPUT": "APO AA 09116",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09116"
+                ]
+            ]
+        }
+    ],
+    "34": [
+        {
+            "Record ID": "34",
+            "INPUT": "APO AE 09609-7344",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09609-7344"
+                ]
+            ]
+        }
+    ],
+    "35": [
+        {
+            "Record ID": "35",
+            "INPUT": "FPO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "36": [
+        {
+            "Record ID": "36",
+            "INPUT": "APO AA 09516",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09516"
+                ]
+            ]
+        }
+    ],
+    "37": [
+        {
+            "Record ID": "37",
+            "INPUT": "APO AE 09377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09377"
+                ]
+            ]
+        }
+    ],
+    "38": [
+        {
+            "Record ID": "38",
+            "INPUT": "APO AE 09427-3223",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09427-3223"
+                ]
+            ]
+        }
+    ],
+    "39": [
+        {
+            "Record ID": "39",
+            "INPUT": "FPO AP 96377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96377"
+                ]
+            ]
+        }
+    ],
+    "40": [
+        {
+            "Record ID": "40",
+            "INPUT": "APO AA 09539",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09539"
+                ]
+            ]
+        }
+    ],
+    "41": [
+        {
+            "Record ID": "41",
+            "INPUT": "FPO AE 09631-8686",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09631-8686"
+                ]
+            ]
+        }
+    ],
+    "42": [
+        {
+            "Record ID": "42",
+            "INPUT": "APO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "43": [
+        {
+            "Record ID": "43",
+            "INPUT": "FPO AA 34002",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "34002"
+                ]
+            ]
+        }
+    ],
+    "44": [
+        {
+            "Record ID": "44",
+            "INPUT": "APO AE 09096",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09096"
+                ]
+            ]
+        }
+    ],
+    "45": [
+        {
+            "Record ID": "45",
+            "INPUT": "FPO AP 96517-7564",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96517-7564"
+                ]
+            ]
+        }
+    ],
+    "46": [
+        {
+            "Record ID": "46",
+            "INPUT": "APO AA 09208",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09208"
+                ]
+            ]
+        }
+    ],
+    "47": [
+        {
+            "Record ID": "47",
+            "INPUT": "FPO AE 09861",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09861"
+                ]
+            ]
+        }
+    ],
+    "48": [
+        {
+            "Record ID": "48",
+            "INPUT": "APO AE 09427-7576",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09427-7576"
+                ]
+            ]
+        }
+    ],
+    "49": [
+        {
+            "Record ID": "49",
+            "INPUT": "FPO AP 96377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96377"
+                ]
+            ]
+        }
+    ],
+    "50": [
+        {
+            "Record ID": "50",
+            "INPUT": "APO AA 09539",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09539"
+                ]
+            ]
+        }
+    ],
+    "51": [
+        {
+            "Record ID": "51",
+            "INPUT": "FPO AE 09631-6565",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09631-6565"
+                ]
+            ]
+        }
+    ],
+    "52": [
+        {
+            "Record ID": "52",
+            "INPUT": "FPO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "53": [
+        {
+            "Record ID": "53",
+            "INPUT": "FPO AA 34002",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "34002"
+                ]
+            ]
+        }
+    ],
+    "54": [
+        {
+            "Record ID": "54",
+            "INPUT": "APO AE 09096",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09096"
+                ]
+            ]
+        }
+    ],
+    "55": [
+        {
+            "Record ID": "55",
+            "INPUT": "FPO AP 96517-4548",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96517-4548"
+                ]
+            ]
+        }
+    ],
+    "56": [
+        {
+            "Record ID": "56",
+            "INPUT": "APO AA 09208",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09208"
+                ]
+            ]
+        }
+    ],
+    "57": [
+        {
+            "Record ID": "57",
+            "INPUT": "FPO AE 09861",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09861"
+                ]
+            ]
+        }
+    ],
+    "58": [
+        {
+            "Record ID": "58",
+            "INPUT": "APO AE 09428-4844",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09428-4844"
+                ]
+            ]
+        }
+    ],
+    "59": [
+        {
+            "Record ID": "59",
+            "INPUT": "APO AP 96251-4748",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96251-4748"
+                ]
+            ]
+        }
+    ],
+    "60": [
+        {
+            "Record ID": "60",
+            "INPUT": "APO AA 09287",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09287"
+                ]
+            ]
+        }
+    ],
+    "61": [
+        {
+            "Record ID": "61",
+            "INPUT": "FPO AE 09826-8984",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09826-8984"
+                ]
+            ]
+        }
+    ],
+    "62": [
+        {
+            "Record ID": "62",
+            "INPUT": "FPO AP 96548",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96548"
+                ]
+            ]
+        }
+    ],
+    "63": [
+        {
+            "Record ID": "63",
+            "INPUT": "APO AA 09116",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09116"
+                ]
+            ]
+        }
+    ],
+    "64": [
+        {
+            "Record ID": "64",
+            "INPUT": "APO AE 09609",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09609"
+                ]
+            ]
+        }
+    ],
+    "65": [
+        {
+            "Record ID": "65",
+            "INPUT": "FPO AP 96373-7633",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373-7633"
+                ]
+            ]
+        }
+    ],
+    "66": [
+        {
+            "Record ID": "66",
+            "INPUT": "APO AA 09516",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09516"
+                ]
+            ]
+        }
+    ],
+    "67": [
+        {
+            "Record ID": "67",
+            "INPUT": "APO AE 09377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09377"
+                ]
+            ]
+        }
+    ],
+    "68": [
+        {
+            "Record ID": "68",
+            "INPUT": "APO AE 09427",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09427"
+                ]
+            ]
+        }
+    ],
+    "69": [
+        {
+            "Record ID": "69",
+            "INPUT": "FPO AP 96377",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96377"
+                ]
+            ]
+        }
+    ],
+    "70": [
+        {
+            "Record ID": "70",
+            "INPUT": "APO AA 09539-3833",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09539-3833"
+                ]
+            ]
+        }
+    ],
+    "71": [
+        {
+            "Record ID": "71",
+            "INPUT": "FPO AE 09631",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09631"
+                ]
+            ]
+        }
+    ],
+    "72": [
+        {
+            "Record ID": "72",
+            "INPUT": "APO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "73": [
+        {
+            "Record ID": "73",
+            "INPUT": "FPO AA 34002",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "34002"
+                ]
+            ]
+        }
+    ],
+    "74": [
+        {
+            "Record ID": "74",
+            "INPUT": "APO AE 09096-3831",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09096-3831"
+                ]
+            ]
+        }
+    ],
+    "75": [
+        {
+            "Record ID": "75",
+            "INPUT": "FPO AP 96517",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96517"
+                ]
+            ]
+        }
+    ],
+    "76": [
+        {
+            "Record ID": "76",
+            "INPUT": "APO AA 09208",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09208"
+                ]
+            ]
+        }
+    ],
+    "77": [
+        {
+            "Record ID": "77",
+            "INPUT": "FPO AE 09861",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09861"
+                ]
+            ]
+        }
+    ],
+    "78": [
+        {
+            "Record ID": "78",
+            "INPUT": "APO AE 09428-4422",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09428-4422"
+                ]
+            ]
+        }
+    ],
+    "79": [
+        {
+            "Record ID": "79",
+            "INPUT": "APO AP 96251",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96251"
+                ]
+            ]
+        }
+    ],
+    "80": [
+        {
+            "Record ID": "80",
+            "INPUT": "APO AA 09287",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09287"
+                ]
+            ]
+        }
+    ],
+    "81": [
+        {
+            "Record ID": "81",
+            "INPUT": "FPO AE 09826-3434",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09826-3434"
+                ]
+            ]
+        }
+    ],
+    "82": [
+        {
+            "Record ID": "82",
+            "INPUT": "FPO AP 96548",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96548"
+                ]
+            ]
+        }
+    ],
+    "83": [
+        {
+            "Record ID": "83",
+            "INPUT": "APO AA 09116-9989",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09116-9989"
+                ]
+            ]
+        }
+    ],
+    "84": [
+        {
+            "Record ID": "84",
+            "INPUT": "APO AE 09609",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09609"
+                ]
+            ]
+        }
+    ],
+    "85": [
+        {
+            "Record ID": "85",
+            "INPUT": "FPO AP 96373",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "FPO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AP"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "96373"
+                ]
+            ]
+        }
+    ],
+    "86": [
+        {
+            "Record ID": "86",
+            "INPUT": "APO AA 09516",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AA"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09516"
+                ]
+            ]
+        }
+    ],
+    "87": [
+        {
+            "Record ID": "87",
+            "INPUT": "APO AE 09377-4554",
+            "MWN": [
+                [
+                    "USAD_MDG",
+                    "M",
+                    "APO"
+                ],
+                [
+                    "USAD_MGN",
+                    "W",
+                    "AE"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "09377-4554"
+                ]
+            ]
+        }
+    ]
+}
+
+Output Fron Rule Based Approach
+
+{}

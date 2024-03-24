@@ -1,0 +1,368 @@
+.input-group button {
+     display: block;
+     width: 100%;
+ }
+ .input-group #submit-next,
+ .input-group #save-exit {
+     display: inline-block;
+     width: auto;
+     margin-right: 10px;
+ }
+  /* Basic reset and body styling */
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+  }
+  /* Style for the navigation bar */
+  .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #4b6584;
+      overflow: hidden;
+  }
+  /* Add padding to the top of the body to push the main content down */
+ body {
+     padding-top: 50px; /* This should be the height of your navbar */
+ }
+ 
+ /* If your page content is within a main tag or a div with a specific class, add padding or margin to that element */
+ main, .main-content {
+     margin-top: 50px; /* Adjust this value to match your navbar's height */
+ }
+  .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+  }
+  .navbar a:hover {
+      background-color: #3867d6;
+      color: white;
+  }
+  .navbar a.active {
+     background-color: #3867d6; /* or any color that indicates the active state */
+     color: white;
+ }
+
+  /* Main content area */
+  .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style for the form input groups */
+  .input-group {
+      margin-bottom: 20px;
+  }
+  .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+  }
+  .input-group input[type="text"],
+  .input-group input[type="file"] {
+      width: calc(100% - 22px); /* Adjust width to account for padding and border */
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccd1d9;
+      border-radius: 4px;
+  }
+  /* Style for the submit button */
+  .input-group button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #20bf6b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 17px;
+  }
+  .input-group button:hover {
+      background-color: #0b8457;
+      }
+ .buttons {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 10px;
+ }
+  .buttons button {
+      display: block;
+      flex : 1;
+      margin-right: 5px;
+      width: 20%;
+      padding: 10px;
+      background-color: #20bf6b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 17px;
+  }
+  #exception-controls {
+     margin-top: 15px;
+     text-align: center; /* Centering the checkbox and button */
+ }
+ 
+ #exception-btn {
+     background-color: #f44336; /* Red color for the button */
+     color: white;
+     padding: 10px 15px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     margin-left: 10px; /* Space between checkbox and button */
+ }
+
+ .result-box {
+     border-collapse: collapse;
+     margin: 30px auto;
+     font-size: 0.9em;
+     font-family: sans-serif;
+     min-width: 400px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+     width: 800px;
+ }
+
+ .result-box thead tr {
+     background-color: #20bf6b;
+     color: #ffffff;
+     text-align: left;
+ }
+ .result-box thead tr:hover {
+     background-color: #0b8457;
+     }
+ .result-box th,
+ .result-box td {
+     padding: 12px 15px;
+ }
+ .result-box tbody tr {
+     border-bottom: 1px solid #dddddd;
+     cursor: pointer;
+ }
+         
+ .result-box tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+     cursor: pointer;
+ }   
+ 
+ .result-box tbody tr:last-of-type {
+     border-bottom: 2px solid #009879;
+     cursor: pointer;
+ }
+ .result-box tbody tr.active-row {
+     font-weight: bold;
+     color: #009879;
+     cursor: pointer;
+ }
+ .result-box tbody tr:hover {
+     background-color: #e1e1e1;
+     } 
+ .udresult-box {
+     border-collapse: collapse;
+     margin: 30px auto;
+     font-size: 0.9em;
+     font-family: sans-serif;
+     min-width: 400px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+     width: 750px;
+     height: 500px;
+     overflow-y: auto;
+ }
+
+ .udresult-box thead tr {
+     background-color: #20bf6b;
+     color: #ffffff;
+     text-align: left;
+ }
+ .udresult-box thead th {
+     position: sticky;
+     top: 0;
+     background-color: #20bf6b;
+     color: #ffffff;
+     text-align: left;
+     padding: 12px 15px;
+ }
+ .udresult-box thead tr:hover {
+     background-color: #0b8457;
+     }
+ .udresult-box th,
+ .udresult-box td {
+     padding: 12px 15px;
+ }
+ .udresult-box tbody tr {
+
+     border-bottom: 1px solid #dddddd;
+     cursor: pointer;
+ }
+         
+ .udresult-box tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+     cursor: pointer;
+ }   
+ 
+ .udresult-box tbody tr:last-of-type {
+     border-bottom: 2px solid #009879;
+     cursor: pointer;
+ }
+ .udresult-box tbody tr.active-row {
+     font-weight: bold;
+     color: #009879;
+     cursor: pointer;
+ }
+ .udresult-box tbody tr:hover {
+     background-color: #e1e1e1;
+     }
+ /* Style for the edit and delete buttons */
+ .edit-btn, .delete-btn {
+     padding: 8px 12px;
+     margin-right: 5px;
+     /* Applying Bootstrap classes to style buttons */
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     text-align: center;
+     text-decoration: none;
+ }
+
+ /* Styling for the Edit button */
+ .edit-btn {
+     color: #ffc107; /* Change the color to match Bootstrap's warning button */
+     background-color: transparent;
+     border: 1px solid #ffc107; /* Border color */
+ }
+
+ /* Styling for the Delete button */
+ .delete-btn {
+     color: #dc3545; /* Change the color to match Bootstrap's danger button */
+     background-color: transparent;
+     border: 1px solid #dc3545; /* Border color */
+ }
+
+ /* Hover styles for both buttons */
+ .edit-btn:hover, .delete-btn:hover {
+     background-color: #f8f9fa;  
+        
+
+ /* Styling for the Save and Cancel buttons */
+ .save-btn,
+ .udresult-box .actions .save-btn {
+     padding: 8px 12px;
+     margin-right: 5px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     text-align: center;
+     text-decoration: none;
+     transition: background-color 0.3s;
+     color: #ffc107;
+     background-color: transparent;
+     border: 1px solid #ffc107;
+ }
+
+ .cancel-btn,
+ .udresult-box .actions .cancel-btn {
+     padding: 8px 12px;
+     margin-right: 5px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     text-align: center;
+     text-decoration: none;
+     transition: background-color 0.3s;
+     color: #dc3545;
+     background-color: transparent;
+     border: 1px solid #dc3545;
+ }
+
+ /* Hover styles for both buttons */
+ .save-btn:hover,
+ .cancel-btn:hover,
+ .udresult-box .actions .save-btn:hover,
+ .udresult-box .actions .cancel-btn:hover {
+     background-color: #f8f9fa;
+     color: #000;
+ }
+
+ 
+
+
+/* General styling for the Map Creation Form tab */
+#MapCreationForm {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;
+}
+
+/* Styling for the containers inside the Map Creation Form */
+.map-container {
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.map-result-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.map-result-box th,
+.map-result-box td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.map-result-box thead {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+}
+
+/* Input and label styling */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccd1d9;
+    border-radius: 4px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

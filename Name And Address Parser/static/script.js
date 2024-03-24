@@ -33,7 +33,6 @@ $(document).ready(function () {
         $('#result-box').show();
         var addressValue = $('#address-input').val();
         unsatisfied_address = addressValue;
-
         $.ajax({
             type: "POST",
             url: "/",
@@ -42,6 +41,7 @@ $(document).ready(function () {
                 console.log('Response:', response);
                 renderAddressData(response);
                 document.getElementById('exception-controls').style.display = 'block';
+                // document.getElementById('address-input').value = null;
                 $('#address-input').val('');
                 isExceptionForced = false;
                 $('#result-box').fadeIn('fast');
@@ -74,7 +74,7 @@ $(document).ready(function () {
             $('#exception-checkbox').prop('checked', false);
             $('#exception-btn').prop('disabled', true);
         } else {
-            
+            // var unsatisfied_address = $('#address-input').val();
             
             // AJAX request to the server with the forceException value
             $.ajax({
@@ -218,6 +218,7 @@ function triggerDownload(downloadUrl) {
 
 
 
+
 //------------------------------------------------------------------------------------------------------------
 //                                  Map Creation Form Tab Functionality
 //------------------------------------------------------------------------------------------------------------      
@@ -230,7 +231,6 @@ let dicIndex = 0;
 document.getElementById("loadFileBtn").addEventListener("click", loadFile);
 // document.getElementById("submit&NextBtn").addEventListener("click", submitButtonHandler);
 document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
-
 
 
 function loadFile() {
@@ -246,9 +246,9 @@ function loadFile() {
         console.error("Container element not found");
         return; // Exit the function if the container is not found
     }
-    
+
     const jsonFileInput = document.getElementById("jsonFileInput");
-    
+
     if (jsonFileInput.files.length > 0) {
         const file = jsonFileInput.files[0];
         const filenameElement = document.getElementById("filename");
@@ -257,9 +257,9 @@ function loadFile() {
         } else {
             console.error("filename element not found");
         }
-        
+
         const reader = new FileReader();
-        
+
         reader.onload = function (e) {
             try {
                 const newData = JSON.parse(e.target.result);
@@ -274,18 +274,18 @@ function loadFile() {
                 }
                 currentKeyIndex = 0;
                 showNext(); // Start processing data if it's the first file
-                
+
             } catch (error) {
                 console.error("Parsing error:", error);
                 alert("Invalid JSON data. Please provide a valid JSON file.", error.message);
             }
         };
-        
+
         reader.readAsText(file);
     } else {
         alert("Please select a JSON file.");
     }
-    
+
 }
 
 function showNext() {
@@ -295,19 +295,19 @@ function showNext() {
         document.getElementById("recordId").value = currentData["Record ID"];
         document.getElementById("inputValue").value = currentData["INPUT"];
         document.getElementById("mask-inputValue").value = keys[2];
-        
+
         const otherDataKey = findThirdObjectKey(currentData);
         const otherData = currentData[otherDataKey];
         const tableBody = document.getElementById("table-body");
         tableBody.innerHTML = "";
         fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
-        
+
         updateDictionaryDisplay();
     } else {
         alert("End of data reached");
         currentKeyIndex = data.length;
     }
-    
+
 }
 
 
@@ -321,16 +321,16 @@ function updateDictionaryDisplay() {
 
 function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
     fetch("/AddressComponents_dropdown")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(options => {
-        populateDropdowns(otherData, otherDataKey, options);
-    })
-    .catch(error => console.error('Error fetching options:', error));
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(options => {
+            populateDropdowns(otherData, otherDataKey, options);
+        })
+        .catch(error => console.error('Error fetching options:', error));
 }
 
 function handleNextDictionary(index) {
@@ -340,7 +340,7 @@ function handleNextDictionary(index) {
         // console.log("data splice: ",data.splice(index,1));
         // Update the dictionary display
         updateDictionaryDisplay();
-        
+
         if (data.length > 0) {
             dicIndex++;
             showNext();
@@ -378,10 +378,10 @@ function populateDropdowns(otherData, otherDataKey, options) {
                             optionElement.textContent = optionValue;
                             valueSelect.appendChild(optionElement);
                         }
-                        
+
                         else{
                             const optionElement = document.createElement("option");
-                            
+                        
                             optionElement.value = optionValue;
                             optionElement.textContent = optionValue;
                             valueSelect.appendChild(optionElement);
@@ -410,7 +410,7 @@ function exitFunction() {
     if (container) {
         container.style.display = "none"; // Hide the container
     }
-    
+
     // Reset the file input
     const fileInput = document.getElementById("jsonFileInput");
     if (fileInput) {
@@ -444,8 +444,8 @@ function collectData() {
     const Address_Type = document.getElementById("AddressType") ? document.getElementById("AddressType").value : null;
     const approval = document.getElementById("Approved?") ? document.getElementById("Approved?").value : null;
     const approved_by = document.getElementById("approvedby") ? document.getElementById("approvedby").value : null;
-    
-    
+
+
     // Example: Collect data from table
     const mappingData = [];
     const tbody = document.getElementById("table-body");
@@ -488,14 +488,38 @@ function collectData() {
     };
     result[mask] = dicData;
     return result;
-    
+
 }
 
 
+// document.getElementById("submitBtn").addEventListener("click", function () {
+//     const approved = document.getElementById("Approved?").value;
+//     if (approved === "Yes" && validateDropdowns()) {
+//         const data = collectData();
+//         checkForExistingMask(data["Mask Pattern"], data);
+//     } else if (approved === "No") {
+//         // If approved is "No", skip to the next dictionary
+//         handleNextDictionary();
+//     } else {
+//         alert("Please fill in all required fields.");
+//     }
+// });
 
-                                
+// document.getElementById("submit&NextBtn").addEventListener("click", function () {
+//     const approved = document.getElementById("Approved?").value;
+//     if (approved === "Yes" && validateDropdowns()) {
+//         const data = collectData();
+//         checkForExistingMask(data["Mask Pattern"], data);
+//     } else if (approved === "No") {
+//         // If approved is "No", skip to the next dictionary
+//         handleNextDictionary();
+//     } else {
+//         alert("Please fill in all required fields.");
+//     }
+// });
+
 document.getElementById("submitBtn").addEventListener("click", function () {
-// setTimeout(() => {
+    // setTimeout(() => {
     // }, 100);
     const data = collectData();
     submitButtonHandler(data, currentKeyIndex);
@@ -503,8 +527,8 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 
 document.getElementById("submit&NextBtn").addEventListener("click", function () {
     // setTimeout(() => {
-    // }, 100);
-    // return false;
+        // }, 100);
+        // return false;
     const data = collectData();
     submitButtonHandler(data, currentKeyIndex);
 });
@@ -514,9 +538,9 @@ function submitButtonHandler(collectedData, index) {
     const approved = document.getElementById("Approved?").value;
     const isDropdownsValid = validateDropdowns();
     const commentValidation = document.getElementById("comment").value;
-    
+
     if (approved === "Yes") {
-        
+
         if (isDropdownsValid) {
             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
         } else {
@@ -546,26 +570,26 @@ function validateDropdowns() {
         console.log(`Dropdown ${id}: Value = ${element.value}, IsValid = ${isValid}`);
         return isValid;
     }
-    
+
     if (!isDropdownValid("region") ||
-    !isDropdownValid("AddressType") ||
-    !isDropdownValid("Approved?") ||
-    !isDropdownValid("approvedby")) {
+        !isDropdownValid("AddressType") ||
+        !isDropdownValid("Approved?") ||
+        !isDropdownValid("approvedby")) {
         return false;
     }
-    
-// Check each address component dropdown
-let isValidComponents = true;
-const dropdowns = document.querySelectorAll("select[name='value']");
-console.log(dropdowns);
-for (let i = 0; i < dropdowns.length; i++) {
-    if (dropdowns[i].value === "Not Selected") {
-        console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
-        isValidComponents = false;
-        return false;
+
+    // Check each address component dropdown
+    let isValidComponents = true;
+    const dropdowns = document.querySelectorAll("select[name='value']");
+    console.log(dropdowns);
+    for (let i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].value === "Not Selected") {
+            console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
+            isValidComponents = false;
+            return false;
+        }
     }
-}
-return isValidComponents;
+    return isValidComponents;
 }
 
 
@@ -647,7 +671,6 @@ function resetDropdown(dropdownId) {
         dropdown.value = ""; // or the default value
     }
 }
-
 
 
 

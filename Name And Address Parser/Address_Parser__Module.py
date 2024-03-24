@@ -37,9 +37,9 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     Mask_log={}
     Unique_Mask={}
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
-    # Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
-    # file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
-    # Lines = Address_4CAF50.readlines()
+    Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
+    file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
+    Lines = Address_4CAF50.readlines()
 
     # file_name = os.path.splitext(os.path.basename(file_stream.filename))[0]
     # Lines = file_stream.readlines()
@@ -48,6 +48,9 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     # Lines = [line.decode('utf-8') if isinstance(line, bytes) else line for line in Lines]
 
     fileHandle = open('USAddressWordTable.txt', 'r',encoding='utf8')
+
+
+
     # Strips the newline character
     Observation=0
     Total=0
@@ -115,7 +118,6 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     for line in tqdm(Lines, desc="Processing"):
         CN=CN+CNT
         # Progress["value"]=CN
-        # print(Progress)
         line=line.strip("\n").split("|")
         ID=line[0].strip()
         try:

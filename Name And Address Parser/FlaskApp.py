@@ -5,46 +5,134 @@ Created on Thu Nov 23 18:22:53 2023
 @author: skhan2
 """
 
-from flask import Flask, request, render_template, jsonify, send_file
+from flask import Flask, request, render_template, jsonify, send_file, session
+from functools import wraps
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
+from flask import Flask, render_template, redirect, request, url_for, flash
 from werkzeug.utils import secure_filename, safe_join
-from flask_wtf import FlaskForm
-from flask_wtf.file import FileField, FileRequired
-from wtforms import SubmitField
 from tqdm import tqdm
 from flask_socketio import SocketIO
-import threading
 import os
 from ORM import MaskTable, ComponentTable, MappingJSON
 from DB_Operations import DB_Operations as CRUD
 import SingleAddressParser_Module as SAP
+from werkzeug.security import generate_password_hash, check_password_hash
 import Address_Parser__Module as BAP
 from flask_cors import CORS
 import json
+import threading
 from datetime import datetime
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from LoginORM import User, UserRole
+from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileRequired
+from wtforms import SubmitField
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Length
+    
 
 current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
+engine2 = create_engine('sqlite:///User_Auth.db', echo=True)
 Session = sessionmaker(bind=engine)
+DBSession=sessionmaker(bind=engine2)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # for 16MB max-size
 
 socketio = SocketIO(app)
 
 CORS(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[InputRequired(), Length(min=4, max=30)])
+    password = PasswordField('Password', validators=[InputRequired()])
+    submit = SubmitField('Login')
+
+class RegisterForm(FlaskForm):
+    username = StringField('Username', validators=[InputRequired(), Length(min=4, max=30)])
+    password = PasswordField('Password', validators=[InputRequired()])
+    submit = SubmitField('Register')
 
 class BatchUploadForm(FlaskForm):
     file = FileField('Upload File', validators=[FileRequired()])
     submit = SubmitField('Process File')
 
+@app.route('/login', methods=['GET', 'POST'])
+def login(): 
+    form = LoginForm()  # Ensure this matches the name of your form class
+    if form.validate_on_submit():
+            sessions = DBSession()
+            username = request.form['username']
+            password = request.form['password']  
+            user = sessions.query(User).filter_by(UserName=username).first()
+            
+            if user and user.Password == password: 
+                role_name = user.role.RoleName
+                
+                session["user_id"]=username
+                session["role"]= role_name
+                # You should use hash comparison here for security!
+                return redirect(url_for('SingleLineAddressParser')) 
+            
+           # Remember, in real apps, don't use plain text for passwords
+           
+            else:
+                session.clear()
+                flash('Invalid username or password')
+    return render_template('login.html', form=form)
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+
+def requires_role(role):
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            if 'user_id' not in session:
+                flash('You need to be logged in to view this page.')
+                return redirect(url_for('login'))
+            user = session['user_id']
+            role= session["role"]
+            if not user or role != role:
+                flash('You do not have the required permissions to view this page.')
+                return redirect(url_for('SingleLineAddressParser'))  # Or some other appropriate redirect
+            return f(*args, **kwargs)
+        return decorated_function
+    return decorator
+
+
+
+@app.route('/logout', methods=["GET", "POST"])
+def logout():
+    flash('You have been logged out!')
+    session.clear()
+    return redirect(url_for('login'))
+
+
+
+
+@app.route('/CRUDUser', methods=["GET", "POST"])
+@requires_role('admin')
+def CRUDUser():
+    sessions = DBSession() 
+    users = sessions.query(User).all()
+    return render_template('index.html', users=users)
 
 
 @app.route('/', methods=["GET", "POST"])
+@requires_role('admin')
 def SingleLineAddressParser():
     result = {}
     form = BatchUploadForm()
+
     if request.method == 'POST':
         address = request.form['address']
         convert = SAP.Address_Parser(address, 'Initials', address)
@@ -101,6 +189,33 @@ def process_file_in_background(file, filename):
             "output_file_path": None
         }
 
+# @app.route('/Batch_Parser', methods=["POST"])
+# def BatchParser():
+#     if 'file' not in request.files:
+#         return jsonify({'error': 'No file part'}), 400
+
+#     file = request.files['file']
+
+#     if file.filename == '':
+#         return jsonify({'error': 'No selected file'}), 400
+
+#     if file:
+#         filename = secure_filename(file.filename)
+#         print(filename)
+#         file_path = os.path.join('File Uploads', filename)
+#         file.save(file_path)
+#         convert = BAP.Address_Parser(file_path, "update_progress")
+#         print("Convert 0: \n",convert[0], "\n Convert 1: \n", convert[1], "\n Convert 2: \n", convert[2])
+#         if convert[0]:
+#             result = convert[1]
+#             metrics = {'metrics': convert[1]}
+#             output_file_path = convert[2]
+#             global download_path
+#             download_path = output_file_path
+#             return jsonify(result=result, metrics=metrics, download_url = '/download')
+        
+#     return jsonify(result=result, metrics=metrics)
+
 @app.route('/Batch_Parser', methods=["GET", "POST"])
 def BatchParser():
     form = BatchUploadForm()
@@ -140,8 +255,6 @@ def download_file(filename):
             return jsonify({'error': 'File not found'}), 404
     else:
         return jsonify({'error': 'Result not ready or file not found'}), 404
-
-
 
 @app.route('/AddressComponents_dropdown', methods=['GET'])
 def get_address_components():
@@ -367,11 +480,6 @@ def delete_component():
             print("Error occurred:", str(e))
             return jsonify(result={'message': f'Error: {str(e)}'})
 
-
-@app.route("/Login", methods=["POST"])
-def loginPage():
-    if request.method == "POST":
-        return
     
     
 if __name__ == '__main__':

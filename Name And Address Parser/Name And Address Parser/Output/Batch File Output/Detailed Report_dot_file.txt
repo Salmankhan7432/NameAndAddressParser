@@ -1,0 +1,168 @@
+Exception and Mask Report
+
+Number of Pattern Parsed Addresses: -	3
+Percentage of Patterns Parsed Result:  -	75.00%
+
+Number of Exceptions Thrown: -		1
+Percentage of RuleBased Parsed Result: -	25.00%
+Output From Active Learning
+
+{
+    "1": [
+        {
+            "Record ID": "1",
+            "INPUT": "43 State Ave ,New Albany, IN 47150",
+            "NRF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "43"
+                ],
+                [
+                    "USAD_SNM",
+                    "R",
+                    "STATE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "NEW ALBANY"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "47150"
+                ]
+            ]
+        }
+    ],
+    "2": [
+        {
+            "Record ID": "2",
+            "INPUT": "815 Marvon St South Ozone Park, NY 11420",
+            "NWFDWF,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "815"
+                ],
+                [
+                    "USAD_SNM",
+                    "W",
+                    "MARVON"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "ST"
+                ],
+                [
+                    "USAD_CTY",
+                    "DWF",
+                    "SOUTH OZONE PARK"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "NY"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "11420"
+                ]
+            ]
+        }
+    ],
+    "3": [
+        {
+            "Record ID": "3",
+            "INPUT": "43 State Ave ,New Albany, IN 47150",
+            "NRF,WW,TN": [
+                [
+                    "USAD_SNO",
+                    "N",
+                    "43"
+                ],
+                [
+                    "USAD_SNM",
+                    "R",
+                    "STATE"
+                ],
+                [
+                    "USAD_SFX",
+                    "F",
+                    "AVE"
+                ],
+                [
+                    "USAD_CTY",
+                    "WW",
+                    "NEW ALBANY"
+                ],
+                [
+                    "USAD_STA",
+                    "T",
+                    "IN"
+                ],
+                [
+                    "USAD_ZIP",
+                    "N",
+                    "47150"
+                ]
+            ]
+        }
+    ]
+}
+
+Output Fron Rule Based Approach
+
+{
+    "4": [
+        [
+            "5506",
+            "USAD_SNO",
+            "N",
+            "Street Number"
+        ],
+        [
+            "A",
+            "USAD_SNM",
+            "W",
+            "Street Name"
+        ],
+        [
+            "STREET",
+            "USAD_SFX",
+            "F",
+            "Street Suffix"
+        ],
+        [
+            "2551",
+            "USAD_ANO",
+            "N",
+            "Secondary Address Number"
+        ],
+        [
+            "AR",
+            "USAD_STA",
+            "T",
+            "State Name"
+        ],
+        [
+            "7225",
+            "USAD_ZIP",
+            "N",
+            "Zip Code"
+        ]
+    ]
+}

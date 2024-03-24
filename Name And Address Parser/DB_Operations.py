@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import IntegrityError
 import json
 from ORM import MaskTable, ComponentTable, MappingJSON
-
+from LoginORM import UserRole, User
 
 class DB_Operations:
     def __init__(self, database_url):
@@ -99,6 +99,16 @@ class DB_Operations:
 
         finally:
             session.close()
+            
+            
+    def authenticate_user(self,username, password):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
+        user = session.query(User).filter_by(username=username).first()
+        if user and user.password == password:  # You should use hash comparison here for security!
+            return user
+        return None
+
     
 
     def add_data(self, data):
@@ -233,6 +243,7 @@ class DB_Operations:
                 
         finally:
             session.close()
+    
 # database_url = 'sqlite:///KnowledgeBase_TestDummy.db'
 # db_operations = DB_Operations(database_url)
 # db_operations.Delete_records('USAD_SFX')

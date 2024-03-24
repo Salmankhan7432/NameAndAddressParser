@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            margin: 10px;
+        }
+        .leftContainer, .rightContainer {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+input[type="text"],
+select,
+textarea {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+label {
+    font-weight: bold;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Map Creation Form</h1>
+    <div class="container" id="mapdata" style="grid-template-columns: 1fr 1fr;" hidden>
+        <div class="leftContainer" style="width: 90%; height: 100vh; padding: 20px;">
+            <table id="otherData" style="width: 100%;"></table>
+
+        </div>
+        <div class="rightContainer" id="inputData" style="width: 90%; height: 100vh; padding: 20px;">
+            <label for="fileName" class="">Exception File Name : </label>
+            <input type="text" id="filename" readonly><br>
+            <label for="recordId" style="">Record ID:</label>
+            <input type="text" id="recordId" readonly><br>
+            <label for="inputValue" style="">INPUT:</label>
+            <input type="text" id="inputValue" readonly><br>
+            <label for="region" class="col-sm-2 col-form-label">Region:</label>
+            <select id="region" name="region" class="" style="">
+                <option value="Not Selected">Not Selected</option>
+                <option value="US">US</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+            </select><br>
+            <label for="type">Address Type : </label>
+            <select id="region" name="region" class="" style="">
+                <option value="street address">Street Address</option>
+                <option value="po box address">PO Box Address</option>
+                <option value="highay contract address">Highway Contract Address</option>
+                <option value="militay address">Military Address</option>
+                <option value="attention line address">Attention Line Address</option>
+                <option value="roural route address">Roural Route Address</option>
+                <option value="puerto rico address">Puerto Rico Address</option>
+                <option value="university address">University Address</option>
+            </select><br>
+            <label id="keyLabel" style="display:none; padding-bottom: 5px;" style=""></label>
+            <label for="">Add to V-DB and KB : </label>
+            <select name="kb" id="">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br>
+            <label for="comment">Comment : </label>
+            <textarea name="" id="" cols="30" rows="3"></textarea><br>
+            <label for="approvedby">Approved By : </label>
+            <select name="approvedby" id="" >
+                <option value="Person 1">Person 1</option>
+                <option value="Person 2">Person 2</option>
+                <option value="Person 3">Person 3</option>
+            </select><br>
+
+            <button id="showNextBtn">Next</button>
+        </div>
+    </div>
+
+
+
+    <div class="" id="upload">
+        <input type="file" id="jsonFileInput" accept=".json">
+        <button id="loadFileBtn">Load JSON File</button>
+    </div>
+
+
+    <script>
+        let data = [];
+        let currentKeyIndex = 0;
+
+        document.getElementById("loadFileBtn").addEventListener("click", loadFile);
+        document.getElementById("showNextBtn").addEventListener("click", showNext);
+
+        function loadFile() {
+            const jsonFileInput = document.getElementById("jsonFileInput");
+            document.getElementById("upload").style.display = "none";
+            document.getElementById("mapdata").style.display = "grid";
+            document.getElementById("filename").value = document.getElementById("jsonFileInput").files[0].name;
+            const file = jsonFileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    try {
+                        const newData = JSON.parse(e.target.result);
+                        data = data.concat(newData); // Append new data to existing data array
+                        if (currentKeyIndex === 0) {
+                            showNext(); // Start processing data if it's the first file
+                        }
+                    } catch (error) {
+                        alert("Invalid JSON data. Please provide a valid JSON file.");
+                    }
+                };
+
+                reader.readAsText(file);
+            } else {
+                alert("Please select a JSON file.");
+            }
+        }
+
+        function showNext() {
+            if (currentKeyIndex < data.length) {
+                const currentData = data[currentKeyIndex];
+                document.getElementById("recordId").value = currentData["Record ID"];
+                document.getElementById("inputValue").value = currentData["INPUT"];
+
+                const otherDataKey = findThirdObjectKey(currentData);
+                const otherData = currentData[otherDataKey];
+
+                if (otherDataKey) {
+                    const keyLabel = document.getElementById("keyLabel");
+                    keyLabel.textContent = "Token Pattern : " + otherDataKey;
+                    keyLabel.style.display = "block";
+                    const table = document.getElementById("otherData");
+                    table.innerHTML = "";
+                    const headerRow = document.createElement("tr");
+                    table.appendChild(headerRow);
+                    ["Direction", "Value", "Category"].forEach(function (text) {
+                        const th = document.createElement("th");
+                        th.textContent = text;
+                        headerRow.appendChild(th);
+                    });
+
+                    otherData.forEach(function (item) {
+                        const row = document.createElement("tr");
+                        table.appendChild(row);
+
+                        // Rearrange the order of insertion to match the desired column order
+                        item.forEach(function (value, index) {
+                            const td = document.createElement("td");
+                            if (index === 1) {
+                                // Convert value column to a dropdown menu
+                                const valueSelect = document.createElement("select");
+                                valueSelect.name = "value";
+                                const options = ["USAD_SNO", "USAD_SNM", "USAD_SFX", "USAD_ANO", "USAD_ANM", "USAD_CTY", "USAD_STA", "USAD_ZIP", "USAD_SPR", "USAD_BNM", "USAD_BNO", "USAD_SPT", "USAD_ZP4", "USAD_RNM", "USAD_RNO", "USAD_ORG", "USAD_MGN", "USAD_MDG", "USAD_HNO", "USAD_HNM", "USAD_NA"];
+                                options.forEach(function (option) {
+                                    const optionElement = document.createElement("option");
+                                    optionElement.value = option;
+                                    optionElement.textContent = option;
+                                    valueSelect.appendChild(optionElement);
+                                });
+                                valueSelect.value = value;
+                                td.appendChild(valueSelect);
+                            } else {
+                                td.textContent = value;
+                            }
+                            row.appendChild(td);
+                        });
+                    });
+                } else {
+                    alert("No third object found in the current data.");
+                }
+
+                currentKeyIndex++;
+            } else {
+                alert("End of data reached");
+                currentKeyIndex = 0; // Reset currentKeyIndex for the next set of data
+            }
+        }
+
+        function findThirdObjectKey(data) {
+            for (const key in data) {
+                if (key !== "Record ID" && key !== "INPUT") {
+                    return key;
+                }
+            }
+            return null; // No third object key found
+        }
+    </script>
+
+</body>
+
+</html>

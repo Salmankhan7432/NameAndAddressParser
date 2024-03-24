@@ -40,11 +40,12 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
     file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
     Lines = Address_4CAF50.readlines()
-
-    # file_name = os.path.splitext(os.path.basename(file_stream.filename))[0]
-    # Lines = file_stream.readlines()
-
-    #
+    
+    # file_name = os.path.splitext(os.path.basename(Address_4CAF50.filename))[0]
+    # Lines = Address_4CAF50.readlines()
+    
+    
+    
     # Lines = [line.decode('utf-8') if isinstance(line, bytes) else line for line in Lines]
 
     fileHandle = open('USAddressWordTable.txt', 'r',encoding='utf8')
@@ -80,7 +81,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     }
     # data={}
     # with open('JSONMappingDefault.json', 'r+', encoding='utf8') as f:
-    #     data = json.load(f)
+    #     data = json.load(f)wo
     USAD_CONVERSION_={
         
   "1": "USAD_SNO",
@@ -518,6 +519,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #---------------------------------------------------------------------------------
         
         # Progress.stop()
+        print(zip_file_name)
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)

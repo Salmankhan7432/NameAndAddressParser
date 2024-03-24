@@ -4,6 +4,9 @@ Created on Thu Nov 23 18:22:53 2023
 
 @author: skhan2
 """
+from flask_socketio import SocketIO, emit
+import time  # Used for simulating processing time
+
 
 from flask import Flask, request, render_template, jsonify, send_file, session
 from functools import wraps
@@ -30,7 +33,9 @@ from flask_wtf.file import FileField, FileRequired
 from wtforms import SubmitField
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length
-    
+from flask_socketio import SocketIO, emit
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
@@ -42,7 +47,6 @@ app.config['SECRET_KEY'] = 'secret!'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # for 16MB max-size
 
 socketio = SocketIO(app)
-
 CORS(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -132,19 +136,22 @@ def CRUDUser():
 def SingleLineAddressParser():
     result = {}
     form = BatchUploadForm()
-
-    if request.method == 'POST':
-        address = request.form['address']
-        convert = SAP.Address_Parser(address, 'Initials', address)
-        if convert[4]:
-            result = convert[0]
-            result['Parsed_By'] = 'Rule Based'
-        else:
-            result = convert[0]
-            result['Parsed_By'] = 'Active Learning'
-        print(result)
-        return jsonify(result=result)
-
+    try:
+        
+        if request.method == 'POST':
+            address = request.form['address']
+            convert = SAP.Address_Parser(address, 'Initials', address)
+            if convert[4]:
+                result = convert[0]
+                result['Parsed_By'] = 'Rule Based'
+            else:
+                result = convert[0]
+                result['Parsed_By'] = 'Active Learning'
+            print(result)
+            return jsonify(result=result)
+    except:
+        return render_template('index.html', result=result, form=form)
+            
     return render_template('index.html', result=result, form=form)
 
 
@@ -172,82 +179,67 @@ def download_except_file():  # Ensure this function name is unique
     except FileNotFoundError:
         return jsonify({'error': 'File not found'}), 404
 
+
 task_results = {}
 def process_file_in_background(file, filename):
-    try:
-        convert = BAP.Address_Parser(file, "update_progress")
-        task_results[filename] = {
-            "result": convert[1] if convert[0] else None,
-            "metrics": {'metrics': convert[1]} if convert[0] else None,
-            "output_file_path": convert[2] if convert[0] else None
-        }
-    except Exception as e:
-        print(f"Error processing file {filename}: {e}")
-        task_results[filename] = {
-            "result": None,
-            "metrics": None,
-            "output_file_path": None
-        }
-
-# @app.route('/Batch_Parser', methods=["POST"])
-# def BatchParser():
-#     if 'file' not in request.files:
-#         return jsonify({'error': 'No file part'}), 400
-
-#     file = request.files['file']
-
-#     if file.filename == '':
-#         return jsonify({'error': 'No selected file'}), 400
-
-#     if file:
-#         filename = secure_filename(file.filename)
-#         print(filename)
-#         file_path = os.path.join('File Uploads', filename)
-#         file.save(file_path)
-#         convert = BAP.Address_Parser(file_path, "update_progress")
-#         print("Convert 0: \n",convert[0], "\n Convert 1: \n", convert[1], "\n Convert 2: \n", convert[2])
-#         if convert[0]:
-#             result = convert[1]
-#             metrics = {'metrics': convert[1]}
-#             output_file_path = convert[2]
-#             global download_path
-#             download_path = output_file_path
-#             return jsonify(result=result, metrics=metrics, download_url = '/download')
+    convert = BAP.Address_Parser(file, "update_progress")
+    task_results[filename] = {
+        "result": convert[1] if convert[0] else None,
+        "metrics": {'metrics': convert[1]} if convert[0] else None,
+        "output_file_path": convert[2] if convert[0] else None
+    }
+    
+    with open("temp_file.json", "w", encoding = "utf8") as file:
+        json.dump(task_results, file, indent=4)
         
-#     return jsonify(result=result, metrics=metrics)
+        
+    
 
 @app.route('/Batch_Parser', methods=["GET", "POST"])
 def BatchParser():
     form = BatchUploadForm()
+    print("Processing starsted: ", flush=True)
+    
     if form.validate_on_submit():
         global task_results
 
         file = form.file.data
         filename = secure_filename(file.filename)
-        # file_path = os.path.join('File Uploads', filename)
-        # file.save(file_path)
+        file_path = os.path.join('File Uploads', filename)
+        file.save(file_path)
 
-        thread = threading.Thread(target=process_file_in_background, args=(file, filename))
-        thread.start()
-        print("Processing started: ")
-
+        thread = threading.Thread(target=process_file_in_background, args=(file_path, filename))
+        thread.run()
+       
         return jsonify(status="Processing started", status_check_url='/check_status/' + filename, download_url='/download_output/' + filename)
 
-    return "Upload a file", 400
+    return jsonify(status="Upload a file")
 
-@app.route('/check_status/<filename>')
+@app.route('/check_status/<filename>', methods=["GET", "POST"])
 def check_status(filename):
-    print(task_results)
-    if filename in task_results:
+    print("sdksdksd") 
+    task_results=dict()
+    try:
+            
+        with open("temp_file.json", "r", encoding="utf8") as file:
+        # Load the JSON content from the file into a Python dictionary
+            task_results = json.load(file)
         if task_results[filename]["result"] is not None:
             return jsonify(result=task_results[filename]["result"], metrics=task_results[filename]["metrics"])
         else:
             return jsonify(status="Still processing"), 202
-    else:
-        return jsonify(error="Task not found or not started"), 404
+    except:
+        pass
+# else:
+    #     return jsonify(error=str(task_results)), 404
 
 @app.route('/download_output/<filename>')
 def download_file(filename):
+    task_results=dict()
+    with open("temp_file.json", "r", encoding="utf8") as file:
+    # Load the JSON content from the file into a Python dictionary
+        task_results = json.load(file)
+
     if filename in task_results and task_results[filename]["output_file_path"] is not None:
         try:
             return send_file(task_results[filename]["output_file_path"], as_attachment=True)
@@ -483,5 +475,6 @@ def delete_component():
     
     
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    
+    app.run(port=8080, debug=True)
 

@@ -147,44 +147,67 @@ $(document).ready(function () {
 //                     Batch Parser Tab Functionality
 //------------------------------------------------------------------------------------------------------------
 
+
+
+
 $(document).ready(function () {
     $('#metrics-display').hide();
     $('#file-upload').on('change', function() {
         $('#metrics-display').hide();
     });
 
-    $('#BatchForm').submit(function (event) {
-        event.preventDefault();
-        var fileData = new FormData(this);
-        // fileData.append('file', $('#file-upload')[0].files[0]);
-        $.ajax({
-            url: '/Batch_Parser',
-            type: 'POST',
-            data: fileData,
-            contentType: false,
-            processData: false,
-            xhr: function () {
-                var xhr = new window.XMLHttpRequest();
-                xhr.upload.addEventListener('progress', function (e) {
-                    if (e.lengthComputable) {
-                        var percentComplete = (e.loaded / e.total) * 100;
-                        // Update progress bar
-                    }
-                }, false);
-                return xhr;
-            },
-            success: function (response) {
-                console.log('File uploaded!');
-                if (response.status_check_url) {
-                    setTimeout(function() {pollForMetrics(response.status_check_url, response.download_url); }, 500);
+
+
+
+$('#BatchForm').submit(function (event) {
+document.getElementById('spinner').style.display = 'block';
+    event.preventDefault();
+    var fileData = new FormData(this);
+
+    $.ajax({
+        url: '/Batch_Parser',
+        type: 'POST',
+        data: fileData,
+        contentType: false,
+        processData: false,
+        xhr: function () {
+            var xhr = new window.XMLHttpRequest();
+            // Event listener for the upload progress
+            xhr.upload.addEventListener('progress', function (e) {
+                if (e.lengthComputable) {
+                    var percentComplete = Math.round((e.loaded / e.total) * 100);
+                    // Update the progress bar with the new percentage
+                    $('#progressBar').val(percentComplete);
+                    $('#progressBarText').text(percentComplete + '%'); // If you also have a text element to update
+               
+               
                 }
-            },
-            error: function (error) {
-                console.log('Upload error:', error);
-                alert("Error during file upload");
+            }, false);
+            return xhr;
+        },
+        success: function (response) {
+        
+                // This code is called when the AJAX request completes successfully
+            console.log('File uploaded!');
+            $('#progressBar').val(50); // Make sure the progress bar shows 100% at the end
+            $('#progressBarText').text('100%'); // Update the text to 100% when upload completes
+            // Further actions based on response
+            if (response.status_check_url) {
+            console.log(response.status_check_url)
+            document.getElementById('spinner').style.display = 'block';
+            
+                setTimeout(function() { pollForMetrics(response.status_check_url, response.download_url); }, 3000);
             }
-        });
+        },
+        error: function (error) {
+            // This code is called if the AJAX request fails
+            console.log('Upload error:', error);
+            alert("Error during file upload");
+        }
     });
+});
+
+
 });
 
 function pollForMetrics(statusCheckUrl, downloadUrl) {
@@ -192,15 +215,19 @@ function pollForMetrics(statusCheckUrl, downloadUrl) {
         url: statusCheckUrl,
         type: 'GET',
         success: function(response) {
+        
             if (response.metrics) {
+                        document.getElementById('spinner').style.display = 'none';
                 var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
                 $('#metrics-display').html(formattedText).show();
+                console.log(downloadUrl)
                 triggerDownload(downloadUrl);
             } else {
                 setTimeout(function() { pollForMetrics(statusCheckUrl, downloadUrl); }, 3000); // Poll every 3 seconds
             }
         },
         error: function(error) {
+        document.getElementById('spinner').style.display = 'none';
             console.log('Error:', error);
             // alert("Error fetching metrics");
         }

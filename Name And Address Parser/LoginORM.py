@@ -36,5 +36,3 @@ class User(Base):
 
     def __repr__(self):
         return f"<User(username='{self.UserName}', role_id={self.role_id})>"
-
-Base.metadata.create_all(engine)

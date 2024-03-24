@@ -55,5 +55,3 @@ class MappingJSON(Base):
                 self.component_value == other.component_value
             )
         return NotImplemented
-    
-Base.metadata.create_all(engine)

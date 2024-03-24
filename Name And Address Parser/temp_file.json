@@ -1,0 +1,9 @@
+{
+    "Pseudo_1_lakh_1_1.txt": {
+        "result": "Detailed_Report of Pseudo_1_lakh_1_1.txt is Generated! \n\nThe Pseudo_1_lakh_1_1_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Addresses: -\t28,882\nUnique Pattern Count: -\t5,541\n\n\nNumber of Pattern Parsed Addresses: -\t15,249\nPercentage of Patterns Parsed Result:  -\t52.80%\n\nNumber of Exceptions Thrown: -\t\t13,633\nPercentage of RuleBased Parsed Result: -\t47.20%\n",
+        "metrics": {
+            "metrics": "Detailed_Report of Pseudo_1_lakh_1_1.txt is Generated! \n\nThe Pseudo_1_lakh_1_1_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Addresses: -\t28,882\nUnique Pattern Count: -\t5,541\n\n\nNumber of Pattern Parsed Addresses: -\t15,249\nPercentage of Patterns Parsed Result:  -\t52.80%\n\nNumber of Exceptions Thrown: -\t\t13,633\nPercentage of RuleBased Parsed Result: -\t47.20%\n"
+        },
+        "output_file_path": "Output/Batch File Output/Pseudo_1_lakh_1_1_output.zip"
+    }
+}

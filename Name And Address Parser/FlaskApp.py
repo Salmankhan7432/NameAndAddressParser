@@ -9,8 +9,12 @@ from flask import Flask, request, render_template, jsonify, send_file
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from werkzeug.utils import secure_filename, safe_join
+from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileRequired
+from wtforms import SubmitField
 from tqdm import tqdm
 from flask_socketio import SocketIO
+import threading
 import os
 from ORM import MaskTable, ComponentTable, MappingJSON
 from DB_Operations import DB_Operations as CRUD
@@ -25,15 +29,22 @@ app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
 Session = sessionmaker(bind=engine)
 app.config['SECRET_KEY'] = 'secret!'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # for 16MB max-size
+
 socketio = SocketIO(app)
 
 CORS(app)
+
+class BatchUploadForm(FlaskForm):
+    file = FileField('Upload File', validators=[FileRequired()])
+    submit = SubmitField('Process File')
 
 
 
 @app.route('/', methods=["GET", "POST"])
 def SingleLineAddressParser():
     result = {}
+    form = BatchUploadForm()
     if request.method == 'POST':
         address = request.form['address']
         convert = SAP.Address_Parser(address, 'Initials', address)
@@ -46,7 +57,8 @@ def SingleLineAddressParser():
         print(result)
         return jsonify(result=result)
 
-    return render_template('index.html', result=result)
+    return render_template('index.html', result=result, form=form)
+
 
 @app.route("/forceException", methods=["GET", "POST"])
 def forceException():
@@ -72,39 +84,64 @@ def download_except_file():  # Ensure this function name is unique
     except FileNotFoundError:
         return jsonify({'error': 'File not found'}), 404
 
-@app.route('/Batch_Parser', methods=["POST"])
-def BatchParser():
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
-
-    file = request.files['file']
-
-    if file.filename == '':
-        return jsonify({'error': 'No selected file'}), 400
-
-    if file:
-        filename = secure_filename(file.filename)
-        print(filename)
-        file_path = os.path.join('File Uploads', filename)
-        file.save(file_path)
-        convert = BAP.Address_Parser(file_path, "update_progress")
-        print("Convert 0: \n",convert[0], "\n Convert 1: \n", convert[1], "\n Convert 2: \n", convert[2])
-        if convert[0]:
-            result = convert[1]
-            metrics = {'metrics': convert[1]}
-            output_file_path = convert[2]
-            global download_path
-            download_path = output_file_path
-            return jsonify(result=result, metrics=metrics, download_url = '/download_output')
-        
-    return jsonify(result=result, metrics=metrics)
-
-@app.route('/download_output')
-def download_file():
+task_results = {}
+def process_file_in_background(file, filename):
     try:
-        return send_file(safe_join(app.root_path, download_path), as_attachment=True)
-    except FileNotFoundError:
-        return jsonify({'error': 'File not found'}), 404
+        convert = BAP.Address_Parser(file, "update_progress")
+        task_results[filename] = {
+            "result": convert[1] if convert[0] else None,
+            "metrics": {'metrics': convert[1]} if convert[0] else None,
+            "output_file_path": convert[2] if convert[0] else None
+        }
+    except Exception as e:
+        print(f"Error processing file {filename}: {e}")
+        task_results[filename] = {
+            "result": None,
+            "metrics": None,
+            "output_file_path": None
+        }
+
+@app.route('/Batch_Parser', methods=["GET", "POST"])
+def BatchParser():
+    form = BatchUploadForm()
+    if form.validate_on_submit():
+        global task_results
+
+        file = form.file.data
+        filename = secure_filename(file.filename)
+        # file_path = os.path.join('File Uploads', filename)
+        # file.save(file_path)
+
+        thread = threading.Thread(target=process_file_in_background, args=(file, filename))
+        thread.start()
+        print("Processing started: ")
+
+        return jsonify(status="Processing started", status_check_url='/check_status/' + filename, download_url='/download_output/' + filename)
+
+    return "Upload a file", 400
+
+@app.route('/check_status/<filename>')
+def check_status(filename):
+    print(task_results)
+    if filename in task_results:
+        if task_results[filename]["result"] is not None:
+            return jsonify(result=task_results[filename]["result"], metrics=task_results[filename]["metrics"])
+        else:
+            return jsonify(status="Still processing"), 202
+    else:
+        return jsonify(error="Task not found or not started"), 404
+
+@app.route('/download_output/<filename>')
+def download_file(filename):
+    if filename in task_results and task_results[filename]["output_file_path"] is not None:
+        try:
+            return send_file(task_results[filename]["output_file_path"], as_attachment=True)
+        except FileNotFoundError:
+            return jsonify({'error': 'File not found'}), 404
+    else:
+        return jsonify({'error': 'Result not ready or file not found'}), 404
+
+
 
 @app.route('/AddressComponents_dropdown', methods=['GET'])
 def get_address_components():
@@ -338,5 +375,5 @@ def loginPage():
     
     
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=5000)
 

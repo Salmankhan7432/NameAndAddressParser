@@ -55,12 +55,31 @@
         <div style="text-align: left;" class="tabdiv active">
             <a href="#" class="tablink" onclick="openTab('Batch',event)">Batch Parser</a>
         </div>
+        {% if session.role == 'admin' or session.role == 'Committee_Member'%}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
         </div>
+        {% endif %}
+         {% if session.role == 'admin'%}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="userdfc" onclick="openTab('UDComponents',event)">User Defined Component</a>
         </div>
+        {% endif %}
+        
+        
+        {% if session.role == 'admin'%}
+       <div style="text-align: left;" class="tabdiv">
+           <a href="#" class="tablink" id="user" onclick="openTab('CreateUser',event)">CRUD users</a>
+       </div>
+         {% endif %}
+ 
+ 
+   <div style="text-align: right;" class="tabdiv">
+<form action="\logout" method="POST"> 
+<button type="submit" name="logout">Logout</button>
+</form>          </div>
+
+
     </div>
 
 
@@ -120,14 +139,15 @@
             <center><h3 style="font-size: 18px; color: #2e4c8c;">Note: Please Upload Pipe Delimited File
             </h3></center>
             <center>
-                <form id="BatchForm" method="post" enctype="multipart/form-data">
+                <form id="BatchForm" method="post" action="{{ url_for('BatchParser') }}" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
                     <div class="input-group">
-                        <input type="file" id="file-upload" name="file" required>
-                        <button type="upload" id="upload-btn">Upload Files</button>
+                    {{ form.file.label }} {{ form.file(class="custom-file-input", id="file-upload") }}
+                    {{ form.submit(class="btn btn-primary", id="upload-btn") }}
                     </div>
+                </form>
             </center>
-            <!--<progress id="progressBar" value="0" max="100"></progress>-->
-            </form>
+            <!-- <progress id="progressBar" value="0" max="100" style="width: 100%;"></progress> -->
 
         </div>
         <!-- Metrics Display -->
@@ -293,6 +313,73 @@
             <!-- </form> -->
         </div>
     </div>
+
+    <!-- User Creation Edit Delete -->
+    
+    <div id="CreateUser" class="tabcontent CRUDUser-container">
+        <div class="container">
+            <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
+{% if session.role == 'admin' %}
+    <div class="user-management">
+        <h2>User Management</h2>
+        
+        <!-- User Creation Form -->
+        <div class="user-creation">
+            <h3>Create New User</h3>
+            <form action="/create_user" method="post">
+                <input type="text" name="new_username" placeholder="Username" required>
+                <input type="password" name="new_password" placeholder="Password" required>
+                <select name="new_role" required>
+                    <option value="user">User</option>
+                    <option value="superuser">Superuser</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <input type="submit" value="Create User">
+            </form>
+        </div>
+        
+        <!-- User List and Edit/Delete Forms -->
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <form action="/edit_user/{{ user.id }}" method="post">
+                    <td>{{ user.UserName }}</td>
+                    <td>
+                        <select name="role" required>
+                            <option value="admin" {% if user.role.RoleName == 'admin' %}selected{% endif %}>Admin</option>
+                            <option value="Committee_Member" {% if user.role.RoleName == 'Committee_Member' %}selected{% endif %}>Committee Member</option>
+                            <option value="general_user" {% if user.role.RoleName == 'general_user' %}selected{% endif %}>General User</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="submit" value="Edit">
+                    </td>
+                </form>
+                <td>
+                    <form action="/delete_user/{{ user.id }}" method="post" onsubmit="return confirm('Are you sure?');">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endif %}
+
+
+        </div>
+    </div>
+
+
+
+
+    
     <!-- <script>
                 function openTab(tabName, event) {
                     var i;

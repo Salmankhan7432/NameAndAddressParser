@@ -37,9 +37,16 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     Mask_log={}
     Unique_Mask={}
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
-    Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
-    file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
-    Lines = Address_4CAF50.readlines()
+    # Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
+    # file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
+    # Lines = Address_4CAF50.readlines()
+
+    # file_name = os.path.splitext(os.path.basename(file_stream.filename))[0]
+    # Lines = file_stream.readlines()
+
+    #
+    # Lines = [line.decode('utf-8') if isinstance(line, bytes) else line for line in Lines]
+
     fileHandle = open('USAddressWordTable.txt', 'r',encoding='utf8')
     # Strips the newline character
     Observation=0
@@ -108,6 +115,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     for line in tqdm(Lines, desc="Processing"):
         CN=CN+CNT
         # Progress["value"]=CN
+        # print(Progress)
         line=line.strip("\n").split("|")
         ID=line[0].strip()
         try:
@@ -167,7 +175,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         Mask_log[ID]=Mask_1
         Unique_Mask[Mask_1]=ID
         FirstPhaseList = [FirstPhaseList[b] for b in range(len(FirstPhaseList)) if FirstPhaseList[b] != ","]
-        print("FirstPhaseList: ",FirstPhaseList)
+        # print("FirstPhaseList: ",FirstPhaseList)
         Found=False
         FoundDict={}
 
@@ -177,7 +185,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         if db_operations.check_mask_exists(Mask_1):
             # Mask exists in the database, retrieve data using database queries
             FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
-            print("FoundDict: ",FoundDict[Mask_1])
+            # print("FoundDict: ",FoundDict[Mask_1])
             Found = True
             # print("Found Dict = ",FoundDict[Mask_1])
         
@@ -189,7 +197,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             for K2,V2 in FoundDict[Mask_1].items():
                 FoundDict_KB=FoundDict[Mask_1]
                 sorted_Found={k: v for k ,v in sorted(FoundDict_KB.items(), key=lambda item:item[1])}
-            print("sorted_Found: ",sorted_Found)
+            # print("sorted_Found: ",sorted_Found)
             for K2,V2 in sorted_Found.items():
                 Temp=""
                 Merge_token=""
@@ -501,8 +509,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #---------------------------------------------------------------------------------
         #Just Evaluations
         
-        print(Mask_1)
-        print("\n Other Without ID: ",Mask_log)
+        # print(Mask_1)
+        # print("\n Other Without ID: ",Mask_log)
         # print(FirstPhaseList)
         
         #---------------------------------------------------------------------------------

@@ -148,13 +148,15 @@ $(document).ready(function () {
 //------------------------------------------------------------------------------------------------------------
 
 $(document).ready(function () {
-    if (document.getElementById('file-upload')) {
+    $('#metrics-display').hide();
+    $('#file-upload').on('change', function() {
         $('#metrics-display').hide();
-    }
+    });
+
     $('#BatchForm').submit(function (event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
         var fileData = new FormData(this);
-        fileData.append('file', $('#file-upload')[0].files[0]);
+        // fileData.append('file', $('#file-upload')[0].files[0]);
         $.ajax({
             url: '/Batch_Parser',
             type: 'POST',
@@ -166,41 +168,54 @@ $(document).ready(function () {
                 xhr.upload.addEventListener('progress', function (e) {
                     if (e.lengthComputable) {
                         var percentComplete = (e.loaded / e.total) * 100;
-                        // Update your front-end progress bar here
+                        // Update progress bar
                     }
                 }, false);
                 return xhr;
             },
-            // Inside the success callback of your $.ajax request
             success: function (response) {
                 console.log('File uploaded!');
-
-                // Replace newlines with <br> tags and tabs with four non-breaking spaces
-                var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
-
-                // Set the formatted text to your metrics display element
-                document.getElementById('metrics-display').innerHTML = formattedText;
-
-                // Show the metrics box
-                document.getElementById('metrics-display').style.display = 'block';
-                if (response.download_url) {
-                    // Create a temporary link element
-                    var tempLink = document.createElement('a');
-                    tempLink.href = response.download_url;
-                    tempLink.download = 'output.zip';
-                    document.body.appendChild(tempLink);
-                    tempLink.click();
-                    document.body.removeChild(tempLink);
+                if (response.status_check_url) {
+                    setTimeout(function() {pollForMetrics(response.status_check_url, response.download_url); }, 500);
                 }
             },
-
             error: function (error) {
                 console.log('Upload error:', error);
-                alert("Please Select valid Pipe Delimited File")
+                alert("Error during file upload");
             }
         });
     });
 });
+
+function pollForMetrics(statusCheckUrl, downloadUrl) {
+    $.ajax({
+        url: statusCheckUrl,
+        type: 'GET',
+        success: function(response) {
+            if (response.metrics) {
+                var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                $('#metrics-display').html(formattedText).show();
+                triggerDownload(downloadUrl);
+            } else {
+                setTimeout(function() { pollForMetrics(statusCheckUrl, downloadUrl); }, 3000); // Poll every 3 seconds
+            }
+        },
+        error: function(error) {
+            console.log('Error:', error);
+            // alert("Error fetching metrics");
+        }
+    });
+}
+
+function triggerDownload(downloadUrl) {
+    var tempLink = document.createElement('a');
+    tempLink.href = downloadUrl;
+    tempLink.download = 'output.zip'; // Or the appropriate filename
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+}
+
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -217,7 +232,13 @@ document.getElementById("loadFileBtn").addEventListener("click", loadFile);
 document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
 
 
+
 function loadFile() {
+    data = [];
+    currentKeyIndex = 0;
+    initialDataLength = 0;
+    dicIndex = 0;
+    resetUIElements();
     let container = document.getElementById("mapdata");
     if (container) {
         container.style.display = 'grid'; // Adjust the display style as per your original layout
@@ -225,9 +246,9 @@ function loadFile() {
         console.error("Container element not found");
         return; // Exit the function if the container is not found
     }
-
+    
     const jsonFileInput = document.getElementById("jsonFileInput");
-
+    
     if (jsonFileInput.files.length > 0) {
         const file = jsonFileInput.files[0];
         const filenameElement = document.getElementById("filename");
@@ -236,9 +257,9 @@ function loadFile() {
         } else {
             console.error("filename element not found");
         }
-
+        
         const reader = new FileReader();
-
+        
         reader.onload = function (e) {
             try {
                 const newData = JSON.parse(e.target.result);
@@ -253,18 +274,18 @@ function loadFile() {
                 }
                 currentKeyIndex = 0;
                 showNext(); // Start processing data if it's the first file
-
+                
             } catch (error) {
                 console.error("Parsing error:", error);
                 alert("Invalid JSON data. Please provide a valid JSON file.", error.message);
             }
         };
-
+        
         reader.readAsText(file);
     } else {
         alert("Please select a JSON file.");
     }
-
+    
 }
 
 function showNext() {
@@ -274,19 +295,19 @@ function showNext() {
         document.getElementById("recordId").value = currentData["Record ID"];
         document.getElementById("inputValue").value = currentData["INPUT"];
         document.getElementById("mask-inputValue").value = keys[2];
-
+        
         const otherDataKey = findThirdObjectKey(currentData);
         const otherData = currentData[otherDataKey];
         const tableBody = document.getElementById("table-body");
         tableBody.innerHTML = "";
         fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
-
+        
         updateDictionaryDisplay();
     } else {
         alert("End of data reached");
         currentKeyIndex = data.length;
     }
-
+    
 }
 
 
@@ -300,16 +321,16 @@ function updateDictionaryDisplay() {
 
 function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
     fetch("/AddressComponents_dropdown")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(options => {
-            populateDropdowns(otherData, otherDataKey, options);
-        })
-        .catch(error => console.error('Error fetching options:', error));
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(options => {
+        populateDropdowns(otherData, otherDataKey, options);
+    })
+    .catch(error => console.error('Error fetching options:', error));
 }
 
 function handleNextDictionary(index) {
@@ -319,7 +340,7 @@ function handleNextDictionary(index) {
         // console.log("data splice: ",data.splice(index,1));
         // Update the dictionary display
         updateDictionaryDisplay();
-
+        
         if (data.length > 0) {
             dicIndex++;
             showNext();
@@ -357,10 +378,10 @@ function populateDropdowns(otherData, otherDataKey, options) {
                             optionElement.textContent = optionValue;
                             valueSelect.appendChild(optionElement);
                         }
-
+                        
                         else{
                             const optionElement = document.createElement("option");
-                        
+                            
                             optionElement.value = optionValue;
                             optionElement.textContent = optionValue;
                             valueSelect.appendChild(optionElement);
@@ -389,7 +410,7 @@ function exitFunction() {
     if (container) {
         container.style.display = "none"; // Hide the container
     }
-
+    
     // Reset the file input
     const fileInput = document.getElementById("jsonFileInput");
     if (fileInput) {
@@ -423,8 +444,8 @@ function collectData() {
     const Address_Type = document.getElementById("AddressType") ? document.getElementById("AddressType").value : null;
     const approval = document.getElementById("Approved?") ? document.getElementById("Approved?").value : null;
     const approved_by = document.getElementById("approvedby") ? document.getElementById("approvedby").value : null;
-
-
+    
+    
     // Example: Collect data from table
     const mappingData = [];
     const tbody = document.getElementById("table-body");
@@ -467,38 +488,14 @@ function collectData() {
     };
     result[mask] = dicData;
     return result;
-
+    
 }
 
 
-// document.getElementById("submitBtn").addEventListener("click", function () {
-//     const approved = document.getElementById("Approved?").value;
-//     if (approved === "Yes" && validateDropdowns()) {
-//         const data = collectData();
-//         checkForExistingMask(data["Mask Pattern"], data);
-//     } else if (approved === "No") {
-//         // If approved is "No", skip to the next dictionary
-//         handleNextDictionary();
-//     } else {
-//         alert("Please fill in all required fields.");
-//     }
-// });
 
-// document.getElementById("submit&NextBtn").addEventListener("click", function () {
-//     const approved = document.getElementById("Approved?").value;
-//     if (approved === "Yes" && validateDropdowns()) {
-//         const data = collectData();
-//         checkForExistingMask(data["Mask Pattern"], data);
-//     } else if (approved === "No") {
-//         // If approved is "No", skip to the next dictionary
-//         handleNextDictionary();
-//     } else {
-//         alert("Please fill in all required fields.");
-//     }
-// });
-
+                                
 document.getElementById("submitBtn").addEventListener("click", function () {
-    // setTimeout(() => {
+// setTimeout(() => {
     // }, 100);
     const data = collectData();
     submitButtonHandler(data, currentKeyIndex);
@@ -506,8 +503,8 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 
 document.getElementById("submit&NextBtn").addEventListener("click", function () {
     // setTimeout(() => {
-        // }, 100);
-        // return false;
+    // }, 100);
+    // return false;
     const data = collectData();
     submitButtonHandler(data, currentKeyIndex);
 });
@@ -517,9 +514,9 @@ function submitButtonHandler(collectedData, index) {
     const approved = document.getElementById("Approved?").value;
     const isDropdownsValid = validateDropdowns();
     const commentValidation = document.getElementById("comment").value;
-
+    
     if (approved === "Yes") {
-
+        
         if (isDropdownsValid) {
             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
         } else {
@@ -549,26 +546,26 @@ function validateDropdowns() {
         console.log(`Dropdown ${id}: Value = ${element.value}, IsValid = ${isValid}`);
         return isValid;
     }
-
+    
     if (!isDropdownValid("region") ||
-        !isDropdownValid("AddressType") ||
-        !isDropdownValid("Approved?") ||
-        !isDropdownValid("approvedby")) {
+    !isDropdownValid("AddressType") ||
+    !isDropdownValid("Approved?") ||
+    !isDropdownValid("approvedby")) {
         return false;
     }
-
-    // Check each address component dropdown
-    let isValidComponents = true;
-    const dropdowns = document.querySelectorAll("select[name='value']");
-    console.log(dropdowns);
-    for (let i = 0; i < dropdowns.length; i++) {
-        if (dropdowns[i].value === "Not Selected") {
-            console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
-            isValidComponents = false;
-            return false;
-        }
+    
+// Check each address component dropdown
+let isValidComponents = true;
+const dropdowns = document.querySelectorAll("select[name='value']");
+console.log(dropdowns);
+for (let i = 0; i < dropdowns.length; i++) {
+    if (dropdowns[i].value === "Not Selected") {
+        console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
+        isValidComponents = false;
+        return false;
     }
-    return isValidComponents;
+}
+return isValidComponents;
 }
 
 
@@ -584,8 +581,9 @@ function checkForExistingMask(mask, data, index) {
                 if (confirm("Mask found in KnowledgeBase, do you want to overwrite the existing entry?")) {
                     sendDataToServer(data, index);
                 } else {
+                    resetUIElements();
                     handleNextDictionary(index);
-                    alert("Gaali");
+                    
                 }
             } else {
                 sendDataToServer(data, index);
@@ -612,6 +610,7 @@ function sendDataToServer(data, index) {
             if (data["Address Approved?"] === "Yes") {
                 alert("Mapping Created and sent to Knowledgebase");
             }
+            resetUIElements();
             handleNextDictionary(index);
         },
         error: function (xhr, status, error) {
@@ -620,6 +619,34 @@ function sendDataToServer(data, index) {
     });
 }
 
+function resetUIElements() {
+    // Example: Reset input fields
+    // document.getElementById("recordId").value = "";
+    // document.getElementById("inputValue").value = "";
+    // document.getElementById("mask-inputValue").value = "";
+    document.getElementById("comment").value = "";
+
+    // Reset dropdowns if needed
+    resetDropdown("region");
+    resetDropdown("AddressType");
+    resetDropdown("Approved?");
+    resetDropdown("approvedby");
+
+    // Hide or reset other UI elements as needed
+    document.getElementById("submit&NextBtn").style.display = 'none';
+    document.getElementById("submitBtn").style.display = 'block';
+
+    // Clear any dynamic content (e.g., table rows)
+    const tableBody = document.getElementById("table-body");
+    tableBody.innerHTML = "";
+}
+
+function resetDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    if (dropdown) {
+        dropdown.value = ""; // or the default value
+    }
+}
 
 
 

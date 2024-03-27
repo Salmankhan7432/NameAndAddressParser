@@ -572,7 +572,15 @@ function submitButtonHandler(collectedData, index) {
         if (isDropdownsValid) {
             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
         } else {
-            alert("Please fill in all required fields.");
+            if (document.getElementById("region").value === ""){
+                return alert("Region is not selected")
+            }
+            else if (document.getElementById("AddressType").value === ""){
+                return alert("Address Type is not selected")
+            }
+            else if (document.getElementById("approvedby").value === ""){
+                return alert("Approved by is not selected")
+            }
         }
     } else if (approved === "No") {
         

@@ -21,6 +21,7 @@ from ORM import MaskTable, ComponentTable, MappingJSON
 from DB_Operations import DB_Operations as CRUD
 import SingleAddressParser_Module as SAP
 from werkzeug.security import generate_password_hash, check_password_hash
+import hashlib
 import Address_Parser__Module as BAP
 from flask_cors import CORS
 import json
@@ -35,6 +36,9 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length
 from flask_socketio import SocketIO, emit
 import logging
+import bcrypt
+import base64
+
 logging.basicConfig(level=logging.DEBUG)
 
 current_time = datetime.now()
@@ -67,6 +71,11 @@ class BatchUploadForm(FlaskForm):
     file = FileField('Upload File', validators=[FileRequired()])
     submit = SubmitField('Process File')
 
+def hash_password(password):
+    """ Hash a password using bcrypt """
+    salt = bcrypt.gensalt()
+    return bcrypt.hashpw(password.encode(), salt)
+
 @app.route('/login', methods=['GET', 'POST'])
 def login(): 
     form = LoginForm()  # Ensure this matches the name of your form class
@@ -75,13 +84,14 @@ def login():
             username = request.form['username']
             password = request.form['password']  
             user = sessions.query(User).filter_by(UserName=username).first()
-            
-            if user and user.Password == password: 
+            # userTable = sessions.query(User).all()
+            if user and bcrypt.checkpw(password.encode(), user.Password): 
                 role_name = user.role.RoleName
                 
                 session["user_id"]=username
                 session["role"]= role_name
-                # You should use hash comparison here for security!
+                session['status'] = user.Status
+                print("\n\n\n",session['status'],"\n", user.Status,"\n\n\n")
                 return redirect(url_for('SingleLineAddressParser')) 
             
            # Remember, in real apps, don't use plain text for passwords
@@ -123,16 +133,10 @@ def logout():
 
 
 
-@app.route('/CRUDUser', methods=["GET", "POST"])
-@requires_role('admin')
-def CRUDUser():
-    sessions = DBSession() 
-    users = sessions.query(User).all()
-    return render_template('index.html', users=users)
 
 
 @app.route('/', methods=["GET", "POST"])
-@requires_role('admin')
+@requires_role('Admin')
 def SingleLineAddressParser():
     result = {}
     form = BatchUploadForm()
@@ -471,6 +475,125 @@ def delete_component():
             session.close()
             print("Error occurred:", str(e))
             return jsonify(result={'message': f'Error: {str(e)}'})
+
+@app.route('/authentication')
+@requires_role('Admin')
+def authentication_page():
+    session = DBSession()
+    try:
+        users = session.query(User).filter(User.Role != "Admin").all()
+        # print("Fetched Users: ", users)
+        # roles = session.query(UserRole).all()
+        roles = session.query(UserRole).filter(UserRole.RoleName != "Admin").all()
+
+        # print("Fetched Roles: ", roles)  # Debugging line
+
+
+        user_data = [
+            {
+                'id': user.id, 
+                'fullName': user.FullName, 
+                'userName': user.UserName, 
+                'email': user.Email, 
+                'password' : "********",
+                'Active' : user.Status,
+                'role': user.role.RoleName  # Assuming a relationship attribute
+                # 'status': 'Active' if user.isActive else 'Inactive'  # Assuming an isActive field
+            } for user in users
+        ]
+        role_data = [role.RoleName for role in roles]
+        # print("role_data", role_data)
+        # print("user_data", user_data)
+        return jsonify({'users': user_data, 'roles': role_data})
+    except Exception as e:
+        print("Error: ", e)
+        return jsonify({'users': [], 'roles': []})
+    finally:
+        session.close()
+
+@app.route('/CRUDUser', methods=["GET", "POST"])
+@requires_role('Admin')
+def CRUDUser():
+    sessions = DBSession() 
+    users = sessions.query(User).all()
+    sessions.close()
+    # print(users)
+    return render_template('index.html', users=users)
+
+
+@app.route('/save_User/<int:user_id>', methods=['POST'])
+def edit_user(user_id):
+    session = DBSession()
+    print("User ID", user_id)
+    try:
+        user = session.query(User).get(user_id)  # Find the user by ID
+        print("Users: ", user)
+        UserDetails = request.get_json()
+        print("\n\nUserDetails: ", UserDetails, "\n\n")
+
+        if user:
+            # Update user details
+            user.FullName = UserDetails.get('FullName')
+            user.UserName = UserDetails.get('UserName')
+            user.Email = UserDetails.get('Email')
+            user.Role = UserDetails.get('Role_id')
+            user.Status = UserDetails.get('Status')
+
+            session.commit()
+
+        return jsonify({"message": "User updated successfully"}), 200
+    except Exception as e:
+        session.rollback()
+        return jsonify({"error": str(e)}), 500
+    finally:
+        session.close()
+
+@app.route('/create_user', methods=['POST'])
+def create_user():
+    session = DBSession()
+    try:
+        UserDetails = request.get_json()
+        print("create_user Details: ", UserDetails)
+        user = session.query(User).get(UserDetails["UserName"])  # Find the user by ID
+        print("user: ",user)
+        # Create a new user instance
+        new_user = User()
+        new_user.FullName = UserDetails.get('FullName')
+        new_user.UserName = UserDetails.get('UserName')
+        new_user.Email = UserDetails.get('Email')
+        
+        hashed_password = hash_password(UserDetails.get('Password'))
+        new_user.Password = hashed_password
+
+        new_user.Role = UserDetails.get('Role_id')
+        new_user.Status = UserDetails.get('Status')
+        print("New User Rady to Add: ",new_user)
+        # Add the new user to the session and commit
+        session.add(new_user)
+        session.commit()
+
+        return jsonify({"message": "User updated successfully"}), 200
+    except Exception as e:
+        session.rollback()
+        return jsonify({"error": str(e)}), 500
+    finally:
+        session.close()
+
+@app.route('/delete_User/<int:user_id>', methods=['POST'])
+def delete_user(user_id):
+    session = DBSession()
+    try:
+        user = session.query(User).get(user_id)  # Find the user by ID
+        if user:
+            session.delete(user)  # Delete the user
+            session.commit()  # Commit the changes
+
+        return redirect(url_for('/authentication'))
+    except Exception as e:
+        session.rollback()
+        return str(e)
+    finally:
+        session.close()
 
     
     

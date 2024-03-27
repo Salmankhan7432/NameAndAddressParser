@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/batchParserTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mapCreationFormTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/userDefinedComponentsTab.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/authenticationTab.css') }}">
     
     <style>
     
@@ -74,23 +74,21 @@
         <div style="text-align: left;" class="tabdiv active">
             <a href="#" class="tablink" onclick="openTab('Batch',event)">Batch Parser</a>
         </div>
-        {% if session.role == 'admin' or session.role == 'Committee_Member'%}
+        {% if session.role == 'Admin' or session.role == 'Committee Member' and session.status == 'Active' %}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
         </div>
         {% endif %}
-         {% if session.role == 'admin'%}
+         {% if session.role == 'Admin'%}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="userdfc" onclick="openTab('UDComponents',event)">User Defined Component</a>
         </div>
           {% endif %}
-        
-        
-               {% if session.role == 'admin'%}
-              <div style="text-align: left;" class="tabdiv">
-                  <a href="#" class="tablink" id="user" onclick="openTab('CreateUser',event)">CRUD users</a>
-              </div>
-                {% endif %}
+        {% if session.role == 'Admin'%}
+        <div style="text-align: left;" class="tabdiv">
+            <a href="#" class="tablink" id="user" onclick="openTab('Authentication',event)">Authentication</a>
+        </div>
+        {% endif %}
         
         
           <div style="text-align: right;" class="tabdiv">
@@ -354,64 +352,80 @@
     
     
     <!-- User Creation Edit Delete -->
-    
-    <div id="CreateUser" class="tabcontent CRUDUser-container">
+    <div id="Authentication" class="tabcontent AuthenticationTab-container">
         <div class="container">
-            <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
-{% if session.role == 'admin' %}
-    <div class="user-management">
-        <h2>User Management</h2>
-        
-        <!-- User Creation Form -->
-        <div class="user-creation">
-            <h3>Create New User</h3>
-            <form action="/create_user" method="post">
-                <input type="text" name="new_username" placeholder="Username" required>
-                <input type="password" name="new_password" placeholder="Password" required>
-                <select name="new_role" required>
-                    <option value="user">User</option>
-                    <option value="superuser">Superuser</option>
-                    <option value="admin">Admin</option>
-                </select>
-                <input type="submit" value="Create User">
-            </form>
-        </div>
-        
-        <!-- User List and Edit/Delete Forms -->
-        <table>
-            <tr>
-                <th>Username</th>
-                <th>Role</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            {% for user in users %}
-            <tr>
-                <form action="/edit_user/{{ user.id }}" method="post">
-                    <td>{{ user.UserName }}</td>
-                    <td>
+            {% if session.role == 'Admin' %}
+                <!-- User Creation Form -->
+                <!-- <div class="user-creation">
+                    <h3>Create New User</h3>
+                    <form action="/create_user" method="post">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
                         <select name="role" required>
-                            <option value="admin" {% if user.role.RoleName == 'admin' %}selected{% endif %}>Admin</option>
-                            <option value="Committee_Member" {% if user.role.RoleName == 'Committee_Member' %}selected{% endif %}>Committee Member</option>
-                            <option value="general_user" {% if user.role.RoleName == 'general_user' %}selected{% endif %}>General User</option>
+                            <option value="general_user">General User</option>
+                            <option value="Committee_Member">Committee Member</option>
+                            <option value="admin">Admin</option>
                         </select>
-                    </td>
-                    <td>
-                        <input type="submit" value="Edit">
-                    </td>
-                </form>
-                <td>
-                    <form action="/delete_user/{{ user.id }}" method="post" onsubmit="return confirm('Are you sure?');">
-                        <input type="submit" value="Delete">
+                        <div>
+                            <input type="radio" id="active" name="status" value="active" checked>
+                            <label for="active">Active</label>
+                            <input type="radio" id="inactive" name="status" value="inactive">
+                            <label for="inactive">Inactive</label>
+                        </div>
+                        <input type="submit" value="Create User">
                     </form>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-{% endif %}
+                </div> -->
+                
+                <!-- User List and Edit/Delete Forms -->
+            <div class="udresult-box" id="utresult-box">
+                <table id="utresultTable" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">User Active</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="utresultBody">
+                        <!-- Table rows will be populated dynamically here -->
+                    </tbody>
+                </table>
+            </div>
+                    <!-- {% for user in users %}
+                    <tr>
+                        <form action="/edit_user/{{ user.id }}" method="post">
+                            <td>{{ user.FullName }}</td>
+                            <td>{{ user.UserName }}</td>
+                            <td>{{ user.Email }}</td>
+                            <td>
+                                <select name="role" required>
+                                    <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Admin</option>
+                                    <option value="Committee_Member" {% if user.role == 'Committee_Member' %}selected{% endif %}>Committee Member</option>
+                                    <option value="general_user" {% if user.role == 'general_user' %}selected{% endif %}>General User</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="radio" name="status" value="active" {% if user.status == 'active' %}checked{% endif %}> Active
+                                <input type="radio" name="status" value="inactive" {% if user.status == 'inactive' %}checked{% endif %}> Inactive
+                            </td>
+                            <td>
+                                <input type="submit" value="Edit">
+                                <button type="button" onclick="confirmDelete('{{ user.id }}')">Delete</button>
+                            </td>
+                        </form>
+                    </tr>
+                    {% endfor %} -->
+            {% endif %}
+            <div class="buttons">
 
-
+                <button id="loadUserData">Load Users</button>
+                <button id="create_user">Create User</button>
+            </div>
         </div>
     </div>
     

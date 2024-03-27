@@ -860,5 +860,58 @@
             }
         ],
         "Rejected By": "Committee Member 1 at 2024-03-21 01:43:44.709321"
+    },
+    {
+        "Record Id": "6",
+        "Exception_File_Name": "RR_Test_Exception File_01_43_44.705320.json",
+        "Input": "RR 77 BOX 134 San Francisco CA 94115",
+        "Mask Pattern": "RNXNWWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Same address repeated, no need to add in data base.",
+        "Mapping Data": [
+            {
+                "Mask Token": "R",
+                "Address Token": "RR",
+                "Address Component": "Route Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "77",
+                "Address Component": "Route Number"
+            },
+            {
+                "Mask Token": "X",
+                "Address Token": "BOX",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "134",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "SAN",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FRANCISCO",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "CA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "94115",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee Member 1 at 2024-03-25 00:53:29.034785"
     }
 ]

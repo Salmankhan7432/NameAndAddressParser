@@ -961,5 +961,53 @@
             }
         ],
         "Rejected By": "Committee Member 1 at 2024-03-27 09:13:26.994518"
+    },
+    {
+        "Record Id": "Single Line Exception_File Initials-->01",
+        "Exception_File_Name": "Initials 01_43_43.980065_ExceptionFile.json",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee Member 1 at 2024-03-27 09:13:26.994518"
     }
 ]

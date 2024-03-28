@@ -155,6 +155,8 @@ $(document).ready(function () {
     $('#file-upload').on('change', function() {
         $('#metrics-display').hide();
     });
+    $('#upload-btn').css('width','170px')
+    $('#file-upload').css('width','250px')
 
 
 
@@ -334,6 +336,7 @@ function showNext() {
     } else {
         alert("End of data reached");
         currentKeyIndex = data.length;
+        exitFunction();
     }
 
 }
@@ -376,6 +379,7 @@ function handleNextDictionary(index) {
             // Do not automatically call showNext here. It will be called after user actions.
         } else {
             alert("All Dictionaries Processed");
+            exitFunction();
         }
     }
 }
@@ -519,32 +523,6 @@ function collectData() {
 
 }
 
-
-// document.getElementById("submitBtn").addEventListener("click", function () {
-//     const approved = document.getElementById("Approved?").value;
-//     if (approved === "Yes" && validateDropdowns()) {
-//         const data = collectData();
-//         checkForExistingMask(data["Mask Pattern"], data);
-//     } else if (approved === "No") {
-//         // If approved is "No", skip to the next dictionary
-//         handleNextDictionary();
-//     } else {
-//         alert("Please fill in all required fields.");
-//     }
-// });
-
-// document.getElementById("submit&NextBtn").addEventListener("click", function () {
-//     const approved = document.getElementById("Approved?").value;
-//     if (approved === "Yes" && validateDropdowns()) {
-//         const data = collectData();
-//         checkForExistingMask(data["Mask Pattern"], data);
-//     } else if (approved === "No") {
-//         // If approved is "No", skip to the next dictionary
-//         handleNextDictionary();
-//     } else {
-//         alert("Please fill in all required fields.");
-//     }
-// });
 
 document.getElementById("submitBtn").addEventListener("click", function () {
     // setTimeout(() => {
@@ -1403,24 +1381,3 @@ function createStatusCheckboxes(userId, status) {
 function toggleCheckbox(userId, isChecked) {
     $('#statusActive-' + userId).prop('checked', isChecked);
 }
-
-
-
-
-
-// $(document).ready(function() {
-//     $(document).on('click', '.edit1-btn', function(event) {
-//         var userId = $(this).closest('tr').data('user-id');
-//         editUser(userId);
-//     });
-
-//     $(document).on('click', '.save1-btn', function(event) {
-//         var userId = $(this).closest('tr').data('user-id');
-//         saveEditedUser(this);  // Pass 'this' to reference the clicked button
-//     });
-
-//     $(document).on('click', '.cancel1-btn', function(event) {
-//         var userId = $(this).closest('tr').data('user-id');
-//         cancelEditUser(userId);
-//     });
-// });

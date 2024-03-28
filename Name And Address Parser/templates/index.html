@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mapCreationFormTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/userDefinedComponentsTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/authenticationTab.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <style>
     
@@ -93,10 +94,17 @@
         
           <div style="text-align: right;" class="tabdiv">
  <form action="\logout" method="POST"> 
- <button type="submit" name="logout">Logout</button>
+ <button type="submit" name="logout" id="logout"
+ style="background-color: transparent; padding-left: 200px; margin-top: -6px;" ><i class='bx bx-power-off'
+     style="font-size: 30px; color: white;" id="imglogout"></i></button>
  </form>          </div>
-       
-
+ <head>
+    <script>
+        $('#imglogout').click(function () {
+            $('#logout').click();
+        })
+    </script>
+</head>
     </div>
 
 
@@ -122,9 +130,6 @@
                     </div>
                     <div id="parsed-by-info" style="margin-top: 10px; margin-bottom: 10px;">
                         <!-- "Address Parsed By -> " info will be inserted here -->
-                    </div>
-                    <div id="Mask_Pattern" style="margin-top: 10px; margin-bottom: 10px;">
-                        <!-- "Mask Pattern -> " info will be inserted here -->
                     </div>
                 </center>
         </div>
@@ -169,13 +174,14 @@
             <center><h3 style="font-size: 18px; color: #2e4c8c;">Note: Please Upload Pipe Delimited File
             </h3></center>
             <center>
-                <form id="BatchForm" method="post" action="{{ url_for('BatchParser') }}" enctype="multipart/form-data">                  {{ form.hidden_tag() }}
+                <form id="BatchForm" method="post" action="{{ url_for('BatchParser') }}" enctype="multipart/form-data">                  
+                    {{ form.hidden_tag() }}
                     <div class="input-group">
                     {{ form.file.label }} {{ form.file(class="custom-file-input", id="file-upload") }}
                     {{ form.submit(class="btn btn-primary", id="upload-btn") }}
-<div id="spinner" class="spinner-border" role="status" style="display: none;">
-    <span class="sr-only"></span>
-</div>
+                    <div id="spinner" class="spinner-border" role="status" style="display: none;">
+                        <span class="sr-only"></span>
+                    </div>
 
                    
                     </div>

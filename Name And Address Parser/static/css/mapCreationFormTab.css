@@ -15,7 +15,7 @@
     background-color: white;
     background-image: url(../image.png);
     background-size: cover;
-    
+    font-family: 'Times New Roman', Times, serif;
     /* Light grey background */
     border-bottom: 1px solid #e7e7e7;
     /* Light grey border */
@@ -57,9 +57,6 @@
     margin-top: 15px;
     margin-left: 40px;
 }
-.tabdiv:hover{
-    border-bottom: 5px solid #2b74b7;
-}
 
 .tablink:hover,
 .tablink.active {
@@ -93,7 +90,7 @@
 .mapCreationFormTab-container .rightContainer label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-weight: normal;
     color: black;
 }
 
@@ -342,6 +339,7 @@
 
 body {
     background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table {
@@ -349,11 +347,14 @@ table {
     border-collapse: separate;
     margin-bottom: 20px;
 }
+table tr td{
+    text-align: center;
+}
 
 th {
     border: none;
     padding: 8px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #2b74b7;
 }
 
 th {
@@ -406,7 +407,7 @@ textarea {
     /* margin-left: 320px; */
     font-size: 14px;
     padding: 10px;
-    width: 40%;
+    width: 20%;
 }
 
 #loadFileBtn {
@@ -504,4 +505,5 @@ footer {
     color: white;
     text-align: left;
     height: 100px;
+    font-family: 'Times New Roman', Times, serif;
 }

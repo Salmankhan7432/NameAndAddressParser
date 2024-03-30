@@ -21,9 +21,9 @@ class DB_Operations:
         return self.engine
     
     def check_mask_exists(self, mask):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
         try:
-            Session = sessionmaker(bind=self.engine)
-            session = Session()
             mask_record = session.query(MaskTable).filter_by(mask=mask).first()
             if mask_record: 
                 return bool(mask_record)
@@ -33,9 +33,9 @@ class DB_Operations:
             session.close()
     
     def get_data_for_mask(self, mask):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
         try:
-            Session = sessionmaker(bind=self.engine)
-            session = Session()
             mask_record = session.query(MaskTable).filter_by(mask=mask).first()
     
             if mask_record:
@@ -57,10 +57,29 @@ class DB_Operations:
         finally:
             session.close()
 
-    def get_component_description(self, component):
+    def get_data_for_all(self):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
         try:
-            Session = sessionmaker(bind=self.engine)
-            session = Session()
+            mask_record = session.query(MaskTable).all()
+            main_dict = {}
+            for record in mask_record:
+                data_records = session.query(MappingJSON).filter_by(mask_index=record.mask).order_by(MappingJSON.component_value).all()
+                result_dict = {}
+                for data_record in data_records:
+                    if data_record.component_index not in result_dict:
+                        result_dict[data_record.component_index] = [data_record.component_value]
+                    else:
+                        result_dict[data_record.component_index].append(data_record.component_value)
+                main_dict[record.mask] = result_dict
+            return main_dict
+        finally:
+            session.close()
+
+    def get_component_description(self, component):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
+        try:
 
             component_record = session.query(ComponentTable).filter_by(component=component).first()
 
@@ -71,12 +90,27 @@ class DB_Operations:
 
         finally:
             session.close()
+    
+    def get_components(self):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
+        try:
+
+            component_record = session.query(ComponentTable).all()
+            component_dict = {}
+            for data in component_record:
+                if data.component not in component_dict:
+                    component_dict[data.component] = data.description
+            return component_dict
+
+        finally:
+            session.close()
 
     
     def get_Mask_data(self):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
         try:
-            Session = sessionmaker(bind=self.engine)
-            session = Session()
             return session.query(MaskTable).all()
 
         finally:
@@ -92,6 +126,15 @@ class DB_Operations:
             session.close()
 
     def get_MappingJSON_data(self):
+        try:
+            Session = sessionmaker(bind=self.engine)
+            session = Session()
+            return session.query(MappingJSON).all()
+
+        finally:
+            session.close()
+
+    def get_deleted_MappingJSON(self,component):
         try:
             Session = sessionmaker(bind=self.engine)
             session = Session()
@@ -240,7 +283,7 @@ class DB_Operations:
                 # Finally, delete the component from ComponentTable
                 session.delete(component_record)
                 session.commit()
-                
+            
         finally:
             session.close()
     

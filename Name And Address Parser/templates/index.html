@@ -167,7 +167,9 @@
         });
     });
 </script>
-        <!--------------------------------------------Batch Parser--------------------------------------->
+        <!----------------------------------------------------------------------------------------------->
+        <!--                                          Batch Parser                                     -->
+        <!----------------------------------------------------------------------------------------------->
     <div id="Batch" class="tabcontent batchParserTab-container" style="display: block;">
         <!-- Upload Section -->
         <div class="container">
@@ -310,10 +312,11 @@
                 <div class="containerin">
                     <label for="approvedby">Approved By : </label>
                     <select name="approvedby" id="approvedby" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="Committee Member 1">Committee Member 1</option>
-                        <option value="Committee Member 2">Committee Member 2</option>
-                        <option value="Committee Member 3">Committee Member 3</option>
+                        <option value="" selected disabled hidden>Choose a user</option>
+                        <option value="Committee_Member">Committee Member</option>
+                        <!-- {% for user in users %}
+                            <option value="{{ user.UserName }}" selected disabled>{{ user.FullName }}</option>
+                        {% endfor %} -->
                     </select>
                 </div>
                 <div class="Button-container">
@@ -352,7 +355,16 @@
             </div>
             <!-- </form> -->
         </div>
+        <div id="downloadContainer" class="download-container">
+            <div class="container">
+                <div class="download-section">
+                    <span class="download-label">Check Logs :</span>
+                    <button onclick="downloadLogs()" id="downloadButton">Download</button>
+                </div>
+            </div>
+        </div>
     </div>
+    
     
     
     

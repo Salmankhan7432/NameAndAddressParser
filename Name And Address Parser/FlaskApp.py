@@ -6,9 +6,8 @@ Created on Thu Nov 23 18:22:53 2023
 """
 from flask_socketio import SocketIO, emit
 import time  # Used for simulating processing time
-
-
-from flask import Flask, request, render_template, jsonify, send_file, session
+from collections import defaultdict
+from flask import Flask, request, render_template, jsonify, send_file, session, send_from_directory
 from functools import wraps
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
@@ -46,9 +45,9 @@ app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
 engine2 = create_engine('sqlite:///User_Auth.db', echo=True)
 Session = sessionmaker(bind=engine)
-DBSession=sessionmaker(bind=engine2)
+DBSession = sessionmaker(bind=engine2)
 app.config['SECRET_KEY'] = 'secret!'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # for 16MB max-size
+app.config['MAX_CONTENT_LENGTH'] = 256 * 1024 * 1024  # for 256MB max- file size
 
 socketio = SocketIO(app)
 CORS(app)
@@ -91,6 +90,7 @@ def login():
                 session["user_id"]=username
                 session["role"]= role_name
                 session['status'] = user.Status
+                session["FullName"] = user.FullName
                 print("\n\n\n",session['status'],"\n", user.Status,"\n\n\n")
                 return redirect(url_for('SingleLineAddressParser')) 
             
@@ -443,38 +443,104 @@ def get_mask_count():
 @app.route("/delete_record", methods=["POST"])
 def delete_component():
     # result = {}
+    if 'user_id' not in session:
+        return jsonify(result={'message': 'User not logged in'}), 401
+
+    username = session["user_id"]
+    print("User deleting the record:", username)
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    
     if request.method == "POST":
         component = request.form['component']  # Get the component to be deleted
         print("Component to delete",component)
-        session = Session()
-        
+        db_session = Session()
+        dictionaries_deleted = {}
         try:
+            component_details = db_session.query(ComponentTable).filter_by(component=component).first()
+            component_desc = component_details.description if component_details else "N/A"
+            
             # Delete from MappingJSON and get associated MaskTable entries
-            mappings_to_delete = session.query(MappingJSON).filter_by(component_index=component).all()
+            mappings_to_delete = db_session.query(MappingJSON).filter_by(component_index=component).all()
             mask_entries_to_delete = []
-            for mapping in mappings_to_delete:
-                mask_entries = session.query(MaskTable).filter_by(mask=mapping.mask_index).all()
-                mask_entries_to_delete.extend(mask_entries)
-                session.delete(mapping)
 
+            for mapping in mappings_to_delete:
+                # Get all mappings associated with the mask to be deleted
+                mask_entries = db_session.query(MaskTable).filter_by(mask=mapping.mask_index).all()
+                mask_entries_to_delete.extend(mask_entries)
+
+                for record in mask_entries:
+                    result_dict = {}
+                    data_records = db_session.query(MappingJSON).filter_by(mask_index=record.mask).order_by(MappingJSON.component_value).all()
+                    for data_record in data_records:
+                        if data_record.component_index not in result_dict:
+                            result_dict[data_record.component_index] = [data_record.component_value]
+                        else:
+                            result_dict[data_record.component_index].append(data_record.component_value)
+                    dictionaries_deleted[record.mask] = result_dict
+            
+            # print("dictionaries_deleted: ",dictionaries_deleted)
+                # Delete the mapping
+                db_session.delete(mapping)
+            
             # Delete from ComponentTable
-            component_to_delete = session.query(ComponentTable).filter_by(component=component).first()
-            if component_to_delete:
-                session.delete(component_to_delete)
+            if component_details:
+                db_session.delete(component_details)
 
             # Delete from MaskTable
             for mask_entry in mask_entries_to_delete:
-                session.delete(mask_entry)
+                db_session.delete(mask_entry)
 
-            session.commit()
-            session.close()
+            # Commit changes to the database
+            db_session.commit()
+
+            # Now 'dictionaries_deleted' contains all the dictionaries associated with the deleted component
+            print("Dictionaries Deleted:", dictionaries_deleted)
+            
+            num_masks_deleted = len(mask_entries_to_delete)
+            log_entry = f"\n{component} | {component_desc} | {username} | {timestamp} | Total dictionaries deleted w.r.t [{component}] component deletion : {num_masks_deleted}"
+            json_data = {
+                timestamp: {
+                    "User Name": username,
+                    "Component | Description Deleted": component + " | " + component_desc,
+                    "Dictionaries Deleted": dictionaries_deleted
+                }
+            }
+
+            # Write to text file
+            with open("UDF_Logs/deletion_log.txt", "a") as file:
+                file.write(log_entry)
+            # Read existing data from JSON log file
+            try:
+                with open("UDF_Logs/deletion_log.json", "r") as file:
+                    existing_data = json.load(file)
+            except (FileNotFoundError, json.JSONDecodeError):
+                existing_data = []
+            
+            # Append new data to existing data
+            existing_data.append(json_data)
+            
+            # Write updated data back to JSON log file
+            with open("UDF_Logs/deletion_log.json", "w") as file:
+                json.dump(existing_data, file)
+
+            db_session.commit()
+            db_session.close()
 
             return jsonify(result={'message': f'Record for component {component} deleted successfully'})
         except Exception as e:
-            session.rollback()
-            session.close()
+            db_session.rollback()
+            db_session.close()
             print("Error occurred:", str(e))
             return jsonify(result={'message': f'Error: {str(e)}'})
+
+@app.route('/download/logs')
+def download_logs():
+    path = "UDF_Logs\deletion_log.txt"
+    try:
+        return send_file(path, as_attachment=True)
+    except FileNotFoundError:
+        return "File not found.", 404
 
 @app.route('/authentication')
 @requires_role('Admin')

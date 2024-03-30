@@ -1,0 +1,13 @@
+Component | Component Description | Username | Time Stamp | Information
+USAD_SNM | Street Name | admin | 2024-03-29 18:33:26 | Total dictionaries deleted w.r.t [USAD_SNM] component deletion : 696
+USAD_ZIP | Zip Code | admin | 2024-03-29 18:34:10 | Total dictionaries deleted w.r.t [USAD_ZIP] component deletion : 4
+USAD_STA | State Name | admin | 2024-03-29 18:34:13 | Total dictionaries deleted w.r.t [USAD_STA] component deletion : 0
+USAD_ZP4 | Zip 4 Code | admin | 2024-03-29 18:34:16 | Total dictionaries deleted w.r.t [USAD_ZP4] component deletion : 0
+USAD_ANM | Secondary Address Name | admin | 2024-03-29 18:34:20 | Total dictionaries deleted w.r.t [USAD_ANM] component deletion : 0
+USAD_ANO | Secondary Address Number | admin | 2024-03-29 18:34:22 | Total dictionaries deleted w.r.t [USAD_ANO] component deletion : 0
+USAD_CTY | City Name | admin | 2024-03-29 18:34:25 | Total dictionaries deleted w.r.t [USAD_CTY] component deletion : 0
+USAD_HNM | Highway Name | admin | 2024-03-29 18:34:27 | Total dictionaries deleted w.r.t [USAD_HNM] component deletion : 0
+USAD_HNO | Highway Number | admin | 2024-03-29 18:34:29 | Total dictionaries deleted w.r.t [USAD_HNO] component deletion : 0
+USAD_SNO | Street Number | admin | 2024-03-29 18:34:31 | Total dictionaries deleted w.r.t [USAD_SNO] component deletion : 0
+USAD_ZIP | Zip Code | admin | 2024-03-29 18:43:41 | Total dictionaries deleted w.r.t [USAD_ZIP] component deletion : 2057
+USAD_STA | State Name | admin | 2024-03-29 18:44:42 | Total dictionaries deleted w.r.t [USAD_STA] component deletion : 8

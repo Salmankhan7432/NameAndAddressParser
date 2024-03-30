@@ -162,10 +162,11 @@ $(document).ready(function () {
 
 
 $('#BatchForm').submit(function (event) {
+
     document.getElementById('spinner').style.display = 'block';
     event.preventDefault();
     var fileData = new FormData(this);
-
+    $('#file-upload').val('');
     $.ajax({
         url: '/Batch_Parser',
         type: 'POST',
@@ -198,7 +199,7 @@ $('#BatchForm').submit(function (event) {
             console.log(response.status_check_url)
             document.getElementById('spinner').style.display = 'block';
             
-                setTimeout(function() { pollForMetrics(response.status_check_url, response.download_url); }, 3000);
+                setTimeout(function() { pollForMetrics(response.status_check_url, response.download_url); }, 500);
             }
         },
         error: function (error) {
@@ -258,7 +259,17 @@ let currentKeyIndex = 0;
 let initialDataLength = 0;
 let dicIndex = 0;
 
-document.getElementById("loadFileBtn").addEventListener("click", loadFile);
+document.getElementById("loadFileBtn").addEventListener("click", function() {
+    const jsonFileInput = document.getElementById("jsonFileInput");
+
+    if (jsonFileInput.files.length === 0) {
+        alert("Please select a JSON file.");
+        return; // Stop the function if no file is selected
+    }
+
+    loadFile(); // Proceed to load the file if a file is selected
+    jsonFileInput.value = "";
+});
 // document.getElementById("submit&NextBtn").addEventListener("click", submitButtonHandler);
 document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
 
@@ -271,7 +282,7 @@ function loadFile() {
     resetUIElements();
     let container = document.getElementById("mapdata");
     if (container) {
-        container.style.display = 'grid'; // Adjust the display style as per your original layout
+        container.style.display = 'grid'; 
     } else {
         console.error("Container element not found");
         return; // Exit the function if the container is not found
@@ -307,6 +318,7 @@ function loadFile() {
 
             } catch (error) {
                 console.error("Parsing error:", error);
+                exitFunction();
                 alert("Invalid JSON data. Please provide a valid JSON file.", error.message);
             }
         };
@@ -316,9 +328,11 @@ function loadFile() {
         alert("Please select a JSON file.");
     }
 
+
 }
 
 function showNext() {
+    console.log("ShowNext Data.length Received: ", data.length)
     if (currentKeyIndex < data.length) {
         const currentData = data[currentKeyIndex];
         const keys = Object.keys(currentData);
@@ -331,7 +345,13 @@ function showNext() {
         const tableBody = document.getElementById("table-body");
         tableBody.innerHTML = "";
         fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
-
+        if (data.length > 1) {
+            document.getElementById("submit&NextBtn").style.display = 'block';
+            document.getElementById("submitBtn").style.display = 'none';
+        } else {
+            document.getElementById("submit&NextBtn").style.display = 'none';
+            document.getElementById("submitBtn").style.display = 'block';
+        }
         updateDictionaryDisplay();
     } else {
         alert("End of data reached");
@@ -366,13 +386,14 @@ function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
 
 function handleNextDictionary(index) {
     console.log(index);
-    if (index < data.length) {
+    console.log("Initial Data Length Before removal: ", data.length)
+    if (index >= 0 && index < data.length) {
         data.splice(index, 1); // Remove the processed dictionary
         // console.log("data splice: ",data.splice(index,1));
         // Update the dictionary display
         updateDictionaryDisplay();
 
-        if (data.length > 0) {
+        if (index < data.length) {
             dicIndex++;
             showNext();
             console.log("data length for show next :",data.length);
@@ -400,7 +421,6 @@ function populateDropdowns(otherData, otherDataKey, options) {
                     // Convert value column to a dropdown menu
                     const valueSelect = document.createElement("select");
                     valueSelect.name = "value";
-                    //const options = ["USAD_SNO", "USAD_SNM", "USAD_SFX", "USAD_ANO", "USAD_ANM", "USAD_CTY", "USAD_STA", "USAD_ZIP", "USAD_SPR", "USAD_BNM", "USAD_BNO", "USAD_SPT", "USAD_ZP4", "USAD_RNM", "USAD_RNO", "USAD_ORG", "USAD_MGN", "USAD_MDG", "USAD_HNO", "USAD_HNM", "USAD_NA"];
                     options.forEach(function (optionValue) {
                         if(optionValue=="Not Selected")
                         {
@@ -979,6 +999,33 @@ function resetButtons() {
         deleteRow(this, event);
     });
 }
+
+function downloadLogs() {
+    $.ajax({
+        url: '/download/logs', 
+        method: 'GET', 
+        xhrFields: {
+            responseType: 'blob'
+        },
+        success: function (data) {
+            var downloadUrl = URL.createObjectURL(data);
+            var a = document.createElement('a');
+            a.href = downloadUrl;
+            a.download = 'logs.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(downloadUrl);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log('AJAX call failed: ', textStatus, errorThrown);
+            alert('Failed to download the logs file.');
+        }
+    });
+}
+
+
+
 function enableButtons(row) {
     row.find('.edit-btn').prop('disabled', false);
     row.find('.delete-btn').prop('disabled', false);

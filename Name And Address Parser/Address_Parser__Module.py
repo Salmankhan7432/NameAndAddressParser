@@ -79,32 +79,39 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
       "USAD_HNM": 19,
       "USAD_HNO": 20
     }
-    # data={}
+    data={}
+    data = db_operations.get_data_for_all()
+
+    print("KwoledgeBase Data: ", data)
+    component_dict = {}
+    component_dict = db_operations.get_components()
+    print("\n Component Dict: ", component_dict)
+
     # with open('JSONMappingDefault.json', 'r+', encoding='utf8') as f:
-    #     data = json.load(f)wo
+    #     data = json.load(f)
     USAD_CONVERSION_={
-        
-  "1": "USAD_SNO",
-  "2": "USAD_SPR",
-  "3": "USAD_SNM",
-  "4": "USAD_SFX",
-  "5": "USAD_SPT",
-  "6": "USAD_ANM",
-  "7": "USAD_ANO",
-  "8": "USAD_CTY",
-  "9": "USAD_STA",
-  "10": "USAD_ZIP",
-  "11": "USAD_ZP4",
-  "12": "USAD_BNM",
-  "13": "USAD_BNO",
-  "14": "USAD_RNM",
-  "15": "USAD_RNO",
-  "16": "USAD_ORG",
-  "17":"USAD_MDG",
-  "18":"USAD_MGN",
-  "19":"USAD_HNM",
-  "20":"USAD_HNO"
-}
+
+        "1": "USAD_SNO",
+        "2": "USAD_SPR",
+        "3": "USAD_SNM",
+        "4": "USAD_SFX",
+        "5": "USAD_SPT",
+        "6": "USAD_ANM",
+        "7": "USAD_ANO",
+        "8": "USAD_CTY",
+        "9": "USAD_STA",
+        "10": "USAD_ZIP",
+        "11": "USAD_ZP4",
+        "12": "USAD_BNM",
+        "13": "USAD_BNO",
+        "14": "USAD_RNM",
+        "15": "USAD_RNO",
+        "16": "USAD_ORG",
+        "17":"USAD_MDG",
+        "18":"USAD_MGN",
+        "19":"USAD_HNM",
+        "20":"USAD_HNO"
+    }
     Detailed_Report+="Exception and Mask Report\n"
     ExceptionList = []
     WordTable={}
@@ -182,14 +189,14 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         Found=False
         FoundDict={}
 
-        # if Mask_1 in data.keys():
-        #     FoundDict[Mask_1]=data[Mask_1]
-        #     Found=True
-        if db_operations.check_mask_exists(Mask_1):
-            # Mask exists in the database, retrieve data using database queries
-            FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
-            # print("FoundDict: ",FoundDict[Mask_1])
-            Found = True
+        if Mask_1 in data.keys():
+            FoundDict[Mask_1]=data[Mask_1]
+            Found=True
+        # if db_operations.check_mask_exists(Mask_1):
+        #     # Mask exists in the database, retrieve data using database queries
+        #     FoundDict[Mask_1] = db_operations.get_data_for_mask(Mask_1)
+        #     # print("FoundDict: ",FoundDict[Mask_1])
+        #     Found = True
             # print("Found Dict = ",FoundDict[Mask_1])
         
         FoundExcept=False
@@ -252,7 +259,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             rules=RuleBased.RuleBasedAddressParser.AddressParser(AddressList)
             for m in rules:
                 component = m[1]
-                component_description = db_operations.get_component_description(component)
+                component_description = component_dict[component]
+                # print(f"{component} : {component_description}")
                 m.append(component_description)
             ExceptionEntry = {
                 "Record ID": ID,

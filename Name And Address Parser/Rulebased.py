@@ -115,7 +115,6 @@ class RuleBasedAddressParser:
                             USAD_Conversion_Dict["USAD_SNO"]=USAD_Conversion_Dict["USAD_SNO"].strip()
                             break
                         
-                            
                 elif R=="USAD_SPR":
                     for j in range(Counts,len(TrackKey)):
                         Dictionary=FirstPhaseList[j]

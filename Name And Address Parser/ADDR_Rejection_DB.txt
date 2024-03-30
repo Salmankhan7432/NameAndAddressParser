@@ -1009,5 +1009,591 @@
             }
         ],
         "Rejected By": "Committee Member 1 at 2024-03-27 09:13:26.994518"
+    },
+    {
+        "Record Id": "1",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "1",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Rejected",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "2",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "88 N Pine Drive Olympia Washington 72733",
+        "Mask Pattern": "NDFFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "88",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "N",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OLYMPIA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "WASHINGTON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72733",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "1",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Rejected",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "1",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "2",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "88 N Pine Drive Olympia Washington 72733",
+        "Mask Pattern": "NDFFWTN",
+        "Region": "US",
+        "Type": "highay contract address",
+        "Address Approved?": "No",
+        "Comment": "Rejected",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "88",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "N",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OLYMPIA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "WASHINGTON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72733",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "3",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "878 NE Birch Lane Portland Oregon 72734",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Rejected",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "878",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "NE",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "BIRCH",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "LANE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "PORTLAND",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "OREGON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72734",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "4",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "78 SE Cedar Court Miami Florida 72735",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "78",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "SE",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CEDAR",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "COURT",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MIAMI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72735",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "5",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "7687 N Main St Anchorage Alaska 99501",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "7687",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "N",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MAIN",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ST",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ANCHORAGE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "ALASKA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "99501",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "6",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "5678 W Elm Ave Juneau Alaska 99801",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5678",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "W",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ELM",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "JUNEAU",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "ALASKA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "99801",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "7",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "55 Maple Avenue California 94993",
+        "Mask Pattern": "NWFTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Invalid Address",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "55",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MAPLE",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "CALIFORNIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "94993",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
+    },
+    {
+        "Record Id": "12",
+        "Exception_File_Name": "New_Test 19_13_26.033131.json",
+        "Input": "9876 E Pine Rd Fairbanks Alaska 99701",
+        "Mask Pattern": "NDFFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Rejected",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "9876",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "E",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "RD",
+                "Address Component": "Military Rd Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FAIRBANKS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "ALASKA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "99701",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "Committee_Member at 2024-03-29 03:54:47.346467"
     }
 ]

@@ -10,11 +10,31 @@ function openTab(tabName, event) {
     for (i = 0; i < tabLinks.length; i++) {
         tabLinks[i].className = tabLinks[i].className.replace(" active", ""); // Remove "active" class from all tabs
     }
+    var tabElement = event.currentTarget;
+    if (tabElement) {
+        tabElement.className += " active";
+    } else {
+        console.log("Tab element not found: " + tabName);
+        // Optionally, open a default tab here if the desired tab doesn't exist
+        // document.getElementById('defaultOpen').click();
+    }
 
     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
-    event.currentTarget.className += " active"; // Add "active" class to the clicked tab
+    event.currentTarget.className += "active"; // Add "active" class to the clicked tab
+    localStorage.setItem('lastOpenedTab', tabName);
 }
-document.getElementById('defaultOpen').click();
+document.addEventListener('DOMContentLoaded', function() {
+    var lastOpenedTab = localStorage.getItem('lastOpenedTab');
+    var tabElement = document.getElementById(lastOpenedTab);
+
+    if (tabElement) {
+        openTab(lastOpenedTab, new Event('click'));
+    } else {
+        console.log("Saved tab not found. Opening default tab.");
+        document.getElementById('defaultOpen').click();
+    }
+});
+
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -259,6 +279,11 @@ let data = [];
 let currentKeyIndex = 0;
 let initialDataLength = 0;
 let dicIndex = 0;
+
+$('#MCF').click(function(){
+    location.reload(true);
+    document.getElementById("MCF").value = ' active';
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const runDropdown = document.getElementById('run-dropdown');
@@ -681,8 +706,7 @@ function validateDropdowns() {
 
     if (!isDropdownValid("region") ||
         !isDropdownValid("AddressType") ||
-        !isDropdownValid("Approved?") ||
-        !isDropdownValid("approvedby")) {
+        !isDropdownValid("Approved?") ) {
         return false;
     }
 
@@ -804,6 +828,7 @@ function fetchComponentData() {
 $('#userdfc').click(function(){
     $('#fetchall').click();
     $('#fetchall').hide();
+    // location.reload(true);
 });
 
 function populateComponentsTable(components) {

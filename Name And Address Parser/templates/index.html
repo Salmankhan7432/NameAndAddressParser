@@ -73,11 +73,11 @@
             <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">Single Line</a>
         </div>
         <div style="text-align: left;" class="tabdiv active">
-            <a href="#" class="tablink" onclick="openTab('Batch',event)">Batch Parser</a>
+            <a href="#" class="tablink" id="BF" onclick="openTab('Batch',event)">Batch Parser</a>
         </div>
         {% if session.role == 'Admin' or session.role == 'Committee Member' and session.status == 'Active' %}
         <div style="text-align: left;" class="tabdiv">
-            <a href="#" class="tablink" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
+            <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
         </div>
         {% endif %}
          {% if session.role == 'Admin'%}

@@ -147,13 +147,14 @@ def SingleLineAddressParser():
             if convert[4]:
                 result = convert[0]
                 result['Parsed_By'] = 'Rule Based'
+                print("result: ", result)
             else:
                 result = convert[0]
                 result['Parsed_By'] = 'Active Learning'
-            print(result)
+                print("result: ", result)
             return jsonify(result=result)
     except:
-        return render_template('index.html', result=result, form=form)
+        return jsonify('index.html', result=result, form=form)
             
     return render_template('index.html', result=result, form=form)
 

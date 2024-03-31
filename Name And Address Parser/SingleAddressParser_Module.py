@@ -38,6 +38,9 @@ ExceptionList = []
 def throwException(originalInput,initials):
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
     PackAddress=PreProc.PreProcessingNameAddress().AddresssCleaning(originalInput)
+    component_dict = {}
+    component_dict = db_operations.get_components()
+    print("\n Component Dict: ", component_dict)
     # AddressList = re.split("\s|\s,\s ", Address)
     AddressList = PackAddress[0]
     AddressList= [item for item in AddressList if item]# != ","]
@@ -45,8 +48,12 @@ def throwException(originalInput,initials):
     print("Rules: ",rules)
     for m in rules:
         component = m[1]
-        component_description = db_operations.get_component_description(component)
-        m.append(component_description)
+        if component not in component_dict.keys():
+            m[1] = "USAD_NA"
+            m.append("Not Selected")
+        else:
+            m.append(component_dict[component])
+    # print("M: ",m)
     
     ID = "1"
     ExceptionDict = {
@@ -104,7 +111,10 @@ def Address_Parser(line,initials,originalInput):
     Mask=[]
     Combine=""
     LoopCheck=1
-    ID = "Single Line Exception_File " + str(initials) + "-->01"
+    ID = "1"
+    component_dict = {}
+    component_dict = db_operations.get_components()
+    print("\n Component Dict: ", component_dict)
     for A in AddressList:
         FirstPhaseDict={}
         NResult=False
@@ -175,10 +185,9 @@ def Address_Parser(line,initials,originalInput):
             for k,v in FirstPhaseList[i].items():
                 token=v
                 # print(dict_found[i+1])
-                component_description = db_operations.get_component_description(dict_found[i+1])
-                # print(component_description)
+                component_description = component_dict[dict_found[i+1]]
             uiMappings.append([token,dict_found[i+1],mask[i],component_description])
-        # print(uiMappings)
+        print("UiMappings: ",uiMappings)
         
         for K2,V2 in sorted_Found.items():
             Temp=""
@@ -242,8 +251,14 @@ def Address_Parser(line,initials,originalInput):
         Result["Output"]=rules
         for m in Result["Output"]:
             component = m[1]
-            component_description = db_operations.get_component_description(component)
-            m.append(component_description)
+            print("Component: ",component)
+            # component_description = db_operations.get_component_description(component)
+            # print("description : ",component_description)
+            if component not in component_dict.keys():
+                m[1] = "USAD_NA"
+                m.append("Not Selected")
+            else:
+                m.append(component_dict[component])
         print(Result["Output"])
         # messagebox.showwarning("Exception!",f"Exception is Created for the Address\n\n{originalInput}\n\nOutput Derived from Rulebased Learning")
 

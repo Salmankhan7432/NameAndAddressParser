@@ -261,9 +261,15 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             rules=RuleBased.RuleBasedAddressParser.AddressParser(AddressList)
             for m in rules:
                 component = m[1]
-                component_description = component_dict[component]
+                if component not in component_dict.keys():
+                    component_description = "Not Selected"
+                    m[1] = "USAD_NA"
+                    m.append(component_description)
+                else:
+                    component_description = component_dict[component]
+                    m.append(component_description)
+
                 # print(f"{component} : {component_description}")
-                m.append(component_description)
             ExceptionEntry = {
                 "Record ID": ID,
                 "INPUT": Address,

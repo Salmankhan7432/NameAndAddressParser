@@ -115,6 +115,7 @@ $(document).ready(function () {
 
         if (data && data.result && data.result.Output && data.result.Parsed_By) {
             var addressComponents = data.result.Output;
+            console.log("Data: ", data);
             var parsedBy = data.result.Parsed_By;
             $('#parsed-by-info').text('Address Parsed By --> ' + parsedBy);
             addressComponents.forEach(function (array, index) {
@@ -520,6 +521,8 @@ function exitFunction() {
     if (container) {
         container.style.display = "none"; // Hide the container
     }
+    location.reload(true);
+
 
     // Reset the file input
     const fileInput = document.getElementById("jsonFileInput");

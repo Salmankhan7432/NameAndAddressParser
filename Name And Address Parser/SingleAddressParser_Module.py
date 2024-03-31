@@ -48,7 +48,7 @@ def throwException(originalInput,initials):
         component_description = db_operations.get_component_description(component)
         m.append(component_description)
     
-    ID = str(initials) + "Forced Exception_File " +  "-->01"
+    ID = "1"
     ExceptionDict = {
         "Record ID": ID,
         "INPUT": originalInput,
@@ -73,7 +73,7 @@ def throwException(originalInput,initials):
         g.truncate
         
 
-    return path
+    return path, ExceptionList
 
 
 def Address_Parser(line,initials,originalInput):

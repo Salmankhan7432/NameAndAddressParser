@@ -11,7 +11,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 import bcrypt
 
 Base = declarative_base()
-engine = create_engine('sqlite:///User_Auth.db', echo=True)
+engine = create_engine('sqlite:///KnowledgeBase_Test.db', echo=True)
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -34,6 +34,8 @@ class User(Base):
     Status = Column(String)
 
     role = relationship("UserRole")
+    exceptionTable = relationship('exceptionTable', back_populates='UserName', cascade='all', single_parent=True)
+
 
     def __repr__(self):
         return f"<User(username='{self.UserName}', role_id={self.Role})>"
@@ -56,19 +58,21 @@ class User(Base):
 
 # # Check if roles exist and then create User instances
 # if admin_role and committee_role and general_user_role:
-#     new_users = [
-#         User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName),
-#         User(FullName='Committee Member 1', UserName='committee1', Email='committee1@gmail.com', Password='123', Status='Inactive', Role=committee_role.RoleName),
-#         User(FullName='Committee Member 2', UserName='committee2', Email='committee2@gmail.com', Password='123', Status='Inactive', Role=committee_role.RoleName),
-#         User(FullName='General', UserName='general', Email='general@gmail.com', Password='123', Status='Inactive', Role=general_user_role.RoleName)
-#     ]
+    # new_users = [
+    #     User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName),
+    #     User(FullName='Committee Member 1', UserName='committee1', Email='committee1@gmail.com', Password='123', Status='Inactive', Role=committee_role.RoleName),
+    #     User(FullName='Committee Member 2', UserName='committee2', Email='committee2@gmail.com', Password='123', Status='Inactive', Role=committee_role.RoleName),
+    #     User(FullName='General', UserName='general', Email='general@gmail.com', Password='123', Status='Inactive', Role=general_user_role.RoleName)
+    # ]
+# new_user = User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName)
 
 #     session.add_all(new_users)
 #     session.commit()
 # else:
 #     print("One or more roles not found in database.")
 # Add instances to the session
-# session.add_all(new_roles)
+# session.add(new_user)
+# # session.add_all(new_roles)
 # session.commit()
 # session.add_all(new_users)
 # session.commit()
@@ -96,8 +100,8 @@ class User(Base):
 #         print(f"An error occurred: {e}")
 #         session.rollback()
 
-# # Call the function to update passwords
+# # # Call the function to update passwords
 # update_passwords()
 
-# # Close the session
+# # # Close the session
 # session.close()

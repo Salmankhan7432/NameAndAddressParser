@@ -16,7 +16,7 @@ from werkzeug.utils import secure_filename, safe_join
 from tqdm import tqdm
 from flask_socketio import SocketIO
 import os
-from ORM import MaskTable, ComponentTable, MappingJSON
+from ORM import MaskTable, ComponentTable, MappingJSON, User, UserRole, ExceptionTable, MapCreationTable
 from DB_Operations import DB_Operations as CRUD
 import SingleAddressParser_Module as SAP
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -27,7 +27,7 @@ import json
 import threading
 from datetime import datetime
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-from LoginORM import User, UserRole
+# from LoginORM import User, UserRole
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileRequired
 from wtforms import SubmitField
@@ -43,7 +43,7 @@ logging.basicConfig(level=logging.DEBUG)
 current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
 engine = create_engine('sqlite:///KnowledgeBase_Test.db')
-engine2 = create_engine('sqlite:///User_Auth.db', echo=True)
+engine2 = create_engine('sqlite:///KnowledgeBase_Test.db', echo=True)
 Session = sessionmaker(bind=engine)
 DBSession = sessionmaker(bind=engine2)
 app.config['SECRET_KEY'] = 'secret!'
@@ -54,7 +54,6 @@ CORS(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[InputRequired(), Length(min=4, max=30)])
@@ -166,10 +165,28 @@ def forceException():
     if request.method == "POST":
         address = request.form["address"]
         convert = SAP.throwException(address, "initials")
+        mapdata = {}
+        excdata = {}
+        mapdata["Address Input"] = address
+        excdata["Timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        rules = convert[1][0]
+        excdata["Username"] = session["user_id"]
+        excdata["Run"] = "Single"
+        excdata["Record ID"] = rules["Record ID"]
+        mapdata["Mask"] = next((key for key, value in rules.items() if isinstance(value, list)), None)
+        # print(mask)
+        excdata["data"] = rules[mapdata["Mask"]]
+        print("excdata: ", excdata)
+
+        print(mapdata)
+        CRUD.add_mapCreation(engine,mapdata, excdata)
+
+
         if convert is not None:  # Check if the return value is not None
             response['result'] = True
-            download_except_path = convert  # Assign the returned file path
-        print(convert)
+            download_except_path = convert[0]  # Assign the returned file path
+        print("RuleBase: ", convert[1])
+
         
     return jsonify(response=response, download_url="/download_except")
 
@@ -179,7 +196,7 @@ def download_except_file():  # Ensure this function name is unique
     if download_except_path is None:
         return jsonify({'error': 'No file to download'}), 404
     try:
-        return send_file(download_except_path, as_attachment=True)
+        return send_file(download_except_path, as_attachment=True ,mimetype='application/json')
     except FileNotFoundError:
         return jsonify({'error': 'File not found'}), 404
 
@@ -252,6 +269,97 @@ def download_file(filename):
     else:
         return jsonify({'error': 'Result not ready or file not found'}), 404
 
+
+@app.route('/get_runs')
+def get_runs():
+    session = Session()
+    runs = session.query(ExceptionTable.Run).distinct().all()
+    return jsonify([run[0] for run in runs])
+
+@app.route('/get_users/<run>')
+def get_users(run):
+    session = Session()
+    users = session.query(ExceptionTable.UserName).filter_by(Run=run).distinct().all()
+    return jsonify([user[0] for user in users])
+
+@app.route('/get_timestamps/<run>/<user>')
+def get_timestamps(run, user):
+    session = Session()
+    timestamps = session.query(ExceptionTable.Timestamp).filter_by(Run=run, UserName=user).distinct().all()
+    print(timestamps)
+    return jsonify([timestamp[0] for timestamp in timestamps])
+
+@app.route('/process_dropdown_data', methods=['POST'])
+def process_dropdown_data():
+    session = Session()
+    data = request.json
+    run = data.get('run')
+    user = data.get('user')
+    timestamp = data.get('timestamp')
+    
+    exception_dict = session.query(
+        ExceptionTable.Address_ID,
+        MapCreationTable.Address_Input,
+        MapCreationTable.Mask,
+        ExceptionTable.Component,
+        ExceptionTable.Mask_Token,
+        ExceptionTable.Token,
+        ExceptionTable.Component_index,
+        ComponentTable.description
+    ).join(
+        MapCreationTable, ExceptionTable.MapCreation_Index == MapCreationTable.ID
+    ).join(ComponentTable,
+        ExceptionTable.Component == ComponentTable.component
+        ).filter(
+        ExceptionTable.Run == run, 
+        ExceptionTable.UserName == user, 
+        ExceptionTable.Timestamp == timestamp
+    ).order_by(
+        ExceptionTable.Address_ID,
+        ExceptionTable.Component_index
+    ).all()
+    # print(exception_dict)
+    print(process_query_data(exception_dict))
+    data = process_query_data(exception_dict)
+
+
+    return jsonify({"status": "success", "message": "Data processed","data" : data})
+
+def process_query_data(query_data):
+    processed = []
+    current_record_id = None
+    current_dict = {}
+    dynamic_key_list = None
+    dynamic_key = None
+
+    for record in query_data:
+        record_id, input_address, mask, component, mask_token, token, _, description = record
+
+        if record_id != current_record_id:
+            if current_dict:
+                current_dict[dynamic_key] = dynamic_key_list
+                processed.append(current_dict)
+            current_record_id = record_id
+            current_dict = {"Record ID": str(record_id), "INPUT": input_address}
+            dynamic_key = mask
+            dynamic_key_list = []
+
+        if mask != dynamic_key:
+            current_dict[dynamic_key] = dynamic_key_list
+            dynamic_key = mask
+            dynamic_key_list = []
+
+        nwftn_entry = [token, component, mask_token, description]
+        dynamic_key_list.append(nwftn_entry)
+
+    # Add the last entry
+    if current_dict:
+        current_dict[dynamic_key] = dynamic_key_list
+        processed.append(current_dict)
+
+    return processed
+
+
 @app.route('/AddressComponents_dropdown', methods=['GET'])
 def get_address_components():
     try:
@@ -276,18 +384,40 @@ def check_mask_existence():
 
 @app.route('/MapCreationForm-Data',methods=["GET","POST"])
 def MapCreationForm():
-    session = Session()
-    database_url = 'sqlite:///KnowledgeBase_Test.db'
-    engine = create_engine(database_url)
+    db_session = Session()
+    # database_url = 'sqlite:///KnowledgeBase_Test.db'
+    # engine = create_engine(database_url)
     result={}
     mapdata = request.get_json()
     print("\nReceived Map Data:",mapdata)
+    # print("mapdata: ", mapdata)
+    username = session["user_id"]
+    print("User: ",username)
+    Address_ID = mapdata["Record Id"]
+    print("Address ID", Address_ID)
+    timestamp = mapdata['Timetamp']
+    print("Timestamp: ", timestamp)
     keys = list(mapdata.keys())
     Vdbs = {k: mapdata[k] for k in keys[:10]}
-    Vdbs["Approved By"] = Vdbs["Approved By"] + " at " + str(current_time)
+    Vdbs["Approved By"] = username + " at " + str(current_time)
     Kbs = {k: mapdata[k] for k in keys[10:]}
     print("\n\nValidation Data Base: ",Vdbs)
     print("\n\nKnowledge Base: ",Kbs)
+    exception_record = db_session.query(ExceptionTable).filter_by(UserName=username, Address_ID=Address_ID, Timestamp=timestamp).first()
+
+
+    if exception_record:
+        map_creation_index = exception_record.MapCreation_Index
+
+        # Delete the exception record
+        db_session.delete(exception_record)
+        db_session.commit()
+
+        # Now, delete the linked MapCreation record
+        map_creation_record = db_session.query(MapCreationTable).filter_by(ID=map_creation_index).first()
+        if map_creation_record:
+            db_session.delete(map_creation_record)
+            db_session.commit()
     if Vdbs["Address Approved?"] == "Yes":
         CRUD.add_data(engine,Kbs)
         print("Approved: Yes")
@@ -393,9 +523,15 @@ def Edit_Components():
                 old_mappings = session.query(MappingJSON).filter_by(
                     component_index=component_data['oldComponent']
                 ).all()
+                old_exceptions = session.query(ExceptionTable).filter_by(
+                    Component=component_data['oldComponent']
+                ).all()
 
                 for old_mapping in old_mappings:
                     old_mapping.component_index = component_data['newComponent']
+                    session.commit()
+                for old_exception in old_exceptions:
+                    old_exception.Component = component_data['newComponent']
                     session.commit()
             session.commit()
             session.close()

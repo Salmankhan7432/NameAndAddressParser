@@ -15,6 +15,8 @@ import collections
 import PreprocessingNameAddress as PreProc
 import sklearn
 from sklearn.metrics import multilabel_confusion_matrix,confusion_matrix,classification_report
+from flask import session
+
 #Parsing 1st program
 from DB_Operations import DB_Operations
 import zipfile
@@ -527,7 +529,25 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #---------------------------------------------------------------------------------
         
         # Progress.stop()
+
         print(zip_file_name)
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        for i in ExceptionList:
+            mapdata = {}
+            excdata = {}
+            rules = i
+            excdata["Timestamp"] = timestamp
+            mapdata["Address Input"] = rules["INPUT"]
+            excdata["Username"] = session["user_id"]
+            excdata["Run"] = "Multiple"
+            excdata["Record ID"] = rules["Record ID"]
+            mapdata["Mask"] = next((key for key, value in rules.items() if isinstance(value, list)), None)
+            # print(mask)
+            excdata["data"] = rules[mapdata["Mask"]]
+            print("excdata: ", excdata)
+
+            print(mapdata)
+            DB_Operations.add_mapCreation(db_operations,mapdata, excdata)
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)

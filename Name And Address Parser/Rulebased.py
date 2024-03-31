@@ -18,7 +18,6 @@ class RuleBasedAddressParser:
         # Address=re.sub('[.]','',Address)
         #Address=re.sub('#','',Address)
         fileHandle = open('USAddressWordTable.txt', 'r',encoding='utf8')
-
         # Address=Address.upper()
         # AddressList = re.split("\s|\s,\s ", Address)
         #print(line)

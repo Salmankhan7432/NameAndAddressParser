@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import IntegrityError
 import json
-from ORM import MaskTable, ComponentTable, MappingJSON
+from ORM import MaskTable, ComponentTable, MappingJSON, User, UserRole, ExceptionTable, MapCreationTable
 from LoginORM import UserRole, User
 
 class DB_Operations:
@@ -286,6 +286,28 @@ class DB_Operations:
             
         finally:
             session.close()
+
+    def add_mapCreation(self, data, excdata):
+        try:
+            Session = sessionmaker(bind=self.engine)
+            session = Session()
+            print(data)
+            mapdata = MapCreationTable(Address_Input=data["Address Input"],Mask=data["Mask"])
+            session.add(mapdata)
+
+            session.commit()
+            print(mapdata.ID)
+            j =1
+            for i in excdata["data"]:
+                exc_data = ExceptionTable(UserName =excdata["Username"], Timestamp =excdata["Timestamp"], Run =excdata["Run"], Address_ID =excdata["Record ID"], Component =i[1], Token =i[0], Mask_Token = i[2], Component_index = j, MapCreation_Index =mapdata.ID)
+                j+=1
+                print(exc_data)
+                session.add(exc_data)
+                session.commit()
+        finally:
+            session.close()
+
+            
     
 # database_url = 'sqlite:///KnowledgeBase_TestDummy.db'
 # db_operations = DB_Operations(database_url)

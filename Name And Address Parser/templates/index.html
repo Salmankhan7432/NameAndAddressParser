@@ -208,8 +208,25 @@
         </center>
         <div class="map-container container" id="upload">
 
-            <input type="file" id="jsonFileInput" accept=".json">
-            <button id="loadFileBtn">Load JSON File</button>
+            <!-- <input type="file" id="jsonFileInput" accept=".json"> -->
+            <!-- Run Dropdown -->
+            <select id="run-dropdown" onchange="updateUserDropdown()">
+                <option>Select Run</option>
+                <!-- Options will be dynamically loaded -->
+            </select>
+            
+            <!-- User Dropdown -->
+            <select id="user-dropdown" onchange="updateTimestampDropdown()">
+                <option>Select User</option>
+                <!-- Options will be dynamically loaded -->
+            </select>
+            
+            <!-- Timestamp Dropdown -->
+            <select id="timestamp-dropdown">
+                <option>Select Timestamp</option>
+                <!-- Options will be dynamically loaded -->
+            </select>
+            <button id="loadFileBtn">Fetch</button>
         </div>
         <div class="map-container" id="mapdata" style="grid-template-columns: 1fr 1fr;" hidden>
             <div class="leftContainer" style="width: 90%; height: 100vh; padding: 20px;">
@@ -256,8 +273,7 @@
                 </div>
 
                 <div class="containerin">
-                    <label for="fileName">Exception
-                        File Name :
+                    <label for="fileName">Timestamp :
                     </label>
                     <input type="text" id="filename" class="field" readonly>
                 </div>
@@ -333,6 +349,7 @@
 
     <div id="UDComponents" class="tabcontent userDefinedComponentsTab-container">
         <div class="container">
+  
             <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
             <div class="udresult-box" id="udresult-box">
                 <table id="udresultTable" class="table">

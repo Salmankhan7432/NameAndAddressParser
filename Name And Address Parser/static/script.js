@@ -259,27 +259,101 @@ let currentKeyIndex = 0;
 let initialDataLength = 0;
 let dicIndex = 0;
 
-document.getElementById("loadFileBtn").addEventListener("click", function() {
-    const jsonFileInput = document.getElementById("jsonFileInput");
+document.addEventListener('DOMContentLoaded', function() {
+    const runDropdown = document.getElementById('run-dropdown');
+    const userDropdown = document.getElementById('user-dropdown');
+    const timestampDropdown = document.getElementById('timestamp-dropdown');
 
-    if (jsonFileInput.files.length === 0) {
-        alert("Please select a JSON file.");
-        return; // Stop the function if no file is selected
+    if(runDropdown) {
+        runDropdown.addEventListener('change', updateUserDropdown);
     }
 
-    loadFile(); // Proceed to load the file if a file is selected
-    jsonFileInput.value = "";
+    if(userDropdown) {
+        userDropdown.addEventListener('change', updateTimestampDropdown);
+    }
+
+    // Your fetch for initial load of Run dropdown
+});
+
+
+
+// Function to update User dropdown based on Run selection
+function updateUserDropdown() {
+    const run = document.getElementById('run-dropdown').value;
+    fetch('/get_users/' + run)
+        .then(response => response.json())
+        .then(data => {
+            const userDropdown = document.getElementById('user-dropdown');
+            // Add default option at the start
+            userDropdown.innerHTML = `<option>Select User</option>` + data.map(user => `<option>${user}</option>`).join('');
+        });
+}
+
+
+// Function to update Timestamp dropdown based on User selection
+function updateTimestampDropdown() {
+    const run = document.getElementById('run-dropdown').value;
+    const user = document.getElementById('user-dropdown').value;
+    console.log("admin: ", user);
+    fetch('/get_timestamps/' + run + '/' + user)
+        .then(response => response.json())
+        .then(data => {
+            const timestampDropdown = document.getElementById('timestamp-dropdown');
+            timestampDropdown.innerHTML = data.map(timestamp => `<option>${timestamp}</option>`).join('');
+        });
+    
+}
+
+// Initial load of Run dropdown
+window.onload = function() {
+    fetch('/get_runs')
+        .then(response => response.json())
+        .then(data => {
+            const runDropdown = document.getElementById('run-dropdown');
+            runDropdown.innerHTML += data.map(run => `<option>${run}</option>`).join('');
+        });
+};
+
+document.getElementById("loadFileBtn").addEventListener("click", function() {
+    // const jsonFileInput = document.getElementById("jsonFileInput");
+
+    // if (jsonFileInput.files.length === 0) {
+    //     alert("Please select a JSON file.");
+    //     return; // Stop the function if no file is selected
+    // }
+    const run = document.getElementById('run-dropdown').value;
+    const user = document.getElementById('user-dropdown').value;
+    const timestamp = document.getElementById('timestamp-dropdown').value;
+
+    $.ajax({
+        url: '/process_dropdown_data', // Update this URL to your Flask endpoint
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            run: run,
+            user: user,
+            timestamp: timestamp
+        }),
+        success: function(response) {
+            console.log('Success:', response);
+            loadFile(response.data); // Call loadFile() on success
+        },
+        error: function(error) {
+            console.error('Error:', error);
+        }
+    });
 });
 // document.getElementById("submit&NextBtn").addEventListener("click", submitButtonHandler);
 document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
 
 
-function loadFile() {
+function loadFile(received_data) {
     data = [];
     currentKeyIndex = 0;
     initialDataLength = 0;
     dicIndex = 0;
     resetUIElements();
+    
     let container = document.getElementById("mapdata");
     if (container) {
         container.style.display = 'grid'; 
@@ -288,46 +362,27 @@ function loadFile() {
         return; // Exit the function if the container is not found
     }
 
-    const jsonFileInput = document.getElementById("jsonFileInput");
 
-    if (jsonFileInput.files.length > 0) {
-        const file = jsonFileInput.files[0];
-        const filenameElement = document.getElementById("filename");
-        if (filenameElement) {
-            filenameElement.value = file.name;
+
+    try {
+        const newData = received_data;
+        data = newData; // Append new data to existing data array
+        initialDataLength = data.length;
+        if (data.length > 1) {
+            document.getElementById("submit&NextBtn").style.display = 'block';
+            document.getElementById("submitBtn").style.display = 'none';
         } else {
-            console.error("filename element not found");
+            document.getElementById("submit&NextBtn").style.display = 'none';
+            document.getElementById("submitBtn").style.display = 'block';
         }
+        currentKeyIndex = 0;
+        showNext(); // Start processing data if it's the first file
 
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            try {
-                const newData = JSON.parse(e.target.result);
-                data = newData; // Append new data to existing data array
-                initialDataLength = data.length;
-                if (data.length > 1) {
-                    document.getElementById("submit&NextBtn").style.display = 'block';
-                    document.getElementById("submitBtn").style.display = 'none';
-                } else {
-                    document.getElementById("submit&NextBtn").style.display = 'none';
-                    document.getElementById("submitBtn").style.display = 'block';
-                }
-                currentKeyIndex = 0;
-                showNext(); // Start processing data if it's the first file
-
-            } catch (error) {
-                console.error("Parsing error:", error);
-                exitFunction();
-                alert("Invalid JSON data. Please provide a valid JSON file.", error.message);
-            }
-        };
-
-        reader.readAsText(file);
-    } else {
-        alert("Please select a JSON file.");
+    } catch (error) {
+        console.error("Parsing error:", error);
+        exitFunction();
+        alert("Invalid JSON data. Please provide a valid JSON file.", error.message);
     }
-
 
 }
 
@@ -336,9 +391,12 @@ function showNext() {
     if (currentKeyIndex < data.length) {
         const currentData = data[currentKeyIndex];
         const keys = Object.keys(currentData);
+        console.log("Keys : ",keys)
+        const filenameElement = document.getElementById("filename");
+        filenameElement.value = document.getElementById('timestamp-dropdown').value;
         document.getElementById("recordId").value = currentData["Record ID"];
         document.getElementById("inputValue").value = currentData["INPUT"];
-        document.getElementById("mask-inputValue").value = keys[2];
+        document.getElementById("mask-inputValue").value = keys[1];
 
         const otherDataKey = findThirdObjectKey(currentData);
         const otherData = currentData[otherDataKey];
@@ -488,14 +546,15 @@ function collectData() {
     // Example: Collect data from input fields
     console.log("collectData called");
     const record_Id = document.getElementById("recordId").value;
-    const file_name = document.getElementById("filename").value;
+    const timestamp = document.getElementById('timestamp-dropdown').value;
     const input_Value = document.getElementById("inputValue").value;
     const mask = document.getElementById("mask-inputValue").value;
     const comment = document.getElementById("comment").value;
     const address_region = document.getElementById("region") ? document.getElementById("region").value : null;
     const Address_Type = document.getElementById("AddressType") ? document.getElementById("AddressType").value : null;
     const approval = document.getElementById("Approved?") ? document.getElementById("Approved?").value : null;
-    const approved_by = document.getElementById("approvedby") ? document.getElementById("approvedby").value : null;
+    // const approved_by = document.getElementById("approvedby") ? document.getElementById("approvedby").value : null;
+    const user = document.getElementById('user-dropdown').value;
 
 
     // Example: Collect data from table
@@ -528,14 +587,14 @@ function collectData() {
     console.log("Data collected", mappingData);
     result = {
         "Record Id": record_Id,
-        "Exception_File_Name": file_name,
+        "Timetamp": timestamp,
         "Input": input_Value,
         "Mask Pattern": mask,
         "Region": address_region,
         "Type": Address_Type,
         "Address Approved?": approval,
-        "Approved By": approved_by,
         "Comment": comment,
+        "User": user,
         "Mapping Data": mappingData
     };
     result[mask] = dicData;
@@ -836,7 +895,7 @@ function editRow(button, event) {
         var cell = $(this);
         var cellText = cell.text();
         cell.attr('data-old-value', cellText);
-        var maxLength = index === 0 ? 8 : 20; // 8 for the first cell, 20 for the second
+        var maxLength = index === 0 ? 8 : 24; // 8 for the first cell, 20 for the second
         cell.html('<input type="text" class="editable" maxlength="' + maxLength + '" value="' + cellText + '">');
     });
     oldComponent = row.find('td:eq(0)').data('old-value');

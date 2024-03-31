@@ -1,9 +1,9 @@
 {
-    "New_Test.txt": {
-        "result": "Detailed_Report of New_Test.txt is Generated! \n\nThe New_Test_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Addresses: -\t91\nUnique Pattern Count: -\t23\n\n\nNumber of Pattern Parsed Addresses: -\t79\nPercentage of Patterns Parsed Result:  -\t86.81%\n\nNumber of Exceptions Thrown: -\t\t12\nPercentage of RuleBased Parsed Result: -\t13.19%\n",
+    "Military_Test.txt": {
+        "result": "Detailed_Report of Military_Test.txt is Generated! \n\nThe Military_Test_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Addresses: -\t84\nUnique Pattern Count: -\t1\n\n\nNumber of Pattern Parsed Addresses: -\t0\nPercentage of Patterns Parsed Result:  -\t0.00%\n\nNumber of Exceptions Thrown: -\t\t84\nPercentage of RuleBased Parsed Result: -\t100.00%\n",
         "metrics": {
-            "metrics": "Detailed_Report of New_Test.txt is Generated! \n\nThe New_Test_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Addresses: -\t91\nUnique Pattern Count: -\t23\n\n\nNumber of Pattern Parsed Addresses: -\t79\nPercentage of Patterns Parsed Result:  -\t86.81%\n\nNumber of Exceptions Thrown: -\t\t12\nPercentage of RuleBased Parsed Result: -\t13.19%\n"
+            "metrics": "Detailed_Report of Military_Test.txt is Generated! \n\nThe Military_Test_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Addresses: -\t84\nUnique Pattern Count: -\t1\n\n\nNumber of Pattern Parsed Addresses: -\t0\nPercentage of Patterns Parsed Result:  -\t0.00%\n\nNumber of Exceptions Thrown: -\t\t84\nPercentage of RuleBased Parsed Result: -\t100.00%\n"
         },
-        "output_file_path": "Output/Batch File Output/New_Test_output.zip"
+        "output_file_path": "Output/Batch File Output/Military_Test_output.zip"
     }
 }

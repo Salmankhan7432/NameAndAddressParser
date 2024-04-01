@@ -700,14 +700,14 @@ def authentication_page():
                 'userName': user.UserName, 
                 'email': user.Email, 
                 'password' : "********",
-                'Active' : user.Status,
+                # 'Active' : user.Status,
                 'role': user.role.RoleName  # Assuming a relationship attribute
                 # 'status': 'Active' if user.isActive else 'Inactive'  # Assuming an isActive field
             } for user in users
         ]
         role_data = [role.RoleName for role in roles]
-        # print("role_data", role_data)
-        # print("user_data", user_data)
+        print("role_data", role_data)
+        print("user_data", user_data)
         return jsonify({'users': user_data, 'roles': role_data})
     except Exception as e:
         print("Error: ", e)
@@ -741,7 +741,7 @@ def edit_user(user_id):
             user.UserName = UserDetails.get('UserName')
             user.Email = UserDetails.get('Email')
             user.Role = UserDetails.get('Role_id')
-            user.Status = UserDetails.get('Status')
+            # user.Status = UserDetails.get('Status')
 
             session.commit()
 
@@ -770,8 +770,8 @@ def create_user():
         new_user.Password = hashed_password
 
         new_user.Role = UserDetails.get('Role_id')
-        new_user.Status = UserDetails.get('Status')
-        print("New User Rady to Add: ",new_user)
+        # new_user.Status = UserDetails.get('Status')
+        print("New User Ready to Add: ",new_user)
         # Add the new user to the session and commit
         session.add(new_user)
         session.commit()

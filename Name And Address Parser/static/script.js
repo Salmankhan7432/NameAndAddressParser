@@ -1320,7 +1320,7 @@ function populateUserTable(users, roles) {
         tableHTML += '<td>' + user.email + '</td>'; // Email
         tableHTML += '<td class="non-editable-password">' + user.password + '</td>'; // Password
         tableHTML += '<td>' + createRoleDropdown(user.role, roles) + '</td>'; // Role Dropdown
-        tableHTML += '<td>' + createStatusCheckboxes(user.id, user.Active) + '</td>'; // Status Checkboxes
+        // tableHTML += '<td>' + createStatusCheckboxes(user.id, user.Active) + '</td>'; // Status Checkboxes
         tableHTML += '<td class="actions">';
         tableHTML += createActionButtons(user.id); // Action Buttons
         tableHTML += '</td>';
@@ -1517,7 +1517,7 @@ function addUser(users,roles) {
         '<td><input type="text" class="editable" placeholder="Enter Email" maxlength="20"></td>' +
         '<td><input type="text" class="editable" placeholder="Enter Password" maxlength="20"></td>' +
         '<td>'+ roleDropdownHtml +'</td>'+
-        '<td><input type="checkbox" id="new-user-status"></td>'+
+        // '<td><input type="checkbox" id="new-user-status"></td>'+
         '<td class="actions">' +
         '<button class="save1-btn" id="save1-btn" onclick="saveNewUser(this,event)">Save</button>' +
         '<button class="cancel1-btn" id="cancel1-btn" onclick="cancelNewUser(this,event)">Cancel</button>' +
@@ -1557,7 +1557,7 @@ function saveNewUser(button) {
         "Email": newRow.find('td input').eq(2).val(), // Email
         "Password": newRow.find('td input').eq(3).val(), // Password
         "Role_id": newRow.find('td select').val(), // Role Dropdown Value
-        "Status": newRow.find('td input[type="checkbox"]').is(':checked') ? "Active" : "Inactive" // Status Checkbox
+        // "Status": newRow.find('td input[type="checkbox"]').is(':checked') ? "Active" : "Inactive" // Status Checkbox
     };
 
     console.log("Sending Data to Server:", SendData);
@@ -1641,20 +1641,20 @@ function createRoleDropdown(currentRole, roles) {
     dropdownHtml += '</select>';
     return dropdownHtml;
 }
-function createStatusCheckboxes(userId, status) {
-    console.log("Status Received: ",status)
-    var isActive = status === 'Active'; // Uncomment and use your logic to set isActive
+// function createStatusCheckboxes(userId, status) {
+//     console.log("Status Received: ",status)
+//     var isActive = status === 'Active'; // Uncomment and use your logic to set isActive
 
-    console.log("Active?", isActive)
-    // Adjust the HTML to include onclick event handlers for the checkboxes
-    var checkboxesHtml = '<input type="checkbox" id="statusActive-' + userId + 
-        '" name="statusActive" ' + (isActive ? 'checked' : '') + 
-        ' onclick="toggleCheckbox(' + userId + ', this.checked)" disabled>';
+//     console.log("Active?", isActive)
+//     // Adjust the HTML to include onclick event handlers for the checkboxes
+//     var checkboxesHtml = '<input type="checkbox" id="statusActive-' + userId + 
+//         '" name="statusActive" ' + (isActive ? 'checked' : '') + 
+//         ' onclick="toggleCheckbox(' + userId + ', this.checked)" disabled>';
 
-    return checkboxesHtml;
-}
+//     return checkboxesHtml;
+// }
 
-// function to toggle the state of the checkboxes
-function toggleCheckbox(userId, isChecked) {
-    $('#statusActive-' + userId).prop('checked', isChecked);
-}
+// // function to toggle the state of the checkboxes
+// function toggleCheckbox(userId, isChecked) {
+//     $('#statusActive-' + userId).prop('checked', isChecked);
+// }

@@ -74,7 +74,7 @@ class User(Base):
     Email = Column(String, unique=True)
     Password = Column(String(60))
     Role = Column(String, ForeignKey('rolesTable.RoleName'))
-    Status = Column(String)
+    # Status = Column(String)
 
     role = relationship("UserRole")
     exception_Table = relationship('ExceptionTable', back_populates='user', cascade='all', single_parent=True)
@@ -125,15 +125,15 @@ class MapCreationTable(Base):
 # general_user_role = session.query(UserRole).filter_by(RoleName='General User').one_or_none()
 
 # new_users = [
-#     User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName),
-#     User(FullName='Committee Member 1', UserName='committee1', Email='committee1@gmail.com', Password='123', Status='Inactive', Role=committee_role.RoleName),
-#     User(FullName='Committee Member 2', UserName='committee2', Email='committee2@gmail.com', Password='123', Status='Inactive', Role=committee_role.RoleName),
-#     User(FullName='General', UserName='general', Email='general@gmail.com', Password='123', Status='Inactive', Role=general_user_role.RoleName)
+#     User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Role=admin_role.RoleName),
+#     User(FullName='Committee Member 1', UserName='committee1', Email='committee1@gmail.com', Password='123', Role=committee_role.RoleName),
+#     User(FullName='Committee Member 2', UserName='committee2', Email='committee2@gmail.com', Password='123', Role=committee_role.RoleName),
+#     User(FullName='General', UserName='general', Email='general@gmail.com', Password='123', Role=general_user_role.RoleName)
 # ]
 
 
 # # # # new_user = User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName)
-# # session.add_all(new_roles)
+# session.add_all(new_roles)
 # session.add_all(new_users)
 # session.commit()
 

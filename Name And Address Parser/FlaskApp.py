@@ -6,7 +6,7 @@ Created on Thu Nov 23 18:22:53 2023
 """
 from flask_socketio import SocketIO, emit
 import time  # Used for simulating processing time
-from flask import Flask, request, render_template, jsonify, send_file, session, send_from_directory
+from flask import Flask, request, render_template, jsonify, send_file, session, send_from_directory, Response, stream_with_context
 from functools import wraps
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
@@ -43,7 +43,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
-app.config['SESSION_TYPE'] = 'filesystem'  # Can be 'redis', 'memcached', etc.
+# app.config['SESSION_TYPE'] = 'filesystem'  # Can be 'redis', 'memcached', etc.
 sess(app)
  
 app.permanent_session_lifetime = timedelta(days=7)
@@ -258,7 +258,7 @@ def check_status(filename):
         with open("temp_file.json", "r", encoding="utf8") as file:
         # Load the JSON content from the file into a Python dictionary
             task_results = json.load(file)
-        if task_results[filename]["result"] is not None:
+        if "result" in task_results[filename] and task_results[filename]["result"] is not None:
             return jsonify(result=task_results[filename]["result"], metrics=task_results[filename]["metrics"])
         else:
             return jsonify(status="Still processing"), 202

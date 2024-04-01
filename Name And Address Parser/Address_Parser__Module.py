@@ -481,7 +481,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         active_learning_stream.write(json.dumps(Result, indent=4, ensure_ascii=False).encode('utf-8'))
         rule_based_output_stream.write(json.dumps(RuleBasedOutput, indent=4, ensure_ascii=False).encode('utf-8'))
         # exception_stream.write(json.dumps(ExceptionList, indent=4, ensure_ascii=False).encode('utf-8'))
-
+        # print("File banri ruko!")
         # Make sure to seek to the start of each stream after writing
         detailed_report_stream.seek(0)
         active_learning_stream.seek(0)

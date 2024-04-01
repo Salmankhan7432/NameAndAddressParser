@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import IntegrityError
 import json
 from ORM import MaskTable, ComponentTable, MappingJSON, User, UserRole, ExceptionTable, MapCreationTable
-from LoginORM import UserRole, User
+# from LoginORM import UserRole, User
 
 class DB_Operations:
     def __init__(self, database_url):
@@ -31,7 +31,60 @@ class DB_Operations:
                 pass# print("Mask Not Found")
         finally:
             session.close()
-    
+
+    def transfer_data(self, data):
+        Session = sessionmaker(bind=self.engine)
+        # session = None
+        session = Session()
+        try:
+            for mask, components in data.items():
+                # Add new mask to MaskTable if not exists
+                mask_record = session.query(MaskTable).filter_by(mask=mask).first()
+                if not mask_record:
+                    mask_record = MaskTable(mask=mask)
+                    session.add(mask_record)
+                    session.commit()
+                session.flush()
+
+                mask_id = mask_record.mask
+
+                for component_key, values in components.items():
+                    # Add new component to ComponentTable if not exists
+                    component_record = session.query(ComponentTable).filter_by(component=component_key).first()
+                    if not component_record:
+                        component_record = ComponentTable(component=component_key)
+                        session.add(component_record)
+                        session.commit()
+                    session.flush()
+
+                    for value in values:
+                        # Check if mapping already exists
+                        mapping_json_record = session.query(MappingJSON).filter_by(
+                            mask_index=mask_id,
+                            component_index=component_record.component,
+                            component_value=value
+                        ).first()
+                        if not mapping_json_record:
+                            # Add new mapping
+                            new_mapping = MappingJSON(
+                                mask_index=mask_id,
+                                component_index=component_record.component,
+                                component_value=value
+                            )
+                            session.add(new_mapping)
+                            session.commit()
+
+            # session.commit()
+
+        except IntegrityError as e:
+            # Handle any integrity errors during commit
+            session.rollback()
+            print(f"Error: {e}")
+
+        finally:
+            if session is not None:
+                session.close()
+
     def get_data_for_mask(self, mask):
         Session = sessionmaker(bind=self.engine)
         session = Session()

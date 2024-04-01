@@ -262,55 +262,53 @@ $(document).ready(function () {
 
 
 
-$('#BatchForm').submit(function (event) {
+    $('#BatchForm').submit(function (event) {
 
-    document.getElementById('spinner').style.display = 'block';
-    event.preventDefault();
-    var fileData = new FormData(this);
-    $('#file-upload').val('');
-    $.ajax({
-        url: '/Batch_Parser',
-        type: 'POST',
-        data: fileData,
-        contentType: false,
-        processData: false,
-        xhr: function () {
-            var xhr = new window.XMLHttpRequest();
-            // Event listener for the upload progress
-            xhr.upload.addEventListener('progress', function (e) {
-                if (e.lengthComputable) {
-                    var percentComplete = Math.round((e.loaded / e.total) * 100);
-                    // Update the progress bar with the new percentage
-                    $('#progressBar').val(percentComplete);
-                    $('#progressBarText').text(percentComplete + '%'); // If you also have a text element to update
-               
-               
-                }
-            }, false);
-            return xhr;
-        },
-        success: function (response) {
-        
-                // This code is called when the AJAX request completes successfully
-            // console.log('File uploaded!');
-            $('#progressBar').val(50); // Make sure the progress bar shows 100% at the end
-            $('#progressBarText').text('100%'); // Update the text to 100% when upload completes
-            // Further actions based on response
-            if (response.status_check_url) {
-            console.log(response.status_check_url)
-            document.getElementById('spinner').style.display = 'block';
+        document.getElementById('spinner').style.display = 'block';
+        event.preventDefault();
+        var fileData = new FormData(this);
+        $('#file-upload').val('');
+        $.ajax({
+            url: '/Batch_Parser',
+            type: 'POST',
+            data: fileData,
+            contentType: false,
+            processData: false,
+            xhr: function () {
+                var xhr = new window.XMLHttpRequest();
+                // Event listener for the upload progress
+                xhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        var percentComplete = Math.round((e.loaded / e.total) * 100);
+                        // Update the progress bar with the new percentage
+                        $('#progressBar').val(percentComplete);
+                        $('#progressBarText').text(percentComplete + '%'); // If you also have a text element to update
+                    }
+                }, false);
+                return xhr;
+            },
+            success: function (response) {
             
-                setTimeout(function() { pollForMetrics(response.status_check_url, response.download_url); }, 500);
+                    // This code is called when the AJAX request completes successfully
+                // console.log('File uploaded!');
+                $('#progressBar').val(50); // Make sure the progress bar shows 100% at the end
+                $('#progressBarText').text('100%'); // Update the text to 100% when upload completes
+                // Further actions based on response
+                if (response.status_check_url) {
+                console.log(response.status_check_url)
+                document.getElementById('spinner').style.display = 'block';
+                
+                    setTimeout(function() { pollForMetrics(response.status_check_url, response.download_url); }, 500);
+                }
+            },
+            error: function (error) {
+                // This code is called if the AJAX request fails
+                // console.log('Upload error:', error);
+                document.getElementById('spinner').style.display = 'none';
+                alert("Unexpected Error: Please ensure the file is pipe delimited!");
             }
-        },
-        error: function (error) {
-            // This code is called if the AJAX request fails
-            // console.log('Upload error:', error);
-            document.getElementById('spinner').style.display = 'none';
-            alert("Error during file upload");
-        }
+        });
     });
-});
 
 
 });

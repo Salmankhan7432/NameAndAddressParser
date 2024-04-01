@@ -71,16 +71,16 @@ def throwException(originalInput,initials):
     
     
     
-    Exception_file_name = initials+" " +str(current_time) +"_Forced_ExceptionFile.json"
-    Exception_file_name = re.sub(r'[^\w_. -]', '_', Exception_file_name)
-    path = 'Exceptions/ForcedExceptions/' + Exception_file_name
-    with open(path, 'w', encoding='utf-8') as g:
-        g.seek(0)
-        json.dump(ExceptionList, g, indent=4)
-        g.truncate
+    # Exception_file_name = initials+" " +str(current_time) +"_Forced_ExceptionFile.json"
+    # Exception_file_name = re.sub(r'[^\w_. -]', '_', Exception_file_name)
+    # path = 'Exceptions/ForcedExceptions/' + Exception_file_name
+    # with open(path, 'w', encoding='utf-8') as g:
+    #     g.seek(0)
+    #     json.dump(ExceptionList, g, indent=4)
+    #     g.truncate
         
 
-    return path, ExceptionList
+    return True, ExceptionList
 
 
 def Address_Parser(line,initials,originalInput):
@@ -229,14 +229,14 @@ def Address_Parser(line,initials,originalInput):
                 "INPUT": originalInput,
                 str(Mask_1): Mappings
             }
-        Output_file_name=initials+str(current_time)+"_Output.json"
-        Output_file_name=re.sub(r'[^\w_. -]', '_', Output_file_name)
-        path= 'Output/Single Line Output/'+Output_file_name
-        with open(path,'w', encoding='utf-8') as g:
-            g.seek(0)
-            # Stat=originalInput,Mappings
-            json.dump(OutputDict,g,indent=4)
-            g.truncate
+        # Output_file_name=initials+str(current_time)+"_Output.json"
+        # Output_file_name=re.sub(r'[^\w_. -]', '_', Output_file_name)
+        # path= 'Output/Single Line Output/'+Output_file_name
+        # with open(path,'w', encoding='utf-8') as g:
+        #     g.seek(0)
+        #     # Stat=originalInput,Mappings
+        #     json.dump(OutputDict,g,indent=4)
+        #     g.truncate
         
     else:
         Exception_=True
@@ -268,12 +268,12 @@ def Address_Parser(line,initials,originalInput):
             
         else:
             ExceptionList.append(ExceptionDict)
-        Exception_file_name = initials+ " " + str(current_time) + "_ExceptionFile.json"
-        Exception_file_name = re.sub(r'[^\w_. -]', '_', Exception_file_name)
-        path = 'Exceptions/SingleException/' + Exception_file_name
-        with open(path, 'w', encoding='utf-8') as g:
-            json.dump(ExceptionList, g, indent=4)
-            g.truncate
+        # Exception_file_name = initials+ " " + str(current_time) + "_ExceptionFile.json"
+        # Exception_file_name = re.sub(r'[^\w_. -]', '_', Exception_file_name)
+        # path = 'Exceptions/SingleException/' + Exception_file_name
+        # with open(path, 'w', encoding='utf-8') as g:
+        #     json.dump(ExceptionList, g, indent=4)
+        #     g.truncate
             
         
        

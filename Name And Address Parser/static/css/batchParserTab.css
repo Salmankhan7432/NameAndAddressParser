@@ -125,6 +125,7 @@
     }
     .input-group button{
         display: inline-block;
+    
     }
 
     .input-group input[type="text"],
@@ -155,7 +156,7 @@
         border-radius: 4px;
         cursor: pointer;
         font-size: 17px;
-        transition: 0.3s ease-in-out;
+        /* transition: 0.3s ease-in-out; */
     }
 
     .input-group button:hover {
@@ -167,7 +168,9 @@
         justify-content: space-between;
         margin-top: 10px;
     }
-
+    .spinner-border{
+        color: #2e4c8c;
+    }
     .buttons button {
         display: block;
         flex: 1;

@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/userDefinedComponentsTab.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/authenticationTab.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <style>
-    
-    
-.spinner-border {
-    display: inline-block;
-    width: 3rem;
-    height: 3rem;
-    vertical-align: text-bottom;
-    border: 0.25em solid currentColor;
-    border-right-color: transparent;
-    border-radius: 50%;
-    animation: spinner-border .75s linear infinite;
-}
 
-@keyframes spinner-border {
-    to { transform: rotate(360deg); }
-}
+    <style>
+        .spinner-border {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            vertical-align: text-bottom;
+            border: 0.25em solid currentColor;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spinner-border .75s linear infinite;
+        }
+
+        @keyframes spinner-border {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         html,
         body {
@@ -62,6 +62,13 @@
             display: block;
             /* Makes <b> behave like a block element */
         }
+
+        .tablink:hover,
+        .tablink.active {
+            /* background-color:#bec9e2; */
+            color: #2e4c8c;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -75,36 +82,30 @@
         <div style="text-align: left;" class="tabdiv active">
             <a href="#" class="tablink" id="BF" onclick="openTab('Batch',event)">Batch Parser</a>
         </div>
-        {% if session.role == 'Admin' or session.role == 'Committee Member' and session.status == 'Active' %}
+        {% if session.role == 'Admin' or session.role == 'Committee Member' %}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
         </div>
         {% endif %}
-         {% if session.role == 'Admin'%}
+        {% if session.role == 'Admin'%}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="userdfc" onclick="openTab('UDComponents',event)">User Defined Component</a>
         </div>
-          {% endif %}
+        {% endif %}
         {% if session.role == 'Admin'%}
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="user" onclick="openTab('Authentication',event)">Authentication</a>
         </div>
         {% endif %}
-        
-        
-          <div style="text-align: right;" class="tabdiv">
- <form action="\logout" method="POST"> 
- <button type="submit" name="logout" id="logout"
- style="background-color: transparent; padding-left: 200px; margin-top: -6px;" ><i class='bx bx-power-off'
-     style="font-size: 30px; color: white;" id="imglogout"></i></button>
- </form>          </div>
- <head>
-    <script>
-        $('#imglogout').click(function () {
-            $('#logout').click();
-        })
-    </script>
-</head>
+
+
+        <div style="text-align: right;" class="tabdiv">
+            <form action="\logout" method="POST" onclick="localStorage.clear()">
+                <button type="submit" name="logout" id="logout"
+                    style="background-color: transparent;position: fixed; top: 25px;right: 20px; margin-top: -6px;"><i
+                        class='bx bx-power-off' style="font-size: 30px; color: white;" id="imglogout"></i></button>
+            </form>
+        </div>
     </div>
 
 
@@ -154,38 +155,40 @@
 
         </form>
     </div>
-    
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-    $(document).ready(function(){
-        var socket = io.connect('http://' + document.domain + ':' + location.port + '/Batch_Parser');
-        socket.on('Batch_Parser', function(data) {
-            $('#progressBar').val(data.progress);
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var socket = io.connect('http://' + document.domain + ':' + location.port + '/Batch_Parser');
+            socket.on('Batch_Parser', function (data) {
+                $('#progressBar').val(data.progress);
+            });
         });
-    });
-</script>
-        <!----------------------------------------------------------------------------------------------->
-        <!--                                          Batch Parser                                     -->
-        <!----------------------------------------------------------------------------------------------->
+    </script>
+    <!----------------------------------------------------------------------------------------------->
+    <!--                                          Batch Parser                                     -->
+    <!----------------------------------------------------------------------------------------------->
     <div id="Batch" class="tabcontent batchParserTab-container" style="display: block;">
         <!-- Upload Section -->
         <div class="container">
-            <center><h3 style="font-size: 18px; color: #2e4c8c;">Note: Please Upload Pipe Delimited File
-            </h3></center>
             <center>
-                <form id="BatchForm" method="post" action="{{ url_for('BatchParser') }}" enctype="multipart/form-data">                  
+                <h3 style="font-size: 18px; color: #2e4c8c;">Note: Please Upload Pipe Delimited File
+                </h3>
+            </center>
+            <center>
+                <form id="BatchForm" method="post" action="{{ url_for('BatchParser') }}" enctype="multipart/form-data">
                     {{ form.hidden_tag() }}
                     <div class="input-group">
-                    {{ form.file.label }} {{ form.file(class="custom-file-input", id="file-upload") }}
-                    {{ form.submit(class="btn btn-primary", id="upload-btn") }}
-                    <div id="spinner" class="spinner-border" role="status" style="display: none;">
-                        <span class="sr-only"></span>
-                    </div>
+                        {{ form.file.label }} {{ form.file(class="custom-file-input", id="file-upload") }}
+                        {{ form.submit(class="btn btn-primary", id="upload-btn") }}
+                        <div id="spinner" class="spinner-border" role="status" style="display: none;">
+                            <span class="sr-only"></span>
+                        </div>
 
-                   
+
                     </div>
                 </form>
             </center>
@@ -214,13 +217,13 @@
                 <option>Select Run</option>
                 <!-- Options will be dynamically loaded -->
             </select>
-            
+
             <!-- User Dropdown -->
             <select id="user-dropdown" onchange="updateTimestampDropdown()">
                 <option>Select User</option>
                 <!-- Options will be dynamically loaded -->
             </select>
-            
+
             <!-- Timestamp Dropdown -->
             <select id="timestamp-dropdown">
                 <option>Select Timestamp</option>
@@ -265,7 +268,17 @@
                     .containerin select input textarea {
                         width: 100%;
                     }
+
+                    .highlight {
+                        border: 10px solid red;
+                        /* Red border for highlighting */
+                    }
                 </style>
+                <script>
+                    // Function to highlight empty inputs
+
+                </script>
+
             </head>
             <div class="rightContainer" id="inputData" style="width: 90%; height: 100vh; padding: 20px;">
                 <div id="dictionaryInfo">
@@ -323,7 +336,7 @@
                 </div>
                 <div class="containerin">
                     <label for="comment">Comment : </label>
-                    <textarea name="" id="comment" cols="30" rows="3"></textarea>
+                    <textarea name="" id="comment" cols="30" rows="2" style="resize: none;"></textarea>
                 </div>
                 <!-- <div class="containerin">
                     <label for="approvedby">Approved By : </label>
@@ -349,7 +362,7 @@
 
     <div id="UDComponents" class="tabcontent userDefinedComponentsTab-container">
         <div class="container">
-  
+
             <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
             <div class="udresult-box" id="udresult-box">
                 <table id="udresultTable" class="table">
@@ -375,23 +388,23 @@
         <div id="downloadContainer" class="download-container">
             <div class="container">
                 <div class="download-section">
-                    <span class="download-label">Check Logs :</span>
+                    <span class="download-label">Logs :</span>
                     <button onclick="downloadLogs()" id="downloadButton">Download</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <!-- User Creation Edit Delete -->
     <div id="Authentication" class="tabcontent AuthenticationTab-container">
         <div class="container">
             {% if session.role == 'Admin' %}
-                <!-- User Creation Form -->
-                <!-- <div class="user-creation">
+            <!-- User Creation Form -->
+            <!-- <div class="user-creation">
                     <h3>Create New User</h3>
                     <form action="/create_user" method="post">
                         <input type="text" name="username" placeholder="Username" required>
@@ -411,8 +424,8 @@
                         <input type="submit" value="Create User">
                     </form>
                 </div> -->
-                
-                <!-- User List and Edit/Delete Forms -->
+
+            <!-- User List and Edit/Delete Forms -->
             <div class="udresult-box" id="utresult-box">
                 <table id="utresultTable" class="table">
                     <thead class="thead-dark">
@@ -431,7 +444,7 @@
                     </tbody>
                 </table>
             </div>
-                    <!-- {% for user in users %}
+            <!-- {% for user in users %}
                     <tr>
                         <form action="/edit_user/{{ user.id }}" method="post">
                             <td>{{ user.FullName }}</td>
@@ -463,17 +476,17 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <!-- <script>
                 function openTab(tabName, event) {
                     var i;

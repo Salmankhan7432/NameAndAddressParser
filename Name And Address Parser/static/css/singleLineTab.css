@@ -316,6 +316,10 @@
         transition: 0.3s ease-in-out;
         text-decoration: bold;
     }
+    .exception-border {
+        border-color: red;
+    }
+    
 
 }
 html, body {

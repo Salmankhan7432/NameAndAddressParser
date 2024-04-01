@@ -53,7 +53,8 @@
     transition: 0.2s ease-in;
     /* Smooth transition for hover effects */
 }
-.tabdiv{
+
+.tabdiv {
     margin-top: 15px;
     margin-left: 40px;
 }
@@ -61,6 +62,10 @@
 .tablink:hover,
 .tablink.active {
     /* background-color:#bec9e2; */
+    color: #2e4c8c;
+    text-decoration: underline;
+}
+.addedclass{
     color: #2e4c8c;
     text-decoration: underline;
 }
@@ -79,9 +84,12 @@
     justify-content: center;
     align-items: center;
 }
-.map-container input, .map-container button{
+
+.map-container input,
+.map-container button {
     margin: 5px;
 }
+
 .leftContainer,
 .rightContainer {
     padding: 20px;
@@ -323,7 +331,7 @@
     border-color: #ffc107;
 }
 
-.rightContainer label{
+.rightContainer label {
     /* margin-top: 5px; */
     margin: 5px;
 }
@@ -332,9 +340,10 @@
 .map-result-box {
     overflow-x: auto;
 }
-.map-result-box tbody tr td select{
+
+.map-result-box tbody tr td select {
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid #2e4c8c;
 }
 
 body {
@@ -347,7 +356,8 @@ table {
     border-collapse: separate;
     margin-bottom: 20px;
 }
-table tr td{
+
+table tr td {
     text-align: center;
 }
 
@@ -394,6 +404,15 @@ tr:hover {
     margin: 5px 0;
 }
 
+#run-dropdown,
+#user-dropdown,
+#timestamp-dropdown {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 3px;
+    width: 150px;
+}
+
 input[type="text"],
 select,
 textarea {
@@ -411,7 +430,7 @@ textarea {
 }
 
 #loadFileBtn {
-    width: 15%;
+    width: 150px;
     /* Allow the button to fit the content */
     padding: 10px 20px;
     /* Uniform padding */
@@ -433,12 +452,14 @@ button {
     gap: 10px;
     justify-content: start;
 }
-#approvedby{
+
+#approvedby {
     margin-bottom: 20px;
 }
+
 /* Container for the buttons */
 .button-container {
-    
+
     padding: 10px;
     display: flex;
     /* Use flexbox to layout the buttons */
@@ -446,7 +467,7 @@ button {
     /* Align buttons to the start of the container */
     gap: 10px;
     /* Space between the buttons */
-    
+
 }
 
 /* Individual buttons */
@@ -480,7 +501,8 @@ button:hover {
         padding: 5px;
         /* Full width button on small screens */
     }
-    footer{
+
+    footer {
         position: absolute;
         color: #fff;
         bottom: 0;

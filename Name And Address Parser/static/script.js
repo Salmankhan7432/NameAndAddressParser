@@ -1561,6 +1561,8 @@ function saveEditedUser(userId) {
         },
         error: function(error) {
             console.error("Error saving user data:", error);
+            alert("Please provide unique value for Username and Email!")
+            location.reload()
         }
     });
     // Reset the action buttons to the default state
@@ -1640,6 +1642,7 @@ function saveNewUser(button) {
             // Add any success handling logic here
             newRow.remove(); // Remove the new user row after saving
             loadUserData();
+            location.reload();
         },
         error: function(error) {
             console.error("Error saving new user data:", error);
@@ -1681,9 +1684,12 @@ function deleteUser(userId) {
                 console.log('Record deleted:', response);
                 row.remove();
                 loadUserData();
+                location.reload();
             },
             error: function(error) {
                 console.error("Unexpected error occred while deleting the User:", error);
+                alert("Unexpected error occred while deleting the User!");
+                location.reload();
             }
         });
     }

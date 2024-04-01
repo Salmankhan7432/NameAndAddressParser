@@ -832,7 +832,7 @@ function submitButtonHandler(collectedData, index) {
                 document.getElementById("AddressType").style.border="3px solid #FF1F1F";
                 // return alert("Address Type is not selected")
             }
-            alert("Please Fill all Required Fields for yes");
+            alert("Please Fill all Required Fields!");
         }
     } else if (approved === "No") {
         
@@ -856,11 +856,11 @@ function submitButtonHandler(collectedData, index) {
             //     document.getElementById("approvedby").style.border="4px solid red";
             //     // return alert("Approved by is not selected")
             // }
-            alert("Please fill in all required fields for no");
+            alert("Please fill in all required fields!");
         }
     } else {
         document.getElementById("Approved?").style.border="3px solid #FF1F1F";
-        alert("Please fill in all required fields for no one");
+        alert("Please fill in all required fields!");
         if (document.getElementById("region").value === ""){
             document.getElementById("region").style.border="3px solid #FF1F1F";
             // return alert("Region is not selected")
@@ -1644,7 +1644,7 @@ function saveNewUser(button) {
         error: function(error) {
             console.error("Error saving new user data:", error);
             newRow.remove();
-            alert("Unexpected error occured!")
+            alert("Please provide the Unique values in Username and Email!")
             // Handle the error scenario
         }
     });

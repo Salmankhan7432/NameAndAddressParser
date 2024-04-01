@@ -164,7 +164,7 @@
 
     .edit1-btn,
     .delete1-btn {
-        width: 30%;
+        width: 60px;
         padding: 8px;
         font-size: 15px;
         margin: 5px;
@@ -174,9 +174,7 @@
         background-color: #fff;
     }
 
-    .edit1-btn {
-        margin-left: 50px;
-    }
+    
 
     .edit1-btn:hover,
     .delete1-btn:hover {
@@ -188,15 +186,16 @@
         transition: 0.2s ease-in-out;
     }
 
-    .utresult-box table tbody tr td input{
+    .utresult-box table tbody tr td input {
         width: 80%;
         padding: 5px;
         border: 1px solid black;
     }
 
-    .utresult-box table tbody tr td .save1-btn,
-    .utresult-box table tbody tr td .cancel1-btn{
-        width: 30%;
+    .save1-btn,
+    .cancel1-btn {
+        text-align: center;
+        width: 60px;
         padding: 8px;
         font-size: 15px;
         margin: 5px;
@@ -205,31 +204,47 @@
         background-color: #fff;
         border: 2px solid #2b74b7;
         transition: 0.2s ease-in-out;
-        
+
     }
-    .thead-dark tr th{
+
+    #utresultBody td select,
+    #utresultBody td input[type="text"] {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    #utresultBody td input[type="checkbox"]:checked~checkmark:after {
+        background-color: yellow;
+        color: green;
+    }
+
+    .thead-dark tr th {
         border-bottom: 2px solid #2b74b7;
     }
+
     /* .udresult-box table tbody tr td .save-btn:hover,
     .udresult-box table tbody tr td .cancel-btn:hover{
         background-color: #2e4c8c;
         transition: 0.2s ease-in-out;
     } */
 
-    .utresult-box table tbody tr td .save1-btn{
+    .utresult-box table tbody tr td .save1-btn {
         margin-left: 50px;
     }
 
-    #utresultbody tr td{
+    #utresultbody tr td {
         text-align: center;
     }
 
 }
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     padding-bottom: 80px;
 }
+
 footer {
     position: fixed;
     left: 0;

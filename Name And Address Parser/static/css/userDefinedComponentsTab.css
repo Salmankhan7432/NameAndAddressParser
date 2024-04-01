@@ -188,14 +188,14 @@
         transition: 0.2s ease-in-out;
     }
 
-    .udresult-box table tbody tr td input{
+    .udresult-box table tbody tr td input {
         width: 80%;
         padding: 5px;
         border: 1px solid black;
     }
 
     .udresult-box table tbody tr td .save-btn,
-    .udresult-box table tbody tr td .cancel-btn{
+    .udresult-box table tbody tr td .cancel-btn {
         width: 30%;
         padding: 8px;
         font-size: 15px;
@@ -205,68 +205,81 @@
         background-color: #fff;
         border: 2px solid #2b74b7;
         transition: 0.2s ease-in-out;
-        
+
     }
-    .thead-dark tr th{
+
+    .thead-dark tr th {
         border-bottom: 2px solid #2b74b7;
     }
+
     /* .udresult-box table tbody tr td .save-btn:hover,
     .udresult-box table tbody tr td .cancel-btn:hover{
         background-color: #2e4c8c;
         transition: 0.2s ease-in-out;
     } */
 
-    .udresult-box table tbody tr td .save-btn{
+    .udresult-box table tbody tr td .save-btn {
         margin-left: 50px;
     }
 
-    #udresultbody tr td{
+    #udresultbody tr td {
         text-align: center;
     }
+
     .download-container {
         position: absolute;
-        top: 85px; /* Align with the top of the page content */
-        right: 0; /* Align to the right side of the page content */
-        background-color: #f5f5f5; /* Match your color scheme */
-        border: 1px solid #ccc; /* Consistent with your design */
-        border-radius: 5px; /* Match your design's border radius */
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(123, 122, 122, 0.2); /* Optional: for shadow */
-        z-index: 10; /* Ensure it is above other content */
+        top: 85px;
+        /* Align with the top of the page content */
+        right: 0;
+        /* Align to the right side of the page content */
+        background-color: transparent;
+        /* Match your color scheme */
+        /* border: 1px solid #ccc; Consistent with your design */
+        border-radius: 5px;
+        /* Match your design's border radius */
+        /* padding: 10px; */
+        /* box-shadow: 0 2px 5px rgba(123, 122, 122, 0.2); Optional: for shadow */
+        z-index: 10;
+        /* Ensure it is above other content */
     }
-    
 
-.download-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    .download-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .download-label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    #downloadButton {
+        padding: 5px 15px;
+        background-color: #2e4c8c;
+        /* Adjust to match your color scheme */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #downloadButton:hover {
+        background-color: #0056b3;
+        /* Adjust for hover effect */
+    }
+
+
 }
 
-.download-label {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-#downloadButton {
-    padding: 5px 15px;
-    background-color: #007bff; /* Adjust to match your color scheme */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#downloadButton:hover {
-    background-color: #0056b3; /* Adjust for hover effect */
-}
-
-
-}
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     padding-bottom: 80px;
 }
+
 footer {
     position: fixed;
     left: 0;

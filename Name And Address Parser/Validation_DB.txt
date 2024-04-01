@@ -8907,5 +8907,245 @@
             }
         ],
         "Approved By": "admin at 2024-03-30 22:21:42.683010"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Secondary Address Name"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-03-31 00:02:00.948869"
+    },
+    {
+        "Record Id": "2",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "88 N Pine Drive Olympia Washington 72733",
+        "Mask Pattern": "NDFFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "Not sa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "88",
+                "Address Component": "Secondary Address Name"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "N",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Box Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OLYMPIA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "WASHINGTON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72733",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-03-31 11:47:14.647750"
+    },
+    {
+        "Record Id": "4",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "78 SE Cedar Court Miami Florida 72735",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "adsa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "78",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "SE",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CEDAR",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "COURT",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MIAMI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72735",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-03-31 14:08:43.602059"
+    },
+    {
+        "Record Id": "8",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "5678 Pine Street Stockton California 95202",
+        "Mask Pattern": "NFFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5678",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "STOCKTON",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "CALIFORNIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "95202",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-03-31 14:08:43.602059"
+    },
+    {
+        "Record Id": "9",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "9876 Elm Drive Bentonville Arkansas 72712",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "9876",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ELM",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "BENTONVILLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "ARKANSAS",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72712",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-03-31 14:08:43.602059"
     }
 ]

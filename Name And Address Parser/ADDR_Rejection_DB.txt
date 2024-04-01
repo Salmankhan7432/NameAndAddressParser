@@ -1887,5 +1887,245 @@
             }
         ],
         "Rejected By": "admin at 2024-03-30 20:29:17.787191"
+    },
+    {
+        "Record Id": "3",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "878 NE Birch Lane Portland Oregon 72734",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "nj",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "878",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "NE",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "BIRCH",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "LANE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "PORTLAND",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "OREGON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72734",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-03-31 13:40:09.434507"
+    },
+    {
+        "Record Id": "5",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "7687 N Main St Anchorage Alaska 99501",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "7687",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "N",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MAIN",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ST",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ANCHORAGE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "ALASKA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "99501",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-03-31 14:08:43.602059"
+    },
+    {
+        "Record Id": "6",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "5678 W Elm Ave Juneau Alaska 99801",
+        "Mask Pattern": "NDWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "gsgqiusAJX",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5678",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "W",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ELM",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "JUNEAU",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "ALASKA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "99801",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-03-31 14:08:43.602059"
+    },
+    {
+        "Record Id": "7",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "55 Maple Avenue California 94993",
+        "Mask Pattern": "NWFTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "tESTING",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "55",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MAPLE",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "CALIFORNIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "94993",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-03-31 14:08:43.602059"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-03-30 22:27:11.964674",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "Testing",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-03-31 16:11:31.185002"
     }
 ]

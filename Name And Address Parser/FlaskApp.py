@@ -88,9 +88,9 @@ def login():
                 
                 session["user_id"]=username
                 session["role"]= role_name
-                session['status'] = user.Status
+                # session['status'] = user.Status
                 session["FullName"] = user.FullName
-                print("\n\n\n",session['status'],"\n", user.Status,"\n\n\n")
+                # print("\n\n\n",session['status'],"\n", user.Status,"\n\n\n")
                 return redirect(url_for('SingleLineAddressParser')) 
             
            # Remember, in real apps, don't use plain text for passwords
@@ -183,23 +183,23 @@ def forceException():
         CRUD.add_mapCreation(engine,mapdata, excdata)
 
 
-        if convert is not None:  # Check if the return value is not None
-            response['result'] = True
-            download_except_path = convert[0]  # Assign the returned file path
-        print("RuleBase: ", convert[1])
+        # if convert is not None:  # Check if the return value is not None
+        #     response['result'] = True
+        #     download_except_path = convert[0]  # Assign the returned file path
+        # print("RuleBase: ", convert[1])
 
         
-    return jsonify(response=response, download_url="/download_except")
+    return jsonify(response=response) #, download_url="/download_except")
 
-@app.route('/download_except')
-def download_except_file():  # Ensure this function name is unique
-    global download_except_path
-    if download_except_path is None:
-        return jsonify({'error': 'No file to download'}), 404
-    try:
-        return send_file(download_except_path, as_attachment=True ,mimetype='application/json')
-    except FileNotFoundError:
-        return jsonify({'error': 'File not found'}), 404
+# @app.route('/download_except')
+# def download_except_file():  # Ensure this function name is unique
+#     global download_except_path
+#     if download_except_path is None:
+#         return jsonify({'error': 'No file to download'}), 404
+#     try:
+#         return send_file(download_except_path, as_attachment=True ,mimetype='application/json')
+#     except FileNotFoundError:
+#         return jsonify({'error': 'File not found'}), 404
 
 
 task_results = {}
@@ -239,7 +239,7 @@ def BatchParser():
 
 @app.route('/check_status/<filename>', methods=["GET", "POST"])
 def check_status(filename):
-    print("sdksdksd") 
+    # print("sdksdksd") 
     task_results=dict()
     try:
             
@@ -458,8 +458,9 @@ def UD_Components():
     if request.method == "POST":
         component_data = Database_schema.get_Component_data()
         for row in component_data:
-            component = row.component
-            Component_description = row.description
+            if row.component != "USAD_NA" and row.description != "Not Selected":
+                component = row.component
+                Component_description = row.description
             result[component] = Component_description
         print(result)
         return jsonify(result=result)
@@ -673,7 +674,7 @@ def delete_component():
 
 @app.route('/download/logs')
 def download_logs():
-    path = "UDF_Logs\deletion_log.txt"
+    path = r"UDF_Logs\deletion_log.txt"
     try:
         return send_file(path, as_attachment=True)
     except FileNotFoundError:

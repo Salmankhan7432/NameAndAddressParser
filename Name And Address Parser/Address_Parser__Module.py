@@ -469,39 +469,40 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         #     zipf.write(exception_File)
 
 
-# ... Your code above ...
-
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
         # Create in-memory byte streams for your files
         detailed_report_stream = io.BytesIO()
         active_learning_stream = io.BytesIO()
         rule_based_output_stream = io.BytesIO()
-        exception_stream = io.BytesIO()
+        # exception_stream = io.BytesIO()
 
         # Write the contents to the byte streams
         detailed_report_stream.write(Detailed_Report.encode('utf-8'))
         active_learning_stream.write(json.dumps(Result, indent=4, ensure_ascii=False).encode('utf-8'))
         rule_based_output_stream.write(json.dumps(RuleBasedOutput, indent=4, ensure_ascii=False).encode('utf-8'))
-        exception_stream.write(json.dumps(ExceptionList, indent=4, ensure_ascii=False).encode('utf-8'))
+        # exception_stream.write(json.dumps(ExceptionList, indent=4, ensure_ascii=False).encode('utf-8'))
 
         # Make sure to seek to the start of each stream after writing
         detailed_report_stream.seek(0)
         active_learning_stream.seek(0)
         rule_based_output_stream.seek(0)
-        exception_stream.seek(0)
+        # exception_stream.seek(0)
 
         # File names
         detailed_report_file_name = f"Detailed Report_{file_name}.txt"
         active_learning_file_name = f"Active Learning Output.json"
         rule_based_output_file_name = f"Rule Based Output.json"
-        exception_file_name = f"{file_name}_Exception File_{str(current_time)}.json"
+        # exception_file_name = f"{file_name}_Exception File_{str(current_time)}.json"
         zip_file_name = f"Output/Batch File Output/{file_name}_output.zip"
-
+        try:
         # Create a zip file and write the byte streams to it
-        with zipfile.ZipFile(zip_file_name, 'w') as zipf:
-            zipf.writestr(detailed_report_file_name, detailed_report_stream.getvalue())
-            zipf.writestr(active_learning_file_name, active_learning_stream.getvalue())
-            zipf.writestr(rule_based_output_file_name, rule_based_output_stream.getvalue())
-            zipf.writestr(exception_file_name, exception_stream.getvalue())
+            with zipfile.ZipFile(zip_file_name, 'w') as zipf:
+                zipf.writestr(detailed_report_file_name, detailed_report_stream.getvalue())
+                zipf.writestr(active_learning_file_name, active_learning_stream.getvalue())
+                zipf.writestr(rule_based_output_file_name, rule_based_output_stream.getvalue())
+                # zipf.writestr(exception_file_name, exception_stream.getvalue())
+        except Exception as e:
+            print(f"Error creating zip file: {e}")
 
         # No need to return a message about generating files since they aren't generated on the filesystem
         # return (True, f"Zip file '{zip_file_name}' has been created with all reports.")
@@ -537,7 +538,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         # Progress.stop()
 
         print(zip_file_name)
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        # timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
         for i in ExceptionList:
             mapdata = {}
             excdata = {}

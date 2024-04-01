@@ -20,9 +20,17 @@ function openTab(tabName, event) {
     }
 
     document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
-    event.currentTarget.className += "active"; // Add "active" class to the clicked tab
+    // event.currentTarget.className += "active"; // Add "active" class to the clicked tab
     localStorage.setItem('lastOpenedTab', tabName);
+    // $("lastOpenedTab").click();
 }
+$('document').ready(function(){
+    var openedTab = localStorage.getItem("lastOpenedTab");
+    if(openedTab =='SingleLine'){
+        document.getElementById('defaultOpen').classList.add('addedclass');
+    }
+    console.log(openedTab);
+});
 document.addEventListener('DOMContentLoaded', function() {
     var lastOpenedTab = localStorage.getItem('lastOpenedTab');
     var tabElement = document.getElementById(lastOpenedTab);
@@ -35,7 +43,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+window.addEventListener('load', function() {
+    var lastOpenedTab = localStorage.getItem('lastOpenedTab');
+    var tabElement = document.getElementById(lastOpenedTab);
 
+    if (tabElement) {
+        openTab(lastOpenedTab, new Event('click'));
+    } else {
+        console.log("Saved tab not found. Opening default tab.");
+        document.getElementById('defaultOpen').click();
+    }
+});
 
 //------------------------------------------------------------------------------------------------------------
 //                                 Single Line Address Parser Tab Functionality
@@ -72,25 +90,31 @@ $(document).ready(function () {
             }
         });
     });
-
+    var exceptionBtnClicked = false;
     $('#exception-checkbox').change(function() {
         // Check if the checkbox is checked
         if ($(this).is(':checked')) {
             // Enable the button if checkbox is checked
             $('#exception-btn').prop('disabled', false);
+            $('#exception-checkbox').css('border-color', '');
         } else {
-            // Disable the button if checkbox is unchecked
+            if (exceptionBtnClicked) {
+                $('#exception-checkbox').css('border-color', 'red');
+                console.log("Color higlighted!")
+            } else {
+                $('#exception-checkbox').css('border-color', '');
+            }
             $('#exception-btn').prop('disabled', true);
-            
         }
     });
 
 
     // Event listener for the exception button
     $('#exception-btn').on('click', function () {
+        exceptionBtnClicked = true;
         // var forceException = $('#exception-checkbox').is(':checked');
         if (isExceptionForced) {
-            alert("Exception already created for this address. \nPlease check your downloads for exception file.");
+            alert("Exception already created for this address and sent to Database!");
             $('#exception-checkbox').prop('checked', false);
             $('#exception-btn').prop('disabled', true);
         } else {
@@ -104,19 +128,19 @@ $(document).ready(function () {
                 success: function (response) {
                     console.log("Response:", response);
                     isExceptionForced = true;
-                    alert("Forced Exception is Created! \nYour Exception file will be downloaded shortly");
+                    alert("Forced Exception is Created! \n Exception Dictionary is sent to the Database!");
                     $('#exception-checkbox').prop('checked', false);
                     $('#exception-btn').prop('disabled', true);
 
-                    if (response.download_url) {
-                        // Create a temporary link element
-                        var tempLink = document.createElement('a');
-                        tempLink.href = response.download_url;
-                        tempLink.download = 'Forced_Except.json';
-                        document.body.appendChild(tempLink);
-                        tempLink.click();
-                        document.body.removeChild(tempLink);
-                    }
+                    // if (response.download_url) {
+                    //     // Create a temporary link element
+                    //     var tempLink = document.createElement('a');
+                    //     tempLink.href = response.download_url;
+                    //     tempLink.download = 'Forced_Except.json';
+                    //     document.body.appendChild(tempLink);
+                    //     tempLink.click();
+                    //     document.body.removeChild(tempLink);
+                    // }
                 },
                 error: function (error) {
                     console.error("Error:", error);
@@ -137,7 +161,7 @@ $(document).ready(function () {
             var addressComponents = data.result.Output;
             console.log("Data: ", data);
             var parsedBy = data.result.Parsed_By;
-            $('#parsed-by-info').text('Address Parsed By --> ' + parsedBy);
+            $('#parsed-by-info').text('Address Parsed By : ' + parsedBy);
             addressComponents.forEach(function (array, index) {
 
                 tableHTML += '<tr>';
@@ -282,8 +306,20 @@ let dicIndex = 0;
 
 $('#MCF').click(function(){
     location.reload(true);
+
+    updateUserDropdown();
+    updateTimestampDropdown();
     document.getElementById("MCF").value = ' active';
 });
+
+// function reloadPageAndSetActive() {
+//     location.reload(true);
+//     document.getElementById("MCF").value = ' active';
+// }
+
+// $(document).ready(function() {
+//     $('#MCF').click(reloadPageAndSetActive);
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const runDropdown = document.getElementById('run-dropdown');
@@ -300,6 +336,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Your fetch for initial load of Run dropdown
 });
+document.getElementById('run-dropdown').addEventListener('change',function(){
+    document.getElementById("region").value="";
+    document.getElementById("AddressType").value="";
+    document.getElementById("Approved?").value="";
+    document.getElementById("comment").value="";
+    document.getElementById("region").style.border="2px solid #2e4c8c";
+    document.getElementById("AddressType").style.border="2px solid #2e4c8c";
+    document.getElementById("Approved?").style.border="2px solid #2e4c8c";
+    document.getElementById("comment").style.border="2px solid #2e4c8c";
+})
 
 
 
@@ -645,27 +691,92 @@ document.getElementById("submit&NextBtn").addEventListener("click", function () 
     const data = collectData();
     submitButtonHandler(data, currentKeyIndex);
 });
+// -----------------------------------------------------------------------------------------
+// function submitButtonHandler(collectedData, index) {
+//     console.log("Submit Button Index:", index);
+//     const approved = document.getElementById("Approved?").value;
+//     const isDropdownsValid = validateDropdowns();
+//     const commentValidation = document.getElementById("comment").value;
+
+//     if (approved === "Yes") {
+
+//         if (isDropdownsValid) {
+//             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
+//         } else {
+//             if (document.getElementById("region").value === ""){
+//                 return alert("Region is not selected")
+//             }
+//             else if (document.getElementById("AddressType").value === ""){
+//                 return alert("Address Type is not selected")
+//             }
+//             else if (document.getElementById("approvedby").value === ""){
+//                 return alert("Approved by is not selected")
+//             }
+//         }
+//     } else if (approved === "No") {
+        
+//         if (isDropdownsValid && commentValidation !== "") {
+//             sendDataToServer(collectedData, index);
+//             // checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
+//         } else {
+//             if (document.getElementById("region").value === ""){
+//                 return alert("Region is not selected")
+//             }
+//             else if (document.getElementById("AddressType").value === ""){
+//                 return alert("Address Type is not selected")
+//             }
+//             else if (document.getElementById("comment").value === ""){
+//                 return alert("Please provide the comment for the Rejection")
+//             }
+//             else if (document.getElementById("approvedby").value === ""){
+//                 return alert("Approved by is not selected")
+//             }
+//             // alert("Please fill in all required fields. \nNote: Comment field is mandatory if 'NO' is Selected.");
+//         }
+//     } else {
+//         alert("Please provide your choice to add or not in Knowledge Base.");
+//     }
+// }
+//------------------------------------------------------------------------------------------------------------
 
 function submitButtonHandler(collectedData, index) {
     console.log("Submit Button Index:", index);
     const approved = document.getElementById("Approved?").value;
     const isDropdownsValid = validateDropdowns();
+    console.log("isDropdownsValid received: ", isDropdownsValid)
     const commentValidation = document.getElementById("comment").value;
-
+    document.getElementById("region").addEventListener('change',function(){
+        document.getElementById("region").style.border="2px solid #2e4c8c";
+        document.getElementById("region").style.transition = "none";
+    });
+    document.getElementById("AddressType").addEventListener('change',function(){
+        document.getElementById("AddressType").style.border="2px solid #2e4c8c";
+        document.getElementById("AddressType").style.transition = "none";
+    });
+    document.getElementById("comment").addEventListener('change',function(){
+        document.getElementById("comment").style.border="2px solid #2e4c8c";
+        document.getElementById("comment").style.transition = "none";
+    });
+    document.getElementById("Approved?").addEventListener('change',function(){
+        document.getElementById("Approved?").style.border="2px solid #2e4c8c";
+        document.getElementById("Approved?").style.transition = "none";
+    });
+    
     if (approved === "Yes") {
+        if (isDropdownsValid === true) {
 
-        if (isDropdownsValid) {
+            console.log("Is Dropdown Valid: Yes : ", isDropdownsValid);
             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
         } else {
             if (document.getElementById("region").value === ""){
-                return alert("Region is not selected")
+                document.getElementById("region").style.border="3px solid #FF1F1F";
+                // return alert("Region is not selected")
             }
-            else if (document.getElementById("AddressType").value === ""){
-                return alert("Address Type is not selected")
+            if (document.getElementById("AddressType").value === ""){
+                document.getElementById("AddressType").style.border="3px solid #FF1F1F";
+                // return alert("Address Type is not selected")
             }
-            else if (document.getElementById("approvedby").value === ""){
-                return alert("Approved by is not selected")
-            }
+            alert("Please Fill all Required Fields for yes");
         }
     } else if (approved === "No") {
         
@@ -674,21 +785,38 @@ function submitButtonHandler(collectedData, index) {
             // checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
         } else {
             if (document.getElementById("region").value === ""){
-                return alert("Region is not selected")
+                document.getElementById("region").style.border="3px solid #FF1F1F";
+                // return alert("Region is not selected")
             }
-            else if (document.getElementById("AddressType").value === ""){
+            if (document.getElementById("AddressType").value === ""){
+                document.getElementById("AddressType").style.border="3px solid #FF1F1F";
                 return alert("Address Type is not selected")
             }
-            else if (document.getElementById("comment").value === ""){
+            if (document.getElementById("comment").value === ""){
+                document.getElementById("comment").style.border="3px solid #FF1F1F";
                 return alert("Please provide the comment for the Rejection")
             }
-            else if (document.getElementById("approvedby").value === ""){
-                return alert("Approved by is not selected")
-            }
-            // alert("Please fill in all required fields. \nNote: Comment field is mandatory if 'NO' is Selected.");
+            // if (document.getElementById("approvedby").value === ""){
+            //     document.getElementById("approvedby").style.border="4px solid red";
+            //     // return alert("Approved by is not selected")
+            // }
+            alert("Please fill in all required fields for no");
         }
     } else {
-        alert("Please provide your choice to add or not in Knowledge Base.");
+        document.getElementById("Approved?").style.border="3px solid #FF1F1F";
+        alert("Please fill in all required fields for no one");
+        if (document.getElementById("region").value === ""){
+            document.getElementById("region").style.border="3px solid #FF1F1F";
+            // return alert("Region is not selected")
+        }
+        if (document.getElementById("AddressType").value === ""){
+            document.getElementById("AddressType").style.border="3px solid #FF1F1F";
+            // return alert("Address Type is not selected")
+        }
+        if (document.getElementById("comment").value === ""){
+            document.getElementById("comment").style.border="3px solid #FF1F1F";
+            // return alert("Please provide the comment for the Rejection")
+        }  
     }
 }
 
@@ -701,7 +829,25 @@ function validateDropdowns() {
         const element = document.getElementById(id);
         const isValid = element.value !== "" && element.value !== "Not Selected";
         console.log(`Dropdown ${id}: Value = ${element.value}, IsValid = ${isValid}`);
-        return isValid;
+        // document.getElementById("id").style.border="4px solid #FF1F1F";
+        let isValidComponents = true;
+        const dropdowns = document.querySelectorAll("select[name='value']");
+        console.log(dropdowns);
+        
+        for (let i = 0; i < dropdowns.length; i++) {
+            console.log("asdasfafda");
+            if (dropdowns[i].value === "Not Selected") {
+                dropdowns[i].style.border="3px solid #FF1F1F";
+                console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
+                isValidComponents = false;
+            }
+            dropdowns[i].addEventListener('change',function(){
+               dropdowns[i].style.border = "2px solid #2e4c8c"; 
+            })
+            console.log("isValidComponents :", isValidComponents)
+        }
+        console.log("isValid : ", isValid)
+        return isValid && isValidComponents;
     }
 
     if (!isDropdownValid("region") ||
@@ -709,19 +855,9 @@ function validateDropdowns() {
         !isDropdownValid("Approved?") ) {
         return false;
     }
-
+    
     // Check each address component dropdown
-    let isValidComponents = true;
-    const dropdowns = document.querySelectorAll("select[name='value']");
-    console.log(dropdowns);
-    for (let i = 0; i < dropdowns.length; i++) {
-        if (dropdowns[i].value === "Not Selected") {
-            console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
-            isValidComponents = false;
-            return false;
-        }
-    }
-    return isValidComponents;
+    return true;
 }
 
 
@@ -811,7 +947,10 @@ function resetDropdown(dropdownId) {
 //------------------------------------------------------------------------------------------------------------
 //                                  User Defined Components Tab Functionality
 //------------------------------------------------------------------------------------------------------------
-
+$('document').ready(function(){
+    $('#fetchall').click();
+    $('#fetchall').hide();
+});
 function fetchComponentData() {
     $.ajax({
         type: "POST",
@@ -888,6 +1027,7 @@ function saveNewRow(button) {
             data: { newComponent: newComponent, newDescription: newDescription },
             success: function (response) {
                 console.log('New record added:', response);
+                location.reload();
                 // Remove the new row upon successful addition
                 newRow.remove();
                 // Refresh the table with updated data
@@ -1009,6 +1149,7 @@ function saveChangesToServer(payload) {
         contentType: "application/json",
         data: JSON.stringify({ components: payload }), // Wrap payload in an object
         success: function (response) {
+            location.reload();// reload when the save button is clicked
             console.log('Response:', response);
             console.log(response.message);
             // Handle success
@@ -1049,7 +1190,9 @@ function deleteRow(button, event) {
                         success: function (response) {
                             console.log('Record deleted:', response);
                             row.remove(); // Remove the row from the table upon successful deletion
+                            location.reload();
                         },
+
                         error: function (error) {
                             console.error('Error deleting record:', error);
                         }
@@ -1140,7 +1283,6 @@ $(document).on('click', '.cancel-btn', function (event) {
 //                                  Authentication Tab
 // ----------------------------------------------------------------------------------------------------------------
 // This function could be triggered when the Authentication Tab is opened
-
 let originalValues = {}
 function loadUserData() {
     $.ajax({
@@ -1160,7 +1302,7 @@ function loadUserData() {
         }
     });
 }
-$('#user').click(function(){
+$('document').ready(function(){
     loadUserData();
     $("#loadUserData").hide();
 });
@@ -1250,6 +1392,7 @@ function editUser(userId) {
     return;
 
 }
+var email = document.querySelectorAll('#utresultBody tr td')
 
 function cancelEditUser(userId) {
     var row = $('#user-row-' + userId);

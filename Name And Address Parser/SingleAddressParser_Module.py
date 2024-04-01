@@ -35,7 +35,7 @@ root_folder = Path(__file__).parents[1]
 
 ExceptionList = []
 def throwException(originalInput,initials):
-    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
+    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase.db')
     PackAddress=PreProc.PreProcessingNameAddress().AddresssCleaning(originalInput)
     component_dict = {}
     component_dict = db_operations.get_components()
@@ -85,7 +85,7 @@ def throwException(originalInput,initials):
 def Address_Parser(line,initials,originalInput):
     global Result, Exception_file_name, FirstPhaseList, Mask_1, AddressList, rules
     Result={}
-    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase_Test.db')
+    db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase.db')
     Exception_=False
     Exception_file_name=""
     fileHandle = open('USAddressWordTable.txt', 'r',encoding="utf8")

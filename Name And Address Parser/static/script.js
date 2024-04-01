@@ -13,10 +13,10 @@ function openTab(tabName, event) {
 
 
     var tabElement = event.currentTarget;
-    console.log(tabElement)
-    console.log("I am")
+    // console.log(tabElement)
+    // console.log("I am")
     if (tabElement) {
-        console.log("Current Tabe")
+        // console.log("Current Tabe")
         tabElement.className += " active";
     } else {
         console.log("Tab element not found: " + tabName);
@@ -76,7 +76,7 @@ $('document').ready(function(){
         document.getElementById('user').classList.add('addedclass');
     }
     
-    console.log(openedTab);
+    // console.log(openedTab);
 });
 document.addEventListener('DOMContentLoaded', function() {
     var lastOpenedTab = localStorage.getItem('lastOpenedTab');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (tabElement) {
         openTab(lastOpenedTab, new Event('click'));
     } else {
-        console.log("Saved tab not found. Opening default tab.");
+        // console.log("Saved tab not found. Opening default tab.");
         document.getElementById('defaultOpen').click();
     }
 });
@@ -97,7 +97,7 @@ window.addEventListener('load', function() {
     if (tabElement) {
         openTab(lastOpenedTab, new Event('click'));
     } else {
-        console.log("Saved tab not found. Opening default tab.");
+        // console.log("Saved tab not found. Opening default tab.");
         document.getElementById('defaultOpen').click();
     }
 });
@@ -128,7 +128,7 @@ $(document).ready(function () {
             url: "/",
             data: { address: addressValue },
             success: function (response) {
-                console.log('Response:', response);
+                // console.log('Response:', response);
                 renderAddressData(response);
                 document.getElementById('exception-controls').style.display = 'block';
                 // document.getElementById('address-input').value = null;
@@ -137,7 +137,7 @@ $(document).ready(function () {
                 $('#result-box').fadeIn('fast');
             },
             error: function (error) {
-                console.error('Error:', error);
+                // console.error('Error:', error);
                 $('#result-box').fadeIn('fast');
             }
         });
@@ -152,7 +152,7 @@ $(document).ready(function () {
         } else {
             if (exceptionBtnClicked) {
                 $('#exception-checkbox').css('border-color', 'red');
-                console.log("Color higlighted!")
+                // console.log("Color higlighted!")
             } else {
                 $('#exception-checkbox').css('border-color', '');
             }
@@ -178,7 +178,7 @@ $(document).ready(function () {
                 url: "/forceException",
                 data: { address: unsatisfied_address },
                 success: function (response) {
-                    console.log("Response:", response);
+                    // console.log("Response:", response);
                     isExceptionForced = true;
                     alert("Forced Exception is Created! \n Exception Dictionary is sent to the Database!");
                     $('#exception-checkbox').prop('checked', false);
@@ -211,7 +211,7 @@ $(document).ready(function () {
 
         if (data && data.result && data.result.Output && data.result.Parsed_By) {
             var addressComponents = data.result.Output;
-            console.log("Data: ", data);
+            // console.log("Data: ", data);
             var parsedBy = data.result.Parsed_By;
             $('#parsed-by-info').text('Address Parsed By : ' + parsedBy);
             addressComponents.forEach(function (array, index) {
@@ -233,7 +233,7 @@ $(document).ready(function () {
             $('#resultTable').show();
             $('#resultTable thead').show();
         } else {
-            console.error('Data structure issue: Output is undefined.');
+            // console.error('Data structure issue: Output is undefined.');
             $('#resultTable').hide();
             $('#resultTable thead').hide();
         }
@@ -292,7 +292,7 @@ $('#BatchForm').submit(function (event) {
         success: function (response) {
         
                 // This code is called when the AJAX request completes successfully
-            console.log('File uploaded!');
+            // console.log('File uploaded!');
             $('#progressBar').val(50); // Make sure the progress bar shows 100% at the end
             $('#progressBarText').text('100%'); // Update the text to 100% when upload completes
             // Further actions based on response
@@ -305,7 +305,7 @@ $('#BatchForm').submit(function (event) {
         },
         error: function (error) {
             // This code is called if the AJAX request fails
-            console.log('Upload error:', error);
+            // console.log('Upload error:', error);
             document.getElementById('spinner').style.display = 'none';
             alert("Error during file upload");
         }
@@ -325,7 +325,7 @@ function pollForMetrics(statusCheckUrl, downloadUrl) {
                         document.getElementById('spinner').style.display = 'none';
                 var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
                 $('#metrics-display').html(formattedText).show();
-                console.log(downloadUrl)
+                // console.log(downloadUrl)
                 triggerDownload(downloadUrl);
             } else {
                 setTimeout(function() { pollForMetrics(statusCheckUrl, downloadUrl); }, 3000); // Poll every 3 seconds
@@ -333,7 +333,7 @@ function pollForMetrics(statusCheckUrl, downloadUrl) {
         },
         error: function(error) {
         document.getElementById('spinner').style.display = 'none';
-            console.log('Error:', error);
+            // console.log('Error:', error);
             // alert("Error fetching metrics");
         }
     });
@@ -422,7 +422,7 @@ function updateUserDropdown() {
 function updateTimestampDropdown() {
     const run = document.getElementById('run-dropdown').value;
     const user = document.getElementById('user-dropdown').value;
-    console.log("admin: ", user);
+    // console.log("admin: ", user);
     fetch('/get_timestamps/' + run + '/' + user)
         .then(response => response.json())
         .then(data => {
@@ -463,7 +463,7 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
             timestamp: timestamp
         }),
         success: function(response) {
-            console.log('Success:', response);
+            // console.log('Success:', response);
             loadFile(response.data); // Call loadFile() on success
         },
         error: function(error) {
@@ -507,7 +507,7 @@ function loadFile(received_data) {
         showNext(); // Start processing data if it's the first file
 
     } catch (error) {
-        console.error("Parsing error:", error);
+        // console.error("Parsing error:", error);
         exitFunction();
         alert("Invalid JSON data. Please provide a valid JSON file.", error.message);
     }
@@ -515,11 +515,11 @@ function loadFile(received_data) {
 }
 
 function showNext() {
-    console.log("ShowNext Data.length Received: ", data.length)
+    // console.log("ShowNext Data.length Received: ", data.length)
     if (currentKeyIndex < data.length) {
         const currentData = data[currentKeyIndex];
         const keys = Object.keys(currentData);
-        console.log("Keys : ",keys)
+        // console.log("Keys : ",keys)
         const filenameElement = document.getElementById("filename");
         filenameElement.value = document.getElementById('timestamp-dropdown').value;
         document.getElementById("recordId").value = currentData["Record ID"];
@@ -571,8 +571,8 @@ function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
 }
 
 function handleNextDictionary(index) {
-    console.log(index);
-    console.log("Initial Data Length Before removal: ", data.length)
+    // console.log(index);
+    // console.log("Initial Data Length Before removal: ", data.length)
     if (index >= 0 && index < data.length) {
         data.splice(index, 1); // Remove the processed dictionary
         // console.log("data splice: ",data.splice(index,1));
@@ -582,7 +582,7 @@ function handleNextDictionary(index) {
         if (index < data.length) {
             dicIndex++;
             showNext();
-            console.log("data length for show next :",data.length);
+            // console.log("data length for show next :",data.length);
             // Do not automatically call showNext here. It will be called after user actions.
         } else {
             alert("All Dictionaries Processed");
@@ -593,7 +593,7 @@ function handleNextDictionary(index) {
 
 function populateDropdowns(otherData, otherDataKey, options) {
     const tableBody = document.getElementById("table-body");
-    console.log("populateDropdowns called with data", otherData);
+    // console.log("populateDropdowns called with data", otherData);
     
     if (otherDataKey) {
         otherData.forEach(function (item) {
@@ -639,7 +639,7 @@ function populateDropdowns(otherData, otherDataKey, options) {
     } else {
         alert("No third object found in the current data.");
     }
-    console.log("Finished populating table");
+    // console.log("Finished populating table");
 }
 
 function exitFunction() {
@@ -674,7 +674,7 @@ function findThirdObjectKey(data) {
 
 function collectData() {
     // Example: Collect data from input fields
-    console.log("collectData called");
+    // console.log("collectData called");
     const record_Id = document.getElementById("recordId").value;
     const timestamp = document.getElementById('timestamp-dropdown').value;
     const input_Value = document.getElementById("inputValue").value;
@@ -691,15 +691,15 @@ function collectData() {
     const mappingData = [];
     const tbody = document.getElementById("table-body");
     if (!tbody) {
-        console.error("Tbody element with ID 'table-body' not found.");
+        // console.error("Tbody element with ID 'table-body' not found.");
         return; // Exit the function if the tbody isn't found
     }
     const rows = tbody.getElementsByTagName("tr");
-    console.log("Rows: ", rows);
+    // console.log("Rows: ", rows);
     const dicData = {};
     for (let i = 0; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName("td");
-        console.log(`Row ${i} cells:`, cells);
+        // console.log(`Row ${i} cells:`, cells);
         if (cells.length < 3) {
             console.error(`Row ${i} is missing one or more cells.`);
             continue;
@@ -714,7 +714,7 @@ function collectData() {
         dicData[i+1] = rowData["Address Component"]
         mappingData.push(rowData);
     }
-    console.log("Data collected", mappingData);
+    // console.log("Data collected", mappingData);
     result = {
         "Record Id": record_Id,
         "Timetamp": timestamp,
@@ -796,10 +796,10 @@ document.getElementById("submit&NextBtn").addEventListener("click", function () 
 //------------------------------------------------------------------------------------------------------------
 
 function submitButtonHandler(collectedData, index) {
-    console.log("Submit Button Index:", index);
+    // console.log("Submit Button Index:", index);
     const approved = document.getElementById("Approved?").value;
     const isDropdownsValid = validateDropdowns();
-    console.log("isDropdownsValid received: ", isDropdownsValid)
+    // console.log("isDropdownsValid received: ", isDropdownsValid)
     const commentValidation = document.getElementById("comment").value;
     document.getElementById("region").addEventListener('change',function(){
         document.getElementById("region").style.border="2px solid #2e4c8c";
@@ -821,7 +821,7 @@ function submitButtonHandler(collectedData, index) {
     if (approved === "Yes") {
         if (isDropdownsValid === true) {
 
-            console.log("Is Dropdown Valid: Yes : ", isDropdownsValid);
+            // console.log("Is Dropdown Valid: Yes : ", isDropdownsValid);
             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
         } else {
             if (document.getElementById("region").value === ""){
@@ -884,25 +884,25 @@ function validateDropdowns() {
     function isDropdownValid(id) {
         const element = document.getElementById(id);
         const isValid = element.value !== "" && element.value !== "Not Selected";
-        console.log(`Dropdown ${id}: Value = ${element.value}, IsValid = ${isValid}`);
+        // console.log(`Dropdown ${id}: Value = ${element.value}, IsValid = ${isValid}`);
         // document.getElementById("id").style.border="4px solid #FF1F1F";
         let isValidComponents = true;
         const dropdowns = document.querySelectorAll("select[name='value']");
-        console.log(dropdowns);
+        // console.log(dropdowns);
         
         for (let i = 0; i < dropdowns.length; i++) {
-            console.log("asdasfafda");
+            // console.log("asdasfafda");
             if (dropdowns[i].value === "Not Selected") {
                 dropdowns[i].style.border="3px solid #FF1F1F";
-                console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
+                // console.log(`Address Component Dropdown ${i}: Value = Not Selected`);
                 isValidComponents = false;
             }
             dropdowns[i].addEventListener('change',function(){
                dropdowns[i].style.border = "2px solid #2e4c8c"; 
             })
-            console.log("isValidComponents :", isValidComponents)
+            // console.log("isValidComponents :", isValidComponents)
         }
-        console.log("isValid : ", isValid)
+        // console.log("isValid : ", isValid)
         return isValid && isValidComponents;
     }
 
@@ -947,14 +947,14 @@ function checkForExistingMask(mask, data, index) {
 
 
 function sendDataToServer(data, index) {
-    console.log("Send Data Server Index: ",index);
+    // console.log("Send Data Server Index: ",index);
     $.ajax({
         type: "POST",
         url: "/MapCreationForm-Data",
         contentType: "application/json",
         data: JSON.stringify(data),
         success: function (response) {
-            console.log("Success:", response);
+            // console.log("Success:", response);
             if (data["Address Approved?"] === "Yes") {
                 alert("Mapping Created and sent to Knowledgebase");
             }
@@ -1012,7 +1012,7 @@ function fetchComponentData() {
         type: "POST",
         url: "/UserDefinedComponents",
         success: function (response) {
-            console.log('Response:', response);
+            // console.log('Response:', response);
             populateComponentsTable(response.result);
         },
         error: function (error) {
@@ -1085,7 +1085,7 @@ function saveNewRow(button) {
             url: "/add_new_component",
             data: { newComponent: newComponent, newDescription: newDescription },
             success: function (response) {
-                console.log('New record added:', response);
+                // console.log('New record added:', response);
                 location.reload();
                 // Remove the new row upon successful addition
                 newRow.remove();
@@ -1112,7 +1112,7 @@ function cancelAddRow(button) {
 
 var oldComponent, oldDescription;
 function editRow(button, event) {
-    console.log('Edit button clicked');
+    // console.log('Edit button clicked');
 
     var row = $(button).closest("tr");
     var cells = row.find("td:not(.actions)");
@@ -1129,8 +1129,8 @@ function editRow(button, event) {
     oldDescription = row.find('td:eq(1)').data('old-value');
 
     // Log values to console for debugging
-    console.log('oldComponent:', oldComponent);
-    console.log('oldDescription:', oldDescription);
+    // console.log('oldComponent:', oldComponent);
+    // console.log('oldDescription:', oldDescription);
 
     var actionsCell = row.find('.actions');
     actionsCell.html('<button class="save-btn" onclick="saveRow(this,event)">Save</button>' +
@@ -1201,7 +1201,7 @@ function saveRow(button) {
 }
 
 function saveChangesToServer(payload) {
-    console.log('Data sent to server:', payload);
+    // console.log('Data sent to server:', payload);
     $.ajax({
         type: "POST",
         url: "/save_changes",
@@ -1209,8 +1209,8 @@ function saveChangesToServer(payload) {
         data: JSON.stringify({ components: payload }), // Wrap payload in an object
         success: function (response) {
             location.reload();// reload when the save button is clicked
-            console.log('Response:', response);
-            console.log(response.message);
+            // console.log('Response:', response);
+            // console.log(response.message);
             // Handle success
         },
         error: function (error) {
@@ -1247,7 +1247,7 @@ function deleteRow(button, event) {
                         url: "/delete_record",
                         data: { component: component }, // Send the component to be deleted
                         success: function (response) {
-                            console.log('Record deleted:', response);
+                            // console.log('Record deleted:', response);
                             row.remove(); // Remove the row from the table upon successful deletion
                             location.reload();
                         },
@@ -1352,7 +1352,7 @@ function loadUserData() {
         url: '/authentication',  // Adjust the URL as per your route
         type: 'GET',
         success: function(response) {
-            console.log("Response:", response)
+            // console.log("Response:", response)
             // Assuming 'response' contains the HTML with the user table
             populateUserTable(response.users, response.roles);
             $('#create_user').off('click').on('click', function(event) {
@@ -1406,7 +1406,7 @@ $('#utresultBody').on('click', 'td', function(event) {
 function editUser(userId) {
 
     var row = $('#user-row-' + userId);
-    console.log("editUser called for user ID:", userId, "Caller:", editUser.caller);
+    // console.log("editUser called for user ID:", userId, "Caller:", editUser.caller);
     // Avoid re-initializing edit mode if it's already active
     if (row.find('.save1-btn').length > 0) {
         return;
@@ -1418,7 +1418,7 @@ function editUser(userId) {
         statusValues: []
     };
 
-    console.log("Original Vlaues Initially: ",originalValues)
+    // console.log("Original Vlaues Initially: ",originalValues)
 
     row.find('td:not(:last-child)').each(function(index, td) {
         var cell = $(td);
@@ -1448,7 +1448,7 @@ function editUser(userId) {
         }
     });
     row.data('original-values', originalValues);
-    console.log("Edit User Original Data:", originalValues);
+    // console.log("Edit User Original Data:", originalValues);
     
     // Replace Action Buttons
     var actionCell = row.find('td:last');
@@ -1463,7 +1463,7 @@ var email = document.querySelectorAll('#utresultBody tr td')
 function cancelEditUser(userId) {
     var row = $('#user-row-' + userId);
     var originalValues = row.data('original-values');
-    console.log("Cancel Edit User Original Data:", originalValues)
+    // console.log("Cancel Edit User Original Data:", originalValues)
 
     // Revert the text input fields to original values
     row.find('td:not(:nth-child(5)):not(:nth-child(6))').each(function(index, td) {
@@ -1472,7 +1472,7 @@ function cancelEditUser(userId) {
 
     // Revert the role dropdown
     var roleSelect = row.find('select');
-    console.log("Role Value:", originalValues.roleValue)
+    // console.log("Role Value:", originalValues.roleValue)
     roleSelect.val(originalValues.roleValue);
 
     // Revert the status checkboxes
@@ -1502,8 +1502,8 @@ function saveEditedUser(userId) {
     // var userId = row.data('user-id');
     // var userId = row.attr('data-user-id');
     
-    console.log("Row element:", row);
-    console.log("User ID found:", userId);
+    // console.log("Row element:", row);
+    // console.log("User ID found:", userId);
     if (!userId) {
         console.error('User ID not found.',row.data());
         return;
@@ -1537,16 +1537,14 @@ function saveEditedUser(userId) {
                     cell.text(value);
                 }
             }
-        } else {
-            console.log('No input or select found in cell:', cell);
-        }
+        } 
     });
     row.find('input, select').prop('disabled', true);
 
-    console.log("Edited Row Data:", SendData);
+    // console.log("Edited Row Data:", SendData);
 
-    console.log("Sending Data to Server:", SendData);
-    console.log("URL: '/save_User/' + userId", '/save_User/' + userId);
+    // console.log("Sending Data to Server:", SendData);
+    // console.log("URL: '/save_User/' + userId", '/save_User/' + userId);
 
     // AJAX call to save data
     $.ajax({
@@ -1556,8 +1554,9 @@ function saveEditedUser(userId) {
         contentType: 'application/json',
         data: JSON.stringify(SendData),
         success: function(response) {
-            console.log("User saved:", response);
+            // console.log("User saved:", response);
             loadUserData();
+            location.reload();
         },
         error: function(error) {
             console.error("Error saving user data:", error);
@@ -1573,7 +1572,7 @@ function saveEditedUser(userId) {
 
 function addUser(users,roles) {
     var roleDropdownHtml = '<select>';
-    console.log("Roles:",roles)
+    // console.log("Roles:",roles)
     roles.forEach(function(role) {
         roleDropdownHtml += '<option value="' + role + '">' + role + '</option>';
     });
@@ -1629,7 +1628,7 @@ function saveNewUser(button) {
         // "Status": newRow.find('td input[type="checkbox"]').is(':checked') ? "Active" : "Inactive" // Status Checkbox
     };
 
-    console.log("Sending Data to Server:", SendData);
+    // console.log("Sending Data to Server:", SendData);
 
     // AJAX call to send data to the server
     $.ajax({
@@ -1638,7 +1637,7 @@ function saveNewUser(button) {
         contentType: 'application/json',
         data: JSON.stringify(SendData),
         success: function(response) {
-            console.log("User saved:", response);
+            // console.log("User saved:", response);
             // Add any success handling logic here
             newRow.remove(); // Remove the new user row after saving
             loadUserData();
@@ -1664,12 +1663,12 @@ function deleteUser(userId) {
     // var row = $(button).closest("tr");
     var row = $('#user-row-' + userId);
     // var userId = row.find('td:first').text();
-    console.log("User ID found:", userId);
+    // console.log("User ID found:", userId);
     if (!userId) {
         console.error('User ID not found.',row.data());
         return;
     }
-    console.log("URL: '/delete_User/' + userId", '/delete_User/' + userId);
+    // console.log("URL: '/delete_User/' + userId", '/delete_User/' + userId);
     var confirmationMessage = "Are you sure you want to delete this user?";
     var confirmation = window.confirm(confirmationMessage);
     if (confirmation) {
@@ -1681,7 +1680,7 @@ function deleteUser(userId) {
             contentType: 'application/json',
             data: {userId:userId},
             success: function(response) {
-                console.log('Record deleted:', response);
+                // console.log('Record deleted:', response);
                 row.remove();
                 loadUserData();
                 location.reload();

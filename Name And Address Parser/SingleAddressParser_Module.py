@@ -15,7 +15,6 @@ import json
 # import re
 import os.path
 import Rulebased as rulebased
-from tkinter import messagebox
 import PreprocessingNameAddress as PreProc
 from DB_Operations import DB_Operations
 
@@ -40,12 +39,12 @@ def throwException(originalInput,initials):
     PackAddress=PreProc.PreProcessingNameAddress().AddresssCleaning(originalInput)
     component_dict = {}
     component_dict = db_operations.get_components()
-    print("\n Component Dict: ", component_dict)
+    # print("\n Component Dict: ", component_dict)
     # AddressList = re.split("\s|\s,\s ", Address)
     AddressList = PackAddress[0]
     AddressList= [item for item in AddressList if item]# != ","]
     rules=rulebased.RuleBasedAddressParser.AddressParser(AddressList)
-    print("Rules: ",rules)
+    # print("Rules: ",rules)
     for m in rules:
         component = m[1]
         if component not in component_dict.keys():
@@ -178,7 +177,7 @@ def Address_Parser(line,initials,originalInput):
             for i in v:
                 dict_found[i]=k
         nest_list=[]
-        print(dict_found)
+        # print(dict_found)
         mask=Mask_1.replace(",","")
         for i in range(0,len(FirstPhaseList)):
             token=""
@@ -187,7 +186,7 @@ def Address_Parser(line,initials,originalInput):
                 # print(dict_found[i+1])
                 component_description = component_dict[dict_found[i+1]]
             uiMappings.append([token,dict_found[i+1],mask[i],component_description])
-        print("UiMappings: ",uiMappings)
+        # print("UiMappings: ",uiMappings)
         
         for K2,V2 in sorted_Found.items():
             Temp=""
@@ -251,7 +250,7 @@ def Address_Parser(line,initials,originalInput):
         Result["Output"]=rules
         for m in Result["Output"]:
             component = m[1]
-            print("Component: ",component)
+            # print("Component: ",component)
             # component_description = db_operations.get_component_description(component)
             # print("description : ",component_description)
             if component not in component_dict.keys():
@@ -259,7 +258,7 @@ def Address_Parser(line,initials,originalInput):
                 m.append("Not Selected")
             else:
                 m.append(component_dict[component])
-        print(Result["Output"])
+        # print(Result["Output"])
         # messagebox.showwarning("Exception!",f"Exception is Created for the Address\n\n{originalInput}\n\nOutput Derived from Rulebased Learning")
 
         

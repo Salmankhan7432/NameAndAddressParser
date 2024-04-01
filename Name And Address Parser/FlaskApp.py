@@ -6,7 +6,6 @@ Created on Thu Nov 23 18:22:53 2023
 """
 from flask_socketio import SocketIO, emit
 import time  # Used for simulating processing time
-from collections import defaultdict
 from flask import Flask, request, render_template, jsonify, send_file, session, send_from_directory
 from functools import wraps
 from sqlalchemy import create_engine, func
@@ -37,16 +36,29 @@ from flask_socketio import SocketIO, emit
 import logging
 import bcrypt
 import base64
+from flask_session import Session as sess
+from datetime import timedelta
 
 logging.basicConfig(level=logging.DEBUG)
 
 current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
-engine = create_engine('sqlite:///KnowledgeBase_Test.db')
-engine2 = create_engine('sqlite:///KnowledgeBase_Test.db', echo=True)
+app.config['SESSION_TYPE'] = 'filesystem'  # Can be 'redis', 'memcached', etc.
+sess(app)
+ 
+app.permanent_session_lifetime = timedelta(days=7)
+engine = create_engine('sqlite:///KnowledgeBase.db')
+engine2 = create_engine('sqlite:///KnowledgeBase.db', echo=True)
 Session = sessionmaker(bind=engine)
 DBSession = sessionmaker(bind=engine2)
-app.config['SECRET_KEY'] = 'secret!'
+original_secret_key = 'Parser_secret!'
+
+# Hash the original secret key using SHA256
+hashed_secret_key = hashlib.sha256(original_secret_key.encode()).hexdigest()
+
+# Assign the hashed value to secret_key
+secret_key = hashed_secret_key
+app.config['SECRET_KEY'] = hashed_secret_key
 app.config['MAX_CONTENT_LENGTH'] = 256 * 1024 * 1024  # for 256MB max- file size
 
 socketio = SocketIO(app)
@@ -147,11 +159,11 @@ def SingleLineAddressParser():
             if convert[4]:
                 result = convert[0]
                 result['Parsed_By'] = 'Rule Based'
-                print("result: ", result)
+                # print("result: ", result)
             else:
                 result = convert[0]
                 result['Parsed_By'] = 'Active Learning'
-                print("result: ", result)
+                # print("result: ", result)
             return jsonify(result=result)
     except:
         return jsonify('index.html', result=result, form=form)
@@ -177,9 +189,9 @@ def forceException():
         mapdata["Mask"] = next((key for key, value in rules.items() if isinstance(value, list)), None)
         # print(mask)
         excdata["data"] = rules[mapdata["Mask"]]
-        print("excdata: ", excdata)
+        # print("excdata: ", excdata)
 
-        print(mapdata)
+        # print(mapdata)
         CRUD.add_mapCreation(engine,mapdata, excdata)
 
 
@@ -220,7 +232,7 @@ def process_file_in_background(file, filename):
 @app.route('/Batch_Parser', methods=["GET", "POST"])
 def BatchParser():
     form = BatchUploadForm()
-    print("Processing starsted: ", flush=True)
+    # print("Processing starsted: ", flush=True)
     
     if form.validate_on_submit():
         global task_results
@@ -287,7 +299,7 @@ def get_users(run):
 def get_timestamps(run, user):
     session = Session()
     timestamps = session.query(ExceptionTable.Timestamp).filter_by(Run=run, UserName=user).distinct().all()
-    print(timestamps)
+    # print(timestamps)
     return jsonify([timestamp[0] for timestamp in timestamps])
 
 @app.route('/process_dropdown_data', methods=['POST'])
@@ -320,7 +332,7 @@ def process_dropdown_data():
         ExceptionTable.Component_index
     ).all()
     # print(exception_dict)
-    print(process_query_data(exception_dict))
+    # print(process_query_data(exception_dict))
     data = process_query_data(exception_dict)
 
 
@@ -367,11 +379,11 @@ def get_address_components():
         session = Session()
         components = session.query(ComponentTable.description).all()
         options = [component[0] for component in components]
-        print(options)
+        # print(options)
         session.close()
         return jsonify(options)
     except Exception as e:
-        print(f"Error occurred: {e}")
+        # print(f"Error occurred: {e}")
         return jsonify({'error': str(e)}), 500
 
 @app.route('/check-mask-existence', methods=['POST'])
@@ -390,20 +402,13 @@ def MapCreationForm():
     # engine = create_engine(database_url)
     result={}
     mapdata = request.get_json()
-    print("\nReceived Map Data:",mapdata)
-    # print("mapdata: ", mapdata)
     username = session["user_id"]
-    print("User: ",username)
     Address_ID = mapdata["Record Id"]
-    print("Address ID", Address_ID)
     timestamp = mapdata['Timetamp']
-    print("Timestamp: ", timestamp)
     keys = list(mapdata.keys())
     Vdbs = {k: mapdata[k] for k in keys[:10]}
     Vdbs["Approved By"] = username + " at " + str(current_time)
     Kbs = {k: mapdata[k] for k in keys[10:]}
-    print("\n\nValidation Data Base: ",Vdbs)
-    print("\n\nKnowledge Base: ",Kbs)
     exception_record = db_session.query(ExceptionTable).filter_by(UserName=username, Address_ID=Address_ID, Timestamp=timestamp).first()
 
 
@@ -421,7 +426,7 @@ def MapCreationForm():
             db_session.commit()
     if Vdbs["Address Approved?"] == "Yes":
         CRUD.add_data(engine,Kbs)
-        print("Approved: Yes")
+       
         with open("Validation_DB.txt", 'r+') as file:
             try:
                 existing_data = json.load(file)
@@ -432,10 +437,10 @@ def MapCreationForm():
             json.dump(existing_data, file, indent=4)
             file.truncate()
     else:
-        print("Approved: No")
+       
         Vdbs["Rejected By"] = Vdbs["Approved By"]
         del Vdbs["Approved By"]
-        print(Vdbs)
+       
         with open("ADDR_Rejection_DB.txt", "r+") as file:
             try:
                 existing_data = json.load(file)
@@ -453,7 +458,7 @@ def MapCreationForm():
 @app.route('/UserDefinedComponents', methods=["GET","POST"])
 def UD_Components():
     result= {}
-    database_url = 'sqlite:///KnowledgeBase_Test.db'
+    database_url = 'sqlite:///KnowledgeBase.db'
     Database_schema = CRUD(database_url)
     if request.method == "POST":
         component_data = Database_schema.get_Component_data()
@@ -462,7 +467,7 @@ def UD_Components():
                 component = row.component
                 Component_description = row.description
             result[component] = Component_description
-        print(result)
+       
         return jsonify(result=result)
     elif request.method == "GET":
         # Handle GET request (if needed)
@@ -475,9 +480,9 @@ def add_new_component():
     try:
         if request.method == "POST":
             new_component = request.form.get('newComponent')  # Get the new component from the form data
-            print("New Component: ",new_component)
+            # print("New Component: ",new_component)
             new_description = request.form.get('newDescription')  # Get the new description from the form data
-            print("New Description: ",new_description)
+            # print("New Description: ",new_description)
             session = Session()
     
             try:
@@ -492,7 +497,7 @@ def add_new_component():
             except Exception as e:
                 session.rollback()
                 session.close()
-                print("Error occurred:", str(e))
+                # print("Error occurred:", str(e))
                 return jsonify(result={'error': f'Error: {str(e)}'})
         return jsonify(result={'success': True, 'message': 'New component added successfully'})
     except Exception as e:
@@ -504,11 +509,11 @@ def add_new_component():
 def Edit_Components():
     if request.method == 'POST':
         received_data = request.json['components']  # Get combined old and modified data
-        print("Received data on server:", received_data)
+        # print("Received data on server:", received_data)
         
         session = Session()
         try:
-            print("Received data:", received_data)
+            # print("Received data:", received_data)
             # Process and update Component Table using SQLAlchemy ORM
             for component_data in received_data:
                 # Identify the old component
@@ -543,7 +548,7 @@ def Edit_Components():
         except Exception as e:
             session.rollback()
             session.close()
-            print("Error occurred:", str(e))
+            # print("Error occurred:", str(e))
             return jsonify({'message': f'Error: {str(e)}'})
 
 @app.route("/get_mask_count", methods=["GET"])
@@ -552,7 +557,7 @@ def get_mask_count():
     if request.method == "GET":
         component = request.args.get('component')  # Get the component from the query parameters
         session = Session()
-        print('Component about to be deleted', component)
+        # print('Component about to be deleted', component)
 
         try:
             # Query the count of associated masks
@@ -566,12 +571,12 @@ def get_mask_count():
                 total_masks += masks
 
             result['maskCount'] = total_masks
-            print(result)
+            # print(result)
             session.close()
 
         except Exception as e:
             session.close()
-            print("Error occurred:", str(e))
+            # print("Error occurred:", str(e))
             return jsonify(result={'error': f'Error: {str(e)}'})
 
     return jsonify(result=result)
@@ -585,13 +590,13 @@ def delete_component():
         return jsonify(result={'message': 'User not logged in'}), 401
 
     username = session["user_id"]
-    print("User deleting the record:", username)
+    # print("User deleting the record:", username)
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     
     if request.method == "POST":
         component = request.form['component']  # Get the component to be deleted
-        print("Component to delete",component)
+        # print("Component to delete",component)
         db_session = Session()
         dictionaries_deleted = {}
         try:
@@ -633,7 +638,7 @@ def delete_component():
             db_session.commit()
 
             # Now 'dictionaries_deleted' contains all the dictionaries associated with the deleted component
-            print("Dictionaries Deleted:", dictionaries_deleted)
+            # print("Dictionaries Deleted:", dictionaries_deleted)
             
             num_masks_deleted = len(mask_entries_to_delete)
             log_entry = f"\n{component} | {component_desc} | {username} | {timestamp} | Total dictionaries deleted w.r.t [{component}] component deletion : {num_masks_deleted}"
@@ -669,7 +674,7 @@ def delete_component():
         except Exception as e:
             db_session.rollback()
             db_session.close()
-            print("Error occurred:", str(e))
+            # print("Error occurred:", str(e))
             return jsonify(result={'message': f'Error: {str(e)}'})
 
 @app.route('/download/logs')
@@ -706,11 +711,11 @@ def authentication_page():
             } for user in users
         ]
         role_data = [role.RoleName for role in roles]
-        print("role_data : ", role_data)
-        print("user_data : ", user_data)
+        # print("role_data : ", role_data)
+        # print("user_data : ", user_data)
         return jsonify({'users': user_data, 'roles': role_data})
     except Exception as e:
-        print("Error: ", e)
+        # print("Error: ", e)
         return jsonify({'users': [], 'roles': []})
     finally:
         session.close()
@@ -728,12 +733,12 @@ def CRUDUser():
 @app.route('/save_User/<int:user_id>', methods=['POST'])
 def edit_user(user_id):
     session = DBSession()
-    print("User ID", user_id)
+    # print("User ID", user_id)
     try:
         user = session.query(User).get(user_id)  # Find the user by ID
-        print("Users: ", user)
+        # print("Users: ", user)
         UserDetails = request.get_json()
-        print("\n\nUserDetails: ", UserDetails, "\n\n")
+        # print("\n\nUserDetails: ", UserDetails, "\n\n")
 
         if user:
             # Update user details
@@ -757,9 +762,9 @@ def create_user():
     session = DBSession()
     try:
         UserDetails = request.get_json()
-        print("create_user Details: ", UserDetails)
+        # print("create_user Details: ", UserDetails)
         user = session.query(User).get(UserDetails["UserName"])  # Find the user by ID
-        print("user: ",user)
+        # print("user: ",user)
         # Create a new user instance
         new_user = User()
         new_user.FullName = UserDetails.get('FullName')
@@ -771,7 +776,7 @@ def create_user():
 
         new_user.Role = UserDetails.get('Role_id')
         # new_user.Status = UserDetails.get('Status')
-        print("New User Ready to Add: ",new_user)
+        # print("New User Ready to Add: ",new_user)
         # Add the new user to the session and commit
         session.add(new_user)
         session.commit()

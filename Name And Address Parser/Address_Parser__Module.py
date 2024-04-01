@@ -84,10 +84,10 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     data={}
     data = db_operations.get_data_for_all()
 
-    print("KwoledgeBase Data: ", data)
+    # print("KwoledgeBase Data: ", data)
     component_dict = {}
     component_dict = db_operations.get_components()
-    print("\n Component Dict: ", component_dict)
+    # print("\n Component Dict: ", component_dict)
 
     # with open('JSONMappingDefault.json', 'r+', encoding='utf8') as f:
     #     data = json.load(f)
@@ -551,9 +551,9 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             mapdata["Mask"] = next((key for key, value in rules.items() if isinstance(value, list)), None)
             # print(mask)
             excdata["data"] = rules[mapdata["Mask"]]
-            print("excdata: ", excdata)
+            # print("excdata: ", excdata)
 
-            print(mapdata)
+            # print(mapdata)
             DB_Operations.add_mapCreation(db_operations,mapdata, excdata)
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 

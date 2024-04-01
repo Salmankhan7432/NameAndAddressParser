@@ -43,7 +43,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
-# app.config['SESSION_TYPE'] = 'filesystem'  # Can be 'redis', 'memcached', etc.
+app.config['SESSION_TYPE'] = 'filesystem'  # Can be 'redis', 'memcached', etc.
 sess(app)
  
 app.permanent_session_lifetime = timedelta(days=7)
@@ -258,8 +258,8 @@ def check_status(filename):
         with open("temp_file.json", "r", encoding="utf8") as file:
         # Load the JSON content from the file into a Python dictionary
             task_results = json.load(file)
-        if "result" in task_results[filename] and task_results[filename]["result"] is not None:
-            return jsonify(result=task_results[filename]["result"], metrics=task_results[filename]["metrics"])
+        if "result" in task_results[filename] and task_results[filename]["result"] and filename in task_results is not None:
+            return jsonify(result=task_results[filename]["result"], metrics=task_results[filename]["metrics"], output_file_path = task_results[filename]["output_file_path"])
         else:
             return jsonify(status="Still processing"), 202
     except:
@@ -281,6 +281,25 @@ def download_file(filename):
             return jsonify({'error': 'File not found'}), 404
     else:
         return jsonify({'error': 'Result not ready or file not found'}), 404
+
+@app.route('/removefile', methods=['POST'])
+def remove_file():
+    try:
+        data = request.json  # More idiomatic way to handle JSON data
+        output_file_path = data.get('output_file_path')
+        print("Output Path", output_file_path)
+
+        full_path = os.path.join(app.root_path, output_file_path)  # Adjust if necessary
+
+        if os.path.exists(full_path):
+            os.remove(full_path)
+            return jsonify({'status': 'success', 'message': 'File removed successfully'})
+        else:
+            return jsonify({'status': 'error', 'message': 'File not found'}), 404
+
+    except Exception as e:
+        print(f"Error occurred: {e}")  # Log the actual error message
+        return jsonify({'status': 'error', 'message': 'An internal error occurred'}), 500
 
 
 @app.route('/get_runs')

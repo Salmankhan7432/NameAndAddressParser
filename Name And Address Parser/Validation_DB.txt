@@ -1,1 +1,154 @@
-[]
+[
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-01 14:28:09.022985",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "Comment",
+        "User": "committee1",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "committee1 at 2024-04-01 14:22:12.536001"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-01 14:26:03.132622",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "general",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "committee1 at 2024-04-01 14:22:12.536001"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-01 17:27:47.892215",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "highay contract address",
+        "Address Approved?": "Yes",
+        "Comment": "n",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-01 17:05:32.561523"
+    }
+]

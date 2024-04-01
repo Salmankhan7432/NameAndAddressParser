@@ -478,8 +478,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
 
         # Write the contents to the byte streams
         detailed_report_stream.write(Detailed_Report.encode('utf-8'))
-        active_learning_stream.write(json.dumps(Result, indent=4, ensure_ascii=False).encode('utf-8'))
-        rule_based_output_stream.write(json.dumps(RuleBasedOutput, indent=4, ensure_ascii=False).encode('utf-8'))
+        active_learning_stream.write(json.dumps(Result, ensure_ascii=False).encode('utf-8'))
+        rule_based_output_stream.write(json.dumps(RuleBasedOutput, ensure_ascii=False).encode('utf-8'))
         # exception_stream.write(json.dumps(ExceptionList, indent=4, ensure_ascii=False).encode('utf-8'))
         # print("File banri ruko!")
         # Make sure to seek to the start of each stream after writing
@@ -554,7 +554,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             # print("excdata: ", excdata)
 
             # print(mapdata)
-            DB_Operations.add_mapCreation(db_operations,mapdata, excdata)
+        DB_Operations.add_mapCreation(db_operations,mapdata, excdata)
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)

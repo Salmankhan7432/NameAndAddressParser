@@ -11,53 +11,55 @@ function openTab(tabName, event) {
         tabLinks[i].className = tabLinks[i].className.replace(" active", ""); // Remove "active" class from all tabs
     }
 
-
-    var tabElement = event.currentTarget;
-    // console.log(tabElement)
-    // console.log("I am")
+    var tabElement = document.getElementById(tabName);
     if (tabElement) {
-        // console.log("Current Tabe")
-        tabElement.className += " active";
+        tabElement.style.display = "block"; // Show the content of the clicked tab
+        tabElement.className += " active"; // Add "active" class to the clicked tab
     } else {
-        console.log("Tab element not found: " + tabName);
+        // console.log("Tab element not found: " + tabName);
         // Optionally, open a default tab here if the desired tab doesn't exist
         // document.getElementById('defaultOpen').click();
     }
 
-    var li= document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
+    if (event.currentTarget) {
+        event.currentTarget.className += " active"; // Add "active" class to the clicked tab
+    } else {
+        // console.log("Current target element not found.");
+    }
 
-li.className += " active";
-     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
     localStorage.setItem('lastOpenedTab', tabName);
-    // $("lastOpenedTab").click();
 }
+
 $('document').ready(function(){
     var openedTab = localStorage.getItem("lastOpenedTab");
-
+    console.log('Opened Tab: ', openedTab)
     
     if(openedTab =='SingleLine'){
 
+        document.getElementById('defaultOpen').classList.add('addedclass');
         document.getElementById('BF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
         document.getElementById('user').classList.remove('addedclass');
         document.getElementById('MCF').classList.remove('addedclass');
-        document.getElementById('defaultOpen').classList.add('addedclass');
+        return;
     }
     else if (openedTab=='Batch')
     {
+        document.getElementById('BF').classList.add('addedclass');
         document.getElementById('defaultOpen').classList.remove('addedclass');
         document.getElementById('MCF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
         document.getElementById('user').classList.remove('addedclass');
-        document.getElementById('BF').classList.add('addedclass');
+        return;
     }
     else if (openedTab=='MapCreationForm')
     {
+        document.getElementById('MCF').classList.add('addedclass');
         document.getElementById('defaultOpen').classList.remove('addedclass');
         document.getElementById('BF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
         document.getElementById('user').classList.remove('addedclass');
-        document.getElementById('MCF').classList.add('addedclass');
+        return;
     }
     else if (openedTab=='UDComponents')
     {
@@ -66,6 +68,7 @@ $('document').ready(function(){
         document.getElementById('MCF').classList.remove('addedclass');
         document.getElementById('user').classList.remove('addedclass');
         document.getElementById('userdfc').classList.add('addedclass');
+        return;
     }
     else if (openedTab=='Authentication')
     {
@@ -74,6 +77,7 @@ $('document').ready(function(){
         document.getElementById('MCF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
         document.getElementById('user').classList.add('addedclass');
+        return;
     }
     
     // console.log(openedTab);
@@ -295,7 +299,7 @@ $(document).ready(function () {
                 $('#progressBarText').text('100%'); // Update the text to 100% when upload completes
                 // Further actions based on response
                 if (response.status_check_url) {
-                console.log(response.status_check_url)
+                // console.log(response.status_check_url)
                 document.getElementById('spinner').style.display = 'block';
                 
                     setTimeout(function() { pollForMetrics(response.status_check_url, response.download_url); }, 500);
@@ -320,32 +324,60 @@ function pollForMetrics(statusCheckUrl, downloadUrl) {
         success: function(response) {
         
             if (response.metrics) {
-                        document.getElementById('spinner').style.display = 'none';
+                // document.getElementById('spinner').style.display = 'none';
                 var formattedText = response.metrics.metrics.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                
                 $('#metrics-display').html(formattedText).show();
+                
                 // console.log(downloadUrl)
-                triggerDownload(downloadUrl);
+                triggerDownload(downloadUrl,response.output_file_path);
             } else {
                 setTimeout(function() { pollForMetrics(statusCheckUrl, downloadUrl); }, 3000); // Poll every 3 seconds
             }
         },
         error: function(error) {
-        document.getElementById('spinner').style.display = 'none';
+        // document.getElementById('spinner').style.display = 'none';
             // console.log('Error:', error);
             // alert("Error fetching metrics");
         }
     });
 }
 
-function triggerDownload(downloadUrl) {
+function triggerDownload(downloadUrl, removeURL) {
     var tempLink = document.createElement('a');
     tempLink.href = downloadUrl;
     tempLink.download = 'output.zip'; // Or the appropriate filename
     document.body.appendChild(tempLink);
     tempLink.click();
     document.body.removeChild(tempLink);
+
+    // Set a delay before calling removeFile
+    setTimeout(function() {
+        removeFile(removeURL);
+    }, 3000); // Delay in milliseconds (e.g., 10000ms = 10 seconds)
 }
 
+
+
+function removeFile(output_file_path){
+    // console.log("output_file_path", output_file_path);
+    $.ajax({
+        url: "/removefile",
+        type: 'POST',
+        contentType: 'application/json',  // Set the content type to application/json
+        data: JSON.stringify({output_file_path: output_file_path}),
+        success: function(response) {
+            document.getElementById('spinner').style.display = 'none';
+            // console.log(response)
+            // location.reload();
+        },
+        error: function(error) {
+            document.getElementById('spinner').style.display = 'none';
+            console.error('Error:', error); // Log the error for debugging
+            alert("Error removing the file");
+        }
+    });
+}
 
 
 

@@ -53,7 +53,7 @@ class DB_Operations:
                 # print(result_dict)
                 return result_dict
             else:
-                print('{mask} not found in MaskTable')
+                pass
         finally:
             session.close()
 
@@ -291,17 +291,17 @@ class DB_Operations:
         try:
             Session = sessionmaker(bind=self.engine)
             session = Session()
-            print(data)
+            # print(data)
             mapdata = MapCreationTable(Address_Input=data["Address Input"],Mask=data["Mask"])
             session.add(mapdata)
 
             session.commit()
-            print(mapdata.ID)
+            # print(mapdata.ID)
             j =1
             for i in excdata["data"]:
                 exc_data = ExceptionTable(UserName =excdata["Username"], Timestamp =excdata["Timestamp"], Run =excdata["Run"], Address_ID =excdata["Record ID"], Component =i[1], Token =i[0], Mask_Token = i[2], Component_index = j, MapCreation_Index =mapdata.ID)
                 j+=1
-                print(exc_data)
+                # print(exc_data)
                 session.add(exc_data)
                 session.commit()
         finally:

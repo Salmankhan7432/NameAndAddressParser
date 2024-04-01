@@ -537,7 +537,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
         
         # Progress.stop()
 
-        print(zip_file_name)
+        # print(zip_file_name)
         # timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
         for i in ExceptionList:
             mapdata = {}

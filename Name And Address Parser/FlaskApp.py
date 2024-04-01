@@ -706,8 +706,8 @@ def authentication_page():
             } for user in users
         ]
         role_data = [role.RoleName for role in roles]
-        print("role_data", role_data)
-        print("user_data", user_data)
+        print("role_data : ", role_data)
+        print("user_data : ", user_data)
         return jsonify({'users': user_data, 'roles': role_data})
     except Exception as e:
         print("Error: ", e)

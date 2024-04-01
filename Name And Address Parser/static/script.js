@@ -10,8 +10,13 @@ function openTab(tabName, event) {
     for (i = 0; i < tabLinks.length; i++) {
         tabLinks[i].className = tabLinks[i].className.replace(" active", ""); // Remove "active" class from all tabs
     }
+
+
     var tabElement = event.currentTarget;
+    console.log(tabElement)
+    console.log("I am")
     if (tabElement) {
+        console.log("Current Tabe")
         tabElement.className += " active";
     } else {
         console.log("Tab element not found: " + tabName);
@@ -19,16 +24,58 @@ function openTab(tabName, event) {
         // document.getElementById('defaultOpen').click();
     }
 
-    document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
-    // event.currentTarget.className += "active"; // Add "active" class to the clicked tab
+    var li= document.getElementById(tabName).style.display = "block"; // Show the content of the clicked tab
+
+li.className += " active";
+     event.currentTarget.className += " active"; // Add "active" class to the clicked tab
     localStorage.setItem('lastOpenedTab', tabName);
     // $("lastOpenedTab").click();
 }
 $('document').ready(function(){
     var openedTab = localStorage.getItem("lastOpenedTab");
+
+    
     if(openedTab =='SingleLine'){
+
+        document.getElementById('BF').classList.remove('addedclass');
+        document.getElementById('userdfc').classList.remove('addedclass');
+        document.getElementById('user').classList.remove('addedclass');
+        document.getElementById('MCF').classList.remove('addedclass');
         document.getElementById('defaultOpen').classList.add('addedclass');
     }
+    else if (openedTab=='Batch')
+    {
+        document.getElementById('defaultOpen').classList.remove('addedclass');
+        document.getElementById('MCF').classList.remove('addedclass');
+        document.getElementById('userdfc').classList.remove('addedclass');
+        document.getElementById('user').classList.remove('addedclass');
+        document.getElementById('BF').classList.add('addedclass');
+    }
+    else if (openedTab=='MapCreationForm')
+    {
+        document.getElementById('defaultOpen').classList.remove('addedclass');
+        document.getElementById('BF').classList.remove('addedclass');
+        document.getElementById('userdfc').classList.remove('addedclass');
+        document.getElementById('user').classList.remove('addedclass');
+        document.getElementById('MCF').classList.add('addedclass');
+    }
+    else if (openedTab=='UDComponents')
+    {
+        document.getElementById('defaultOpen').classList.remove('addedclass');
+        document.getElementById('BF').classList.remove('addedclass');
+        document.getElementById('MCF').classList.remove('addedclass');
+        document.getElementById('user').classList.remove('addedclass');
+        document.getElementById('userdfc').classList.add('addedclass');
+    }
+    else if (openedTab=='Authentication')
+    {
+        document.getElementById('defaultOpen').classList.remove('addedclass');
+        document.getElementById('BF').classList.remove('addedclass');
+        document.getElementById('MCF').classList.remove('addedclass');
+        document.getElementById('userdfc').classList.remove('addedclass');
+        document.getElementById('user').classList.add('addedclass');
+    }
+    
     console.log(openedTab);
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,6 +105,11 @@ window.addEventListener('load', function() {
 //------------------------------------------------------------------------------------------------------------
 //                                 Single Line Address Parser Tab Functionality
 //------------------------------------------------------------------------------------------------------------
+$('#defaultOpen').click(function(){
+    location.reload(true);
+    document.getElementById("defaultOpen").value = ' active';
+});
+
 
 $(document).ready(function () {
     
@@ -192,6 +244,10 @@ $(document).ready(function () {
 //                     Batch Parser Tab Functionality
 //------------------------------------------------------------------------------------------------------------
 
+$('#BF').click(function(){
+    location.reload(true);
+    document.getElementById("BF").value = ' active';
+});
 
 
 
@@ -965,8 +1021,11 @@ function fetchComponentData() {
     });
 }
 $('#userdfc').click(function(){
+    location.reload();
     $('#fetchall').click();
     $('#fetchall').hide();
+    document.getElementById("BF").value = ' active';
+
     // location.reload(true);
 });
 
@@ -1283,6 +1342,10 @@ $(document).on('click', '.cancel-btn', function (event) {
 //                                  Authentication Tab
 // ----------------------------------------------------------------------------------------------------------------
 // This function could be triggered when the Authentication Tab is opened
+$('#user').click(function(){
+    location.reload(true);
+    document.getElementById("user").value = ' active';
+});
 let originalValues = {}
 function loadUserData() {
     $.ajax({
@@ -1302,6 +1365,9 @@ function loadUserData() {
         }
     });
 }
+
+
+
 $('document').ready(function(){
     loadUserData();
     $("#loadUserData").hide();
@@ -1435,6 +1501,7 @@ function saveEditedUser(userId) {
     // var row = $(button).closest("tr");
     // var userId = row.data('user-id');
     // var userId = row.attr('data-user-id');
+    
     console.log("Row element:", row);
     console.log("User ID found:", userId);
     if (!userId) {

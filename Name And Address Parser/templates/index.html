@@ -74,7 +74,7 @@
 
 <body>
 
-    <div class="navbar" style="display: flex;">
+    <div class="navbar" style="display: flex;" >
         <img style="width: 10%; filter: invert(100%);" src="../static/logo.svg" alt="" class="logo">
         <div style="text-align: left; padding-bottom: 10px;" class="tabdiv">
             <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">Single Line</a>
@@ -84,7 +84,7 @@
         </div>
         {% if session.role == 'Admin' or session.role == 'Committee Member' %}
         <div style="text-align: left;" class="tabdiv">
-            <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
+            <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)"   >Map Creation Form</a>
         </div>
         {% endif %}
         {% if session.role == 'Admin'%}

@@ -5,6 +5,13 @@ Created on Sat Nov 11 20:27:31 2023
 @author: Salman Khan
 """
 
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.exc import IntegrityError
+import json
+from ORM import MaskTable, ComponentTable, MappingJSON, User, UserRole, ExceptionTable, MapCreationTable
+# from LoginORM import UserRole, User
 import re
 import io
 from tqdm import tqdm
@@ -539,6 +546,15 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
 
         # print(zip_file_name)
         # timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        
+        Session = sessionmaker(create_engine('sqlite:///KnowledgeBase.db'))
+        sessions = Session()
+        # print(data)
+        
+        # print(mapdata.ID)
+
+    
+        
         for i in ExceptionList:
             mapdata = {}
             excdata = {}
@@ -552,9 +568,20 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             # print(mask)
             excdata["data"] = rules[mapdata["Mask"]]
             # print("excdata: ", excdata)
+            mapdata = MapCreationTable(Address_Input=mapdata["Address Input"],Mask=mapdata["Mask"])
+            sessions.add(mapdata)
 
+            # sessions.commit()
             # print(mapdata)
-        DB_Operations.add_mapCreation(db_operations,mapdata, excdata)
+            
+            
+            j =1
+            for i in excdata["data"]:
+                exc_data = ExceptionTable(UserName =excdata["Username"], Timestamp =excdata["Timestamp"], Run =excdata["Run"], Address_ID =excdata["Record ID"], Component =i[1], Token =i[0], Mask_Token = i[2], Component_index = j, MapCreation_Index =mapdata.ID)
+                j+=1
+                # print(exc_data)
+                sessions.add(exc_data)
+        sessions.commit()
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)

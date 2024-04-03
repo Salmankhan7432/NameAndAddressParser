@@ -468,5 +468,49 @@
             }
         ],
         "Approved By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "8",
+        "Timetamp": "2024-04-03 03:59:04.508220",
+        "Input": "5678 Pine Street Stockton California 95202",
+        "Mask Pattern": "NFFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5678",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "STOCKTON",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "CALIFORNIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "95202",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-03 03:56:43.020792"
     }
 ]

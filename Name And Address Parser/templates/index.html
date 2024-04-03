@@ -74,7 +74,7 @@
 
 <body>
 
-    <div class="navbar" style="display: flex;" >
+    <div class="navbar" style="display: flex;">
         <img style="width: 10%; filter: invert(100%);" src="../static/logo.svg" alt="" class="logo">
         {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %}
         <div style="text-align: left; padding-bottom: 10px;" class="tabdiv">
@@ -88,7 +88,7 @@
         {% endif %}
         {% if session.role == 'Admin' or session.role == 'Committee Member' %}
         <div style="text-align: left;" class="tabdiv">
-            <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)"   >Map Creation Form</a>
+            <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
         </div>
         {% endif %}
         {% if session.role == 'Admin'%}
@@ -101,64 +101,59 @@
             <a href="#" class="tablink" id="user" onclick="openTab('Authentication',event)">Authentication</a>
         </div>
         {% endif %}
-
-
         <div style="text-align: right;" class="tabdiv">
             <form action="\logout" method="POST" onclick="localStorage.clear()">
-                <button type="submit" name="logout" id="logout"
-                    style="background-color: transparent;position: fixed; top: 25px;right: 20px; margin-top: -6px;"><i
+                <button type="submit" name="logout" id="logout" style="background-color: transparent;"><i
                         class='bx bx-power-off' style="font-size: 30px; color: white;" id="imglogout"></i></button>
             </form>
         </div>
     </div>
 
 
-    <!-- Content for SingleLine Address Parser -->
-    <div id="SingleLine" class="tabcontent singleLineTab-container">
-
-        <div class="container">
-            <form id="myForm" action="/" method="POST">
-                <!--<div class="input-group"><label for="file-upload">Please Choose a Pipe Delimited File</label><input type="file" id="file-upload" name="file-upload"></div>-->
-                <div class="input-group" style="display: inline-flex;">
-                    <label for="address-input">Enter Address</label>
-                    <input type="text" id="address-input" name="address" placeholder="1234 Main St"
-                        autocomplete="address">
-                    <button type="submit" id="submit-btn">Submit</button>
-                </div>
-                <center>
-                    <div id="exception-controls" style="display:none;">
-                        <label for="exception-checkbox">
-                            <input type="checkbox" id="exception-checkbox" name="ForceException"
-                                style="margin-left: 300px;"> Not Satisfied?
-                        </label>
-                        <button type="button" id="exception-btn" disabled>Force Exception</button>
+        <!-- Content for SingleLine Address Parser -->
+        <div id="SingleLine" class="tabcontent singleLineTab-container">
+            <div class="container">
+                <form id="myForm" action="/" method="POST">
+                    <!--<div class="input-group"><label for="file-upload">Please Choose a Pipe Delimited File</label><input type="file" id="file-upload" name="file-upload"></div>-->
+                    <div class="input-group">
+                        <label for="address-input">Enter Address</label>
+                        <input type="text" id="address-input" name="address" placeholder="1234 Main St"
+                            autocomplete="address">
+                        <button type="submit" id="submit-btn">Submit</button>
                     </div>
-                    <div id="parsed-by-info" style="margin-top: 10px; margin-bottom: 10px;">
-                        <!-- "Address Parsed By -> " info will be inserted here -->
-                    </div>
-                </center>
-        </div>
-        <center>
-            <div class="result-box" id="result-box">
-                <div id="parsedbyar"></div>
-                <table id="resultTable" class="table" style="display: none;">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Token</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Component</th>
-                            <th scope="col">Component Description</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultBody">
-                        <!-- Table rows will be populated dynamically here -->
-                    </tbody>
-                </table>
+                        <div id="exception-controls" style="display:none;">
+                            <label for="exception-checkbox">
+                                <input type="checkbox" id="exception-checkbox" name="ForceException"
+                                    style="margin-left: 300px;"> Not Satisfied?
+                            </label>
+                            <button type="button" id="exception-btn" disabled>Force Exception</button>
+                        </div>
+                        <div id="parsed-by-info" style="margin-top: 10px; margin-bottom: 10px;">
+                            <!-- "Address Parsed By -> " info will be inserted here -->
+                        </div>
+                </form>
             </div>
-        </center>
-
-        </form>
-    </div>
+            <center>
+                <div class="result-box" id="result-box">
+                    <div id="parsedbyar"></div>
+                    <table id="resultTable" class="table" style="display: none;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Token</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Component</th>
+                                <th scope="col">Component Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultBody">
+                            <!-- Table rows will be populated dynamically here -->
+                        </tbody>
+                    </table>
+                </div>
+            </center>
+    
+            </form>
+        </div>
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
@@ -234,6 +229,9 @@
                 <!-- Options will be dynamically loaded -->
             </select>
             <button id="loadFileBtn">Fetch</button>
+            <div id="spinners" class="spinner-border" role="status" style="display: none;">
+                <span class="sr-only"></span>
+            </div>
         </div>
         <div class="map-container" id="mapdata" style="grid-template-columns: 1fr 1fr;" hidden>
             <div class="leftContainer" style="width: 90%; height: 100vh; padding: 20px;">
@@ -366,6 +364,14 @@
 
     <div id="UDComponents" class="tabcontent userDefinedComponentsTab-container">
         <div class="container">
+            <div id="downloadContainer" class="download-container">
+                <div class="downloadcontainer">
+                    <div class="download-section">
+                        <span class="download-label">Logs :</span><br>
+                        <button onclick="downloadLogs()" id="downloadButton">Download</button>
+                    </div>
+                </div>
+            </div>
 
             <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
             <div class="udresult-box" id="udresult-box">
@@ -388,14 +394,6 @@
                 <button onclick="addComponent()">Add</button>
             </div>
             <!-- </form> -->
-        </div>
-        <div id="downloadContainer" class="download-container">
-            <div class="container">
-                <div class="download-section">
-                    <span class="download-label">Logs :</span>
-                    <button onclick="downloadLogs()" id="downloadButton">Download</button>
-                </div>
-            </div>
         </div>
     </div>
 

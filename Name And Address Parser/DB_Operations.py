@@ -200,6 +200,7 @@ class DB_Operations:
     def authenticate_user(self,username, password):
         Session = sessionmaker(bind=self.engine)
         session = Session()
+
         user = session.query(User).filter_by(username=username).first()
         if user and user.password == password:  # You should use hash comparison here for security!
             return user
@@ -311,7 +312,8 @@ class DB_Operations:
                 print("All changes committed.")
 
             finally:
-                session.close()
+                if session is not None:
+                    session.close()
     def Delete_records(self, component):
         try:
             Session = sessionmaker(bind=self.engine)

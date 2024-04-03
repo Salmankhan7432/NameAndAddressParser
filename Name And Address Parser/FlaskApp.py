@@ -2,7 +2,7 @@
 """
 Created on Thu Nov 23 18:22:53 2023
 
-@author: skhan2
+@author: Salman Khan
 """
 from flask_socketio import SocketIO, emit
 import time  # Used for simulating processing time
@@ -45,13 +45,17 @@ current_time = datetime.now()
 app = Flask(__name__, template_folder='templates')
 app.config['SESSION_TYPE'] = 'filesystem'  # Can be 'redis', 'memcached', etc.
 sess(app)
- 
+
+
+
 app.permanent_session_lifetime = timedelta(days=7)
-engine = create_engine('sqlite:///KnowledgeBase.db')
-engine2 = create_engine('sqlite:///KnowledgeBase.db', echo=True)
+engine = create_engine('sqlite:///KnowledgeBase.db',echo=True)
+# engine2 = create_engine('sqlite:///KnowledgeBase.db', echo=True)
 Session = sessionmaker(bind=engine)
-DBSession = sessionmaker(bind=engine2)
+# DBSession = sessionmaker(bind=engine2)
 original_secret_key = 'Parser_secret!'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///KnowledgeBase.db?check_same_thread=False'
 
 # Hash the original secret key using SHA256
 hashed_secret_key = hashlib.sha256(original_secret_key.encode()).hexdigest()
@@ -61,7 +65,7 @@ secret_key = hashed_secret_key
 app.config['SECRET_KEY'] = hashed_secret_key
 app.config['MAX_CONTENT_LENGTH'] = 256 * 1024 * 1024  # for 256MB max- file size
 
-socketio = SocketIO(app)
+# socketio = SocketIO(app)
 CORS(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -90,7 +94,7 @@ def hash_password(password):
 def login(): 
     form = LoginForm()  # Ensure this matches the name of your form class
     if form.validate_on_submit():
-            sessions = DBSession()
+            sessions = Session()
             username = request.form['username']
             password = request.form['password']  
             user = sessions.query(User).filter_by(UserName=username).first()
@@ -318,42 +322,58 @@ def get_users(run):
 def get_timestamps(run, user):
     session = Session()
     timestamps = session.query(ExceptionTable.Timestamp).filter_by(Run=run, UserName=user).distinct().all()
-    # print(timestamps)
+    print(timestamps)
     return jsonify([timestamp[0] for timestamp in timestamps])
 
 @app.route('/process_dropdown_data', methods=['POST'])
 def process_dropdown_data():
     session = Session()
+    print(session)
     data = request.json
     run = data.get('run')
     user = data.get('user')
     timestamp = data.get('timestamp')
-    
-    exception_dict = session.query(
-        ExceptionTable.Address_ID,
-        MapCreationTable.Address_Input,
-        MapCreationTable.Mask,
-        ExceptionTable.Component,
-        ExceptionTable.Mask_Token,
-        ExceptionTable.Token,
-        ExceptionTable.Component_index,
-        ComponentTable.description
-    ).join(
-        MapCreationTable, ExceptionTable.MapCreation_Index == MapCreationTable.ID
-    ).join(ComponentTable,
-        ExceptionTable.Component == ComponentTable.component
+    print(f"Run: {run}\nuser: {user}\ntimestamp: {timestamp}")
+
+    print("/Prcess Data called:")
+    # Extract Address_ID values from the first query results
+    Ids = session.query(ExceptionTable.Address_ID
         ).filter(
-        ExceptionTable.Run == run, 
-        ExceptionTable.UserName == user, 
-        ExceptionTable.Timestamp == timestamp
-    ).order_by(
-        ExceptionTable.Address_ID,
-        ExceptionTable.Component_index
-    ).all()
-    # print(exception_dict)
+            ExceptionTable.Run == run, 
+            ExceptionTable.UserName == user, 
+            ExceptionTable.Timestamp == timestamp
+        ).distinct(ExceptionTable.Address_ID).limit(50).all()
+
+    address_id_list = [id_tuple[0] for id_tuple in Ids]  # Unpack tuples to get Address_ID values
+
+    # Use the list of Address_ID values in the second query's filter
+    exception_dict = session.query(
+            ExceptionTable.Address_ID,
+            MapCreationTable.Address_Input,
+            MapCreationTable.Mask,
+            ExceptionTable.Component,
+            ExceptionTable.Mask_Token,
+            ExceptionTable.Token,
+            ExceptionTable.Component_index,
+            ComponentTable.description
+        ).join(
+            MapCreationTable, ExceptionTable.MapCreation_Index == MapCreationTable.ID
+        ).join(ComponentTable,
+            ExceptionTable.Component == ComponentTable.component
+        ).filter(
+            ExceptionTable.Run == run, 
+            ExceptionTable.UserName == user, 
+            ExceptionTable.Timestamp == timestamp,
+            ExceptionTable.Address_ID.in_(address_id_list)  # Add this line
+        ).order_by(
+            ExceptionTable.Address_ID,
+            ExceptionTable.Component_index
+        ).all()
+
+    print(exception_dict)
     # print(process_query_data(exception_dict))
     data = process_query_data(exception_dict)
-
+    print("Process Data Query :", data)
 
     return jsonify({"status": "success", "message": "Data processed","data" : data})
 
@@ -363,7 +383,7 @@ def process_query_data(query_data):
     current_dict = {}
     dynamic_key_list = None
     dynamic_key = None
-
+    print("process_query_data received : ", query_data)
     for record in query_data:
         record_id, input_address, mask, component, mask_token, token, _, description = record
 
@@ -388,7 +408,7 @@ def process_query_data(query_data):
     if current_dict:
         current_dict[dynamic_key] = dynamic_key_list
         processed.append(current_dict)
-
+    print("Data to send: ",processed)
     return processed
 
 
@@ -707,7 +727,7 @@ def download_logs():
 @app.route('/authentication')
 @requires_role('Admin')
 def authentication_page():
-    session = DBSession()
+    session = Session()
     try:
         users = session.query(User).filter(User.Role != "Admin").all()
         # print("Fetched Users: ", users)
@@ -742,7 +762,7 @@ def authentication_page():
 @app.route('/CRUDUser', methods=["GET", "POST"])
 @requires_role('Admin')
 def CRUDUser():
-    sessions = DBSession() 
+    sessions = Session() 
     users = sessions.query(User).all()
     sessions.close()
     # print(users)
@@ -751,7 +771,7 @@ def CRUDUser():
 
 @app.route('/save_User/<int:user_id>', methods=['POST'])
 def edit_user(user_id):
-    session = DBSession()
+    session = Session()
     # print("User ID", user_id)
     try:
         user = session.query(User).get(user_id)  # Find the user by ID
@@ -778,7 +798,7 @@ def edit_user(user_id):
 
 @app.route('/create_user', methods=['POST'])
 def create_user():
-    session = DBSession()
+    session = Session()
     try:
         UserDetails = request.get_json()
         # print("create_user Details: ", UserDetails)
@@ -809,7 +829,7 @@ def create_user():
 
 @app.route('/delete_User/<int:user_id>', methods=['POST'])
 def delete_user(user_id):
-    session = DBSession()
+    session = Session()
     try:
         user = session.query(User).get(user_id)  # Find the user by ID
         if user:
@@ -827,5 +847,5 @@ def delete_user(user_id):
     
 if __name__ == '__main__':
     
-    app.run(port=8080, debug=True)
+    app.run(port=5000, debug=True)
 

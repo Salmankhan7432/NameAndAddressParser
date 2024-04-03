@@ -98,6 +98,14 @@
         background-color: #ffffff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    .downloadcontainer {
+        padding: 20px;
+        max-width: 800px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
 
     /* Style for the form input groups */
     .input-group {
@@ -227,20 +235,9 @@
     }
 
     .download-container {
-        position: absolute;
-        top: 85px;
-        /* Align with the top of the page content */
-        right: 0;
-        /* Align to the right side of the page content */
+        width: 200px;
         background-color: transparent;
-        /* Match your color scheme */
-        /* border: 1px solid #ccc; Consistent with your design */
         border-radius: 5px;
-        /* Match your design's border radius */
-        /* padding: 10px; */
-        /* box-shadow: 0 2px 5px rgba(123, 122, 122, 0.2); Optional: for shadow */
-        z-index: 10;
-        /* Ensure it is above other content */
     }
 
 
@@ -269,8 +266,6 @@
         background-color: #0056b3;
         /* Adjust for hover effect */
     }
-
-
 }
 
 html,

@@ -5,6 +5,13 @@ Created on Sat Nov 11 20:27:31 2023
 @author: Salman Khan
 """
 
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.exc import IntegrityError
+import json
+from ORM import MaskTable, ComponentTable, MappingJSON, User, UserRole, ExceptionTable, MapCreationTable
+# from LoginORM import UserRole, User
 import re
 import io
 from tqdm import tqdm
@@ -539,22 +546,44 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
 
         # print(zip_file_name)
         # timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        
+        Session = sessionmaker(create_engine('sqlite:///KnowledgeBase.db'))
+        sessions = Session()
+        mapdata_list = []
+        exc_data_list = []
         for i in ExceptionList:
-            mapdata = {}
-            excdata = {}
             rules = i
-            excdata["Timestamp"] = timestamp
-            mapdata["Address Input"] = rules["INPUT"]
-            excdata["Username"] = session["user_id"]
-            excdata["Run"] = "Multiple"
-            excdata["Record ID"] = rules["Record ID"]
-            mapdata["Mask"] = next((key for key, value in rules.items() if isinstance(value, list)), None)
-            # print(mask)
-            excdata["data"] = rules[mapdata["Mask"]]
-            # print("excdata: ", excdata)
-
-            # print(mapdata)
-        DB_Operations.add_mapCreation(db_operations,mapdata, excdata)
+            excdata = {
+                "Timestamp": timestamp,
+                "Username": session["user_id"],
+                "Run": "Multiple",
+                "Record ID": rules["Record ID"],
+                "data": rules[next((key for key, value in rules.items() if isinstance(value, list)), None)]
+            }
+            mapdata = MapCreationTable(Address_Input=rules["INPUT"], Mask=next((key for key, value in rules.items() if isinstance(value, list)), None))
+            mapdata_list.append(mapdata)
+            # Wait until the mapdata object is added to get the ID
+            sessions.add(mapdata)
+            sessions.flush()  # Required to generate the ID for mapdata before using it
+            j = 1
+            for data in excdata["data"]:
+                exc_data = ExceptionTable(
+                    UserName=excdata["Username"], 
+                    Timestamp=excdata["Timestamp"], 
+                    Run=excdata["Run"], 
+                    Address_ID=excdata["Record ID"], 
+                    Component=data[1], 
+                    Token=data[0], 
+                    Mask_Token=data[2], 
+                    Component_index=j, 
+                    MapCreation_Index=mapdata.ID
+                )
+                exc_data_list.append(exc_data)
+                j += 1
+        # Add all the records in a batch
+        sessions.add_all(mapdata_list + exc_data_list)
+        # Commit the transaction
+        sessions.commit()
         return (True,f"Detailed_Report of {file_name}.txt is Generated! \n\nThe {file_name}_Output.zip is downloaded, please check your download's directory. \n\n{Detailed_Report}", zip_file_name)
 
     # print("Final Correct Address Parsing Percentage",Count_of_Correct/Total_Count*100)

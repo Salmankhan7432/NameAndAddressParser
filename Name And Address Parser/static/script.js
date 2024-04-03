@@ -393,9 +393,9 @@ let dicIndex = 0;
 $('#MCF').click(function(){
     location.reload(true);
 
-    updateUserDropdown();
-    updateTimestampDropdown();
-    document.getElementById("MCF").value = ' active';
+    // updateUserDropdown();
+    // updateTimestampDropdown();
+    // document.getElementById("MCF").value = ' active';
 });
 
 // function reloadPageAndSetActive() {
@@ -479,10 +479,11 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
     //     alert("Please select a JSON file.");
     //     return; // Stop the function if no file is selected
     // }
+    document.getElementById('spinners').style.display = 'block';
     const run = document.getElementById('run-dropdown').value;
     const user = document.getElementById('user-dropdown').value;
     const timestamp = document.getElementById('timestamp-dropdown').value;
-
+    console.log("LoadFileBtn Clicked")
     $.ajax({
         url: '/process_dropdown_data', // Update this URL to your Flask endpoint
         type: 'POST',
@@ -494,7 +495,11 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
         }),
         success: function(response) {
             // console.log('Success:', response);
+            console.log("Response: ",response)
+            // document.getElementById('spinners').style.display = 'block';
             loadFile(response.data); // Call loadFile() on success
+            document.getElementById('spinners').style.display = 'none';
+
         },
         error: function(error) {
             console.error('Error:', error);
@@ -511,7 +516,7 @@ function loadFile(received_data) {
     initialDataLength = 0;
     dicIndex = 0;
     resetUIElements();
-    
+    console.log('Data Received in LoadFile() :',received_data)
     let container = document.getElementById("mapdata");
     if (container) {
         container.style.display = 'grid'; 

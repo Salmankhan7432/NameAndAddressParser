@@ -108,8 +108,9 @@
 
     /* Main content area */
     .container {
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         padding: 10px;
         margin: 30px auto;
@@ -120,10 +121,11 @@
 
     /* Style for the form input groups */
     .input-group {
-        margin-bottom: 20px;
-        margin-right: 10px;
+        display: inline-flex;
+        /* margin-bottom: 20px;
+        margin-right: 10px; */
         align-items: center;
-        /* width: 100%; */
+        width: 100%;
     }
 
     .input-group label {
@@ -131,10 +133,10 @@
         margin-bottom: 5px;
         color: #2e4c8c;
         font-weight: bolder;
-        font-size: 110%;
+        font-size: 16px;
         margin-right: 5px;
         width: 180px;
-        margin-left: 220px;
+        /* margin-left: 220px; */
     }
 
 
@@ -154,8 +156,9 @@
 
 
     #myform {
-        width: 200%;
+        width: 100%;
         text-align: center;
+        margin: 0 auto;
     }
 
     #address-input {
@@ -206,7 +209,7 @@
 
     #exception-controls {
         margin-top: 15px;
-        text-align: center;
+        /* text-align: center; */
         /* Centering the checkbox and button */
     }
     #parsed-by-info {
@@ -214,7 +217,7 @@
         justify-content: center; 
         align-items: center; 
         width: 100%; 
-        margin-left: 15%;
+        margin-left: 5%;
         text-align: center;
         color: #2b74b7;
         font-weight: bold;

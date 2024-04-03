@@ -132,8 +132,8 @@ class MapCreationTable(Base):
 # ]
 
 
-# # # # new_user = User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName)
-# session.add_all(new_roles)
+# # # # # new_user = User(FullName='Admin', UserName='admin', Email='admin@gmail.com', Password='123', Status='Active', Role=admin_role.RoleName)
+# # session.add_all(new_roles)
 # session.add_all(new_users)
 # session.commit()
 

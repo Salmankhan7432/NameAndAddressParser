@@ -16,42 +16,26 @@
     background-image: url(../image.png);
     background-size: cover;
     font-family: 'Times New Roman', Times, serif;
-    /* Light grey background */
-    border-bottom: 1px solid #e7e7e7;
-    /* Light grey border */
     padding: 10px 0;
-    /* Padding at top and bottom */
     position: fixed;
-    /* Fixed positioning */
     top: 0;
-    /* Align to the top */
     width: 100%;
-    /* Full width */
+    height: 65px;
     z-index: 1030;
-    /* High z-index to ensure it stays on top of other content */
-    /* margin-top: 10px; */
     padding: 15px;
+    display: flex;
 }
 
 .navbar a {
-    /* font-size: 50px; */
     top: 20%;
 }
 
 .tablink {
     color: #fff;
-    /* Bootstrap primary color for links */
-    /* padding: 80px 160px; */
-    /* Padding for each tab */
     text-decoration: none;
-    /* No underline */
     font-size: 18px;
-    /* max-width: 50px; */
-    /* Size of the font */
     font-weight: 600;
-    /* Make the font a bit bolder */
     transition: 0.2s ease-in;
-    /* Smooth transition for hover effects */
 }
 
 .tabdiv {
@@ -68,6 +52,11 @@
 .addedclass{
     color: #2e4c8c;
     text-decoration: underline;
+}
+.tabdiv:last-child {
+    margin-left: auto ;
+    padding-right: 25px;
+    margin-top: 10px;
 }
 
 /* Padding-top for the content to ensure it doesn't hide behind the fixed navbar */
@@ -497,7 +486,7 @@ button:hover {
 
 
     #loadFileBtn {
-        width: 100%;
+        /* width: 100%; */
         padding: 5px;
         /* Full width button on small screens */
     }

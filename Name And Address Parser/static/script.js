@@ -32,7 +32,7 @@ function openTab(tabName, event) {
 
 $('document').ready(function(){
     var openedTab = localStorage.getItem("lastOpenedTab");
-    console.log('Opened Tab: ', openedTab)
+    // console.log('Opened Tab: ', openedTab)
     
     if(openedTab =='SingleLine'){
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
                 success: function (response) {
                     // console.log("Response:", response);
                     isExceptionForced = true;
-                    alert("Forced Exception is Created! \n Exception Dictionary is sent to the Database!");
+                    alert("Forced Exception is Created! \nException Dictionary is sent to the Database!");
                     $('#exception-checkbox').prop('checked', false);
                     $('#exception-btn').prop('disabled', true);
 
@@ -389,6 +389,7 @@ let data = [];
 let currentKeyIndex = 0;
 let initialDataLength = 0;
 let dicIndex = 0;
+let total_dict;
 
 $('#MCF').click(function(){
     location.reload(true);
@@ -495,9 +496,15 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
         }),
         success: function(response) {
             // console.log('Success:', response);
-            console.log("Response: ",response)
+            console.log("Response: ", response);
+            total_dict = response.total_dict;
+            if (response.total_dict !== undefined) {
+                console.log("Total Dict: ", response.total_dict);
+                // You can now use response.total_dict as needed
+            }
+
             // document.getElementById('spinners').style.display = 'block';
-            loadFile(response.data); // Call loadFile() on success
+            loadFile(response.data,total_dict); // Call loadFile() on success
             document.getElementById('spinners').style.display = 'none';
 
         },
@@ -510,13 +517,14 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
 document.getElementById("clear&exitBtn").addEventListener("click", exitFunction);
 
 
-function loadFile(received_data) {
+function loadFile(received_data,total_dict) {
     data = [];
     currentKeyIndex = 0;
     initialDataLength = 0;
     dicIndex = 0;
     resetUIElements();
-    console.log('Data Received in LoadFile() :',received_data)
+    console.log('Data Received in LoadFile() :',received_data);
+    console.log("Total Dictionaries: ", total_dict);
     let container = document.getElementById("mapdata");
     if (container) {
         container.style.display = 'grid'; 
@@ -539,7 +547,7 @@ function loadFile(received_data) {
             document.getElementById("submitBtn").style.display = 'block';
         }
         currentKeyIndex = 0;
-        showNext(); // Start processing data if it's the first file
+        showNext(total_dict); // Start processing data if it's the first file
 
     } catch (error) {
         // console.error("Parsing error:", error);
@@ -549,8 +557,9 @@ function loadFile(received_data) {
 
 }
 
-function showNext() {
-    // console.log("ShowNext Data.length Received: ", data.length)
+function showNext(total_dict) {
+    console.log("ShowNext total_dict Received: ", total_dict)
+
     if (currentKeyIndex < data.length) {
         const currentData = data[currentKeyIndex];
         const keys = Object.keys(currentData);
@@ -565,7 +574,7 @@ function showNext() {
         const otherData = currentData[otherDataKey];
         const tableBody = document.getElementById("table-body");
         tableBody.innerHTML = "";
-        fetchOptionsAndPopulateDropdowns(otherData, otherDataKey);
+        fetchOptionsAndPopulateDropdowns(otherData, otherDataKey,total_dict);
         if (data.length > 1) {
             document.getElementById("submit&NextBtn").style.display = 'block';
             document.getElementById("submitBtn").style.display = 'none';
@@ -586,9 +595,13 @@ function showNext() {
 
 function updateDictionaryDisplay() {
     const totalDictionaries = initialDataLength;
+    const TotalDictionaries = total_dict;
     // const keyIndex = currentKeyIndex;
+    console.log("update Dictionaries total dict received: ",TotalDictionaries);
+    console.log("update Dictionaries total dict received: ",total_dict);
     const currentDictionaryIndex = totalDictionaries > 0 ? dicIndex + 1 : 0;
     document.getElementById("currentDictionaryDisplay").textContent = `${currentDictionaryIndex}/${totalDictionaries}`;
+    document.getElementById("totaldictionaryDisplay").textContent = `${TotalDictionaries}`;
 }
 
 function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
@@ -607,23 +620,31 @@ function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
 
 function handleNextDictionary(index) {
     // console.log(index);
+    console.log("HandleNext totaldict: ", total_dict);
     // console.log("Initial Data Length Before removal: ", data.length)
     if (index >= 0 && index < data.length) {
         data.splice(index, 1); // Remove the processed dictionary
         // console.log("data splice: ",data.splice(index,1));
         // Update the dictionary display
-        updateDictionaryDisplay();
+        updateDictionaryDisplay(total_dict);
 
         if (index < data.length) {
             dicIndex++;
-            showNext();
+            showNext(total_dict);
             // console.log("data length for show next :",data.length);
             // Do not automatically call showNext here. It will be called after user actions.
+        } 
+        else if (total_dict <= 50 && total_dict > 1) {
+            alert("All " + total_dict + " dictionaries processed!");
+            exitFunction();
+        } else if (total_dict > 50) {
+            alert("50 out of " + total_dict + " dictionaries processed!");
+            exitFunction();
         } else {
-            alert("All Dictionaries Processed");
+            alert("Successfully processed!");
             exitFunction();
         }
-    }
+    } 
 }
 
 function populateDropdowns(otherData, otherDataKey, options) {
@@ -782,53 +803,6 @@ document.getElementById("submit&NextBtn").addEventListener("click", function () 
     const data = collectData();
     submitButtonHandler(data, currentKeyIndex);
 });
-// -----------------------------------------------------------------------------------------
-// function submitButtonHandler(collectedData, index) {
-//     console.log("Submit Button Index:", index);
-//     const approved = document.getElementById("Approved?").value;
-//     const isDropdownsValid = validateDropdowns();
-//     const commentValidation = document.getElementById("comment").value;
-
-//     if (approved === "Yes") {
-
-//         if (isDropdownsValid) {
-//             checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
-//         } else {
-//             if (document.getElementById("region").value === ""){
-//                 return alert("Region is not selected")
-//             }
-//             else if (document.getElementById("AddressType").value === ""){
-//                 return alert("Address Type is not selected")
-//             }
-//             else if (document.getElementById("approvedby").value === ""){
-//                 return alert("Approved by is not selected")
-//             }
-//         }
-//     } else if (approved === "No") {
-        
-//         if (isDropdownsValid && commentValidation !== "") {
-//             sendDataToServer(collectedData, index);
-//             // checkForExistingMask(collectedData["Mask Pattern"], collectedData, index);
-//         } else {
-//             if (document.getElementById("region").value === ""){
-//                 return alert("Region is not selected")
-//             }
-//             else if (document.getElementById("AddressType").value === ""){
-//                 return alert("Address Type is not selected")
-//             }
-//             else if (document.getElementById("comment").value === ""){
-//                 return alert("Please provide the comment for the Rejection")
-//             }
-//             else if (document.getElementById("approvedby").value === ""){
-//                 return alert("Approved by is not selected")
-//             }
-//             // alert("Please fill in all required fields. \nNote: Comment field is mandatory if 'NO' is Selected.");
-//         }
-//     } else {
-//         alert("Please provide your choice to add or not in Knowledge Base.");
-//     }
-// }
-//------------------------------------------------------------------------------------------------------------
 
 function submitButtonHandler(collectedData, index) {
     // console.log("Submit Button Index:", index);

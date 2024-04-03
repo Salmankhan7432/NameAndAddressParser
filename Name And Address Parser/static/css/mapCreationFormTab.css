@@ -319,7 +319,9 @@
     background-color: #ffc107;
     border-color: #ffc107;
 }
-
+.spinner-border{
+    color: #2e4c8c;
+}
 .rightContainer label {
     /* margin-top: 5px; */
     margin: 5px;

@@ -8,7 +8,7 @@ from flask_socketio import SocketIO, emit
 import time  # Used for simulating processing time
 from flask import Flask, request, render_template, jsonify, send_file, session, send_from_directory, Response, stream_with_context
 from functools import wraps
-from sqlalchemy import create_engine, func
+from sqlalchemy import create_engine, func, distinct
 from sqlalchemy.orm import sessionmaker
 from flask import Flask, render_template, redirect, request, url_for, flash
 from werkzeug.utils import secure_filename, safe_join
@@ -328,7 +328,7 @@ def get_timestamps(run, user):
 @app.route('/process_dropdown_data', methods=['POST'])
 def process_dropdown_data():
     session = Session()
-    print(session)
+    # print(session)
     data = request.json
     run = data.get('run')
     user = data.get('user')
@@ -369,13 +369,19 @@ def process_dropdown_data():
             ExceptionTable.Address_ID,
             ExceptionTable.Component_index
         ).all()
-
-    print(exception_dict)
+    total_dict = session.query(
+        func.count(distinct(ExceptionTable.Address_ID))
+        ).filter(
+            ExceptionTable.Run == run, 
+            ExceptionTable.UserName == user, 
+            ExceptionTable.Timestamp == timestamp
+        ).scalar()
+    # print(exception_dict)
     # print(process_query_data(exception_dict))
     data = process_query_data(exception_dict)
-    print("Process Data Query :", data)
-
-    return jsonify({"status": "success", "message": "Data processed","data" : data})
+    # print("Process Data Query :", data)
+    print("Total Dictionaries: ",total_dict)
+    return jsonify({"status": "success", "message": "Data processed","data" : data, "total_dict":total_dict})
 
 def process_query_data(query_data):
     processed = []

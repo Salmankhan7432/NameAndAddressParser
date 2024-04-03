@@ -1,1 +1,4455 @@
-[]
+[
+    {
+        "Record Id": "49",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "21345",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "50",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "efrg",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "100",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "dsffe",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "149",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "wefefdwq",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "150",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "werfd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "199",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "sqdefwdsq",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "200",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "wqergtfdw",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "249",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "defgdsq",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "250",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "rfwedse",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "299",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "efrweq",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:27:45.652533"
+    },
+    {
+        "Record Id": "349",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "sdfs",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:34:26.636314"
+    },
+    {
+        "Record Id": "399",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "qwdd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:34:26.636314"
+    },
+    {
+        "Record Id": "400",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "dsffdss",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:34:26.636314"
+    },
+    {
+        "Record Id": "449",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "sdss",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:49:55.867878"
+    },
+    {
+        "Record Id": "450",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "Puerto Rico",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "as",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "499",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "sd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "500",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "sdafsd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "549",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "weqrfeds",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "550",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "efwregtewr",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "599",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "ewtrew",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "649",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "wertrfdw",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "650",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "wefrgrfd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "700",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "efdwsq",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "749",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "grfedws",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "750",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "fdwsa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "799",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "erfedwsq",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "800",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "gfewqsa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "850",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "efrewda",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "882",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "4325, Hidden Meadow Drive,CAMP HILL,Pennsylvania 17012",
+        "Mask Pattern": "N,WFF,FF,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "dewrewda",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "4325",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HIDDEN",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "MEADOW",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Secondary Address Number"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "CAMP",
+                "Address Component": "Military Rd Number"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "HILL",
+                "Address Component": "Box Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "PENNSYLVANIA",
+                "Address Component": "Secondary Address Number"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "17012",
+                "Address Component": "Secondary Address Name"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "892",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "2388, Kuhl, Avenue,Atlanta,Georgia 30303",
+        "Mask Pattern": "N,W,F,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "ewqqs",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "2388",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "KUHL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ATLANTA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "GEORGIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "30303",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "898",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "3434R3E2QW",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "899",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "RE2WQDW",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "900",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "ERGFWD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "908",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "2388, Kuhl, Avenue,Atlanta,Georgia 30303",
+        "Mask Pattern": "N,W,F,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "EWRGTFD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "2388",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "KUHL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ATLANTA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "GEORGIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "30303",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "914",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "ERGTRFDW",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "915",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "RTERW",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "916",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "ERWDE",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "924",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "2388, Kuhl, Avenue,Atlanta,Georgia 30303",
+        "Mask Pattern": "N,W,F,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "DSFDA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "2388",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "KUHL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ATLANTA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "GEORGIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "30303",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "930",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "DFEDWD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "931",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "GRFEDWA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "932",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "GEFWDSA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "940",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "2388, Kuhl, Avenue,Atlanta,Georgia 30303",
+        "Mask Pattern": "N,W,F,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "EFWDS",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "2388",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "KUHL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ATLANTA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "GEORGIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "30303",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "946",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "REWDSQ",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "947",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "EDWSA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "948",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "Puerto Rico",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "DWEFDW",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "956",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "2388, Kuhl, Avenue,Atlanta,Georgia 30303",
+        "Mask Pattern": "N,W,F,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "RFEDSA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "2388",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "KUHL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ATLANTA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "GEORGIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "30303",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "962",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "TGRFE",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "963",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "GRFEWDQS",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "964",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "RFEWDQWD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "972",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "2388, Kuhl, Avenue,Atlanta,Georgia 30303",
+        "Mask Pattern": "N,W,F,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "DVCDASD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "2388",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "KUHL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "AVENUE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ATLANTA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "GEORGIA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "30303",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "978",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "GRFEWDSQ",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "979",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "FEDWA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "980",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "FD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "994",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "A",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "995",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "EWFEDWQ",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "996",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "RFEWQWE",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "998",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1977 Laurel, Lee,Minneapolis,Minnesota 55415",
+        "Mask Pattern": "NW,W,W,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "43DWE",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1977",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LAUREL",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LEE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MINNEAPOLIS",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "MINNESOTA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "55415",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "999",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "EFREFWD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "1000",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins  Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "E453432",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "1049",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "EDWSQ",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "1099",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "GFDF",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 02:53:06.114687"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-03 03:28:11.303179",
+        "Input": "5506 A Street, Little Rock, AR 72205",
+        "Mask Pattern": "NWF,WW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "wsd",
+        "User": "admin",
+        "Mapping Data": [],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-03 03:29:48.009747",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "qwedfd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-03 03:31:05.365530",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "cdsa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-03 03:32:36.966706",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "Puerto Rico",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "desa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-03 03:35:19.977891",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "dsa",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "600",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "Puerto Rico",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "dfreds",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "699",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "efdw",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "849",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "edswd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1100",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "wedas",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1149",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "eds",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1150",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "fred",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1199",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "eqwdA",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1200",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "REDWSQ",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1249",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "REW",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1250",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "EE",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1299",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "JHGFC",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1300",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "HFGD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1349",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "XDX",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1350",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "YTDRXFD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1400",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "JYGFD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:27:56.335016"
+    },
+    {
+        "Record Id": "1399",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "YFHTCF",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:43:46.773622"
+    },
+    {
+        "Record Id": "1449",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "JHGC",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:43:46.773622"
+    },
+    {
+        "Record Id": "1450",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "TRD",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:43:46.773622"
+    },
+    {
+        "Record Id": "1499",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "GF",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:43:46.773622"
+    },
+    {
+        "Record Id": "1500",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "THF",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:43:46.773622"
+    },
+    {
+        "Record Id": "1549",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "jghcfx",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1550",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "ghfxd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1599",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hjhfgxd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1600",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "htdr",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1649",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "jghcf",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1650",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "Puerto Rico",
+        "Type": "po box address",
+        "Address Approved?": "No",
+        "Comment": "hg",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1699",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "Puerto Rico",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "jhg",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1700",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hgfc",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1749",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "jhgfxd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1750",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hgf",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:47:23.926700"
+    },
+    {
+        "Record Id": "1799",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "Puerto Rico",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hgfd",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:50:38.977389"
+    },
+    {
+        "Record Id": "1800",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hgf",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:50:38.977389"
+    },
+    {
+        "Record Id": "1849",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "1254 Rodney Street, Chester,field-Missouri 63005",
+        "Mask Pattern": "NWF,W,WN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hgcf",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "1254",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "RODNEY",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "CHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "FIELD-MISSOURI",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "63005",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:50:38.977389"
+    },
+    {
+        "Record Id": "1850",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "3759 Collins Street Tampa Florida 33619",
+        "Mask Pattern": "NWFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "jhgc",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "3759",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "COLLINS",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "TAMPA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "FLORIDA",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "33619",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:50:38.977389"
+    },
+    {
+        "Record Id": "1882",
+        "Timetamp": "2024-04-03 00:52:30.141371",
+        "Input": "4325, Hidden Meadow Drive,CAMP HILL,Pennsylvania 17012",
+        "Mask Pattern": "N,WFF,FF,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "No",
+        "Comment": "hgcf",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "4325",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HIDDEN",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "MEADOW",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Highway Number"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "CAMP",
+                "Address Component": "Organization Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "HILL",
+                "Address Component": "Military Rd Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "PENNSYLVANIA",
+                "Address Component": "Military Rd Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "17012",
+                "Address Component": "Organization Name"
+            }
+        ],
+        "Rejected By": "admin at 2024-04-03 03:50:38.977389"
+    }
+]

@@ -29,6 +29,22 @@
                 transform: rotate(360deg);
             }
         }
+        .spinners-border {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            vertical-align: text-bottom;
+            border: 0.25em solid currentColor;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spinner-border .75s linear infinite;
+        }
+
+        @keyframes spinners-border {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         html,
         body {
@@ -229,7 +245,7 @@
                 <!-- Options will be dynamically loaded -->
             </select>
             <button id="loadFileBtn">Fetch</button>
-            <div id="spinners" class="spinner-border" role="status" style="display: none;">
+            <div id="spinners" class="spinners-border" role="status" style="display: none;">
                 <span class="sr-only"></span>
             </div>
         </div>
@@ -285,6 +301,9 @@
             <div class="rightContainer" id="inputData" style="width: 90%; height: 100vh; padding: 20px;">
                 <div id="dictionaryInfo">
                     Current Dictionary: <span id="currentDictionaryDisplay">0/0</span>
+                </div>
+                <div id="totaldictionaryInfo">
+                    Total Dictionaries: <span id="totaldictionaryDisplay">0</span>
                 </div>
 
                 <div class="containerin">

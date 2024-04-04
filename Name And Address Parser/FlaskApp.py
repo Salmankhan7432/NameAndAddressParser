@@ -248,6 +248,8 @@ def BatchParser():
 
         thread = threading.Thread(target=process_file_in_background, args=(file_path, filename))
         thread.run()
+        if os.path.exists(file_path):
+            os.remove(file_path)
        
         return jsonify(status="Processing started", status_check_url='/check_status/' + filename, download_url='/download_output/' + filename)
 
@@ -291,7 +293,7 @@ def remove_file():
     try:
         data = request.json  # More idiomatic way to handle JSON data
         output_file_path = data.get('output_file_path')
-        print("Output Path", output_file_path)
+        # print("Output Path", output_file_path)
 
         full_path = os.path.join(app.root_path, output_file_path)  # Adjust if necessary
 
@@ -322,7 +324,7 @@ def get_users(run):
 def get_timestamps(run, user):
     session = Session()
     timestamps = session.query(ExceptionTable.Timestamp).filter_by(Run=run, UserName=user).distinct().all()
-    print(timestamps)
+    # print(timestamps)
     return jsonify([timestamp[0] for timestamp in timestamps])
 
 @app.route('/process_dropdown_data', methods=['POST'])
@@ -333,9 +335,9 @@ def process_dropdown_data():
     run = data.get('run')
     user = data.get('user')
     timestamp = data.get('timestamp')
-    print(f"Run: {run}\nuser: {user}\ntimestamp: {timestamp}")
+    # print(f"Run: {run}\nuser: {user}\ntimestamp: {timestamp}")
 
-    print("/Prcess Data called:")
+    # print("/Prcess Data called:")
     # Extract Address_ID values from the first query results
     Ids = session.query(ExceptionTable.Address_ID
         ).filter(
@@ -853,5 +855,5 @@ def delete_user(user_id):
     
 if __name__ == '__main__':
     
-    app.run(port=5000, debug=True)
+    app.run(port=8080, debug=True)
 

@@ -484,7 +484,7 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
     const run = document.getElementById('run-dropdown').value;
     const user = document.getElementById('user-dropdown').value;
     const timestamp = document.getElementById('timestamp-dropdown').value;
-    console.log("LoadFileBtn Clicked")
+    // console.log("LoadFileBtn Clicked")
     $.ajax({
         url: '/process_dropdown_data', // Update this URL to your Flask endpoint
         type: 'POST',
@@ -496,12 +496,12 @@ document.getElementById("loadFileBtn").addEventListener("click", function() {
         }),
         success: function(response) {
             // console.log('Success:', response);
-            console.log("Response: ", response);
+            // console.log("Response: ", response);
             total_dict = response.total_dict;
-            if (response.total_dict !== undefined) {
-                console.log("Total Dict: ", response.total_dict);
-                // You can now use response.total_dict as needed
-            }
+            // if (response.total_dict !== undefined) {
+            //     console.log("Total Dict: ", response.total_dict);
+            //     // You can now use response.total_dict as needed
+            // }
 
             // document.getElementById('spinners').style.display = 'block';
             loadFile(response.data,total_dict); // Call loadFile() on success
@@ -523,8 +523,8 @@ function loadFile(received_data,total_dict) {
     initialDataLength = 0;
     dicIndex = 0;
     resetUIElements();
-    console.log('Data Received in LoadFile() :',received_data);
-    console.log("Total Dictionaries: ", total_dict);
+    // console.log('Data Received in LoadFile() :',received_data);
+    // console.log("Total Dictionaries: ", total_dict);
     let container = document.getElementById("mapdata");
     if (container) {
         container.style.display = 'grid'; 
@@ -558,7 +558,7 @@ function loadFile(received_data,total_dict) {
 }
 
 function showNext(total_dict) {
-    console.log("ShowNext total_dict Received: ", total_dict)
+    // console.log("ShowNext total_dict Received: ", total_dict)
 
     if (currentKeyIndex < data.length) {
         const currentData = data[currentKeyIndex];
@@ -597,8 +597,8 @@ function updateDictionaryDisplay() {
     const totalDictionaries = initialDataLength;
     const TotalDictionaries = total_dict;
     // const keyIndex = currentKeyIndex;
-    console.log("update Dictionaries total dict received: ",TotalDictionaries);
-    console.log("update Dictionaries total dict received: ",total_dict);
+    // console.log("update Dictionaries total dict received: ",TotalDictionaries);
+    // console.log("update Dictionaries total dict received: ",total_dict);
     const currentDictionaryIndex = totalDictionaries > 0 ? dicIndex + 1 : 0;
     document.getElementById("currentDictionaryDisplay").textContent = `${currentDictionaryIndex}/${totalDictionaries}`;
     document.getElementById("totaldictionaryDisplay").textContent = `${TotalDictionaries}`;
@@ -620,7 +620,7 @@ function fetchOptionsAndPopulateDropdowns(otherData, otherDataKey) {
 
 function handleNextDictionary(index) {
     // console.log(index);
-    console.log("HandleNext totaldict: ", total_dict);
+    // console.log("HandleNext totaldict: ", total_dict);
     // console.log("Initial Data Length Before removal: ", data.length)
     if (index >= 0 && index < data.length) {
         data.splice(index, 1); // Remove the processed dictionary
@@ -1316,7 +1316,7 @@ function downloadLogs() {
             URL.revokeObjectURL(downloadUrl);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            console.log('AJAX call failed: ', textStatus, errorThrown);
+            // console.log('AJAX call failed: ', textStatus, errorThrown);
             alert('Failed to download the logs file.');
         }
     });

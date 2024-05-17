@@ -187,7 +187,8 @@ def forceException():
         mapdata["Address Input"] = address
         excdata["Timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
         rules = convert[1][0]
-        excdata["Username"] = session["user_id"]
+        # excdata["Username"] = session["user_id"]
+        excdata["Username"] = "admin"
         excdata["Run"] = "Single"
         excdata["Record ID"] = rules["Record ID"]
         mapdata["Mask"] = next((key for key, value in rules.items() if isinstance(value, list)), None)
@@ -231,7 +232,7 @@ def process_file_in_background(file, filename):
         json.dump(task_results, file, indent=4)
         
         
-    
+
 
 @app.route('/Batch_Parser', methods=["GET", "POST"])
 def BatchParser():
@@ -271,7 +272,7 @@ def check_status(filename):
     except:
         pass
 # else:
-    #     return jsonify(error=str(task_results)), 404
+    #return jsonify(error=str(task_results)), 404
 
 @app.route('/download_output/<filename>')
 def download_file(filename):
@@ -333,7 +334,8 @@ def process_dropdown_data():
     # print(session)
     data = request.json
     run = data.get('run')
-    user = data.get('user')
+    # user = data.get('user')
+    user = "admin"
     timestamp = data.get('timestamp')
     # print(f"Run: {run}\nuser: {user}\ntimestamp: {timestamp}")
 
@@ -449,7 +451,8 @@ def MapCreationForm():
     # engine = create_engine(database_url)
     result={}
     mapdata = request.get_json()
-    username = session["user_id"]
+    # username = session["user_id"]
+    username = "admin"
     Address_ID = mapdata["Record Id"]
     timestamp = mapdata['Timetamp']
     keys = list(mapdata.keys())
@@ -629,14 +632,14 @@ def get_mask_count():
     return jsonify(result=result)
 
 
-
 @app.route("/delete_record", methods=["POST"])
 def delete_component():
     # result = {}
     if 'user_id' not in session:
         return jsonify(result={'message': 'User not logged in'}), 401
 
-    username = session["user_id"]
+    # username = session["user_id"]
+    username = "admin"
     # print("User deleting the record:", username)
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 

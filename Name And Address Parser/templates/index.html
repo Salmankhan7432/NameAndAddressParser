@@ -92,37 +92,37 @@
 
     <div class="navbar" style="display: flex;">
         <img style="width: 10%; filter: invert(100%);" src="../static/logo.svg" alt="" class="logo">
-        {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %}
+        <!-- {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %} -->
         <div style="text-align: left; padding-bottom: 10px;" class="tabdiv">
             <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">Single Line</a>
         </div>
-        {% endif %}
-        {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %}
+        <!-- {% endif %}
+        {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %} -->
         <div style="text-align: left;" class="tabdiv active">
             <a href="#" class="tablink" id="BF" onclick="openTab('Batch',event)">Batch Parser</a>
         </div>
-        {% endif %}
-        {% if session.role == 'Admin' or session.role == 'Committee Member' %}
+        <!-- {% endif %}
+        {% if session.role == 'Admin' or session.role == 'Committee Member' %} -->
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
         </div>
-        {% endif %}
-        {% if session.role == 'Admin'%}
+        <!-- {% endif %}
+        {% if session.role == 'Admin'%} -->
         <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="userdfc" onclick="openTab('UDComponents',event)">User Defined Component</a>
         </div>
-        {% endif %}
-        {% if session.role == 'Admin'%}
-        <div style="text-align: left;" class="tabdiv">
+        <!-- {% endif %}
+        {% if session.role == 'Admin'%} -->
+        <!-- <div style="text-align: left;" class="tabdiv">
             <a href="#" class="tablink" id="user" onclick="openTab('Authentication',event)">Authentication</a>
-        </div>
-        {% endif %}
-        <div style="text-align: right;" class="tabdiv">
+        </div> -->
+        <!-- {% endif %} -->
+        <!-- <div style="text-align: right;" class="tabdiv">
             <form action="\logout" method="POST" onclick="localStorage.clear()">
                 <button type="submit" name="logout" id="logout" style="background-color: transparent;"><i
                         class='bx bx-power-off' style="font-size: 30px; color: white;" id="imglogout"></i></button>
             </form>
-        </div>
+        </div> -->
     </div>
 
 
@@ -421,7 +421,7 @@
 
 
     <!-- User Creation Edit Delete -->
-    <div id="Authentication" class="tabcontent AuthenticationTab-container">
+    <!-- <div id="Authentication" class="tabcontent AuthenticationTab-container">
         <div class="container">
             {% if session.role == 'Admin' %}
             <!-- User Creation Form -->
@@ -447,7 +447,7 @@
                 </div> -->
 
             <!-- User List and Edit/Delete Forms -->
-            <div class="udresult-box" id="utresult-box">
+            <!-- <div class="udresult-box" id="utresult-box">
                 <table id="utresultTable" class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -456,15 +456,15 @@
                             <th scope="col">Email</th>
                             <th scope="col">Password</th>
                             <th scope="col">Role</th>
-                            <!-- <th scope="col">User Active</th> -->
-                            <th scope="col">Actions</th>
+                            <th scope="col">User Active</th> -->
+                            <!-- <th scope="col">Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="utresultBody">
+                    <tbody id="utresultBody"> -->
                         <!-- Table rows will be populated dynamically here -->
-                    </tbody>
+                    <!-- </tbody>
                 </table>
-            </div>
+            </div> --> 
             <!-- {% for user in users %}
                     <tr>
                         <form action="/edit_user/{{ user.id }}" method="post">
@@ -489,14 +489,14 @@
                         </form>
                     </tr>
                     {% endfor %} -->
-            {% endif %}
+            <!-- {% endif %}
             <div class="buttons">
 
                 <button id="loadUserData">Load Users</button>
                 <button id="create_user">Create User</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 

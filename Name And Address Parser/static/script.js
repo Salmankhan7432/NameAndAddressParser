@@ -1161,7 +1161,7 @@ function cancelEditRow(button) {
 
     var actionsCell = row.find('.actions');
     actionsCell.html('<button class="edit-btn" onclick="editRow(this,event)">Edit</button>' +
-        '<button class="delete-btn" onclick="deleteRow(this,event)">Delete</button>');
+        '<button class="delete-btn" onclick="deleteRow(this,event)" disabled>Delete</button>');
     enableButtons(row);
 
     // Preserve oldComponent and oldDescription
@@ -1195,7 +1195,7 @@ function saveRow(button) {
 
     var actionsCell = row.find('.actions');
     actionsCell.html('<button class="edit-btn">Edit</button>' +
-        '<button class="delete-btn">Delete</button>');
+        '<button class="delete-btn" disabled>Delete</button>');
     enableButtons(row);
     // Preserve oldComponent and oldDescription
     oldComponent = cells.eq(0).text();
@@ -1232,54 +1232,54 @@ function saveChangesToServer(payload) {
         });
 }
 
-function deleteRow(button, event) {
-    var row = $(button).closest("tr");
-    var component = row.find('td:first').text(); // Assuming the Component column is the first one
+// function deleteRow(button, event) {
+//     var row = $(button).closest("tr");
+//     var component = row.find('td:first').text(); // Assuming the Component column is the first one
 
-    // Send a GET request to the server to get the count of associated masks
-    $.ajax({
-        type: "GET",
-        url: "/get_mask_count",
-        data: { component: component },
-        success: function (response) {
-            // Check if response has the 'result' property
-            if ('result' in response && 'maskCount' in response.result) {
-                var confirmationMessage = "Are you sure you want to delete this record?\n";
-                confirmationMessage += "Number of Masks and Dictionaries effected: " + response.result.maskCount;
+//     // Send a GET request to the server to get the count of associated masks
+//     $.ajax({
+//         type: "GET",
+//         url: "/get_mask_count",
+//         data: { component: component },
+//         success: function (response) {
+//             // Check if response has the 'result' property
+//             if ('result' in response && 'maskCount' in response.result) {
+//                 var confirmationMessage = "Are you sure you want to delete this record?\n";
+//                 confirmationMessage += "Number of Masks and Dictionaries effected: " + response.result.maskCount;
 
-                // Use a JavaScript confirm dialog
-                var confirmation = window.confirm(confirmationMessage);
-                if (confirmation) {
-                    // Send a POST request to the server for deletion
-                    $.ajax({
-                        type: "POST",
-                        url: "/delete_record",
-                        data: { component: component }, // Send the component to be deleted
-                        success: function (response) {
-                            // console.log('Record deleted:', response);
-                            row.remove(); // Remove the row from the table upon successful deletion
-                            location.reload();
-                        },
+//                 // Use a JavaScript confirm dialog
+//                 var confirmation = window.confirm(confirmationMessage);
+//                 if (confirmation) {
+//                     // Send a POST request to the server for deletion
+//                     $.ajax({
+//                         type: "POST",
+//                         url: "/delete_record",
+//                         data: { component: component }, // Send the component to be deleted
+//                         success: function (response) {
+//                             // console.log('Record deleted:', response);
+//                             row.remove(); // Remove the row from the table upon successful deletion
+//                             location.reload();
+//                         },
 
-                        error: function (error) {
-                            console.error('Error deleting record:', error);
-                        }
-                    });
-                } else {
-                    // Do nothing if the user selects "Cancel" in the confirmation dialog
-                }
-            } else {
-                console.error('Invalid response format:', response);
-            }
-        },
-        error: function (error) {
-            console.error('Error getting mask count:', error);
-        }
-    });
+//                         error: function (error) {
+//                             console.error('Error deleting record:', error);
+//                         }
+//                     });
+//                 } else {
+//                     // Do nothing if the user selects "Cancel" in the confirmation dialog
+//                 }
+//             } else {
+//                 console.error('Invalid response format:', response);
+//             }
+//         },
+//         error: function (error) {
+//             console.error('Error getting mask count:', error);
+//         }
+//     });
 
-    event.preventDefault(); // Prevent the default action of the button
-    event.stopPropagation(); // Stop the event from propagating further
-}
+//     event.preventDefault(); // Prevent the default action of the button
+//     event.stopPropagation(); // Stop the event from propagating further
+// }
 
 
 

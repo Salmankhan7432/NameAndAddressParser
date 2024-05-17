@@ -1,1 +1,350 @@
-[]
+[
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-16 20:23:40.341713",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-16 12:45:43.896594"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-28 23:24:38.258453",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-28 23:23:53.825171"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-17 15:11:03.077298",
+        "Input": "5506 A Street, Little Rock, AR 72205",
+        "Mask Pattern": "NWF,WW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-28 23:23:53.825171"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-29 09:21:09.876592",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-28 23:23:53.825171"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-04-29 09:23:08.871125",
+        "Input": "402 S Oak Road Manchester New Hampshire 72732",
+        "Mask Pattern": "NDWFWWWN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "402",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "S",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OAK",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "ROAD",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "MANCHESTER",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "NEW",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "HAMPSHIRE",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72732",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-28 23:23:53.825171"
+    },
+    {
+        "Record Id": "2",
+        "Timetamp": "2024-04-29 09:23:08.871125",
+        "Input": "88 N Pine Drive Olympia Washington 72733",
+        "Mask Pattern": "NDFFWTN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "88",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "D",
+                "Address Token": "N",
+                "Address Component": "Street Pre-Directional"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "PINE",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "DRIVE",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "OLYMPIA",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "WASHINGTON",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72733",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-04-28 23:23:53.825171"
+    },
+    {
+        "Record Id": "1",
+        "Timetamp": "2024-05-17 01:07:24.219886",
+        "Input": "5506 A Street Little Rock, AR 72205",
+        "Mask Pattern": "NWFWW,TN",
+        "Region": "US",
+        "Type": "street address",
+        "Address Approved?": "Yes",
+        "Comment": "",
+        "User": "admin",
+        "Mapping Data": [
+            {
+                "Mask Token": "N",
+                "Address Token": "5506",
+                "Address Component": "Street Number"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "A",
+                "Address Component": "Street Name"
+            },
+            {
+                "Mask Token": "F",
+                "Address Token": "STREET",
+                "Address Component": "Street Suffix"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "LITTLE",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "W",
+                "Address Token": "ROCK",
+                "Address Component": "City Name"
+            },
+            {
+                "Mask Token": "T",
+                "Address Token": "AR",
+                "Address Component": "State Name"
+            },
+            {
+                "Mask Token": "N",
+                "Address Token": "72205",
+                "Address Component": "Zip Code"
+            }
+        ],
+        "Approved By": "admin at 2024-05-17 01:07:01.576440"
+    }
+]

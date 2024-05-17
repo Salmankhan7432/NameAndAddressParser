@@ -170,8 +170,7 @@
         background-color: blue;
     }
 
-    .edit-btn,
-    .delete-btn {
+    .edit-btn {
         width: 30%;
         padding: 8px;
         font-size: 15px;
@@ -180,6 +179,16 @@
         border: 2px solid #2b74b7;
         color: #2b74b7;
         background-color: #fff;
+    }
+    .delete-btn {
+        width: 30%;
+        padding: 8px;
+        font-size: 15px;
+        margin: 5px;
+        border-radius: 10px;
+        border: 2px solid #474747;
+        color: #4a4b4c;
+        background-color: #d0cbcb;
     }
 
     .edit-btn {

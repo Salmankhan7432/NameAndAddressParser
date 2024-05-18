@@ -52,16 +52,15 @@
         /* Smooth transition effect */
     }
 
-    /* Change background color of tabs on hover */
-    .tablink:hover {
-        background-color: #ddd;
-        /* Slightly darker grey on hover */
-    }
-
-    /* Active tab link */
+    .tablink:hover,
     .tablink.active {
-        background-color: #ccc;
-        /* Even darker grey for the active tab */
+        /* background-color:#bec9e2; */
+        color: #2e4c8c;
+        text-decoration: underline;
+    }
+    .addedclass{
+        color: #2e4c8c;
+        text-decoration: underline;
     }
 
     /* Style the tab content */

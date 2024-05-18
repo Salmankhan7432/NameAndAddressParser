@@ -90,31 +90,31 @@ def hash_password(password):
     salt = bcrypt.gensalt()
     return bcrypt.hashpw(password.encode(), salt)
 
-@app.route('/login', methods=['GET', 'POST'])
-def login(): 
-    form = LoginForm()  # Ensure this matches the name of your form class
-    if form.validate_on_submit():
-            sessions = Session()
-            username = request.form['username']
-            password = request.form['password']  
-            user = sessions.query(User).filter_by(UserName=username).first()
-            # userTable = sessions.query(User).all()
-            if user and bcrypt.checkpw(password.encode(), user.Password): 
-                role_name = user.role.RoleName
+# @app.route('/login', methods=['GET', 'POST'])
+# def login(): 
+#     form = LoginForm()  # Ensure this matches the name of your form class
+#     if form.validate_on_submit():
+#             sessions = Session()
+#             username = request.form['username']
+#             password = request.form['password']  
+#             user = sessions.query(User).filter_by(UserName=username).first()
+#             # userTable = sessions.query(User).all()
+#             if user and bcrypt.checkpw(password.encode(), user.Password): 
+#                 role_name = user.role.RoleName
                 
-                session["user_id"]=username
-                session["role"]= role_name
-                # session['status'] = user.Status
-                session["FullName"] = user.FullName
-                # print("\n\n\n",session['status'],"\n", user.Status,"\n\n\n")
-                return redirect(url_for('SingleLineAddressParser')) 
+#                 session["user_id"]=username
+#                 session["role"]= role_name
+#                 # session['status'] = user.Status
+#                 session["FullName"] = user.FullName
+#                 # print("\n\n\n",session['status'],"\n", user.Status,"\n\n\n")
+#                 return redirect(url_for('SingleLineAddressParser')) 
             
-           # Remember, in real apps, don't use plain text for passwords
+#            # Remember, in real apps, don't use plain text for passwords
            
-            else:
-                session.clear()
-                flash('Invalid username or password')
-    return render_template('login.html', form=form)
+#             else:
+#                 session.clear()
+#                 flash('Invalid username or password')
+#     return render_template('login.html', form=form)
 
 @login_manager.user_loader
 def load_user(user_id):

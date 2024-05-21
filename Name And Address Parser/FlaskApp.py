@@ -67,14 +67,14 @@ app.config['MAX_CONTENT_LENGTH'] = 256 * 1024 * 1024  # for 256MB max- file size
 
 # socketio = SocketIO(app)
 CORS(app)
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'login'
+# login_manager = LoginManager()
+# login_manager.init_app(app)
+# login_manager.login_view = 'login'
 
-class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[InputRequired(), Length(min=4, max=30)])
-    password = PasswordField('Password', validators=[InputRequired()])
-    submit = SubmitField('Login')
+# class LoginForm(FlaskForm):
+#     username = StringField('Username', validators=[InputRequired(), Length(min=4, max=30)])
+#     password = PasswordField('Password', validators=[InputRequired()])
+#     submit = SubmitField('Login')
 
 class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[InputRequired(), Length(min=4, max=30)])
@@ -116,34 +116,34 @@ def hash_password(password):
 #                 flash('Invalid username or password')
 #     return render_template('login.html', form=form)
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
+# @login_manager.user_loader
+# def load_user(user_id):
+#     return User.query.get(int(user_id))
 
 
-def requires_role(role):
-    def decorator(f):
-        @wraps(f)
-        def decorated_function(*args, **kwargs):
-            if 'user_id' not in session:
-                flash('You need to be logged in to view this page.')
-                return redirect(url_for('login'))
-            user = session['user_id']
-            role= session["role"]
-            if not user or role != role:
-                flash('You do not have the required permissions to view this page.')
-                return redirect(url_for('SingleLineAddressParser'))  # Or some other appropriate redirect
-            return f(*args, **kwargs)
-        return decorated_function
-    return decorator
+# def requires_role(role):
+#     def decorator(f):
+#         @wraps(f)
+#         def decorated_function(*args, **kwargs):
+#             if 'user_id' not in session:
+#                 flash('You need to be logged in to view this page.')
+#                 return redirect(url_for('authentication'))
+#             user = session['user_id']
+#             role= session["role"]
+#             if not user or role != role:
+#                 flash('You do not have the required permissions to view this page.')
+#                 return redirect(url_for('SingleLineAddressParser'))  # Or some other appropriate redirect
+#             return f(*args, **kwargs)
+#         return decorated_function
+#     return decorator
 
 
 
-@app.route('/logout', methods=["GET", "POST"])
-def logout():
-    flash('You have been logged out!')
-    session.clear()
-    return redirect(url_for('login'))
+# @app.route('/logout', methods=["GET", "POST"])
+# def logout():
+#     flash('You have been logged out!')
+#     session.clear()
+#     return redirect(url_for('login'))
 
 
 
@@ -151,7 +151,7 @@ def logout():
 
 
 @app.route('/', methods=["GET", "POST"])
-@requires_role('Admin')
+# @requires_role('Admin')
 def SingleLineAddressParser():
     result = {}
     form = BatchUploadForm()
@@ -736,7 +736,7 @@ def download_logs():
         return "File not found.", 404
 
 @app.route('/authentication')
-@requires_role('Admin')
+# @requires_role('Admin')
 def authentication_page():
     session = Session()
     try:
@@ -770,14 +770,14 @@ def authentication_page():
     finally:
         session.close()
 
-@app.route('/CRUDUser', methods=["GET", "POST"])
-@requires_role('Admin')
-def CRUDUser():
-    sessions = Session() 
-    users = sessions.query(User).all()
-    sessions.close()
-    # print(users)
-    return render_template('index.html', users=users)
+# @app.route('/CRUDUser', methods=["GET", "POST"])
+# @requires_role('Admin')
+# def CRUDUser():
+#     sessions = Session() 
+#     users = sessions.query(User).all()
+#     sessions.close()
+#     # print(users)
+#     return render_template('index.html', users=users)
 
 
 @app.route('/save_User/<int:user_id>', methods=['POST'])

@@ -89,40 +89,16 @@
 </head>
 
 <body>
-
-    <div class="navbar" style="display: flex;">
+    <div class="navbar">
         <img style="width: 10%; filter: invert(100%);" src="../static/logo.svg" alt="" class="logo">
-        <!-- {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %} -->
-        <div style="text-align: left; padding-bottom: 10px;" class="tabdiv">
-            <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">Single Line</a>
-        </div>
-        <!-- {% endif %}
-        {% if session.role == 'Admin' or session.role == 'Committee Member' or session.role == 'General User' %} -->
-        <div style="text-align: left;" class="tabdiv active">
-            <a href="#" class="tablink" id="BF" onclick="openTab('Batch',event)">Batch Parser</a>
-        </div>
-        <!-- {% endif %}
-        {% if session.role == 'Admin' or session.role == 'Committee Member' %} -->
         <div style="text-align: left;" class="tabdiv">
-            <a href="#" class="tablink" id="MCF" onclick="openTab('MapCreationForm',event)">Map Creation Form</a>
-        </div>
-        <!-- {% endif %}
-        {% if session.role == 'Admin'%} -->
+        <a href="#" class="tablink" onclick="openTab('SingleLine',event)" id="defaultOpen">Single Line</a></div>
         <div style="text-align: left;" class="tabdiv">
-            <a href="#" class="tablink" id="userdfc" onclick="openTab('UDComponents',event)">User Defined Component</a>
-        </div>
-        <!-- {% endif %}
-        {% if session.role == 'Admin'%} -->
-        <!-- <div style="text-align: left;" class="tabdiv">
-            <a href="#" class="tablink" id="user" onclick="openTab('Authentication',event)">Authentication</a>
-        </div> -->
-        <!-- {% endif %} -->
-        <!-- <div style="text-align: right;" class="tabdiv">
-            <form action="\logout" method="POST" onclick="localStorage.clear()">
-                <button type="submit" name="logout" id="logout" style="background-color: transparent;"><i
-                        class='bx bx-power-off' style="font-size: 30px; color: white;" id="imglogout"></i></button>
-            </form>
-        </div> -->
+        <a href="#" class="tablink" onclick="openTab('Batch',event)" id="BF">Batch Parser</a></div>
+        <div style="text-align: left;" class="tabdiv">
+        <a href="#" class="tablink" onclick="openTab('MapCreationForm',event)" id="MCF">Map Creation Form</a></div>
+        <div style="text-align: left;" class="tabdiv">
+        <a href="#" class="tablink" onclick="openTab('UDComponents',event)" id="userdfc">User Defined Component</a></div>
     </div>
 
 
@@ -382,15 +358,15 @@
     <!--------------------------------------------------------------------------------------------------- -->
 
     <div id="UDComponents" class="tabcontent userDefinedComponentsTab-container">
-        <div class="container">
-            <div id="downloadContainer" class="download-container">
+        <div class="container" style="margin-top: 70px;">
+            <!-- <div id="downloadContainer" class="download-container">
                 <div class="downloadcontainer">
                     <div class="download-section">
                         <span class="download-label">Logs :</span><br>
                         <button onclick="downloadLogs()" id="downloadButton">Download</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- <form id="udForm" action="/UserDefinedComponents" method="GET"> -->
             <div class="udresult-box" id="udresult-box">

@@ -39,7 +39,7 @@ $('document').ready(function(){
         document.getElementById('defaultOpen').classList.add('addedclass');
         document.getElementById('BF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
-        document.getElementById('user').classList.remove('addedclass');
+        // document.getElementById('user').classList.remove('addedclass');
         document.getElementById('MCF').classList.remove('addedclass');
         return;
     }
@@ -49,7 +49,7 @@ $('document').ready(function(){
         document.getElementById('defaultOpen').classList.remove('addedclass');
         document.getElementById('MCF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
-        document.getElementById('user').classList.remove('addedclass');
+        // document.getElementById('user').classList.remove('addedclass');
         return;
     }
     else if (openedTab=='MapCreationForm')
@@ -58,7 +58,7 @@ $('document').ready(function(){
         document.getElementById('defaultOpen').classList.remove('addedclass');
         document.getElementById('BF').classList.remove('addedclass');
         document.getElementById('userdfc').classList.remove('addedclass');
-        document.getElementById('user').classList.remove('addedclass');
+        // document.getElementById('user').classList.remove('addedclass');
         return;
     }
     else if (openedTab=='UDComponents')
@@ -66,19 +66,19 @@ $('document').ready(function(){
         document.getElementById('defaultOpen').classList.remove('addedclass');
         document.getElementById('BF').classList.remove('addedclass');
         document.getElementById('MCF').classList.remove('addedclass');
-        document.getElementById('user').classList.remove('addedclass');
+        // document.getElementById('user').classList.remove('addedclass');
         document.getElementById('userdfc').classList.add('addedclass');
         return;
     }
-    else if (openedTab=='Authentication')
-    {
-        document.getElementById('defaultOpen').classList.remove('addedclass');
-        document.getElementById('BF').classList.remove('addedclass');
-        document.getElementById('MCF').classList.remove('addedclass');
-        document.getElementById('userdfc').classList.remove('addedclass');
-        document.getElementById('user').classList.add('addedclass');
-        return;
-    }
+    // else if (openedTab=='Authentication')
+    // {
+    //     document.getElementById('defaultOpen').classList.remove('addedclass');
+    //     document.getElementById('BF').classList.remove('addedclass');
+    //     document.getElementById('MCF').classList.remove('addedclass');
+    //     document.getElementById('userdfc').classList.remove('addedclass');
+    //     document.getElementById('user').classList.add('addedclass');
+    //     return;
+    // }
     
     // console.log(openedTab);
 });
@@ -1016,6 +1016,12 @@ $('document').ready(function(){
     $('#fetchall').click();
     $('#fetchall').hide();
 });
+
+$('#userdfc').click(function(){
+    location.reload(true);
+    document.getElementById("userdfc").value = ' active';
+});
+
 function fetchComponentData() {
     $.ajax({
         type: "POST",

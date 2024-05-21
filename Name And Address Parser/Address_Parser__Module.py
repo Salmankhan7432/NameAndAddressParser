@@ -555,7 +555,8 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
             rules = i
             excdata = {
                 "Timestamp": timestamp,
-                "Username": session["user_id"],
+                # "Username": session["user_id"],
+                "Username": "admin",
                 "Run": "Multiple",
                 "Record ID": rules["Record ID"],
                 "data": rules[next((key for key, value in rules.items() if isinstance(value, list)), None)]

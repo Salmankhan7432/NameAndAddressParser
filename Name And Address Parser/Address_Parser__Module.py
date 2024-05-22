@@ -46,7 +46,7 @@ def Address_Parser(Address_4CAF50,Progress,TruthSet=""):
     Mask_log={}
     Unique_Mask={}
     db_operations = DB_Operations(database_url='sqlite:///KnowledgeBase.db')
-    Address_4CAF50=open(Address_4CAF50,"r",encoding='utf8')
+    Address_4CAF50=open(Address_4CAF50,"r", encoding="utf-8")
     file_name = os.path.splitext(os.path.basename(Address_4CAF50.name))[0]
     Lines = Address_4CAF50.readlines()
     
